@@ -1,0 +1,9 @@
+2013-01-30 14:20:38 Error: [MissingControllerException] Controller class Isad234Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Isad234Controller',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/isad234/
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
