@@ -7,3 +7,175 @@ Request URL: /ISAD234/isad234/
 Stack Trace:
 #0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-02-01 20:57:58 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-01 20:59:01 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-01 20:59:18 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-01 20:59:26 Error: [MissingActionException] Action UsersController::register() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'register',
+)
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-01 20:59:38 Error: [MissingViewException] View file "C:\xampp\htdocs\ISAD234\app\View\Users\register.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\ISAD234\\app\\View\\Users\\register.ctp',
+)
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-01 21:14:01 Error: Fatal Error (1): Call to a member function create() on a non-object in [C:\xampp\htdocs\ISAD234\app\View\Users\register.ctp, line 4]
+2013-02-01 21:14:01 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 4)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 4, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 4, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-01 21:14:23 Error: Fatal Error (1): Call to a member function create() on a non-object in [C:\xampp\htdocs\ISAD234\app\View\Users\register.ctp, line 4]
+2013-02-01 21:14:23 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 4)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 4, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 4, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-01 21:14:40 Error: Fatal Error (1): Call to a member function create() on a non-object in [C:\xampp\htdocs\ISAD234\app\View\Users\register.ctp, line 4]
+2013-02-01 21:14:40 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 4)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 4, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 4, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-01 21:14:48 Error: Fatal Error (1): Call to a member function create() on a non-object in [C:\xampp\htdocs\ISAD234\app\View\Users\register.ctp, line 4]
+2013-02-01 21:14:48 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 4)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 4, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 4, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-01 21:15:00 Error: Fatal Error (1): Call to a member function input() on a non-object in [C:\xampp\htdocs\ISAD234\app\View\Users\register.ctp, line 5]
+2013-02-01 21:15:00 Error: [FatalErrorException] Call to a member function input() on a non-object
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 5)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 5, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 5, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-01 21:18:06 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-01 21:30:15 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-01 21:30:25 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /ISAD234/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-01 21:30:39 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /ISAD234/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-01 21:36:44 Error: [MissingViewException] View file "C:\xampp\htdocs\ISAD234\app\View\Users\login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\ISAD234\\app\\View\\Users\\login.ctp',
+)
+Request URL: /ISAD234/login
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-01 21:39:14 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\xampp\htdocs\ISAD234\app\View\Users\register.ctp, line 4]
+2013-02-01 21:39:14 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 4, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 4, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-02 15:58:40 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [C:\xampp\htdocs\ISAD234\app\View\Users\register.ctp, line 4]
+2013-02-02 15:58:40 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 4, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 4, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
