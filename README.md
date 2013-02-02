@@ -15,8 +15,9 @@ This process needs to be followed every time you decide to do some development w
 
 1. Grab the latest version of the website files using GitHub for Windows/Mac. **This is essential** as other people may have made changes and if you don't have the latest files you may break something.
 2. The database settings in `app/Config/database.php` may be different from the settings you need. Change them to the settings you need. Generally this will just be a `database_name` change, for best results set up the database as I have done so you don't need to change anything.
-3. Go work some magic and wizardry on the code.
-4. Commit the changes back to GitHub using GitHub for Windows/Mac. It's essential that you do this for every feature that you've completed so we can track who's done what.
+3. If the database schema has been changed you may get some Cake or SQL errors. Make sure you import the new database SQL file (in the root directory of the application) so you have the latest changes. If you make changes to the database, please upload the SQL dump (you can "export" from phpMyAdmin) so people can get the latest schema.
+4. Go work some magic and wizardry on the code.
+5. Commit the changes back to GitHub using GitHub for Windows/Mac. It's essential that you do this for every feature that you've completed so we can track who's done what.
 
 And please, for the love of God
 ----------------
