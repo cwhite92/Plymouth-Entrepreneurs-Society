@@ -5,9 +5,9 @@ class UsersController extends AppController {
     public $helpers = array('Html', 'Form');
 
     public function register() {
-        if ($this->request->is('post')) {
+        if($this->request->is('post')) {
             $this->User->create();
-            if ($this->User->save($this->request->data)) {
+            if($this->User->save($this->request->data)) {
                 $this->Session->setFlash('You have been registered.');
                 $this->redirect(array('action' => 'register'));
             } else {
