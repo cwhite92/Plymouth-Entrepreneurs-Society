@@ -1,0 +1,133 @@
+2013-02-05 01:01:04 Error: Fatal Error (64): Cannot redeclare class User in [C:\xampp\htdocs\ISAD234\app\Model\Profile.php, line 7]
+2013-02-05 01:01:04 Error: [FatalErrorException] Cannot redeclare class User
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\xampp\htdocs...', 7)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\xampp\htdocs...', 7, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\xampp\htdocs...', 7, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-05 02:15:49 Error: [MissingControllerException] Controller class ProfilesController could not be found.
+Exception Attributes: array (
+  'class' => 'ProfilesController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/profile
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-05 02:19:20 Error: [MissingViewException] View file "C:\xampp\htdocs\ISAD234\app\View\Profiles\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\ISAD234\\app\\View\\Profiles\\index.ctp',
+)
+Request URL: /ISAD234/profile
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-05 02:25:00 Error: Fatal Error (1): Call to a member function save() on a non-object in [C:\xampp\htdocs\ISAD234\app\Controller\ProfilesController.php, line 9]
+2013-02-05 02:25:00 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /ISAD234/profile
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 9, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 9, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-05 02:25:14 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`pes`.`profiles`, CONSTRAINT `profiles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Request URL: /ISAD234/profile
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `pe...', Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Model.php(1734): DboSource->create(Object(Profile), Array, Array)
+#4 C:\xampp\htdocs\ISAD234\app\Controller\ProfilesController.php(9): Model->save(Array)
+#5 [internal function]: ProfilesController->index()
+#6 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#7 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-02-05 02:28:44 Error: Fatal Error (4): syntax error, unexpected T_EXIT in [C:\xampp\htdocs\ISAD234\app\Controller\ProfilesController.php, line 11]
+2013-02-05 02:28:44 Error: [FatalErrorException] syntax error, unexpected T_EXIT
+Request URL: /ISAD234/profile
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 11, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 11, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-05 02:29:14 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`pes`.`profiles`, CONSTRAINT `profiles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Request URL: /ISAD234/profile
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `pe...', Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Model.php(1734): DboSource->create(Object(Profile), Array, Array)
+#4 C:\xampp\htdocs\ISAD234\app\Controller\ProfilesController.php(12): Model->save(Array)
+#5 [internal function]: ProfilesController->index()
+#6 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#7 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-02-05 02:30:31 Error: Fatal Error (1): Call to a member function saveAssociated() on a non-object in [C:\xampp\htdocs\ISAD234\app\Controller\ProfilesController.php, line 12]
+2013-02-05 02:30:31 Error: [FatalErrorException] Call to a member function saveAssociated() on a non-object
+Request URL: /ISAD234/profile
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-05 04:05:59 Error: [MissingActionException] Action ProfilesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProfilesController',
+  'action' => 'index',
+)
+Request URL: /ISAD234/profiles
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-05 04:06:08 Error: [MissingActionException] Action ProfilesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProfilesController',
+  'action' => 'index',
+)
+Request URL: /ISAD234/profiles
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-05 04:06:22 Error: [MissingActionException] Action ProfilesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProfilesController',
+  'action' => 'index',
+)
+Request URL: /ISAD234/profiles
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-05 04:06:43 Error: [MissingActionException] Action ProfilesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProfilesController',
+  'action' => 'index',
+)
+Request URL: /ISAD234/profiles
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
