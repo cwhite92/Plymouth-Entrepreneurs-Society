@@ -5,18 +5,6 @@ class User extends AppModel {
     public $hasOne = 'Profile';
 
     public $validate = array(
-        'firstname' => array(
-            'required' => array(
-                'rule' => array('notEmpty'),
-                'message' => 'Firstname is required.'
-            )
-        ),
-        'lastname' => array(
-            'required' => array(
-                'rule' => array('notEmpty'),
-                'message' => 'Password is required.'
-            )
-        ),
         'email' => array(
             'kosher' => array(
                 'rule' => 'email',
