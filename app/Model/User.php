@@ -1,7 +1,10 @@
 <?php
 
 class User extends AppModel {
-    var $validate = array(
+
+    public $hasOne = 'Profile';
+
+    public $validate = array(
         'firstname' => array(
             'required' => array(
                 'rule' => array('notEmpty'),

@@ -8,6 +8,10 @@ class UsersController extends AppController {
         if($this->request->is('post')) {
             $this->User->create();
             if($this->User->save($this->request->data)) {
+                // Also create and save the users profile
+                $this->request->data['Profile']['user_id'] = $this->User->id;
+                $this->User->Profile->save($this->request->data);
+
                 $this->Session->setFlash('You have been registered.');
                 $this->redirect(array('action' => 'register'));
             } else {
