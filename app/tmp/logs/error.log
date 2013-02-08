@@ -131,3 +131,356 @@ Stack Trace:
 #1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
 #2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2013-02-08 00:28:19 Error: [SocketException] Could not send email.
+Request URL: /ISAD234/
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\MailTransport.php(46): MailTransport->_mail('you@example.com', 'About', 'My message????', 'From: My Site <...', NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1065): MailTransport->send(Object(CakeEmail))
+#2 C:\xampp\htdocs\ISAD234\app\Controller\PagesController.php(15): CakeEmail->send('My message')
+#3 [internal function]: PagesController->home()
+#4 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-08 00:36:45 Error: [SocketException] Could not send email.
+Request URL: /ISAD234/
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\MailTransport.php(46): MailTransport->_mail('you@example.com', 'About', 'My message????', 'From: My Site <...', NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1065): MailTransport->send(Object(CakeEmail))
+#2 C:\xampp\htdocs\ISAD234\app\Controller\PagesController.php(15): CakeEmail->send('My message')
+#3 [internal function]: PagesController->home()
+#4 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-08 00:50:33 Error: [SocketException] Could not send email.
+Request URL: /ISAD234/
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\MailTransport.php(46): MailTransport->_mail('you@example.com', 'About', 'My message????', 'From: My Site <...', NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1065): MailTransport->send(Object(CakeEmail))
+#2 C:\xampp\htdocs\ISAD234\app\Controller\PagesController.php(15): CakeEmail->send('My message')
+#3 [internal function]: PagesController->home()
+#4 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-08 01:21:08 Error: [SocketException] Could not send email.
+Request URL: /ISAD234/
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\MailTransport.php(46): MailTransport->_mail('you@example.com', 'About', 'My message????', 'From: My Site <...', NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1065): MailTransport->send(Object(CakeEmail))
+#2 C:\xampp\htdocs\ISAD234\app\Controller\PagesController.php(15): CakeEmail->send('My message')
+#3 [internal function]: PagesController->home()
+#4 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-08 01:21:11 Error: [SocketException] Could not send email.
+Request URL: /ISAD234/
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\MailTransport.php(46): MailTransport->_mail('you@example.com', 'About', 'My message????', 'From: My Site <...', NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1065): MailTransport->send(Object(CakeEmail))
+#2 C:\xampp\htdocs\ISAD234\app\Controller\PagesController.php(15): CakeEmail->send('My message')
+#3 [internal function]: PagesController->home()
+#4 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-08 01:22:09 Error: [SocketException] Could not send email.
+Request URL: /ISAD234/
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\MailTransport.php(46): MailTransport->_mail('you@example.com', 'About', 'My message????', 'From: My Site <...', NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1065): MailTransport->send(Object(CakeEmail))
+#2 C:\xampp\htdocs\ISAD234\app\Controller\PagesController.php(15): CakeEmail->send('My message')
+#3 [internal function]: PagesController->home()
+#4 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-08 01:25:03 Error: [SocketException] Could not send email.
+Request URL: /ISAD234/
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\MailTransport.php(46): MailTransport->_mail('you@example.com', 'About', 'My message????', 'From: My Site <...', NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1065): MailTransport->send(Object(CakeEmail))
+#2 C:\xampp\htdocs\ISAD234\app\Controller\PagesController.php(15): CakeEmail->send('My message')
+#3 [internal function]: PagesController->home()
+#4 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-08 02:35:04 Error: Fatal Error (1): Class 'CakeEmail' not found in [C:\xampp\htdocs\ISAD234\app\Controller\UsersController.php, line 20]
+2013-02-08 02:35:04 Error: [FatalErrorException] Class 'CakeEmail' not found
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Class 'CakeEmai...', 'C:\xampp\htdocs...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'CakeEmai...', 'C:\xampp\htdocs...', 20, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'CakeEmai...', 'C:\xampp\htdocs...', 20, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-08 02:35:40 Error: [SocketException] Invalid email: ""
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(568): CakeEmail->_setEmail('_from', '', NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(354): CakeEmail->_setEmailSingle('_from', '', NULL, 'From requires o...')
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1146): CakeEmail->from('')
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1038): CakeEmail->_applyConfig('default')
+#4 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(335): CakeEmail->config('default')
+#5 C:\xampp\htdocs\ISAD234\app\Controller\UsersController.php(22): CakeEmail->__construct('default')
+#6 [internal function]: UsersController->register()
+#7 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 02:37:20 Error: [SocketException] Invalid email: ""
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(568): CakeEmail->_setEmail('_from', '', NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(354): CakeEmail->_setEmailSingle('_from', '', NULL, 'From requires o...')
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1146): CakeEmail->from('')
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1038): CakeEmail->_applyConfig('default')
+#4 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(335): CakeEmail->config('default')
+#5 C:\xampp\htdocs\ISAD234\app\Controller\UsersController.php(22): CakeEmail->__construct('default')
+#6 [internal function]: UsersController->register()
+#7 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 02:43:39 Error: [SocketException] Invalid email: ""
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(568): CakeEmail->_setEmail('_from', '', NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(354): CakeEmail->_setEmailSingle('_from', '', NULL, 'From requires o...')
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1146): CakeEmail->from('')
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1038): CakeEmail->_applyConfig('default')
+#4 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(335): CakeEmail->config('default')
+#5 C:\xampp\htdocs\ISAD234\app\Controller\UsersController.php(22): CakeEmail->__construct('default')
+#6 [internal function]: UsersController->register()
+#7 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 02:45:18 Error: [SocketException] Invalid email: ""
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(568): CakeEmail->_setEmail('_from', '', NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(354): CakeEmail->_setEmailSingle('_from', '', NULL, 'From requires o...')
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1146): CakeEmail->from('')
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1038): CakeEmail->_applyConfig('default')
+#4 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(335): CakeEmail->config('default')
+#5 C:\xampp\htdocs\ISAD234\app\Controller\UsersController.php(22): CakeEmail->__construct('default')
+#6 [internal function]: UsersController->register()
+#7 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 02:46:58 Error: [SocketException] Invalid email: ""
+Request URL: /ISAD234/register
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(568): CakeEmail->_setEmail('_from', '', NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(354): CakeEmail->_setEmailSingle('_from', '', NULL, 'From requires o...')
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1146): CakeEmail->from('')
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1038): CakeEmail->_applyConfig('default')
+#4 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(335): CakeEmail->config('default')
+#5 C:\xampp\htdocs\ISAD234\app\Controller\UsersController.php(22): CakeEmail->__construct('default')
+#6 [internal function]: UsersController->register()
+#7 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 02:47:38 Error: [SocketException] Invalid email: ""
+Request URL: /ISAD234/
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(568): CakeEmail->_setEmail('_from', '', NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(354): CakeEmail->_setEmailSingle('_from', '', NULL, 'From requires o...')
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1146): CakeEmail->from('')
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(1038): CakeEmail->_applyConfig('default')
+#4 C:\xampp\htdocs\ISAD234\lib\Cake\Network\Email\CakeEmail.php(335): CakeEmail->config('default')
+#5 C:\xampp\htdocs\ISAD234\app\Controller\PagesController.php(9): CakeEmail->__construct('default')
+#6 [internal function]: PagesController->home()
+#7 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#8 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 03:00:44 Error: [MissingControllerException] Controller class ActivateController could not be found.
+Exception Attributes: array (
+  'class' => 'ActivateController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/activate/2ecce12d59f1583cd03bf8628c823aa3
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-08 03:09:24 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\ISAD234\app\Controller\UsersController.php, line 46]
+2013-02-08 03:09:24 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /ISAD234/login
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 46)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 46, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 46, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-08 03:19:18 Error: [MissingViewException] View file "C:\xampp\htdocs\ISAD234\app\View\Users\activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\ISAD234\\app\\View\\Users\\activate.ctp',
+)
+Request URL: /ISAD234/activate
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-08 03:22:41 Error: [MissingControllerException] Controller class ActivateController could not be found.
+Exception Attributes: array (
+  'class' => 'ActivateController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/activate/hash
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-08 03:28:36 Error: [MissingViewException] View file "C:\xampp\htdocs\ISAD234\app\View\Users\activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\ISAD234\\app\\View\\Users\\activate.ctp',
+)
+Request URL: /ISAD234/activate
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-08 03:35:40 Error: [MissingViewException] View file "C:\xampp\htdocs\ISAD234\app\View\Users\activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\ISAD234\\app\\View\\Users\\activate.ctp',
+)
+Request URL: /ISAD234/activate
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-08 03:35:54 Error: [MissingViewException] View file "C:\xampp\htdocs\ISAD234\app\View\Users\activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\ISAD234\\app\\View\\Users\\activate.ctp',
+)
+Request URL: /ISAD234/activate/b968b8f9fa79732d523b31fc221154f8
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-08 03:36:15 Error: [MissingViewException] View file "C:\xampp\htdocs\ISAD234\app\View\Users\activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\ISAD234\\app\\View\\Users\\activate.ctp',
+)
+Request URL: /ISAD234/activate/b968b8f9fa79732d523b31fc221154f8
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-08 03:36:19 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/activate/b968b8lf9fa79732d523b31fc221154f8
+Stack Trace:
+#0 [internal function]: UsersController->activate('b968b8lf9fa7973...')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-08 03:36:23 Error: [MissingViewException] View file "C:\xampp\htdocs\ISAD234\app\View\Users\activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\ISAD234\\app\\View\\Users\\activate.ctp',
+)
+Request URL: /ISAD234/activate/b968b8f9fa79732d523b31fc221154f8
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-08 03:37:14 Error: [MissingViewException] View file "C:\xampp\htdocs\ISAD234\app\View\Users\activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\ISAD234\\app\\View\\Users\\activate.ctp',
+)
+Request URL: /ISAD234/activate/b968b8f9fa79732d523b31fc221154f8
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-08 03:37:58 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/activate/b968b8f9fa79732d523b31fc221154f8
+Stack Trace:
+#0 [internal function]: UsersController->activate('b968b8f9fa79732...')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-08 03:38:06 Error: [MissingViewException] View file "C:\xampp\htdocs\ISAD234\app\View\Users\activate.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\ISAD234\\app\\View\\Users\\activate.ctp',
+)
+Request URL: /ISAD234/activate/b968b8f9fa79732d523b31fc221154f8
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-08 03:38:45 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/activate/b968b8f9fa79732d523b31fc221154f8
+Stack Trace:
+#0 [internal function]: UsersController->activate('b968b8f9fa79732...')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-08 03:38:53 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/activate/b968b8f9fa79732d523b31fc221154f8
+Stack Trace:
+#0 [internal function]: UsersController->activate('b968b8f9fa79732...')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-08 03:39:34 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/activate/b968b8f9fa79732d523b31fc221154f8
+Stack Trace:
+#0 [internal function]: UsersController->activate('b968b8f9fa79732...')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

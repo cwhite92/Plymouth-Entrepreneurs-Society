@@ -47,7 +47,7 @@ class AppController extends Controller {
     );
 
     public function beforeFilter() {
-        $this->Auth->allow('home', 'register');
+        $this->Auth->allow('home', 'register', 'activate');
 
         // Used in our views to check if the user is logged in
         $this->set('authed', $this->Auth->user());
