@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 05, 2013 at 01:03 AM
+-- Generation Time: Feb 08, 2013 at 03:48 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -35,14 +35,14 @@ CREATE TABLE IF NOT EXISTS `profiles` (
   `bio` text CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
 -- Dumping data for table `profiles`
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `course`, `bio`) VALUES
-(1, 13, 'John', 'Smith', '', '');
+(25, 35, 'John', 'Smith', 'BSc Web Applications Development', 'I like the web. And cheese. And stuff.');
 
 -- --------------------------------------------------------
 
@@ -55,15 +55,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 NOT NULL,
   `created` datetime NOT NULL,
+  `activation` varchar(32) CHARACTER SET utf8 NOT NULL,
+  `activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=36 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `created`) VALUES
-(13, 'john.smith@gmail.com', '$2a$10$R8L4CLuJl6XvkA7ngP7jZOjFs6RBYlFYrv8GSsU1CsDmqAmjobNq6', '2013-02-05 01:02:22');
+INSERT INTO `users` (`id`, `email`, `password`, `created`, `activation`, `activated`) VALUES
+(35, 'john.smith@gmail.com', '$2a$10$iNsnLYTxYZHpX6Dnv5T.4uJXa0dd7ahLQDgk4sMXIgIls.RPvwkmy', '2013-02-08 03:47:05', '4c4338c2c7e0d66af261820e451fdf5e', 1);
 
 --
 -- Constraints for dumped tables
