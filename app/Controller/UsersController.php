@@ -16,27 +16,23 @@ class UsersController extends AppController {
             if($this->User->save($this->request->data)) {
                 // Also create and save the users profile
                 $this->request->data['Profile']['user_id'] = $this->User->id;
-                $this->User->Profile->save($this->request->data);
+                $this->request->data['Profile']['email'] = $this->request->data['User']['email'];
 
-                // Send activation email
-                $email = new CakeEmail('default');
-                $email->viewVars(array(
-                    'emailTitle' => 'Activate your account',
-                    'name' => $this->request->data['Profile']['firstname'],
-                    'activation' => $this->request->data['User']['activation']
-                ))
-                ->from(array('noreply@pes.co.uk' => 'Plymouth Entrepreneurs Society'))
-                ->to($this->request->data['User']['email'])
-                ->subject('Activate your account')
-                ->template('activation')
-                ->emailFormat('html')
-                ->send();
+                if($this->User->Profile->save($this->request->data)) {
+                    // Send activation email
+                    $email = new CakeEmail('default');
+                    $email->viewVars(array(
+                        'emailTitle' => 'Activate your account',
+                        'name' => $this->request->data['Profile']['firstname'],
+                        'activation' => $this->request->data['User']['activation']
+                    ))->to($this->request->data['User']['email'])->subject('Activate your account')->template('activation')->send();
 
-                $this->Session->setFlash('You have been registered. Please check your email for an activation code.');
-                $this->redirect(array('action' => 'register'));
-            } else {
-                $this->Session->setFlash('There was an error registering your account. Please try again.');
+                    $this->Session->setFlash('You have been registered. Please check your email for an activation code.');
+                    $this->redirect(array('action' => 'register'));
+                }
             }
+
+            $this->Session->setFlash('There was a problem registering your account. Please try again.');
         }
     }
 

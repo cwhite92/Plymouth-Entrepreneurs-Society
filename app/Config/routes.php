@@ -27,8 +27,8 @@
     // User specific routes
     Router::connect('/register', array('controller' => 'users', 'action' => 'register'));
     Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
-    Router::connect('/activate/*', array('controller' => 'users', 'action' => 'activate'));
     Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
+    Router::connect('/activate/*', array('controller' => 'users', 'action' => 'activate'));
     Router::connect('/profile/edit', array('controller' => 'profiles', 'action' => 'edit'));
 
 /**

@@ -28,9 +28,9 @@
  * You can specify multiple configurations for production, development and testing.
  *
  * transport => The name of a supported transport; valid options are as follows:
- *		Mail 		- Send using PHP mail function
- *		Smtp		- Send using SMTP
- *		Debug		- Do not send the email, just return the result
+ *      Mail        - Send using PHP mail function
+ *      Smtp        - Send using SMTP
+ *      Debug       - Do not send the email, just return the result
  *
  * You can add custom transports (or override existing transports) by adding the
  * appropriate file to app/Network/Email.  Transports should be named 'YourTransport.php',
@@ -42,12 +42,14 @@
  */
 class EmailConfig {
 
-	public $default = array(
-		'host' => 'ssl://smtp.gmail.com',
+    public $default = array(
+        'host' => 'ssl://smtp.gmail.com',
         'port' => 465,
         'username' => 'isad234test@gmail.com',
         'password' => 'thegmailpassword123',
-        'transport' => 'Smtp'
-	);
+        'transport' => 'Smtp',
+        'from' => array('noreply@pes.co.uk' => 'Plymouth Entrepreneurs Society'),
+        'emailFormat' => 'html'
+    );
 
 }

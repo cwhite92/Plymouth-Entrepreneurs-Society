@@ -46,13 +46,9 @@ class User extends AppModel {
     }
 
     public function beforeSave($options = array()) {
+        // Hash the password before saving
         if(isset($this->data[$this->alias]['password'])) {
             $this->data[$this->alias]['password'] = Security::hash($this->data[$this->alias]['password'], 'blowfish');
-            unset($this->data['User']['passwd']);
-        }
-
-        if(isset($this->data['User']['passwd_confirm'])) {
-            unset($this->data['User']['passwd_confirm']);
         }
 
         return true;
