@@ -6,6 +6,24 @@ class UsersController extends AppController {
 
     public $helpers = array('Html', 'Form');
 
+    public function edit() {
+        if($this->request->is('post')) {
+            if($this->User->save($this->request->data)) {
+                $this->Session->setFlash('Your account has been updated.');
+                $this->redirect(array('action' => 'edit'));
+            }
+
+            $this->Session->setFlash('There was a problem saving your account settings. Please try again.');
+        }
+
+        // Auto populate form fields
+        if(!$this->request->data) {
+            $this->request->data = $this->User->find('first', array(
+                'conditions' => array('User.id' => $this->Auth->user('id'))
+            ));
+        }
+    }
+
     public function register() {
         if($this->request->is('post')) {
             $this->User->create();

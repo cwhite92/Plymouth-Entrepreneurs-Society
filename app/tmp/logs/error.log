@@ -539,3 +539,25 @@ Stack Trace:
 #7 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
 #8 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #9 {main}
+2013-02-11 22:44:45 Error: [MissingViewException] View file "C:\xampp\htdocs\ISAD234\app\View\Users\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\ISAD234\\app\\View\\Users\\edit.ctp',
+)
+Request URL: /ISAD234/account/edit
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-11 23:03:23 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [C:\xampp\htdocs\ISAD234\app\Model\User.php, line 28]
+2013-02-11 23:03:23 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+Request URL: /ISAD234/account/edit
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 28)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 28, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 28, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

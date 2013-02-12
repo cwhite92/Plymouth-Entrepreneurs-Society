@@ -11,7 +11,7 @@ class ProfilesController extends AppController {
                 $this->redirect(array('action' => 'edit'));
             }
             
-            $this->Session->setFlash('There was an error saving your profile. Please try again.');
+            $this->Session->setFlash('There was a problem saving your profile. Please try again.');
         }
 
         // Auto populate form fields

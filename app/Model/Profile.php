@@ -26,7 +26,7 @@ class Profile extends AppModel {
                 'rule' => 'notEmpty',
                 'message' => 'Please enter your email.'
             )
-        ),
+        )
     );
 
 }
