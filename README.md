@@ -2,6 +2,24 @@
 
 A website which will enable users to register and network between each other in order to find people who want something done and people who have the skills to do it.
 
+| Tasks                         | Assigned-to | Status          |
+| ------------------------------|:-----------:|----------------:|
+| Blogging engine               | Jake        | Not-started     |
+| Rich text editor              |             |                 |
+| Profile editor                | Christopher | Nearly complete |
+| Anonymous email               |             |                 |
+| online indicator              |             |                 |
+| admin indicator               |             |                 |
+| report abuse system           |             |                 |
+| create new admin system       |             |                 |
+| event posting                 |             |                 |
+| account verification          |             |                 |
+| link profile with skills page | Christopher |                 |
+| skill search                  |             |                 |
+| rss for blog                  |             |                 |
+| rss for events                |             |                 |
+
+
 Some good things to know
 ----------------
 - Read through the [CakePHP coding standards](http://book.cakephp.org/2.0/en/contributing/cakephp-coding-conventions.html). It will make it a lot easier for other people to understand your code if it's written in a standard way.
