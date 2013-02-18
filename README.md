@@ -4,9 +4,9 @@ A website which will enable users to register and network between each other in 
 
 | Tasks                         | Assigned-to | Status          |
 | ------------------------------|:-----------:|----------------:|
-| Blogging engine               | Jake        | Not-started     |
+| Blogging engine               | Jake        | Not started     |
 | Rich text editor              |             |                 |
-| Profile editor                | Christopher | Nearly complete |
+| Profile editor                | Chris       | Completed       |
 | Anonymous email               |             |                 |
 | online indicator              |             |                 |
 | admin indicator               |             |                 |
@@ -14,7 +14,7 @@ A website which will enable users to register and network between each other in 
 | create new admin system       |             |                 |
 | event posting                 |             |                 |
 | account verification          |             |                 |
-| link profile with skills page | Christopher |                 |
+| link profile with skills page | Chris       | Completed       |
 | skill search                  |             |                 |
 | rss for blog                  |             |                 |
 | rss for events                |             |                 |
