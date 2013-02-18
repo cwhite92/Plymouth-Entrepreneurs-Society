@@ -14,11 +14,21 @@ class ProfilesController extends AppController {
             $this->Session->setFlash('There was a problem saving your profile. Please try again.');
         }
 
-        // Auto populate form fields
         if(!$this->request->data) {
-            $this->request->data = $this->Profile->find('first', array(
+            // Auto populate form fields
+            $profile = $this->Profile->find('first', array(
                 'conditions' => array('User.id' => $this->Auth->user('id'))
             ));
+
+            $this->request->data = $profile;
+
+            // Get the skills corresponding to this profile
+            $skills = array();
+            foreach($profile['Skill'] as $skill) {
+                $skills[] = $skill['name'];
+            }
+
+            $this->set('skills', $skills);
         }
     }
 

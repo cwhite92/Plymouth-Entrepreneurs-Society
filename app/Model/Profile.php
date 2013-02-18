@@ -3,6 +3,7 @@
 class Profile extends AppModel {
 
     public $belongsTo = 'User';
+    public $hasAndBelongsToMany = 'Skill';
 
     public $validate = array(
         'firstname' => array(
@@ -28,5 +29,32 @@ class Profile extends AppModel {
             )
         )
     );
+
+    /**
+     * For some reason, Cake won't call beforeSave() in our Skill model when saving a profile even with a HABTM relationship,
+     * so unfortunately we have to have the skill logic in this Profile model...
+     */
+    public function beforeSave() {
+        $skills = array_filter(explode(' ', $this->data['Skill']['Skill']));
+
+        $this->data['Skill']['Skill'] = array();
+
+        foreach($skills as $skill) {
+            // Check if skill exists
+            if(!$dbSkill = $this->Skill->findByName($skill)) {
+                // Doesn't exist, create it
+                $this->Skill->create();
+                $this->Skill->save(array('name' => $skill));
+            } else {
+                // Does exist, use this skill
+                $this->Skill->set($dbSkill);
+            }
+
+            // Add this skill to our data collection
+            $this->data['Skill']['Skill'][] = $this->Skill->id;
+        }
+
+        return true;
+    }
 
 }
