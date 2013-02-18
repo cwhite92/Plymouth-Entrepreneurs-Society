@@ -13,7 +13,7 @@ A website which will enable users to register and network between each other in 
 | report abuse system           |             |                 |
 | create new admin system       |             |                 |
 | event posting                 |             |                 |
-| account verification          |             |                 |
+| account verification          |             | Completed       |
 | link profile with skills page | Chris       | Completed       |
 | skill search                  |             |                 |
 | rss for blog                  |             |                 |
