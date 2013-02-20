@@ -66,7 +66,7 @@ class User extends AppModel {
     }
 
     // Used when a user changes their password
-    public function beforeValidate() {
+    public function beforeValidate($options) {
         // Change "newPassword" and "confirmNewPassword" to "password" and "confirmPassword"
         if(!empty($this->data[$this->alias]['newPassword'])) {
             $this->data[$this->alias]['password'] = $this->data[$this->alias]['newPassword'];
@@ -79,7 +79,7 @@ class User extends AppModel {
         return true;
     }
 
-    public function beforeSave() {
+    public function beforeSave($options) {
         // Hash the password before saving
         if(isset($this->data[$this->alias]['password'])) {
             $this->data[$this->alias]['password'] = Security::hash($this->data[$this->alias]['password'], 'blowfish');
