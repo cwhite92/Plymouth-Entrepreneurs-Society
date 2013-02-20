@@ -8,16 +8,17 @@ A website which will enable users to register and network between each other in 
 | Rich text editor              |             |                 |
 | Profile editor                | Chris       | Completed       |
 | Anonymous email               |             |                 |
-| online indicator              |             |                 |
-| admin indicator               |             |                 |
-| report abuse system           |             |                 |
-| create new admin system       |             |                 |
-| event posting                 |             |                 |
-| account verification          |             | Completed       |
-| link profile with skills page | Chris       | Completed       |
-| skill search                  |             |                 |
-| rss for blog                  |             |                 |
-| rss for events                |             |                 |
+| Online indicator              |             |                 |
+| Admin indicator               |             |                 |
+| Report abuse system           |             |                 |
+| Create new admin system       |             |                 |
+| Event posting                 |             |                 |
+| Account verification          | Sheldon C.  | Completed       |
+| Link profile with skills page | Chris       | Completed       |
+| Skill search                  |             |                 |
+| RSS for blog                  |             |                 |
+| RSS for events                |             |                 |
+| Integrate template w/ backend | Ed          | Not started     |
 
 
 Some good things to know
