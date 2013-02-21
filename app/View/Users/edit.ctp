@@ -1,4 +1,4 @@
-<h1>Edit account details</h1>
+<h2>Edit account details</h2>
 
 <?php echo $this->Form->create('User', array('type' => 'post')); ?>
 <?php echo $this->Form->hidden('id'); ?>

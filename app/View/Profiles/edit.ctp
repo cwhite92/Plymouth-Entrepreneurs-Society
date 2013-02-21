@@ -1,4 +1,4 @@
-<h1>Edit your profile</h1>
+<h2>Edit your profile</h2>
 
 <?php echo $this->Form->create('Profile', array('type' => 'post')); ?>
 <?php echo $this->Form->hidden('id'); ?>
