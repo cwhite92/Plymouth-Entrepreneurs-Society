@@ -4,6 +4,20 @@ class ProfilesController extends AppController {
 
     public $helpers = array('Html', 'Form');
 
+    public function view($id = null) {
+        // Find profile using $id
+        $profile = $this->Profile->find('first', array(
+            'conditions' => array('Profile.id' => $id)
+        ));
+
+        if(!$profile) {
+            // Profile doesn't exist, return 404
+            throw new NotFoundException();
+        }
+
+        $this->set('profile', $profile);
+    }
+
     public function edit() {
         if($this->request->is('post')) {
             if($this->Profile->save($this->request->data)) {

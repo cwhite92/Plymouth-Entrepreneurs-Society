@@ -32,6 +32,9 @@
     Router::connect('/profile/edit', array('controller' => 'profiles', 'action' => 'edit'));
     Router::connect('/account/edit', array('controller' => 'users', 'action' => 'edit'));
 
+    // Profile specific routes
+    Router::connect('/profile/*', array('controller' => 'profiles', 'action' => 'view'));
+
 /**
  * Load all plugin routes.  See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
