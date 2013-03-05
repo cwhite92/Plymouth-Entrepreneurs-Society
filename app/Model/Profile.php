@@ -34,7 +34,7 @@ class Profile extends AppModel {
      * For some reason, Cake won't call beforeSave() in our Skill model when saving a profile even with a HABTM relationship,
      * so unfortunately we have to have the skill logic in this Profile model...
      */
-    public function beforeSave() {
+    public function beforeSave($options = Array()) {
         // If we have skills to save, do it here
         if(isset($this->data['Skill']['Skill'])) {
             $skills = array_filter(explode(' ', $this->data['Skill']['Skill']));
@@ -59,5 +59,4 @@ class Profile extends AppModel {
             return true;
         }
     }
-
 }
