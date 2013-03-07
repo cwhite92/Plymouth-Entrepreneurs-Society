@@ -10,4 +10,11 @@ Skills:
 Last update: <?php echo $this->Time->format('d M Y', $profile['Profile']['modified']); ?><br /><br />
 
 <h3>Biography</h3>
-<?php echo htmlspecialchars($profile['Profile']['bio']); ?>
+<?php echo htmlspecialchars($profile['Profile']['bio']); ?><br /><br />
+
+<h3>Contact <?php echo $profile['Profile']['firstname']; ?></h3>
+
+<?php echo $this->Form->create('Profile', array('type' => 'post')); ?>
+<?php echo $this->Form->hidden('id'); ?>
+<?php echo $this->Form->input('message'); ?>
+<?php echo $this->Form->end('Send message'); ?>
