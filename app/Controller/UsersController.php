@@ -59,6 +59,9 @@ class UsersController extends AppController {
             'conditions' => array(
                 'User.activation' => $hash,
                 'User.activated' => false
+            ),
+            'fields' => array(
+                'User.id'
             )
         ));
 
