@@ -228,7 +228,8 @@ input[type="button"],
 .dashboard,
 .pageNumbers .pageNumber,
 .profilePic,
-.members ul li {
+.members ul li,
+#flashMessage {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -243,7 +244,8 @@ input[type="button"],
 input[type="submit"],
 input[type="button"],
 .whiteBox,
-.dashboard {
+.dashboard,
+#flashMessage {
     -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, .15);
     -moz-box-shadow: 0 0 6px rgba(0, 0, 0, .15);
     box-shadow: 0 0 6px rgba(0, 0, 0, .15);
@@ -311,6 +313,13 @@ input[type="search"] {
     color: #c22121;
 }
 
+.error-message {
+    display: block;
+    color: #b65151;
+    font-style: italic;
+    font-size: .85em;
+}
+
 .btn,
 .button,
 input[type="submit"],
@@ -358,6 +367,19 @@ input[type="button"] {
 
     .buttons a {
         margin-left: 4px;
+    }
+
+#flashMessage {
+    display: block;
+    margin-bottom: 1.6em;
+    text-align: center;
+    font-weight: 700;
+    padding: .8em 1.6em;
+}
+
+    #flashMessage.message {
+        background-color: #97bdde;
+        color: #3170a6;
     }
 
 /* HEADER CONTAINER --------------------------------- */
