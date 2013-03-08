@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 21, 2013 at 03:52 AM
+-- Generation Time: Mar 08, 2013 at 08:51 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -37,14 +37,14 @@ CREATE TABLE IF NOT EXISTS `profiles` (
   `modified` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=40 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
 
 --
 -- Dumping data for table `profiles`
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `email`, `course`, `bio`, `modified`) VALUES
-(36, 52, 'John', 'Smith', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-02-21 03:47:53');
+(36, 52, 'John', 'Smith', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff. <script type="text/javascript">alert("xss");</script>', '2013-02-21 04:01:02');
 
 -- --------------------------------------------------------
 
@@ -108,18 +108,19 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `admin` int(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `activation` varchar(32) CHARACTER SET utf8 NOT NULL,
   `activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=57 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=59 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `created`, `activation`, `activated`) VALUES
-(52, 'john.smith@gmail.com', '$2a$10$9nLSM4BucqPPBTRaOTzxBu2xao4l.V6YtAp.Dz1VT3sBtoM9FIZuW', '2013-02-12 03:07:40', '4f8a070a4a24a9676ab6ae6a8dfad2a2', 1);
+INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`, `activated`) VALUES
+(52, 'john.smith@gmail.com', '$2a$10$9nLSM4BucqPPBTRaOTzxBu2xao4l.V6YtAp.Dz1VT3sBtoM9FIZuW', 1, '2013-02-12 03:07:40', '4f8a070a4a24a9676ab6ae6a8dfad2a2', 1);
 
 --
 -- Constraints for dumped tables
@@ -135,8 +136,8 @@ ALTER TABLE `profiles`
 -- Constraints for table `profiles_skills`
 --
 ALTER TABLE `profiles_skills`
-  ADD CONSTRAINT `profiles_skills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`),
-  ADD CONSTRAINT `profiles_skills_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`);
+  ADD CONSTRAINT `profiles_skills_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`),
+  ADD CONSTRAINT `profiles_skills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

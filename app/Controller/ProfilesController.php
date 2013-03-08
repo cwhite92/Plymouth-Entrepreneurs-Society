@@ -4,6 +4,12 @@ class ProfilesController extends AppController {
 
     public $helpers = array('Html', 'Form');
 
+    function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('view');
+    }
+
+
     public function view($id = null) {
         // Find profile using $id
         $profile = $this->Profile->find('first', array(

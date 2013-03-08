@@ -4,6 +4,11 @@ class PagesController extends AppController {
 
     public $helpers = array('Html', 'Form');
 
+    function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('home');
+    }
+
     public function home() {
         $this->loadModel('User');
 

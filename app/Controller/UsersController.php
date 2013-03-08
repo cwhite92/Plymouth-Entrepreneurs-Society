@@ -6,6 +6,16 @@ class UsersController extends AppController {
 
     public $helpers = array('Html', 'Form');
 
+    function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('register', 'activate', 'login');
+    }
+
+    // Example admin action for editing users
+    public function admin_edit() {
+
+    }
+
     public function edit() {
         if($this->request->is('post')) {
             if($this->User->save($this->request->data)) {

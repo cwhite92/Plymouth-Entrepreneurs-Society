@@ -42,15 +42,26 @@ class AppController extends Controller {
                 )
             ),
             'loginRedirect' => array('controller' => 'pages', 'action' => 'home'),
-            'logoutRedirect' => array('controller' => 'pages', 'action' => 'home')
+            'logoutRedirect' => array('controller' => 'pages', 'action' => 'home'),
+            'authorize' => array('Controller')
         )
     );
 
     public function beforeFilter() {
-        $this->Auth->allow('home', 'register', 'activate');
-
-        // Used in our views to check if the user is logged in
+        // Used in views to easily check if a user is logged in
         $this->set('authed', $this->Auth->user());
+    }
+
+    public function isAuthorized($user) {
+        // Check if admin
+        if(!empty($this->params['prefix']) && $this->params['prefix'] == 'admin') {
+            if($this->Auth->user('admin') != 1) {
+                // User is not an admin, deny
+                return false;
+            }
+        }
+
+        return true;
     }
 
 }
