@@ -8,8 +8,8 @@ A website which will enable users to register and network between each other in 
 | Rich text editor              |             |                 |
 | Profile editor                | Chris       | Completed       |
 | Anonymous email               |             |                 |
-| Online indicator              |             |                 |
-| Admin indicator               |             |                 |
+| Online indicator              | Jake        |                 |
+| Admin indicator               | Jake        |                 |
 | Report abuse system           |             |                 |
 | Create new admin system       |             |                 |
 | Event posting                 |             |                 |
