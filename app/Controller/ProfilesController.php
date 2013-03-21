@@ -18,6 +18,7 @@ class ProfilesController extends AppController {
 
         if(!$profile) {
             // Profile doesn't exist, return 404
+            // TODO: route to 404 page // redirectUrl(array('controller' => 'pages', 'action' => '404'));
             throw new NotFoundException();
         }
 
