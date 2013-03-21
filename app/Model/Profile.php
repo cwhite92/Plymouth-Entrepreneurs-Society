@@ -27,14 +27,46 @@ class Profile extends AppModel {
                 'rule' => 'notEmpty',
                 'message' => 'Please enter your email.'
             )
+        ),
+        'picture' => array(
+            'kosher' => array(
+                'rule' => 'validateImage',
+                'message' => 'Only images are allowed to be uploaded'
+            ),
+            'size' => array(
+                'rule' => array('fileSize', '<=', '2MB'),
+                'message' => 'Picture must be less than 2 MB'
+            )
         )
     );
+
+    public function validateImage($check) {
+        // Quickly check if the file is an image by trying to get its width/height
+        if(@getimagesize($check['picture']['tmp_name'])) {
+            return true;
+        }
+
+        return false;
+    }
 
     /**
      * For some reason, Cake won't call beforeSave() in our Skill model when saving a profile even with a HABTM relationship,
      * so unfortunately we have to have the skill logic in this Profile model...
      */
     public function beforeSave($options = Array()) {
+        if(isset($this->data['Profile']['picture'])) {
+            // Make a filename
+            $filename = md5(microtime()) . '.jpg';
+
+            // Attempt to move the uploaded file
+            if(!move_uploaded_file($this->data['Profile']['picture']['tmp_name'], WWW_ROOT . 'img' . DS . 'profile_pics' . DS . $filename)) {
+                return false;
+            }
+
+            // Rename it so it gets saved with the correct name in the database
+            $this->data['Profile']['picture'] = $filename;
+        }
+
         // If we have skills to save, do it here
         if(isset($this->data['Skill']['Skill'])) {
             $skills = array_filter(explode(' ', $this->data['Skill']['Skill']));
@@ -55,8 +87,8 @@ class Profile extends AppModel {
                 // Add this skill to our data collection
                 $this->data['Skill']['Skill'][] = $this->Skill->id;
             }
-
-            return true;
         }
+
+        return true;
     }
 }

@@ -1,5 +1,10 @@
 <h2><?php echo $profile['Profile']['firstname']; ?> <?php echo $profile['Profile']['lastname']; ?></h2>
 
+<div class="profile-picture">
+
+    <?php echo $this->Html->image('profile_pics/' . $profile['Profile']['picture'], array('fullbase' => true, 'alt' => $profile['Profile']['firstname'] . ' ' . $profile['Profile']['lastname'] . '\'s profile picture')); ?>
+</div>
+
 <h3>Member information</h3>
 Course: <?php echo htmlspecialchars($profile['Profile']['course']); ?><br />
 Skills: 
