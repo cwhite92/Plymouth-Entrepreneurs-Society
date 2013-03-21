@@ -12,12 +12,12 @@ A website which will enable users to register and network between each other in 
 | Admin indicator               | Jake        |                 |
 | Report abuse system           |             |                 |
 | Create new admin system       |             |                 |
-| Event posting                 |             |                 |
+| Event posting                 | Chris       |                 |
 | Account verification          | Sheldon C.  | Completed       |
 | Link profile with skills page | Chris       | Completed       |
 | Skill search                  |             |                 |
-| RSS for blog                  |             |                 |
-| RSS for events                |             |                 |
+| RSS for blog                  | Jake        |                 |
+| RSS for events                | Jake        |                 |
 | Integrate template w/ backend | Ed          | Started         |
 
 
