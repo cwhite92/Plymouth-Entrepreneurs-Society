@@ -11,11 +11,11 @@ A website which will enable users to register and network between each other in 
 | Online indicator              | Lewis       | Not started     |
 | Admin indicator               | Lewis       | Not started     |
 | Report abuse system           | Levi        | Not started     |
-| Create new admin system       |             |                 |
-| Event posting                 | Chris       | Not started     |
+| Create new admin system       | Levi        | Not started     |
+| Event posting                 | Jake        | Not started     |
 | Account verification          | Sheldon C.  | Completed       |
 | Link profile with skills page | Chris       | Completed       |
-| Skill search                  |             |                 |
+| Skill search                  | Chris       | Not started     |
 | RSS for blog                  | Jake        | Not started     |
 | RSS for events                | Jake        | Not started     |
 | Integrate template w/ backend | Ed          | Started         |
