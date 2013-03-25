@@ -18,12 +18,22 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_pes_blog_post_tags_blog_posts" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_pes_blog_post_tags_blog_posts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_pes_blog_posts" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_pes_blog_posts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_pes_list" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_pes_list" />
+<<<<<<< HEAD
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_pes_profiles" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_pes_profiles" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_pes_users" afterPath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_pes_users" />
+>>>>>>> development
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ISAD234.iws" />
     <ignored path=".idea/workspace.xml" />
+<<<<<<< HEAD
     <file path="/Dummy.txt" changelist="4c6704f8-0b78-407b-a6bd-7b3810dad1a3" time="1364239627049" ignored="false" />
     <file path="/bootstrap.php" changelist="4c6704f8-0b78-407b-a6bd-7b3810dad1a3" time="1364228677550" ignored="false" />
+=======
+    <file path="/Dummy.txt" changelist="4c6704f8-0b78-407b-a6bd-7b3810dad1a3" time="1364236447770" ignored="false" />
+    <file path="/bootstrap.php" changelist="4c6704f8-0b78-407b-a6bd-7b3810dad1a3" time="1364236571446" ignored="false" />
+>>>>>>> development
     <file path="/HabtmCounterCacheBehavior.php" changelist="4c6704f8-0b78-407b-a6bd-7b3810dad1a3" time="1364230883493" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,19 +54,79 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
       <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugins/Blog/Config/routes.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="65" column="21" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.7323232">
+=======
+      <file leaf-file-name="BlogPostsController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/Blog/Controller/BlogPostsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="59.875">
+              <folding>
+                <element signature="n#index#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+                <element signature="n#_filtered#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+                <element signature="n#_category#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+                <element signature="n#_tag#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+                <element signature="n#_setArchivesCategoriesAndTags#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+                <element signature="n#_setSelectedCategory#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+                <element signature="n#admin_index#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+                <element signature="n#admin_view#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+                <element signature="n#admin_add#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+                <element signature="n#admin_edit#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+                <element signature="n#admin_delete#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlogSettingsController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/Blog/Controller/BlogSettingsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="35" selection-start="1428" selection-end="1430" vertical-scroll-proportion="-15.6">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="BlogPost.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/Blog/Model/BlogPost.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="129" column="36" selection-start="2952" selection-end="2952" vertical-scroll-proportion="-80.625">
+>>>>>>> development
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Config/routes.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+=======
+      <file leaf-file-name="BlogSetting.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/Blog/Model/BlogSetting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="18" selection-start="266" selection-end="266" vertical-scroll-proportion="-5.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.jpg" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/webroot/img/profile_pics/user.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlogPostTag.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/Blog/Model/BlogPostTag.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="23.0">
+>>>>>>> development
               <folding />
             </state>
           </provider>
@@ -81,12 +151,22 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/plugins/Blog/Config/routes.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/Config/bootstrap.php" />
+=======
+>>>>>>> development
         <option value="$PROJECT_DIR$/app/Config/database.php" />
         <option value="$PROJECT_DIR$/plugins/Blog/Model/BlogSetting.php" />
         <option value="$PROJECT_DIR$/plugins/Blog/Model/BlogPost.php" />
         <option value="$PROJECT_DIR$/plugins/HabtmCounterCache/Model/Behavior/HabtmCounterCacheBehavior.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/pes.sql" />
+=======
+        <option value="$PROJECT_DIR$/app/Config/bootstrap.php" />
+        <option value="$PROJECT_DIR$/pes.sql" />
+        <option value="$PROJECT_DIR$/plugins/Blog/View/BlogPosts/view.ctp" />
+        <option value="$PROJECT_DIR$/plugins/Blog/View/BlogPosts/index.ctp" />
+>>>>>>> development
       </list>
     </option>
   </component>
@@ -165,7 +245,114 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+=======
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ISAD234" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ISAD234" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ISAD234" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ISAD234" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ISAD234" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ISAD234" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ISAD234" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ISAD234" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ISAD234" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ISAD234" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -186,6 +373,32 @@
               <option name="myItemId" value="Config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+>>>>>>> development
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ISAD234" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ISAD234" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+<<<<<<< HEAD
+=======
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Schema" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+>>>>>>> development
           </PATH>
         </subPane>
       </pane>
@@ -193,6 +406,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
+=======
+    <property name="FullScreen" value="false" />
+>>>>>>> development
   </component>
   <component name="RunManager">
     <list size="0" />
@@ -290,6 +507,7 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/plugins/Blog/Model/BlogPost.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="129" column="31" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.0">
@@ -310,17 +528,46 @@
     <entry file="file://$PROJECT_DIR$/plugins/Blog/Config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="16" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/lib/Cake/Core/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="31" selection-start="1923" selection-end="1923" vertical-scroll-proportion="-16.875">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="27" selection-start="2344" selection-end="2344" vertical-scroll-proportion="0.6060606">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/HabtmCounterCache/Model/Behavior/HabtmCounterCacheBehavior.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="312" column="16" selection-start="11692" selection-end="11692" vertical-scroll-proportion="-19.708334">
+>>>>>>> development
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/Config/routes.php">
+=======
+    <entry file="file://$PROJECT_DIR$/plugins/Blog/Controller/BlogPostCategoriesController.php">
+>>>>>>> development
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/Config/bootstrap.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="144" column="0" selection-start="6360" selection-end="6360" vertical-scroll-proportion="-0.625" />
@@ -339,17 +586,55 @@
     <entry file="file://$PROJECT_DIR$/plugins/Blog/Model/BlogSetting.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="36" selection-start="582" selection-end="582" vertical-scroll-proportion="-17.5">
+=======
+    <entry file="file://$PROJECT_DIR$/plugins/Blog/Controller/BlogPostsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="59.875">
+          <folding>
+            <element signature="n#index#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+            <element signature="n#_filtered#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+            <element signature="n#_category#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+            <element signature="n#_tag#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+            <element signature="n#_setArchivesCategoriesAndTags#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+            <element signature="n#_setSelectedCategory#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+            <element signature="n#admin_index#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+            <element signature="n#admin_view#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+            <element signature="n#admin_add#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+            <element signature="n#admin_edit#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+            <element signature="n#admin_delete#0;n#BlogPostsController#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pes.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="33" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.7005838">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Config/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="0" selection-start="6388" selection-end="6388" vertical-scroll-proportion="1.5656565">
+>>>>>>> development
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/plugins/Blog/Model/BlogPost.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="129" column="36" selection-start="2952" selection-end="2952" vertical-scroll-proportion="-0.625">
+=======
+    <entry file="file://$PROJECT_DIR$/plugins/Blog/Controller/BlogSettingsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="35" selection-start="1428" selection-end="1430" vertical-scroll-proportion="-15.6">
+>>>>>>> development
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/pes.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state line="273" column="0" selection-start="9194" selection-end="9194" vertical-scroll-proportion="0.97497916" />
@@ -373,17 +658,64 @@
     <entry file="file://$PROJECT_DIR$/app/Config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/plugins/Blog/View/Helper/blog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="301" column="22" selection-start="8762" selection-end="8762" vertical-scroll-proportion="3.8005052">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/Blog/View/BlogPosts/index.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="54" selection-start="2632" selection-end="2648" vertical-scroll-proportion="0.8712121">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/Blog/View/BlogPosts/view.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="76" selection-start="1841" selection-end="1841" vertical-scroll-proportion="0.5808081">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/Blog/Model/BlogPost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="36" selection-start="2952" selection-end="2952" vertical-scroll-proportion="-80.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/Blog/Model/BlogPostTag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="23.0">
+>>>>>>> development
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/plugins/Blog/Config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="21" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.7323232">
+=======
+    <entry file="file://$PROJECT_DIR$/plugins/Blog/Model/BlogSetting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="18" selection-start="266" selection-end="266" vertical-scroll-proportion="-5.625">
+>>>>>>> development
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/app/webroot/img/profile_pics/user.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+>>>>>>> development
   </component>
 </project>
 
