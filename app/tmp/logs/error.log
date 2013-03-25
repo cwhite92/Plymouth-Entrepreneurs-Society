@@ -3621,3 +3621,30 @@ Request URL: /ISAD234/images/user.png
 Stack Trace:
 #0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-03-25 18:58:19 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/images/user.png
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 19:17:21 Error: [MissingControllerException] Controller class BlogPostsController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogPostsController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 19:17:22 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/admin/images/user.png
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
