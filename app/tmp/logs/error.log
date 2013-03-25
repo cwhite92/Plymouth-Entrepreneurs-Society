@@ -3902,3 +3902,252 @@ Request URL: /ISAD234/images/user.png
 Stack Trace:
 #0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-03-25 21:31:06 Error: [MissingControllerException] Controller class BlogSettingsController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogSettingsController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/admin/blog_settings
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 21:35:13 Error: [MissingControllerException] Controller class BlogPostsController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogPostsController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 21:36:46 Error: [MissingControllerException] Controller class BlogPostsController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogPostsController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 21:37:12 Error: [MissingControllerException] Controller class BlogPostsController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogPostsController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 21:37:50 Error: [MissingControllerException] Controller class BlogPostsController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogPostsController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 21:38:10 Error: [PrivateActionException] Private Action BlogPostsController::admin_index() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'BlogPostsController',
+  'action' => 'admin_index',
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-25 21:38:17 Error: [PrivateActionException] Private Action BlogPostsController::admin_index() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'BlogPostsController',
+  'action' => 'admin_index',
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-25 21:38:44 Error: [PrivateActionException] Private Action BlogPostsController::admin_view() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'BlogPostsController',
+  'action' => 'admin_view',
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-25 21:38:45 Error: [PrivateActionException] Private Action BlogPostsController::admin_view() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'BlogPostsController',
+  'action' => 'admin_view',
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-25 21:39:11 Error: [PrivateActionException] Private Action BlogPostsController::admin_edit() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'BlogPostsController',
+  'action' => 'admin_edit',
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-25 21:41:22 Error: [PrivateActionException] Private Action BlogPostsController::admin_index() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'BlogPostsController',
+  'action' => 'admin_index',
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-25 22:48:23 Error: [MissingControllerException] Controller class BlogSettingsController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogSettingsController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/admin/blog_settings
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 22:48:26 Error: [MissingControllerException] Controller class BlogSettingsController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogSettingsController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/admin/blog_settings
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 22:48:45 Error: [PrivateActionException] Private Action BlogSettingsController::admin_view() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'BlogSettingsController',
+  'action' => 'admin_view',
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogSettingsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-25 22:48:49 Error: [PrivateActionException] Private Action BlogSettingsController::admin_view() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'BlogSettingsController',
+  'action' => 'admin_view',
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogSettingsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-25 22:49:50 Error: [PrivateActionException] Private Action BlogSettingsController::admin_index() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'BlogSettingsController',
+  'action' => 'admin_index',
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogSettingsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-25 22:49:52 Error: [PrivateActionException] Private Action BlogSettingsController::admin_index() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'BlogSettingsController',
+  'action' => 'admin_index',
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogSettingsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-25 22:54:38 Error: [PrivateActionException] Private Action BlogPostsController::admin_index() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'BlogPostsController',
+  'action' => 'admin_index',
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-25 22:58:41 Error: [PrivateActionException] Private Action BlogPostsController::admin_index() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'BlogPostsController',
+  'action' => 'admin_index',
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-25 22:58:51 Error: [MissingControllerException] Controller class BlogPostsController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogPostsController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/admin/blog_posts
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 23:00:24 Error: [NotFoundException] Invalid Blog Post
+Request URL: /ISAD234/blog/admin
+Stack Trace:
+#0 [internal function]: BlogPostsController->view()
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(BlogPostsController), Array)
+#2 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-25 23:01:20 Error: [NotFoundException] Invalid Blog Post
+Request URL: /ISAD234/blog/admin/
+Stack Trace:
+#0 [internal function]: BlogPostsController->view()
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(BlogPostsController), Array)
+#2 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-25 23:04:08 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/admin
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 23:04:15 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => 'Blog',
+)
+Request URL: /ISAD234/admin/blog
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 23:04:20 Error: [MissingControllerException] Controller class BlogSettingsController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogSettingsController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/admin/blog_settings
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
