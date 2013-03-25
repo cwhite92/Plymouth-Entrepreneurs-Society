@@ -6,3 +6,11 @@ app/Config/database.php
 plugins/Blog
 
 plugins/HabtmCounterCache
+
+.idea/inspectionProfiles/Project_Default.xml
+
+.idea/inspectionProfiles/profiles_settings.xml
+
+.idea/sqldialects.xml
+
+app/tmp/cache/.DS_Store
