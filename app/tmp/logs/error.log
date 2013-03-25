@@ -2711,3 +2711,214 @@ Stack Trace:
 #3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
 #4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2013-03-25 17:22:24 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Unknown database \'pes\'',
+  'enabled' => true,
+)
+Request URL: /ISAD234/
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Datasource\DboSource.php(261): Mysql->connect()
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Model\ConnectionManager.php(101): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Model.php(3195): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Model.php(1107): Model->setDataSource('default')
+#4 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Model.php(3217): Model->setSource('users')
+#5 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Model.php(2674): Model->getDataSource()
+#6 C:\xampp\htdocs\ISAD234\app\Controller\PagesController.php(19): Model->find('all', Array)
+#7 [internal function]: PagesController->home()
+#8 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#9 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-25 17:22:26 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/images/user.png
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 17:23:33 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/images/user.png
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 17:23:43 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/images/user.png
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 17:23:46 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/images/user.png
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 17:27:00 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/images/user.png
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 17:27:09 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/images/user.png
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 17:27:12 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/images/user.png
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 17:37:04 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/profile/images/user.png
+Stack Trace:
+#0 [internal function]: ProfilesController->view('images', 'user.png')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-25 17:37:30 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/images/user.png
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 17:38:07 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/images/user.png
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 17:38:27 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/profile/images/user.png
+Stack Trace:
+#0 [internal function]: ProfilesController->view('images', 'user.png')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-25 17:39:22 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/profile/images/user.png
+Stack Trace:
+#0 [internal function]: ProfilesController->view('images', 'user.png')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-25 17:39:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/img/profile_pics/1bb5bed66b1fb7ef9844fb1f3b35ba78
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-25 17:39:27 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/profile/images/user.png
+Stack Trace:
+#0 [internal function]: ProfilesController->view('images', 'user.png')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-25 17:43:01 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/profile/images/user.png
+Stack Trace:
+#0 [internal function]: ProfilesController->view('images', 'user.png')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-25 17:43:05 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/profile/images/user.png
+Stack Trace:
+#0 [internal function]: ProfilesController->view('images', 'user.png')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-25 17:43:12 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/profile/images/user.png
+Stack Trace:
+#0 [internal function]: ProfilesController->view('images', 'user.png')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-25 17:45:29 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/profile/images/user.png
+Stack Trace:
+#0 [internal function]: ProfilesController->view('images', 'user.png')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-25 17:46:53 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\ISAD234\app\View\Profiles\view.ctp, line 4]
+2013-03-25 17:46:53 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /ISAD234/profile/36
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 4, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 4, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-25 17:46:54 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/profile/images/user.png
+Stack Trace:
+#0 [internal function]: ProfilesController->view('images', 'user.png')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-25 17:47:03 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/profile/images/user.png
+Stack Trace:
+#0 [internal function]: ProfilesController->view('images', 'user.png')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

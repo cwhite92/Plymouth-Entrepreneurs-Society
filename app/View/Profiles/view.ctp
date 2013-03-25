@@ -1,8 +1,7 @@
 <h2><?php echo $profile['Profile']['firstname']; ?> <?php echo $profile['Profile']['lastname']; ?></h2>
 
 <div class="profile-picture">
-
-    <?php echo $this->Html->image('profile_pics/' . $profile['Profile']['picture'], array('fullbase' => true, 'alt' => $profile['Profile']['firstname'] . ' ' . $profile['Profile']['lastname'] . '\'s profile picture')); ?>
+    <?php echo $this->Html->image('profile_pics/' . $profile['Profile']['picture'], array('fullbase' => true, 'alt' => $profile['Profile']['firstname'] . ' ' . $profile['Profile']['lastname'] . '\'s profile picture', 'width' => 226, 'height' => 226)); ?>
 </div>
 
 <h3>Member information</h3>

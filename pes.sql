@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Mar 08, 2013 at 08:51 PM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Host: 127.0.0.1
+-- Generation Time: Mar 25, 2013 at 05:55 PM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS `profiles` (
   `user_id` int(11) NOT NULL,
   `firstname` varchar(50) CHARACTER SET utf8 NOT NULL,
   `lastname` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `picture` varchar(36) CHARACTER SET utf8 NOT NULL DEFAULT 'user.jpg',
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `course` varchar(50) CHARACTER SET utf8 NOT NULL,
   `bio` text CHARACTER SET utf8 NOT NULL,
@@ -43,8 +44,8 @@ CREATE TABLE IF NOT EXISTS `profiles` (
 -- Dumping data for table `profiles`
 --
 
-INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `email`, `course`, `bio`, `modified`) VALUES
-(36, 52, 'John', 'Smith', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff. <script type="text/javascript">alert("xss");</script>', '2013-02-21 04:01:02');
+INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `email`, `course`, `bio`, `modified`) VALUES
+(36, 52, 'John', 'Smith', '0a885f7b5d8968bd5daabace240a91fd.jpg', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-03-25 17:43:04');
 
 -- --------------------------------------------------------
 
