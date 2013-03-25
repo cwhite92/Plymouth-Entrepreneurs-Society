@@ -67,3 +67,17 @@ Router::connect('/blog/*', array(
   'controller' => 'blog_posts',
   'action' => 'index',
 ));
+
+Router::connect('/admin/blog_posts', array(
+    'plugin' => 'blog',
+    'controller' => 'blog_posts',
+    'action' => 'index',
+    'admin' => true,
+));
+
+Router::connect('/admin/blog_settings', array(
+    'plugin' => 'blog',
+    'controller' => 'blog_settings',
+    'action' => 'index',
+    'admin' => true,
+));
