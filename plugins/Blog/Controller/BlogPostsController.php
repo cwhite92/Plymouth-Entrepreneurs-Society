@@ -38,6 +38,7 @@ class BlogPostsController extends AppController {
 
   public function beforeFilter() {
     parent::beforeFilter();
+    $this->Auth->allow('index');
     $this->set('blogSettings', ClassRegistry::init('Blog.BlogSetting')->getSettings());
   }
 

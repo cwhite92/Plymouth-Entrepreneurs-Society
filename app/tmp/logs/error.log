@@ -4187,3 +4187,330 @@ Request URL: /ISAD234/
 Stack Trace:
 #0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-03-26 02:17:03 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/admin
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 02:19:29 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/Blog/blog_posts/index/category:Events
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 02:19:59 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/Blog/index/category:Events
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 02:20:04 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/Blog/category:Events
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 02:20:41 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/Blog/category:Events
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 02:20:43 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/Blog/category:Events
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 02:20:48 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/Blog/blog_posts/index/category:Events
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 11:16:26 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /ISAD234/login
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Datasource\DboSource.php(261): Mysql->connect()
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Model\ConnectionManager.php(101): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Model.php(3195): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Model.php(1107): Model->setDataSource('default')
+#4 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Model.php(3217): Model->setSource('users')
+#5 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Model.php(1318): Model->getDataSource()
+#6 C:\xampp\htdocs\ISAD234\lib\Cake\View\Helper\FormHelper.php(197): Model->schema()
+#7 C:\xampp\htdocs\ISAD234\lib\Cake\View\Helper\FormHelper.php(446): FormHelper->_introspectModel('User', 'fields')
+#8 C:\xampp\htdocs\ISAD234\app\View\Users\login.ctp(8): FormHelper->create('User')
+#9 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(947): include('C:\xampp\htdocs...')
+#10 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(909): View->_evaluate('C:\xampp\htdocs...', Array)
+#11 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(470): View->_render('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#13 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#14 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-03-26 11:18:46 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/Blog/blog_posts/index/year:2013/month:03
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 11:18:54 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/Blog/blog_posts/index/category:Events
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 12:10:31 Error: [MissingActionException] Action UsersController::admin_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_login',
+)
+Request URL: /ISAD234/admin/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-26 12:11:18 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ';' in [C:\xampp\htdocs\ISAD234\app\Model\Profile.php, line 7]
+2013-03-26 12:11:18 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ';'
+Request URL: /ISAD234/profile/36
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 7, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 7, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 12:11:38 Error: [MissingPluginException] Plugin Searchable could not be found.
+Exception Attributes: array (
+  'plugin' => 'Searchable',
+)
+Request URL: /ISAD234/profile/36
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(364): CakePlugin::path('Searchable')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(225): App::pluginPath('Searchable')
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(542): App::path('Model/Behavior', 'Searchable')
+#3 [internal function]: App::load('SearchableBehav...')
+#4 [internal function]: spl_autoload_call('SearchableBehav...')
+#5 C:\xampp\htdocs\ISAD234\lib\Cake\Model\BehaviorCollection.php(120): class_exists('SearchableBehav...')
+#6 C:\xampp\htdocs\ISAD234\lib\Cake\Model\BehaviorCollection.php(67): BehaviorCollection->load('Searchable.Sear...', Array)
+#7 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Model.php(748): BehaviorCollection->init('Profile', Array)
+#8 [internal function]: Model->__construct(Array)
+#9 C:\xampp\htdocs\ISAD234\lib\Cake\Utility\ClassRegistry.php(164): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(733): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(366): Controller->loadModel('Profile')
+#12 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(404): Controller->__isset('Profile')
+#13 C:\xampp\htdocs\ISAD234\app\Controller\ProfilesController.php(15): Controller->__get('Profile')
+#14 [internal function]: ProfilesController->view('36')
+#15 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#16 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#17 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#18 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2013-03-26 12:13:00 Error: [MissingPluginException] Plugin Searchable could not be found.
+Exception Attributes: array (
+  'plugin' => 'Searchable',
+)
+Request URL: /ISAD234/profile/36
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(364): CakePlugin::path('Searchable')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(225): App::pluginPath('Searchable')
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(542): App::path('Model/Behavior', 'Searchable')
+#3 [internal function]: App::load('SearchableBehav...')
+#4 [internal function]: spl_autoload_call('SearchableBehav...')
+#5 C:\xampp\htdocs\ISAD234\lib\Cake\Model\BehaviorCollection.php(120): class_exists('SearchableBehav...')
+#6 C:\xampp\htdocs\ISAD234\lib\Cake\Model\BehaviorCollection.php(67): BehaviorCollection->load('Searchable.Sear...', Array)
+#7 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Model.php(748): BehaviorCollection->init('Profile', Array)
+#8 [internal function]: Model->__construct(Array)
+#9 C:\xampp\htdocs\ISAD234\lib\Cake\Utility\ClassRegistry.php(164): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(733): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(366): Controller->loadModel('Profile')
+#12 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(404): Controller->__isset('Profile')
+#13 C:\xampp\htdocs\ISAD234\app\Controller\ProfilesController.php(15): Controller->__get('Profile')
+#14 [internal function]: ProfilesController->view('36')
+#15 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#16 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#17 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#18 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2013-03-26 12:13:36 Error: [MissingPluginException] Plugin Searchable could not be found.
+Exception Attributes: array (
+  'plugin' => 'Searchable',
+)
+Request URL: /ISAD234/profile/36
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(364): CakePlugin::path('Searchable')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(225): App::pluginPath('Searchable')
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(542): App::path('Model/Behavior', 'Searchable')
+#3 [internal function]: App::load('SearchableBehav...')
+#4 [internal function]: spl_autoload_call('SearchableBehav...')
+#5 C:\xampp\htdocs\ISAD234\lib\Cake\Model\BehaviorCollection.php(120): class_exists('SearchableBehav...')
+#6 C:\xampp\htdocs\ISAD234\lib\Cake\Model\BehaviorCollection.php(67): BehaviorCollection->load('Searchable.Sear...', Array)
+#7 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Model.php(748): BehaviorCollection->init('Profile', Array)
+#8 [internal function]: Model->__construct(Array)
+#9 C:\xampp\htdocs\ISAD234\lib\Cake\Utility\ClassRegistry.php(164): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(733): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(366): Controller->loadModel('Profile')
+#12 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(404): Controller->__isset('Profile')
+#13 C:\xampp\htdocs\ISAD234\app\Controller\ProfilesController.php(15): Controller->__get('Profile')
+#14 [internal function]: ProfilesController->view('36')
+#15 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#16 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#17 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#18 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2013-03-26 12:14:09 Error: [MissingPluginException] Plugin Searchable could not be found.
+Exception Attributes: array (
+  'plugin' => 'Searchable',
+)
+Request URL: /ISAD234/profile/36
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(364): CakePlugin::path('Searchable')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(225): App::pluginPath('Searchable')
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(542): App::path('Model/Behavior', 'Searchable')
+#3 [internal function]: App::load('SearchableBehav...')
+#4 [internal function]: spl_autoload_call('SearchableBehav...')
+#5 C:\xampp\htdocs\ISAD234\lib\Cake\Model\BehaviorCollection.php(120): class_exists('SearchableBehav...')
+#6 C:\xampp\htdocs\ISAD234\lib\Cake\Model\BehaviorCollection.php(67): BehaviorCollection->load('Searchable.Sear...', Array)
+#7 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Model.php(748): BehaviorCollection->init('Profile', Array)
+#8 [internal function]: Model->__construct(Array)
+#9 C:\xampp\htdocs\ISAD234\lib\Cake\Utility\ClassRegistry.php(164): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(733): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(366): Controller->loadModel('Profile')
+#12 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(404): Controller->__isset('Profile')
+#13 C:\xampp\htdocs\ISAD234\app\Controller\ProfilesController.php(15): Controller->__get('Profile')
+#14 [internal function]: ProfilesController->view('36')
+#15 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#16 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#17 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#18 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2013-03-26 12:14:26 Error: [MissingPluginException] Plugin Searchable could not be found.
+Exception Attributes: array (
+  'plugin' => 'Searchable',
+)
+Request URL: /ISAD234/profile/36
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(364): CakePlugin::path('Searchable')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(225): App::pluginPath('Searchable')
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(542): App::path('Model/Behavior', 'Searchable')
+#3 [internal function]: App::load('SearchableBehav...')
+#4 [internal function]: spl_autoload_call('SearchableBehav...')
+#5 C:\xampp\htdocs\ISAD234\lib\Cake\Model\BehaviorCollection.php(120): class_exists('SearchableBehav...')
+#6 C:\xampp\htdocs\ISAD234\lib\Cake\Model\BehaviorCollection.php(67): BehaviorCollection->load('Searchable.Sear...', Array)
+#7 C:\xampp\htdocs\ISAD234\lib\Cake\Model\Model.php(748): BehaviorCollection->init('Profile', Array)
+#8 [internal function]: Model->__construct(Array)
+#9 C:\xampp\htdocs\ISAD234\lib\Cake\Utility\ClassRegistry.php(164): ReflectionClass->newInstance(Array)
+#10 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(733): ClassRegistry::init(Array)
+#11 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(366): Controller->loadModel('Profile')
+#12 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(404): Controller->__isset('Profile')
+#13 C:\xampp\htdocs\ISAD234\app\Controller\ProfilesController.php(15): Controller->__get('Profile')
+#14 [internal function]: ProfilesController->view('36')
+#15 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#16 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#17 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#18 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2013-03-26 12:15:26 Error: [MissingControllerException] Controller class SkillsController could not be found.
+Exception Attributes: array (
+  'class' => 'SkillsController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/skills/view/32
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 12:17:19 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\xampp\htdocs\ISAD234\app\Controller\SkillsController.php, line 15]
+2013-03-26 12:17:19 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /ISAD234/skills/view/32
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 15, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 15, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 12:19:06 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/skills/view/32
+Stack Trace:
+#0 [internal function]: SkillsController->view('32')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(SkillsController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(SkillsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 12:19:18 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/skill/C
+Stack Trace:
+#0 [internal function]: SkillsController->view('C')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(SkillsController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(SkillsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 12:19:29 Error: [MissingViewException] View file "C:\xampp\htdocs\ISAD234\app\View\Skills\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\ISAD234\\app\\View\\Skills\\view.ctp',
+)
+Request URL: /ISAD234/skill/HTML
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(SkillsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 12:20:01 Error: [MissingViewException] View file "C:\xampp\htdocs\ISAD234\app\View\Skills\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\ISAD234\\app\\View\\Skills\\view.ctp',
+)
+Request URL: /ISAD234/skill/32
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(SkillsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 12:36:40 Error: [NotFoundException] Not Found
+Request URL: /ISAD234/skill/C
+Stack Trace:
+#0 [internal function]: SkillsController->view('C')
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(SkillsController), Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(SkillsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

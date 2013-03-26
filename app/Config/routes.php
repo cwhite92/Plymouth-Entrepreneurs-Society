@@ -32,6 +32,9 @@
     Router::connect('/profile/edit', array('controller' => 'profiles', 'action' => 'edit'));
     Router::connect('/account/edit', array('controller' => 'users', 'action' => 'edit'));
 
+    // Skill specific routes
+    Router::connect('/skill/*', array('controller' => 'skills', 'action' => 'view'));
+
     // Profile specific routes
     Router::connect('/profile/*', array('controller' => 'profiles', 'action' => 'view'));
 

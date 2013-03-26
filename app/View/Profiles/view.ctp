@@ -8,7 +8,7 @@
 Course: <?php echo htmlspecialchars($profile['Profile']['course']); ?><br />
 Skills: 
 <?php foreach($profile['Skill'] as $skill): ?>
-    <?php echo $this->Html->link($skill['name'], array('controller' => 'skills', 'action' => 'view', $skill['id'])); ?>
+    <?php echo $this->Html->link($skill['name'], array('controller' => 'skills', 'action' => 'view', urlencode($skill['name']))); ?>
 <?php endforeach; ?>
 <br />
 Last update: <?php echo $this->Time->format('d M Y', $profile['Profile']['modified']); ?><br /><br />
