@@ -3,7 +3,7 @@
 <?php echo $this->Form->create('Profile', array('type' => 'file')); ?>
 <?php echo $this->Form->hidden('id'); ?>
 <?php echo $this->Form->label('Profile.picture', 'Profile picture'); ?>
-<?php echo $this->Form->file('picture'); ?>
+<?php echo $this->Form->input('picture', array('type' => 'file')); ?>
 <?php echo $this->Form->input('firstname'); ?>
 <?php echo $this->Form->input('lastname'); ?>
 <?php echo $this->Form->input('email', array('between' => 'This is the email other users will use to contact you')); ?>
