@@ -1,7 +1,8 @@
 <div class="mainContainer">
     <div class="contentContainer clearfix">
         <div class="section userMenu">
-            <a class="logo" href="./">Entrepreneurs Society</a><a href="#"><img src="img/user.png" alt="user"></a> <a href="#">ed torba</a> <a href="#">Sign out</a>
+            <a class="logo" href="./">Entrepreneurs Society</a><a href="#"><?php echo $this->Html->image('profile_pics/user.jpg', array('alt' => 'User', 'class' => 'profilePic')); ?></a>
+            <a href="#">ed torba</a> <a href="#">Sign out</a>
         </div><!-- END .section -->
         <div class="section clearfix">
             <div class="entry">
