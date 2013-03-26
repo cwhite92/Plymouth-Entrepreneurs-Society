@@ -1,17 +1,14 @@
 <div class="widget hiddenPhone dashboard dashboardMain">
-    <fieldset>
-        <div class="fieldWrap">
-            <input type="text" name="email" tabindex="1" placeholder="Email" />
-        </div>
-    </fieldset>
-    <fieldset>
-        <div class="fieldWrap">
-            <input type="password" name="password" tabindex="2" placeholder="Password" autocomplete="off" />
-        </div>
-    </fieldset>
+    <?php echo $this->Session->flash('auth'); ?>
+
+    <?php echo $this->Form->create('User', array('url' => array('plugin' => false, 'controller' => 'users', 'action' => 'login'))); ?>
+    <?php echo $this->Form->input('email'); ?>
+    <?php echo $this->Form->input('password'); ?>
+    <?php echo $this->Form->end('Sign In'); ?>
     <fieldset>
         <div class="buttons">
-            <input class="button" type="submit" name="submit" value="Sign In" /> <a href="#">Lost Password?</a> <?php echo $this->Html->link('Register', array('controller' => 'users', 'action' => 'register')); ?>
+            <a href="#">Lost Password?</a> 
+            <?php echo $this->Html->link('Register', array('controller' => 'users', 'action' => 'register')); ?>
         </div>
     </fieldset>
 </div>

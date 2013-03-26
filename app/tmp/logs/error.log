@@ -4525,3 +4525,68 @@ Stack Trace:
 #1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
 #2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2013-03-26 15:19:44 Error: [MissingActionException] Action PagesController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'images',
+)
+Request URL: /ISAD234/pages/images/user.png
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-26 15:22:23 Error: [MissingActionException] Action PagesController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'images',
+)
+Request URL: /ISAD234/pages/images/user.png
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-26 15:25:18 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\ISAD234\app\View\Elements\loginForm.ctp, line 3]
+2013-03-26 15:25:18 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /ISAD234/
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 3, Array)
+#2 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 3, Array)
+#3 C:\xampp\htdocs\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-26 15:26:41 Error: [MissingActionException] Action PagesController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'images',
+)
+Request URL: /ISAD234/pages/images/user.png
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-26 15:28:04 Error: [MissingActionException] Action PagesController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'images',
+)
+Request URL: /ISAD234/pages/images/user.png
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-26 15:30:18 Error: [MissingActionException] Action PagesController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'images',
+)
+Request URL: /ISAD234/pages/images/user.png
+Stack Trace:
+#0 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

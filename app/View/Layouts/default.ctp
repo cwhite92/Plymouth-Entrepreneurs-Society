@@ -69,7 +69,7 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
                                     <li><a href="#">About Us</a></li>
                                     <li><a href="#">Contact</a></li>
                                     <?php if($authed): // Will be removed later ?>
-                                    <li><?php echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout')); ?></li>
+                                    <li><?php echo $this->Html->link('Logout', array('plugin' => false, 'controller' => 'users', 'action' => 'logout')); ?></li>
                                     <?php endif; ?>
                                 </ul>
                                 <div class="hiddenDesktop">
@@ -113,7 +113,9 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
 								);
 							?>
                             </div>
-                            <?php echo $this->element('loginForm'); ?>
+                            <?php if(!$authed): ?>
+                                <?php echo $this->element('loginForm'); ?>
+                            <?php endif; ?>
                             <?php echo $this->element('sidebar'); ?>
                         </div>
                     </div><!-- END .span4 -->
