@@ -22,7 +22,7 @@
  */
 
     // General routes
-    Router::connect('/', array('plugin' => 'Blog', 'controller' => 'blog_posts', 'action' => 'index'));
+    Router::connect('/', array('plugin' => 'blog', 'controller' => 'blog_posts', 'action' => 'index'));
 
     // User specific routes
     Router::connect('/register', array('controller' => 'users', 'action' => 'register'));
