@@ -1,0 +1,679 @@
+/*
+    STYLE CSS
+    
+    - FONTS
+    - NORMALIZE
+    - COMMON CLASSES
+    - DOCUMENT SETUP
+    - CSS3 EFFECTS
+    - INPUTS AND TEXTAREA
+    - TABLE
+    - WIDGET
+    - BAR
+    - USER MENU
+    - SECTION
+    # GRID
+    # MEDIA QUERIES
+    # PRINT STYLES
+*/
+
+/** --------------------------------------------------------------
+    FONTS
+    ----------------------------------------------------------- */
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+
+@font-face {
+    font-family: 'batch';
+    src:url('../fonts/batch-icons-webfont.eot');
+    src:url('../fonts/batch-icons-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/batch-icons-webfont.svg#batch') format('svg'),
+        url('../fonts/batch-icons-webfont.woff') format('woff'),
+        url('../fonts/batch-icons-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/** --------------------------------------------------------------
+    NORMALIZE
+    Eric A. and Kathryn S. Meyer
+    - http://meyerweb.com/eric/tools/css/reset/
+    ----------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } :focus { outline: 0; } ins { text-decoration: none; } del { text-decoration: line-through; } table { border-collapse: collapse; border-spacing: 0; } div { position: relative; }
+
+/** --------------------------------------------------------------
+    COMMON CLASSES
+    ----------------------------------------------------------- */
+.block { display: block; }
+.inline { display: inline; }
+.none { display: none; }
+.hidden { display: none; visibility: hidden; } /* Hide from screen readers */
+.alignleft, .alignLeft { float: left; }
+.alignright, .alignRight { float: right; }
+.aligncenter, .alignCenter {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    clear: both;
+}
+
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } 
+.clearfix { display: inline-block; } /* Hide from IE Mac */ 
+.clearfix { display: block; } /* End hide from IE Mac */
+.cf {
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    width: 100%;
+}
+
+/** --------------------------------------------------------------
+    DOCUMENT SETUP
+    ----------------------------------------------------------- */
+body {
+    background: #fff;
+    font: normal 14px/1.75em 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #777;
+    letter-spacing: 0;
+}
+
+.mainContainer {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+.contentContainer {
+    display: block;
+    margin: 0 2em;
+}
+
+p {
+    margin-top: 1.65em;
+}
+
+    p:first-child {
+        margin-top: 0;
+    }
+    
+a {
+    color: #037ea5;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    line-height: 1.2em;
+    color: #333;
+    margin: 0 0 0.67em 0;
+}
+
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 2.0em; }
+h4 { font-size: 1.7em; }
+h5 { font-size: 1.5em; }
+h6 { font-size: 1.3em; }
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: #333;
+}
+
+h1 a:hover, h1 a:focus,
+h2 a:hover, h2 a:focus,
+h3 a:hover, h3 a:focus,
+h4 a:hover, h4 a:focus,
+h5 a:hover, h5 a:focus,
+h6 a:hover, h6 a:focus {
+    color: #0d737a;
+}
+
+input[type="button"],
+input[type="submit"],
+.button {
+    display: block;
+    padding: .6em .9em;
+    margin-top: 1.6em;
+    background-color: #037ea5;
+    color: #fff;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+}
+
+    input[type="button"]:hover,
+    input[type="button"]:focus,
+    input[type="submit"]:hover,
+    input[type="submit"]:focus,
+    .button:hover,
+    .button:focus {
+        background-color: #0d737a;
+        color: #fff;
+    }
+
+    input.delete,
+    .button.delete {
+        background-color: #d63339;
+    }
+
+    input.delete:hover,
+    input.delete:focus,
+    .button.delete:hover,
+    .button.delete:focus {
+        background-color: #d63353;
+    }
+
+[data-icon]:before {
+    font-family: 'batch';
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+/** --------------------------------------------------------------
+    CSS3 EFFECTS
+    ----------------------------------------------------------- */
+a, img, input {
+    -webkit-transition: all ease-in-out 0.2s;
+    -moz-transition: all ease-in-out 0.2s;
+    -o-transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.2s;
+}
+
+input[type="button"],
+input[type="submit"],
+.button,
+.userMenu img,
+.nav ul li a {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/** --------------------------------------------------------------
+    INPUTS AND TEXTAREA
+    ----------------------------------------------------------- */
+label {
+    display: block;
+    font-weight: 700;
+    margin-top: 1.6em;
+}
+
+    label:first-child {
+        margin-top: 0;
+    }
+
+textarea {
+    margin-top: 1.6em;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 160px;
+}
+
+input,
+textarea {
+    width: 100%;
+    color: #777;
+    border: 1px solid;
+    border-color: #ddd;
+    padding: .5em .7em;
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.no-boxsizing input,
+.no-boxsizing textarea {
+    width: 98.2%;
+    min-width: 98.2%;
+    max-width: 98.2%;
+}
+
+.no-boxsizing input[type="button"],
+.no-boxsizing input[type="submit"] {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+/** --------------------------------------------------------------
+    TABLE
+    ----------------------------------------------------------- */
+table {
+    width: 100%;
+}
+    table thead {
+        border-bottom: 1px solid;
+        border-color: #ddd;
+    }
+
+        table thead tr th {
+            padding: .4em 0;
+        }
+
+    table a {
+        display: block;
+        color: #333;
+        padding: .4em .6em;
+    }
+
+        table a:hover, 
+        table a:focus {
+            color: #037ea5;
+            text-decoration: none;
+        }
+
+        table a.actions {
+            text-align: center;
+        }
+
+    table th {
+        text-align: left;
+    }
+
+    table th,
+    table td {
+        
+    }
+
+    table tbody tr:nth-child(even) {
+        background-color: #eee;
+    }
+
+    .redactor_box {
+        margin-top: 1.6em;
+    }
+
+/** --------------------------------------------------------------
+    WIDGET
+    ----------------------------------------------------------- */
+.widget {
+    margin-top: 1.6em;
+}
+
+    .widget:first-child {
+        margin-top: 0;
+    }
+
+/** --------------------------------------------------------------
+    BAR
+    ----------------------------------------------------------- */
+.bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #222;
+    width: 80px;
+    height: 100%;
+    font-family: 'Open Sans', Helvetica Neue, Helvetica, sans-serif;
+    color: #bbb;
+    font-size: .9em;
+    z-index: 50;
+}
+
+    .bar ul {
+        margin-top: 1.6em;
+        width: 80px;
+    }
+
+        .bar ul li {
+            display: block;
+        }
+
+            .bar ul li a {
+                text-align: center;
+                color: #bbb;
+                display: block;
+                font-size: 1.2em;
+                line-height: 62px;
+                height: 62px;
+            }
+
+            .bar ul li a:hover,
+            .bar ul li a:focus,
+            .bar ul li a:hover .text,
+            .bar ul li a:focus .text {
+                visibility: visible;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .bar ul li a .text:hover {
+                text-decoration: underline;
+            }
+
+            .bar ul li a .text {
+                visibility: hidden;
+                position: absolute;
+                left: 72px;
+                background-color: #222;
+                width: 120px;
+                font-size: .8em;
+                text-transform: uppercase;
+            }
+
+            .bar ul li.currentMenuItem a {
+                color: #037ea5;
+            }
+
+/** --------------------------------------------------------------
+    USER MENU
+    ----------------------------------------------------------- */
+.userMenu {
+    text-align: right;
+    font-size: .9em;
+}
+
+    .userMenu img {
+        width: 32px;
+        height: 32px;
+        margin-bottom: -12px;
+    }
+
+    .userMenu a {
+        margin-left: .6em;
+        color: #333;
+        font-weight: 700;
+    }
+
+        .userMenu a:hover,
+        .userMenu a:focus {
+            color: #037ea5;
+            text-decoration: none;
+        }
+
+    .userMenu .logo {
+        float: left;
+        font-size: 1.8em;
+        margin-left: 0;
+    }
+
+/** --------------------------------------------------------------
+    SECTION
+    ----------------------------------------------------------- */
+.section {
+    display: block;
+    margin-top: 2em;
+}
+
+    .section:first-child {
+        margin-top: 0;
+    }
+
+    .section .entry {
+        display: block;
+        padding: 1.6em 0;
+        border: 1px solid;
+        border-left: 0;
+        border-right: 0;
+        border-color: #ddd;
+    }
+
+/** --------------------------------------------------------------
+    GRID
+    BOOTSTRAP - http://twitter.github.com/bootstrap/
+    ----------------------------------------------------------- */
+.row {
+    float: left;
+    width: 100%;
+    *zoom: 1;
+}
+    .row:after {
+        clear: both;
+    }
+
+    .row [class*="span"] {
+        display: block;
+        float: left;
+        position: relative;
+        width: 100%;
+        min-height: 30px;
+        margin-left: 2.564102564102564%;
+        *margin-left: 2.5109110747408616%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .row [class*="span"]:first-child {
+        margin-left: 0;
+    }
+
+    .row .span12 {
+        width: 100%;
+        *width: 99.94680851063829%;
+    }
+    .row .span11 {
+        width: 91.45299145299145%;
+        *width: 91.39979996362975%;
+    }
+    .row .span10 {
+        width: 82.90598290598291%;
+        *width: 82.8527914166212%;
+    }
+    .row .span9 {
+        width: 74.35897435897436%;
+        *width: 74.30578286961266%;
+    }
+    .row .span8 {
+        width: 65.81196581196582%;
+        *width: 65.75877432260411%;
+    }
+    .row .span7 {
+        width: 57.26495726495726%;
+        *width: 57.21176577559556%;
+    }
+    .row .span6 {
+        width: 48.717948717948715%;
+        *width: 48.664757228587014%;
+    }
+    .row .span5 {
+        width: 40.17094017094017%;
+        *width: 40.11774868157847%;
+    }
+    .row .span4 {
+        width: 31.623931623931625%;
+        *width: 31.570740134569924%;
+    }
+    .row .span3 {
+        width: 23.076923076923077%;
+        *width: 23.023731587561375%;
+    }
+    .row .span2 {
+        width: 14.52991452991453%;
+        *width: 14.476723040552828%;
+    }
+    .row .span1 {
+        width: 5.982905982905983%;
+        *width: 5.929714493544281%;
+    }
+
+    .row .offset12 {
+        margin-left: 105.12820512820512%;
+        *margin-left: 105.02182214948171%;
+    }
+    .row .offset12:first-child {
+        margin-left: 102.56410256410257%;
+        *margin-left: 102.45771958537915%;
+    }
+    .row .offset11 {
+        margin-left: 96.58119658119658%;
+        *margin-left: 96.47481360247316%;
+    }
+    .row .offset11:first-child {
+        margin-left: 94.01709401709402%;
+        *margin-left: 93.91071103837061%;
+    }
+    .row .offset10 {
+        margin-left: 88.03418803418803%;
+        *margin-left: 87.92780505546462%;
+    }
+    .row .offset10:first-child {
+        margin-left: 85.47008547008548%;
+        *margin-left: 85.36370249136206%;
+    }
+    .row .offset9 {
+        margin-left: 79.48717948717949%;
+        *margin-left: 79.38079650845607%;
+    }
+    .row .offset9:first-child {
+        margin-left: 76.92307692307693%;
+        *margin-left: 76.81669394435352%;
+    }
+    .row .offset8 {
+        margin-left: 70.94017094017094%;
+        *margin-left: 70.83378796144753%;
+    }
+    .row .offset8:first-child {
+        margin-left: 68.37606837606839%;
+        *margin-left: 68.26968539734497%;
+    }
+    .row .offset7 {
+        margin-left: 62.393162393162385%;
+        *margin-left: 62.28677941443899%;
+    }
+    .row .offset7:first-child {
+        margin-left: 59.82905982905982%;
+        *margin-left: 59.72267685033642%;
+    }
+    .row .offset6 {
+        margin-left: 53.84615384615384%;
+        *margin-left: 53.739770867430444%;
+    }
+    .row .offset6:first-child {
+        margin-left: 51.28205128205128%;
+        *margin-left: 51.175668303327875%;
+    }
+    .row .offset5 {
+        margin-left: 45.299145299145295%;
+        *margin-left: 45.1927623204219%;
+    }
+    .row .offset5:first-child {
+        margin-left: 42.73504273504273%;
+        *margin-left: 42.62865975631933%;
+    }
+    .row .offset4 {
+        margin-left: 36.75213675213675%;
+        *margin-left: 36.645753773413354%;
+    }
+    .row .offset4:first-child {
+        margin-left: 34.18803418803419%;
+        *margin-left: 34.081651209310785%;
+    }
+    .row .offset3 {
+        margin-left: 28.205128205128204%;
+        *margin-left: 28.0987452264048%;
+    }
+    .row .offset3:first-child {
+        margin-left: 25.641025641025642%;
+        *margin-left: 25.53464266230224%;
+    }
+    .row .offset2 {
+        margin-left: 19.65811965811966%;
+        *margin-left: 19.551736679396257%;
+    }
+    .row .offset2:first-child {
+        margin-left: 17.094017094017094%;
+        *margin-left: 16.98763411529369%;
+    }
+    .row .offset1 {
+        margin-left: 11.11111111111111%;
+        *margin-left: 11.004728132387708%;
+    }
+    .row .offset1:first-child {
+        margin-left: 8.547008547008547%;
+        *margin-left: 8.440625568285142%;
+    }
+/** --------------------------------------------------------------
+    MEDIA QUERIES - DESKTOP
+    ----------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+    .mainContainer {
+        width: 870px;
+        margin-left: 90px;
+    }
+}
+/** --------------------------------------------------------------
+    MEDIA QUERIES - PRINT STYLES
+    ----------------------------------------------------------- */
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

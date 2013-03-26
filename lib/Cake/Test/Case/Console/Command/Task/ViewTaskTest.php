@@ -581,7 +581,7 @@ class ViewTaskTest extends CakeTestCase {
 
 		$this->Task->expects($this->exactly(4))->method('createFile');
 
-		$views = array('admin_index.ctp', 'admin_add.ctp', 'admin_view.ctp', 'admin_edit.ctp');
+		$views = array('admin.ctp', 'admin_add.ctp', 'admin_view.ctp', 'admin_edit.ctp');
 		foreach ($views as $i => $view) {
 			$this->Task->expects($this->at($i))->method('createFile')
 				->with(

@@ -24,7 +24,11 @@
     // General routes
     Router::connect('/', array('plugin' => 'blog', 'controller' => 'blog_posts', 'action' => 'index'));
 
-    // User specific routes
+    // Admin routes
+    Router::connect('/admin', array('controller' => 'users', 'action' => 'index', 'admin' => true));
+
+
+// User specific routes
     Router::connect('/register', array('controller' => 'users', 'action' => 'register'));
     Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
     Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));

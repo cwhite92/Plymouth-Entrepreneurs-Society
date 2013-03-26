@@ -4590,3 +4590,254 @@ Stack Trace:
 #1 C:\xampp\htdocs\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
 #2 C:\xampp\htdocs\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2013-03-26 15:40:16 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /ISAD234/
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Datasource/DboSource.php(261): Mysql->connect()
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(3195): ConnectionManager::getDataSource('default')
+#3 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(1107): Model->setDataSource('default')
+#4 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(3217): Model->setSource('blog_settings')
+#5 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(2674): Model->getDataSource()
+#6 /Users/jakechampion/Sites/ISAD234/plugins/Blog/Model/BlogSetting.php(45): Model->find('list', Array)
+#7 /Users/jakechampion/Sites/ISAD234/plugins/Blog/Controller/BlogPostsController.php(42): BlogSetting->getSettings()
+#8 [internal function]: BlogPostsController->beforeFilter(Object(CakeEvent))
+#9 /Users/jakechampion/Sites/ISAD234/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /Users/jakechampion/Sites/ISAD234/lib/Cake/Controller/Controller.php(669): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(183): Controller->startupProcess()
+#12 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#13 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-03-26 15:45:20 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /ISAD234/
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Datasource/DboSource.php(261): Mysql->connect()
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(3195): ConnectionManager::getDataSource('default')
+#3 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(1107): Model->setDataSource('default')
+#4 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(3217): Model->setSource('blog_settings')
+#5 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(2674): Model->getDataSource()
+#6 /Users/jakechampion/Sites/ISAD234/plugins/Blog/Model/BlogSetting.php(45): Model->find('list', Array)
+#7 /Users/jakechampion/Sites/ISAD234/plugins/Blog/Controller/BlogPostsController.php(42): BlogSetting->getSettings()
+#8 [internal function]: BlogPostsController->beforeFilter(Object(CakeEvent))
+#9 /Users/jakechampion/Sites/ISAD234/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /Users/jakechampion/Sites/ISAD234/lib/Cake/Controller/Controller.php(669): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(183): Controller->startupProcess()
+#12 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#13 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-03-26 15:45:22 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /ISAD234/
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Datasource/DboSource.php(261): Mysql->connect()
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(3195): ConnectionManager::getDataSource('default')
+#3 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(1107): Model->setDataSource('default')
+#4 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(3217): Model->setSource('blog_settings')
+#5 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(2674): Model->getDataSource()
+#6 /Users/jakechampion/Sites/ISAD234/plugins/Blog/Model/BlogSetting.php(45): Model->find('list', Array)
+#7 /Users/jakechampion/Sites/ISAD234/plugins/Blog/Controller/BlogPostsController.php(42): BlogSetting->getSettings()
+#8 [internal function]: BlogPostsController->beforeFilter(Object(CakeEvent))
+#9 /Users/jakechampion/Sites/ISAD234/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /Users/jakechampion/Sites/ISAD234/lib/Cake/Controller/Controller.php(669): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(183): Controller->startupProcess()
+#12 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#13 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-03-26 16:06:51 Error: [MissingActionException] Action UsersController::admin_index() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_index',
+)
+Request URL: /ISAD234/admin
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-26 16:07:08 Error: [MissingViewException] View file "/Users/jakechampion/Sites/ISAD234/app/View/Users/admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/jakechampion/Sites/ISAD234/app/View/Users/admin_index.ctp',
+)
+Request URL: /ISAD234/admin
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/View/View.php(467): View->_getViewFileName(NULL)
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Controller/Controller.php(947): View->render(NULL, NULL)
+#2 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 16:09:57 Error: [MissingActionException] Action UsersController::admin_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_login',
+)
+Request URL: /ISAD234/admin/users/login
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-26 16:10:01 Error: [MissingActionException] Action UsersController::admin_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_login',
+)
+Request URL: /ISAD234/admin/users/login
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-26 16:10:11 Error: [MissingActionException] Action UsersController::admin_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_login',
+)
+Request URL: /ISAD234/admin/users/login
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-26 16:10:13 Error: [MissingActionException] Action UsersController::admin_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_login',
+)
+Request URL: /ISAD234/admin/users/login
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-03-26 16:10:26 Error: [MissingLayoutException] Layout file "/Users/jakechampion/Sites/ISAD234/app/View/Layouts/admin.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/jakechampion/Sites/ISAD234/app/View/Layouts/admin.ctp',
+)
+Request URL: /ISAD234/admin
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/View/View.php(508): View->_getLayoutFileName('admin')
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/View/View.php(478): View->renderLayout('', 'admin')
+#2 /Users/jakechampion/Sites/ISAD234/lib/Cake/Controller/Controller.php(947): View->render(NULL, NULL)
+#3 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#4 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#5 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-03-26 16:10:54 Error: [MissingViewException] View file "/Users/jakechampion/Sites/ISAD234/app/View/Users/admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/jakechampion/Sites/ISAD234/app/View/Users/admin_index.ctp',
+)
+Request URL: /ISAD234/admin
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/View/View.php(467): View->_getViewFileName(NULL)
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Controller/Controller.php(947): View->render(NULL, NULL)
+#2 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-26 16:22:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/css/fonts/batch-icons-webfont.svg
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:22:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/css/fonts/batch-icons-webfont.woff
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:22:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/css/fonts/batch-icons-webfont.ttf
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:22:12 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/css/fonts/batch-icons-webfont.svg
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:22:12 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/css/fonts/batch-icons-webfont.woff
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:22:12 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/css/fonts/batch-icons-webfont.ttf
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:24:08 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/css/fonts/batch-icons-webfont.svg
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:24:08 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/css/fonts/batch-icons-webfont.woff
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:24:08 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/css/fonts/batch-icons-webfont.ttf
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-26 16:47:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/img/user.png
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

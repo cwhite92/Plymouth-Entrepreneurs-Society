@@ -61,6 +61,7 @@ class AppController extends Controller {
             }
         }
 
+        $this->layout = 'admin';
         return true;
     }
 

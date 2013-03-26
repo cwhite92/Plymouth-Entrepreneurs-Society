@@ -12,8 +12,7 @@ class UsersController extends AppController {
     }
 
     // Example admin action for editing users
-    public function admin_edit() {
-
+    public function admin_index() {
     }
 
     public function edit() {
