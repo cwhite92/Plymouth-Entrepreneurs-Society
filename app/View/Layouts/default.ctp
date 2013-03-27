@@ -23,135 +23,107 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<!-- Designed and Coded by Eduards Torba, Chris White, Levi Lucas, Jake Champion, Louis Harrison. -->
+<!--
+    Plymouth Entrepreneurs Society
+    Designed by:    BBB Eduards Torba
+    Coded by:       BBB Eduards Torba, Chris White, Jake Champion, Levi Lucas
+    Version:        1.0
+-->
 <head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
-	</title>
-	<?php echo $this->Html->meta('icon'); ?>
+    <?php echo $this->Html->charset(); ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        <?php echo $cakeDescription ?>:
+        <?php echo $title_for_layout; ?>
+    </title>
+    <?php echo $this->Html->meta('icon'); ?>
 
-	<!-- STYLESHEET -->
-	<?php echo $this->Html->css(array('style')); ?>
+    <!-- STYLESHEET -->
+    <?php echo $this->Html->css(array('style')); ?>
 
-	<!-- SCRIPTS -->
-	<?php echo $this->Html->script(array('jquery', 'fitvids.min', 'twitter', 'functions')); ?>
-	<!--[if lt IE 9]> <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
-    <!--[if lte IE 9]> <script src="js/jquery.placeholder.min.js"></script> <script>$(document).ready(function(){ $('input, textarea').placeholder(); });</script><![endif]-->
+    <!-- SCRIPTS -->
+    <?php echo $this->Html->script(array('moderniz.min.js', 'jquery', 'fitvids.min', 'twitter', 'main')); ?>
+    <!--[if lt IE 9]> <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+    <!--[if lte IE 9]> <?php echo $this->Html->script(array('jquery.placeholder.min.js')); ?>
+    <script>$(document).ready(function(){ $('input, textarea').placeholder(); });
+    </script><![endif]-->
 
-	<?php echo $this->fetch('meta'); ?>
-	<?php echo $this->fetch('css'); ?>
-	<?php echo $this->fetch('script'); ?>
+    <?php echo $this->fetch('meta'); ?>
+    <?php echo $this->fetch('css'); ?>
+    <?php echo $this->fetch('script'); ?>
 </head>
 <body>
-	<div class="mainContainer"><!-- BEGIN .mainContainer -->
-		<div class="headerContainer clearfix"><!-- BEGIN .headerContainer -->
-            <div class="contentContainer"><!-- BEGIN .contentContainer -->
-                <!-- BEGIN .row -->
-                <div class="row">
-                    <div class="span12">
-                        <div class="nav">
-                            <nav>
-                                <ul class="mainMenu visibleDesktop">
-                                    <li class="currentMenuItem"><?php echo $this->Html->link('Home', '/', array('escape' => false)); ?></li>
-                                    <li><a href="#">News</a></li>
-                                    <li><a href="#">Events</a></li>
-                                    <li><a href="#">Members</a></li>
-                                    <li>
-                                        <a href="#">Services +</a>
-                                        <ul>
-                                            <li><a href="#">Mentoring</a></li>
-                                            <li><a href="#">University Start-Up Support</a></li>
-                                            <li><a href="#">Funding</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                    <?php if($authed): // Will be removed later ?>
-                                    <li><?php echo $this->Html->link('Logout', array('plugin' => false, 'controller' => 'users', 'action' => 'logout')); ?></li>
-                                    <?php endif; ?>
-                                </ul>
-                                <div class="hiddenDesktop">
-                                    <a class="mobileMenuBtn" href="#">Mobile Menu</a>
-                                    <ul class="mobileMenu"></ul>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <!-- END .row -->
-            <div class="cfix"></div>
-            </div><!-- END .contentContainer -->
-        </div><!-- END .headerContainer -->
-        <div class="middleContainer"><!-- BEGIN .middleContainer -->
-            <div class="contentContainer"><!-- BEGIN .contentContainer -->
-                <!-- BEGIN .row -->
-                <div class="row">
-                    <div class="span8"><!-- BEGIN .span8 -->
-                        <span class="logo visiblePhone">
-							<?php echo $this->Html->link(
-									$this->Html->image('logo.png', array('alt' => $cakeDescription, 'border' => '0')),
-									'/',
-									array('escape' => false)
-								);
-							?>
-                        </span>
-                        <div class="dashboardMobile dashboard visiblePhone"></div>
-                        <div>
-                        	<?php echo $this->Session->flash(); ?>
-							<?php echo $this->fetch('content'); ?>
-                        </div>
-                    </div><!-- END .span8 -->
-                    <div class="span4"><!-- BEGIN .span4 -->
-                        <div class="aside"><!-- BEGIN .aside -->
-                            <div class="widget logo hiddenPhone">
-                                <?php echo $this->Html->link(
-									$this->Html->image('logo.png', array('alt' => $cakeDescription, 'border' => '0')),
-									'/',
-									array('escape' => false)
-								);
-							?>
-                            </div>
-                            <?php if(!$authed): ?>
-                                <?php echo $this->element('loginForm'); ?>
-                            <?php endif; ?>
-                            <?php echo $this->element('sidebar'); ?>
-                        </div>
-                    </div><!-- END .span4 -->
-                </div>
-                <!-- END .row -->
-                <div class="cfix"></div>
-            </div><!-- END .contentContainer -->
-        </div><!-- END .middleContainer -->
-        <div class="footerContainer"><!-- BEGIN .footerContainer -->
-            <div class="contentContainer"><!-- BEGIN .contentContainer -->
-            	<?php echo $this->element('sponsors'); ?>
-                <!-- BEGIN .row -->
-                <div class="row">
-                    <div class="span7 copyright">
-                        <footer>
-                            <p>© 2013 BBB. All Rights Reserved.</p>
-                            Designed and Coded by Eduards Torba, Chris White, Levi Lucas, Jake Champion, Louis Harrison.
-                        </footer>
-                    </div>
-                    <div class="span5 copyright links">
-                        <footer>
-                            <a href="#">Terms</a> &#8226; <a href="#">Data Use Policy</a> &#8226; <a href="#">Cookies</a>
-                        </footer>
-                    </div>
-                </div>
-                <!-- END .row -->
-                <div class="row">
-                	<div class="span12">
-                		<?php echo $this->element('sql_dump'); ?>
-                	</div>
-                </div>
-                <div class="cfix"></div>
-            </div><!-- END .contentContainer -->
-        </div><!-- END .footerContainer -->
-	<div class="cfix"></div>
-    </div><!-- END .mainContainer -->
-    <a class="scrollUpBtn" href="#">Scroll Up</a>
+<?php echo $this->Session->flash(); ?>
+<div class="mainContainer">
+    <div class="section clearfix">
+        <ul class="nav">
+            <li class="mobileTrigger hiddenDesktop"><a href="#" data-icon="&#xF0AA;"></a></li>
+            <li class="currentMenuItem"><?php echo $this->Html->link('News', '/', array('escape' => false)); ?></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Members</a></li>
+            <li>
+                <a href="#">Services+</a>
+                <ul>
+                    <li><a href="#">Mentoring</a></li>
+                    <li><a href="#">University Start-Up Support</a></li>
+                    <li><a href="#">Funding</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div><!-- END .section -->
+    <div class="section clearfix">
+        <div class="aside upper">
+            <div class="entry logo">
+                <?php
+                echo $this->Html->link(
+                    $this->Html->image('logo.png', array('alt' => $cakeDescription, 'border' => '0')),
+                    '/',
+                    array('escape' => false)
+                );
+                ?>
+            </div><!-- END .entry -->
+            <?php if(!$authed): ?>
+                <?php echo $this->element('login'); ?>
+            <?php else: ?>
+                <?php echo $this->element('dashboard'); ?>
+            <?php endif; ?>
+        </div><!-- END .aside -->
+        <div class="primary">
+            <?php echo $this->fetch('content'); ?>
+        </div><!-- END .primary -->
+        <div class="aside lower">
+            <div class="entry widget">
+                <div class="content">
+                    <h1>Upcoming events</h1>
+                    widget 1
+                </div><!-- END .content -->
+            </div><!-- END .entry -->
+            <div class="entry widget">
+                <div class="content">
+                    <h1>Welcome to my hood</h1>
+                    widget 2
+                </div><!-- END .content -->
+            </div><!-- END .entry -->
+            <div class="entry widget">
+                <div class="content">
+                    <h1>Twitter Feed</h1>
+                    <ul class="tweetbox"></ul>
+                </div><!-- END .content -->
+            </div><!-- END .entry -->
+        </div><!-- END .aside -->
+    </div><!-- END .section -->
+    <div class="section clearfix">
+        <div class="entry">
+            <footer>
+                footer
+            </footer>
+        </div><!-- END .entry -->
+        <div class="entry">
+            &copy; <?php print date( 'Y' ); ?>. All rights reserved.
+        </div><!-- END .entry -->
+    </div><!-- END .section -->
+</div><!-- END .mainContainer -->
 </body>
 </html>

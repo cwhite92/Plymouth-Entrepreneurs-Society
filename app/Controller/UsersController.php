@@ -12,7 +12,16 @@ class UsersController extends AppController {
     }
 
     // Example admin action for editing users
-    public function admin_index() {
+    public function admin_index($id = null) {
+        $this->layout = 'admin';
+    }
+
+    public function admin_users() {
+        $this->layout = 'admin';
+    }
+
+    public function admin_news() {
+        $this->layout = 'admin';
     }
 
     public function edit() {

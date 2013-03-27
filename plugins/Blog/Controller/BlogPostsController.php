@@ -315,7 +315,9 @@ class BlogPostsController extends AppController {
 	public function admin_index() {
 		$this->BlogPost->recursive = 0;
 		$this->set('blogPosts', $this->paginate());
-	}
+        $this->layout = 'admin';
+
+    }
 
 /**
  * admin view method
@@ -349,7 +351,9 @@ class BlogPostsController extends AppController {
 		$blogPostCategories = $this->BlogPost->BlogPostCategory->generateTreeList();
 		$blogPostTags = $this->BlogPost->BlogPostTag->find('list');
 		$this->set(compact('blogPostCategories', 'blogPostTags'));
-	}
+        $this->layout = 'admin';
+
+    }
 
 /**
  * admin edit method
@@ -375,7 +379,9 @@ class BlogPostsController extends AppController {
 		$blogPostCategories = $this->BlogPost->BlogPostCategory->generateTreeList();
 		$blogPostTags = $this->BlogPost->BlogPostTag->find('list');
 		$this->set(compact('blogPostCategories', 'blogPostTags'));
-	}
+        $this->layout = 'admin';
+
+    }
 
 /**
  * admin delete method

@@ -6,7 +6,7 @@
     - COMMON CLASSES
     - DOCUMENT SETUP
     - CSS3 EFFECTS
-    - INPUTS AND TEXTAREA
+    - INPUTS AND TEXTAREA - and forms!
     - TABLE
     - WIDGET
     - BAR
@@ -205,8 +205,16 @@ input[type="submit"],
 }
 
 /** --------------------------------------------------------------
-    INPUTS AND TEXTAREA
+    INPUTS AND TEXTAREA and forms!
     ----------------------------------------------------------- */
+form div.span9{
+    margin-left: 0 !important; /* sorts out the margin-left bug on the edit-news page */
+}
+
+select {
+    width: 100%;
+}
+
 label {
     display: block;
     font-weight: 700;
@@ -236,6 +244,15 @@ textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+    input[type="checkbox"] + label {
+        display: inline;
+        margin-left: .4em;
+    }
 
 .no-boxsizing input,
 .no-boxsizing textarea {

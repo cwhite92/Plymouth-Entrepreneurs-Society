@@ -26,9 +26,12 @@
 
     // Admin routes
     Router::connect('/admin', array('controller' => 'users', 'action' => 'index', 'admin' => true));
+    Router::connect('/admin/users', array('controller' => 'users', 'action' => 'users', 'admin' => true));
+//    Router::connect('/admin/news', array('plugin' => 'blog', 'controller' => 'blog_posts', 'action' => 'index', 'admin' => true));
+    Router::connect('/admin/events', array('plugin' => 'blog', 'controller' => 'blog_posts', 'action' => 'index', 'admin' => true));
 
 
-// User specific routes
+    // User specific routes
     Router::connect('/register', array('controller' => 'users', 'action' => 'register'));
     Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
     Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
