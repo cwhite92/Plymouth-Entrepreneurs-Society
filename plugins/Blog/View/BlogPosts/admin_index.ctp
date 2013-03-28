@@ -6,9 +6,10 @@
 <!--        <th>--><?php //echo $this->Paginator->sort('published');?><!--</th>-->
 <!--        <th>--><?php //echo $this->Paginator->sort('sticky');?><!--</th>-->
 <!--        <th>--><?php //echo $this->Paginator->sort('in_rss');?><!--</th>-->
-<!--        <th>--><?php //echo $this->Paginator->sort('created');?><!--</th>-->
+        <th><?php echo $this->Paginator->sort('created');?></th>
 <!--        <th>--><?php //echo $this->Paginator->sort('modified');?><!--</th>-->
-        <th class="actions" colspan="2"><?php echo __('Actions');?></th>
+        <th class="actions"><?php echo __('Edit');?></th>
+        <th class="actions"><?php echo __('Delete');?></th>
 </tr>
 <?php
 $i = 0;
@@ -24,7 +25,7 @@ foreach ($blogPosts as $blogPost):
 <!--    <td>--><?php //echo h($blogPost['BlogPost']['published']); ?><!--&nbsp;</td>-->
 <!--    <td>--><?php //echo h($blogPost['BlogPost']['sticky']); ?><!--&nbsp;</td>-->
 <!--    <td>--><?php //echo h($blogPost['BlogPost']['in_rss']); ?><!--&nbsp;</td>-->
-<!--    <td>--><?php //echo h($blogPost['BlogPost']['created']); ?><!--&nbsp;</td>-->
+    <td><?php echo h($blogPost['BlogPost']['created']); ?>&nbsp;</td>
 <!--    <td>--><?php //echo h($blogPost['BlogPost']['modified']); ?><!--&nbsp;</td>-->
 <!--    <td>-->
 <!--        --><?php //echo $this->Html->link(__('View'), array('action' => 'view', $blogPost['BlogPost']['id'])); ?>
