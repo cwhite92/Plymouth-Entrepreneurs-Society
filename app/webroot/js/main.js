@@ -15,9 +15,9 @@ $(function(){
 	});
 
 	// Scroll up
-	function scrollUpBtn() {
+	function scrollUpButton() {
 		var didScroll = false;
-		$scrollBtn = $('.scrollUpBtn');
+		$scrollBtn = $('.scrollUpButton');
 
 		$scrollBtn.click(function(e) {
 			e.preventDefault();
@@ -40,7 +40,7 @@ $(function(){
 			}
 		}, 250);
 	}
-	scrollUpBtn();
+	scrollUpButton();
 });
 
 $(document).ready(function(){

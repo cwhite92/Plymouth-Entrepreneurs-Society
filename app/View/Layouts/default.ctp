@@ -25,8 +25,8 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <!--
     Plymouth Entrepreneurs Society
-    Designed by:    BBB Eduards Torba
-    Coded by:       BBB Eduards Torba, Chris White, Jake Champion, Levi Lucas
+    Designed by:    BBB, Eduards Torba
+    Coded by:       BBB, Eduards Torba, Chris White, Jake Champion, Levi Lucas
     Version:        1.0
 -->
 <head>
@@ -125,5 +125,6 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
         </div><!-- END .entry -->
     </div><!-- END .section -->
 </div><!-- END .mainContainer -->
+<a class="scrollUpButton" href="#" data-icon="&#xF018;"></a>
 </body>
 </html>
