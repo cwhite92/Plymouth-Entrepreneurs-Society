@@ -1,6 +1,5 @@
 <div class="entry login">
     <div class="content">
-        <?php echo $this->Session->flash('auth'); ?>
         <?php
         echo $this->Form->create('User', array(
             'url'               => array(
