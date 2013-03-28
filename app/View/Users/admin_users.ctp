@@ -9,7 +9,6 @@
             <th>Delete</th>
         </tr>
         </thead>
-
         <tbody>
         <?php foreach ($users as $user): ?>
             <tr>

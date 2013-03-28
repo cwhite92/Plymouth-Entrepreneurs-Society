@@ -28,7 +28,7 @@
         ));
         ?>
         <a href="#">Recover?*</a> 
-        <?php echo $this->Html->link('Register', array('controller' => 'users', 'action' => 'register')); ?>
+        <?php echo $this->Html->link('Register', array('controller' => 'users', 'action' => 'register', 'plugin' => false)); ?>
         <?php echo $this->Form->end(); ?>
     </div><!-- END .content -->
 </div><!-- END .entry -->
