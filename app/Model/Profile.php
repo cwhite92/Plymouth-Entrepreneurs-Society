@@ -56,7 +56,7 @@ class Profile extends AppModel {
     public function beforeSave($options = Array()) {
         if(isset($this->data['Profile']['picture'])) {
             // Make a filename
-            $filename = md5(microtime() * rand()) . '.jpg';
+            $filename = md5(microtime() * rand()) . '.png';
 
             // Attempt to move the uploaded file
             if(!move_uploaded_file($this->data['Profile']['picture']['tmp_name'], WWW_ROOT . 'img' . DS . 'profile_pics' . DS . $filename)) {
