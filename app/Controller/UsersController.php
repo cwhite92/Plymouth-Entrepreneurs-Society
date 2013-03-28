@@ -104,7 +104,7 @@ class UsersController extends AppController {
                     $this->Auth->logout();
                     $this->Session->setFlash('You must activate your account before you can log in. Please check your email for details.');
                 } else {
-                    $this->redirect($this->Auth->redirect());
+                    $this->redirect($this->Auth->redirectUrl('/'));
                 }
             } else {
                 $this->Session->setFlash('Invalid username or password, try again.');
