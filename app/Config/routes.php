@@ -27,7 +27,7 @@
     // Admin routes
     Router::connect('/admin', array('controller' => 'users', 'action' => 'index', 'admin' => true));
     Router::connect('/admin/users', array('controller' => 'users', 'action' => 'users', 'admin' => true));
-//    Router::connect('/admin/news', array('plugin' => 'blog', 'controller' => 'blog_posts', 'action' => 'index', 'admin' => true));
+    Router::connect('/admin/news', array('plugin' => 'blog', 'controller' => 'blog_posts', 'action' => 'index', 'admin' => true));
     Router::connect('/admin/events', array('plugin' => 'blog', 'controller' => 'blog_posts', 'action' => 'index', 'admin' => true));
 
 
@@ -36,7 +36,6 @@
     Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
     Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
     Router::connect('/activate/*', array('controller' => 'users', 'action' => 'activate'));
-    Router::connect('/profile/edit', array('controller' => 'profiles', 'action' => 'edit'));
     Router::connect('/account/edit', array('controller' => 'users', 'action' => 'edit'));
 
     // Skill specific routes
@@ -44,6 +43,7 @@
 
     // Profile specific routes
     Router::connect('/profile/*', array('controller' => 'profiles', 'action' => 'view'));
+    Router::connect('/profile/edit', array('controller' => 'profiles', 'action' => 'edit'));
 
 /**
  * Load all plugin routes.  See the CakePlugin documentation on
