@@ -21,7 +21,24 @@ class UsersController extends AppController {
     }
 
     public function admin_news() {
+    public function admin_edit() {
+        if($this->request->is('post')) {
+            if($this->User->save($this->request->data)) {
+                $this->Session->setFlash('Account has been updated.');
+                $this->redirect(array('action' => 'edit'));
+            }
+
+            $this->Session->setFlash('There was a problem saving your account settings. Please try again.');
+        }
+
+        // Auto populate form fields
+        if(!$this->request->data) {
+            $this->request->data = $this->User->find('first', array(
+                'conditions' => array('User.id' => $this->Auth->user('id'))
+            ));
+        }
         $this->layout = 'admin';
+
     }
 
     public function edit() {
