@@ -12,6 +12,7 @@
     - PRIMARY
     - ASIDE
     - WIDGETS - logo, mini dashboard, twitter etc..
+    - PROFILE
     # GRID
     # MEDIA QUERIES
     # PRINT STYLES
@@ -112,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0 0.67em 0;
 }
 
-h1 { font-size: 2.2em; }
+h1 { font-size: 1.6em; }
 h2 { font-size: 2.1em; }
 h3 { font-size: 2.0em; }
 h4 { font-size: 1.7em; }
@@ -146,6 +147,30 @@ h6 a:hover, h6 a:focus {
     -webkit-font-smoothing: antialiased;
 }
 
+.scrollUpButton {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 1em;
+    background-color: #222;
+    color: #fff;
+    font-size: 1.6em;
+    padding: .4em .5em;
+
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    border-top-left-radius: 3px;
+
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-right-radius: 3px;
+}
+
+    .scrollUpButton:hover {
+        background-color: #037ea5;
+        color: #fff;
+    }
+
 /** --------------------------------------------------------------
     CSS3 EFFECTS
     ----------------------------------------------------------- */
@@ -163,6 +188,12 @@ input,
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+}
+
+.profile img {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
 }
 
 .nav,
@@ -206,7 +237,7 @@ textarea {
     margin-top: 1.6em;
     max-width: 100%;
     min-width: 100%;
-    min-height: 160px;
+    min-height: 120px;
 }
 
 input,
@@ -269,6 +300,16 @@ input[type="submit"],
     content: ' *';
     color: red;
     display: inline;
+}
+
+.description {
+    display: block;
+    background-color: #eee;
+    margin-top: 1em;
+    padding: .7em 1em;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #7b7b7b;
 }
 
 /** --------------------------------------------------------------
@@ -528,6 +569,44 @@ input[type="submit"],
         .tweetbox li:first-child {
             padding-top: 0;
         }
+
+/** --------------------------------------------------------------
+    PROFILE
+    ----------------------------------------------------------- */
+.profile {
+
+}
+
+    .profile .meta {
+        display: block;
+        margin-bottom: 1.6em;
+    }
+
+    .profile img {
+        float: left;
+        width: 132px;
+        height: 132px;
+        margin: 0 1.6em 0 0;
+    }
+
+    .profile .content > h1 {
+        margin-top: 1.6em;
+        padding-bottom: .4em;
+        border-bottom: 1px solid;
+        border-color: #ddd;
+    }
+
+        .profile .content > h1:first-child {
+            margin-top: 0;
+        }
+
+    .profile ul {
+        float: left;
+    }
+
+    .profile textarea {
+        margin-top: 0;
+    }
 
 /** --------------------------------------------------------------
     GRID
@@ -904,7 +983,13 @@ input[type="submit"],
         display: block;
         width: auto;
         max-width: 767px;
-        margin: 1.6em ;
+        margin: 0 1em;
+    }
+
+    .profile img {
+        float: none;
+        display: block;
+        margin: 0 auto 1.6em;
     }
 
     /* VISIBILITY AND GRID ------------------------------ */
