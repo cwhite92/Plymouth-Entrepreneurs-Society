@@ -18,9 +18,9 @@ class UsersController extends AppController {
 
     public function admin_users() {
         $this->layout = 'admin';
+        $this->set('users', $this->User->find('all'));
     }
 
-    public function admin_news() {
     public function admin_edit() {
         if($this->request->is('post')) {
             if($this->User->save($this->request->data)) {

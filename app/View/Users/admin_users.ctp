@@ -1,42 +1,46 @@
-<div class="entry">
+<div class='entry'>
     <table>
-        <thead>
+        <thead></thead>
         <tr>
-            <th>Username</th>
+<!--            <th>Username</th>-->
             <th>Email</th>
-            <th>Status</th>
-            <th colspan="2">&nbsp;</th>
+            <th>Activated</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
         </thead>
+
         <tbody>
-        <tr>
-            <td><a href="user-edit.html">levi lucas</a></td>
-            <td><a href="user-edit.html">levi.lucas@students.plymouth.ac.uk</a></td>
-            <td><a href="user-edit.html">Online</a></td>
-            <td><a class="actions" href="news-edit.html" data-icon="&#xF139;"></a></td>
-            <td><a class="actions" href="#" data-icon="&#xF155;"></a></td>
-        </tr>
-        <tr>
-            <td><a href="user-edit.html">Ed Torba</a></td>
-            <td><a href="user-edit.html">ed.torba@students.plymouth.ac.uk</a></td>
-            <td><a href="user-edit.html">Online</a></td>
-            <td><a class="actions" href="news-edit.html" data-icon="&#xF139;"></a></td>
-            <td><a class="actions" href="#" data-icon="&#xF155;"></a></td>
-        </tr>
-        <tr>
-            <td><a href="user-edit.html">Jake Champion</a></td>
-            <td><a href="user-edit.html">jake.champion@students.plymouth.ac.uk</a></td>
-            <td><a href="user-edit.html">Offline</a></td>
-            <td><a class="actions" href="news-edit.html" data-icon="&#xF139;"></a></td>
-            <td><a class="actions" href="#" data-icon="&#xF155;"></a></td>
-        </tr>
-        <tr>
-            <td><a href="user-edit.html">Chris White</a></td>
-            <td><a href="user-edit.html">chris.white1@students.plymouth.ac.uk</a></td>
-            <td><a href="user-edit.html">Offline</a></td>
-            <td><a class="actions" href="news-edit.html" data-icon="&#xF139;"></a></td>
-            <td><a class="actions" href="#" data-icon="&#xF155;"></a></td>
-        </tr>
+        <?php foreach ($users as $user): ?>
+            <tr>
+                <td><?php echo $user['User']['email']; ?></td>
+                <td><?php echo $user['User']['activated']; ?></td>
+                <td>
+                    <?php echo $this->Html->link('',
+                        array(
+                            'action' => 'edit',
+                            $user['User']['id']),
+                        array(
+                            'escape' => false,
+                            'class' => 'actions',
+                            'data-icon' => '&#xF139;')); ?>
+                </td>
+                <td>
+                    <?php echo $this->Form->postLink('',
+                        array(
+                            'action' => 'delete',
+                            $user['User']['id']),
+                        array(
+                            'class' => 'actions',
+                            'escape' => false,
+                            'data-icon' => '&#xF155;'),
+                        __('Are you sure you want to delete %s?',
+                            $user['User']['email'])); ?>
+
+                </td>
+            </tr>
+        <?php endforeach; ?>
+        <?php unset($user); ?>
         </tbody>
     </table>
 </div><!-- END .entry-->
