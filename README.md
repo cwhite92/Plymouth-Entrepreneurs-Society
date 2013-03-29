@@ -5,7 +5,7 @@ A website which will enable users to register and network between each other in 
 | Tasks                         | Assigned-to | Status          |
 | ------------------------------|:-----------:|----------------:|
 | Blogging engine               | Jake        | Nearly perfect  |
-| Rich text editor              | Ed          | Not started     |
+| Rich text editor              | Ed          | Completed       |
 | Profile editor                | Chris       | Completed       |
 | Anonymous email               | Everyone    |                 |
 | Online indicator              | Lewis       | Not started     |
