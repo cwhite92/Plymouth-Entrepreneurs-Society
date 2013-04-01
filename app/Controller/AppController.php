@@ -50,6 +50,11 @@ class AppController extends Controller {
     public function beforeFilter() {
         // Used in views to easily check if a user is logged in
         $this->set('authed', $this->Auth->user());
+        
+        if($this->Auth->user()) {
+            // Also make it easy to grab user/profile information in views
+            $this->set('user', $this->Auth->user());
+        }
     }
 
     public function isAuthorized($user) {

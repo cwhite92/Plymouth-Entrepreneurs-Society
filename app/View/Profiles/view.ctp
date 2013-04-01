@@ -1,7 +1,7 @@
 <div class="entry profile">
     <div class="content">
         <div class="meta clearfix">
-            <?php 
+            <?php
             echo $this->Html->image('profile_pics/' . $profile['Profile']['picture'], array(
                 'fullbase'  => true, 
                 'alt'       => $profile['Profile']['firstname'] . ' ' . $profile['Profile']['lastname'] . '\'s profile picture'
