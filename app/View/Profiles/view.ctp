@@ -43,10 +43,11 @@
         $currentTime = time();
 
         $temp = ($currentTime - $userTime);
-//        echo $temp;
 
-        if ($temp <= 300) {
+        if ($temp <= 5) {
             echo "online";
+        } else {
+            echo 'ofline';
         }
 
         if($profile['User']['admin']) {
