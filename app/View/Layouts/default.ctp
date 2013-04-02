@@ -54,6 +54,7 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
 </head>
 <body>
 <?php echo $this->Session->flash(); ?>
+<?php if($authed) $this->requestAction('/Users/online', array('pass' => array($user['id']))); ?>
 <div class="mainContainer">
     <div class="section clearfix">
         <ul class="nav">

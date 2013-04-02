@@ -6909,3 +6909,110 @@ Stack Trace:
 #1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
 #2 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2013-04-02 12:20:05 Error: [MissingHelperException] Helper class UserHelper could not be found.
+Exception Attributes: array (
+  'class' => 'UserHelper',
+  'plugin' => 'Blog',
+)
+Request URL: /projects/ISAD234/
+Stack Trace:
+#0 E:\xampp\htdocs\projects\ISAD234\lib\Cake\View\HelperCollection.php(65): HelperCollection->load('Blog.User')
+#1 E:\xampp\htdocs\projects\ISAD234\lib\Cake\View\View.php(835): HelperCollection->__isset('User')
+#2 E:\xampp\htdocs\projects\ISAD234\app\View\Layouts\default.ctp(57): View->__get('User')
+#3 E:\xampp\htdocs\projects\ISAD234\lib\Cake\View\View.php(947): include('E:\xampp\htdocs...')
+#4 E:\xampp\htdocs\projects\ISAD234\lib\Cake\View\View.php(909): View->_evaluate('E:\xampp\htdocs...', Array)
+#5 E:\xampp\htdocs\projects\ISAD234\lib\Cake\View\View.php(534): View->_render('E:\xampp\htdocs...')
+#6 E:\xampp\htdocs\projects\ISAD234\lib\Cake\View\View.php(478): View->renderLayout('', 'default')
+#7 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#8 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#9 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#10 E:\xampp\htdocs\projects\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-02 12:20:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /projects/ISAD234/css/cake.generic.css
+Stack Trace:
+#0 E:\xampp\htdocs\projects\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-02 12:25:52 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [E:\xampp\htdocs\projects\ISAD234\app\View\Layouts\default.ctp, line 57]
+2013-04-02 12:25:52 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /projects/ISAD234/
+Stack Trace:
+#0 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\xampp\htdocs...', 57)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\xampp\htdocs...', 57, Array)
+#2 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\xampp\htdocs...', 57, Array)
+#3 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-02 12:26:30 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [E:\xampp\htdocs\projects\ISAD234\app\View\Layouts\default.ctp, line 57]
+2013-04-02 12:26:30 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /projects/ISAD234/
+Stack Trace:
+#0 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\xampp\htdocs...', 57)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\xampp\htdocs...', 57, Array)
+#2 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\xampp\htdocs...', 57, Array)
+#3 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-02 12:28:34 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [E:\xampp\htdocs\projects\ISAD234\app\View\Layouts\default.ctp, line 57]
+2013-04-02 12:28:34 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /projects/ISAD234/
+Stack Trace:
+#0 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\xampp\htdocs...', 57)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\xampp\htdocs...', 57, Array)
+#2 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\xampp\htdocs...', 57, Array)
+#3 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-02 12:28:55 Error: [MissingControllerException] Controller class UsersControllerController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersControllerController',
+  'plugin' => NULL,
+)
+Request URL: /projects/ISAD234/
+Stack Trace:
+#0 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\Object.php(102): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse), Array)
+#1 E:\xampp\htdocs\projects\ISAD234\app\View\Layouts\default.ctp(57): Object->requestAction('/UsersControlle...', Array)
+#2 E:\xampp\htdocs\projects\ISAD234\lib\Cake\View\View.php(947): include('E:\xampp\htdocs...')
+#3 E:\xampp\htdocs\projects\ISAD234\lib\Cake\View\View.php(909): View->_evaluate('E:\xampp\htdocs...', Array)
+#4 E:\xampp\htdocs\projects\ISAD234\lib\Cake\View\View.php(534): View->_render('E:\xampp\htdocs...')
+#5 E:\xampp\htdocs\projects\ISAD234\lib\Cake\View\View.php(478): View->renderLayout('', 'default')
+#6 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#7 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#8 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#9 E:\xampp\htdocs\projects\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-04-02 12:29:07 Error: [MissingViewException] View file "E:\xampp\htdocs\projects\ISAD234\app\View\Users\online.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'E:\\xampp\\htdocs\\projects\\ISAD234\\app\\View\\Users\\online.ctp',
+)
+Request URL: /projects/ISAD234/
+Stack Trace:
+#0 E:\xampp\htdocs\projects\ISAD234\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\Object.php(102): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse), Array)
+#5 E:\xampp\htdocs\projects\ISAD234\app\View\Layouts\default.ctp(57): Object->requestAction('/Users/online', Array)
+#6 E:\xampp\htdocs\projects\ISAD234\lib\Cake\View\View.php(947): include('E:\xampp\htdocs...')
+#7 E:\xampp\htdocs\projects\ISAD234\lib\Cake\View\View.php(909): View->_evaluate('E:\xampp\htdocs...', Array)
+#8 E:\xampp\htdocs\projects\ISAD234\lib\Cake\View\View.php(534): View->_render('E:\xampp\htdocs...')
+#9 E:\xampp\htdocs\projects\ISAD234\lib\Cake\View\View.php(478): View->renderLayout('', 'default')
+#10 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#11 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#12 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#13 E:\xampp\htdocs\projects\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-04-02 12:45:20 Error: Fatal Error (1): Call to undefined function print_f() in [E:\xampp\htdocs\projects\ISAD234\app\View\Layouts\default.ctp, line 60]
+2013-04-02 12:45:20 Error: [FatalErrorException] Call to undefined function print_f()
+Request URL: /projects/ISAD234/
+Stack Trace:
+#0 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'E:\xampp\htdocs...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'E:\xampp\htdocs...', 60, Array)
+#2 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'E:\xampp\htdocs...', 60, Array)
+#3 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

@@ -136,4 +136,10 @@ class UsersController extends AppController {
         $this->redirect($this->Auth->logout());
     }
 
+    // Online indicator
+    public function online($id = null) {
+        $this->User->id = $id;
+        $this->User->saveField('last_active', time());
+    }
+
 }

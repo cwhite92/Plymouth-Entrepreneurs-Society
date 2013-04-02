@@ -1,14 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.5
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Mar 25, 2013 at 08:03 PM
--- Server version: 5.5.29
--- PHP Version: 5.4.10
+-- Host: 127.0.0.1
+-- Generation Time: Apr 02, 2013 at 01:08 PM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `pes`
@@ -20,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `blog_posts`
 --
 
-CREATE TABLE `blog_posts` (
+CREATE TABLE IF NOT EXISTS `blog_posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `slug` varchar(255) NOT NULL,
@@ -43,7 +49,7 @@ CREATE TABLE `blog_posts` (
 -- Table structure for table `blog_post_categories`
 --
 
-CREATE TABLE `blog_post_categories` (
+CREATE TABLE IF NOT EXISTS `blog_post_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) DEFAULT NULL,
   `lft` int(11) DEFAULT NULL,
@@ -69,7 +75,7 @@ CREATE TABLE `blog_post_categories` (
 -- Table structure for table `blog_post_categories_blog_posts`
 --
 
-CREATE TABLE `blog_post_categories_blog_posts` (
+CREATE TABLE IF NOT EXISTS `blog_post_categories_blog_posts` (
   `blog_post_category_id` int(11) NOT NULL,
   `blog_post_id` int(11) NOT NULL,
   PRIMARY KEY (`blog_post_category_id`,`blog_post_id`)
@@ -81,7 +87,7 @@ CREATE TABLE `blog_post_categories_blog_posts` (
 -- Table structure for table `blog_post_tags`
 --
 
-CREATE TABLE `blog_post_tags` (
+CREATE TABLE IF NOT EXISTS `blog_post_tags` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `slug` varchar(255) NOT NULL,
@@ -104,7 +110,7 @@ CREATE TABLE `blog_post_tags` (
 -- Table structure for table `blog_post_tags_blog_posts`
 --
 
-CREATE TABLE `blog_post_tags_blog_posts` (
+CREATE TABLE IF NOT EXISTS `blog_post_tags_blog_posts` (
   `blog_post_tag_id` int(11) NOT NULL,
   `blog_post_id` int(11) NOT NULL,
   PRIMARY KEY (`blog_post_tag_id`,`blog_post_id`)
@@ -116,7 +122,7 @@ CREATE TABLE `blog_post_tags_blog_posts` (
 -- Table structure for table `blog_settings`
 --
 
-CREATE TABLE `blog_settings` (
+CREATE TABLE IF NOT EXISTS `blog_settings` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `setting` varchar(255) NOT NULL,
   `setting_text` varchar(255) NOT NULL,
@@ -158,7 +164,7 @@ INSERT INTO `blog_settings` (`id`, `setting`, `setting_text`, `tip`, `value`, `m
 -- Table structure for table `profiles`
 --
 
-CREATE TABLE `profiles` (
+CREATE TABLE IF NOT EXISTS `profiles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `firstname` varchar(50) CHARACTER SET utf8 NOT NULL,
@@ -185,7 +191,7 @@ INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `em
 -- Table structure for table `profiles_skills`
 --
 
-CREATE TABLE `profiles_skills` (
+CREATE TABLE IF NOT EXISTS `profiles_skills` (
   `profile_id` int(11) NOT NULL,
   `skill_id` int(11) NOT NULL,
   KEY `profile_id` (`profile_id`),
@@ -211,7 +217,7 @@ INSERT INTO `profiles_skills` (`profile_id`, `skill_id`) VALUES
 -- Table structure for table `skills`
 --
 
-CREATE TABLE `skills` (
+CREATE TABLE IF NOT EXISTS `skills` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
@@ -237,7 +243,7 @@ INSERT INTO `skills` (`id`, `name`) VALUES
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 NOT NULL,
@@ -245,15 +251,16 @@ CREATE TABLE `users` (
   `created` datetime NOT NULL,
   `activation` varchar(32) CHARACTER SET utf8 NOT NULL,
   `activated` tinyint(1) NOT NULL DEFAULT '0',
+  `last_active` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=59 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=60 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`, `activated`) VALUES
-(52, 'john.smith@gmail.com', '$2a$10$9nLSM4BucqPPBTRaOTzxBu2xao4l.V6YtAp.Dz1VT3sBtoM9FIZuW', 1, '2013-02-12 03:07:40', '4f8a070a4a24a9676ab6ae6a8dfad2a2', 1);
+INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`, `activated`, `last_active`) VALUES
+(52, 'john.smith@gmail.com', '$2a$10$9nLSM4BucqPPBTRaOTzxBu2xao4l.V6YtAp.Dz1VT3sBtoM9FIZuW', 1, '2013-02-12 03:07:40', '4f8a070a4a24a9676ab6ae6a8dfad2a2', 1, 1364900699);
 
 --
 -- Constraints for dumped tables
@@ -263,11 +270,15 @@ INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`
 -- Constraints for table `profiles`
 --
 ALTER TABLE `profiles`
-ADD CONSTRAINT `profiles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `profiles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `profiles_skills`
 --
 ALTER TABLE `profiles_skills`
-ADD CONSTRAINT `profiles_skills_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`),
-ADD CONSTRAINT `profiles_skills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`);
+  ADD CONSTRAINT `profiles_skills_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`),
+  ADD CONSTRAINT `profiles_skills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
