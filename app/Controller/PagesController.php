@@ -18,6 +18,13 @@ class PagesController extends AppController {
             'limit' => 5
         ));
         $this->set('latestUsers', $latestUsers);
+
+        // Get the latest active time for all members
+        $latestUsers = $this->User->find('all', array(
+            'order' => array('User.created'),
+            'limit' => 5
+        ));
+        $this->set('latestUsers', $latestUsers);
     }
 
 }

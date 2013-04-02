@@ -38,6 +38,21 @@
         <?php echo htmlspecialchars($profile['Profile']['bio']); ?>
         <h1>Experience</h1>
         Same with this bit, it also needs to be added. Boom.
+        <?php
+        $userTime = $profile['Profile']['last_active'];
+        $currentTime = time();
+
+        $temp = ($currentTime - $userTime);
+//        echo $temp;
+
+        if ($temp <= 300) {
+            echo "online";
+        }
+
+        if($profile['User']['admin']) {
+            echo "cunt";
+        }
+        ?>
     </div><!-- END .content -->
 </div><!-- END .entry -->
 <div class="entry profile">

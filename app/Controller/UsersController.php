@@ -139,7 +139,10 @@ class UsersController extends AppController {
     // Online indicator
     public function online($id = null) {
         $this->User->id = $id;
-        $this->User->saveField('last_active', time());
-    }
+        $this->request->data['Profile']['user_id'] = $this->User->id;
 
+        $this->User->Profile->updateAll(
+            array('last_active' => time())
+        );
+    }
 }
