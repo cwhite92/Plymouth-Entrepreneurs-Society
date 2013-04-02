@@ -5,6 +5,7 @@
 <!--            <th>Username</th>-->
             <th>Email</th>
             <th>Activated</th>
+            <th>Role</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
@@ -14,6 +15,7 @@
             <tr>
                 <td><?php echo $user['User']['email']; ?></td>
                 <td><?php echo $user['User']['activated']; ?></td>
+                <td><?php echo $user['User']['admin']; ?></td>
                 <td>
                     <?php echo $this->Html->link('',
                         array(
