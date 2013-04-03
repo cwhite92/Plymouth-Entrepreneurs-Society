@@ -44,6 +44,7 @@ $(function(){
 
 	// User dashboard
 	$('.dashboard .settings').click(function(e){
+		e.preventDefault();
 		$this = $(this);
 		$this.parent().find('ul').slideToggle(200);
 	});
