@@ -8,8 +8,8 @@ A website which will enable users to register and network between each other in 
 | Rich text editor              | Ed          | Completed       |
 | Profile editor                | Chris       | Completed       |
 | Anonymous email               | Everyone    |                 |
-| Online indicator              | Louis       | complete        |
-| Admin indicator               | Louis       | complete        |
+| Online indicator              | Louis       | Completed       |
+| Admin indicator               | Louis       | Completed       |
 | Report abuse system           | Levi        | Not started     |
 | Create new admin system       | Levi        | Not started     |
 | Event posting                 | Jake        | Nearly perfect  |
@@ -19,7 +19,7 @@ A website which will enable users to register and network between each other in 
 | RSS for blog                  | Jake        | Completed       |
 | RSS for events                | Jake        | Completed       |
 | Integrate template w/ backend | Ed          | Started         |
-| Design admin panel            | Levi        | Complete        |
+| Design admin panel            | Levi        | Completed       |
 
 
 Some good things to know
