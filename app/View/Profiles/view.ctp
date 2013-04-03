@@ -38,9 +38,9 @@
             </ul>
         </div><!-- END .meta -->
 
-        <h1>About me</h1>
+        <h2>About me</h2>
         <?php echo htmlspecialchars($profile['Profile']['bio']); ?>
-        <h1>Experience</h1>
+        <h2>Experience</h2>
         Same with this bit, it also needs to be added. Boom.
     </div><!-- END .content -->
 </div><!-- END .entry -->
