@@ -52,4 +52,24 @@ class ProfilesController extends AppController {
             $this->request->data = $profile;
         }
     }
+
+    // User online status
+    public function onlineStatus($time) {
+        $currentTime = time();
+            
+        if ($currentTime - $time <= 180) {
+            return '<span class="status online"><span data-icon="&#xF0C7;"></span> Online</span>';
+        } else {
+            return '<span class="status offline"><span data-icon="&#xF0C7;"></span> Offline</span>';
+        }
+    }
+
+    // User rank
+    public function rank($rank) {
+        switch ($rank) {
+            case 1:
+                return '<span class="rank">Admin</span>';
+                break;
+        }
+    }
 }

@@ -185,7 +185,8 @@ input,
 .button,
 .nav,
 .content,
-.dashboard img {
+.dashboard img,
+.profile .rank {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -669,6 +670,35 @@ input[type="submit"],
 
     .profile textarea {
         margin-top: 0;
+    }
+
+    .profile .status {
+        font-size: .6em;
+        text-transform: uppercase;
+        margin-left: .6em;
+    }
+
+        .profile .status > span {
+            font-size: .8em;
+        }
+
+        .profile .status.online {
+            color: #8eb265;
+        }
+
+        .profile .status.offline {
+            color: #b26565;
+        }
+
+    .profile .rank {
+        float: right;
+        background-color: #b26565;
+        color: #fff;
+        font-size: .5em;
+        line-height: 1em;
+        padding: .4em .5em;
+        margin-top: .55em;
+        text-transform: uppercase;
     }
 
 /** --------------------------------------------------------------

@@ -8,7 +8,11 @@
             )); 
             ?>
             
-            <h1><?php echo $profile['Profile']['firstname']; ?> <?php echo $profile['Profile']['lastname']; ?></h1>
+            <h1>
+                <?php echo $profile['Profile']['firstname']; ?> <?php echo $profile['Profile']['lastname']; ?>
+                <?php echo $this->requestAction('/Profiles/onlineStatus', array('pass' => array( $profile['Profile']['last_active'] ))); ?>
+                <?php echo $this->requestAction('/Profiles/rank', array('pass' => array( $profile['User']['admin'] ))); ?>
+            </h1>
             <ul>
                 <li><strong>Course:</strong> <?php echo htmlspecialchars($profile['Profile']['course']); ?></li>
                 <li>
@@ -38,22 +42,6 @@
         <?php echo htmlspecialchars($profile['Profile']['bio']); ?>
         <h1>Experience</h1>
         Same with this bit, it also needs to be added. Boom.
-        <?php
-        $userTime = $profile['Profile']['last_active'];
-        $currentTime = time();
-
-        $temp = ($currentTime - $userTime);
-
-        if ($temp <= 300) {
-            echo "online";
-        } else {
-            echo 'ofline';
-        }
-
-        if($profile['User']['admin']) {
-            echo "cunt";
-        }
-        ?>
     </div><!-- END .content -->
 </div><!-- END .entry -->
 <div class="entry profile">
