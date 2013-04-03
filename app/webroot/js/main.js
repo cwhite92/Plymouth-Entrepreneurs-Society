@@ -41,6 +41,12 @@ $(function(){
 		}, 250);
 	}
 	scrollUpButton();
+
+	// User dashboard
+	$('.dashboard .settings').click(function(e){
+		$this = $(this);
+		$this.parent().find('ul').slideToggle(200);
+	});
 });
 
 $(document).ready(function(){

@@ -79,8 +79,8 @@ body {
 }
 
 .mainContainer {
-    width: 1140px;
-    margin: 0 auto;
+    width: 870px;
+    margin: 0 auto 0 90px;
     padding: 2em 0;
 }
 
@@ -619,10 +619,10 @@ table {
 /** --------------------------------------------------------------
     MEDIA QUERIES - DESKTOP
     ----------------------------------------------------------- */
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1260px) {
     .mainContainer {
-        width: 870px;
-        margin-left: 90px;
+        width: 1140px;
+        margin: 0 auto;
     }
 }
 /** --------------------------------------------------------------

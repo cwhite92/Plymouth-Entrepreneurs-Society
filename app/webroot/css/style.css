@@ -114,11 +114,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: 1.6em; }
-h2 { font-size: 2.1em; }
-h3 { font-size: 2.0em; }
-h4 { font-size: 1.7em; }
-h5 { font-size: 1.5em; }
-h6 { font-size: 1.3em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.3em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1.1em; }
 
 h1 a,
 h2 a,
@@ -184,7 +184,8 @@ a, img, input {
 input,
 .button,
 .nav,
-.content {
+.content,
+.dashboard img {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -517,13 +518,20 @@ input[type="submit"],
         - widget
         - login
         - twitter
+        - dashboard
     ----------------------------------------------------------- */
+    /*
+        Logo
+    */
     .logo img {
         width: auto;
         max-width: 100%;
         height: auto;
     }
 
+    /*
+        Widget
+    */
     .aside.lower .entry.widget {
         margin-top: 4em;
     }
@@ -545,6 +553,9 @@ input[type="submit"],
             border-top-right-radius: 3px;
         }
 
+    /*
+        Login
+    */
     .entry.login input[type="password"],
     .entry.login input[type="text"] {
         margin-top: 1.6em;
@@ -558,6 +569,9 @@ input[type="submit"],
         margin-left: .6em;
     }
 
+    /*
+        Twitter
+    */
     .tweetbox .text {
         margin: 0;
     }
@@ -569,6 +583,55 @@ input[type="submit"],
         .tweetbox li:first-child {
             padding-top: 0;
         }
+
+    /*
+        Dashboard
+    */
+    .entry.dashboard {
+        margin-top: 3.3em;
+        font-weight: 700;
+    }
+
+        .dashboard .avatar {
+            float: left;
+            margin-top: -2.5em;
+            margin-right: 1em;
+            line-height: 1em;
+        }
+
+            .dashboard .avatar img {
+                width: 60px;
+                height: 60px;
+            }
+
+        .dashboard .settings {
+            float: right;
+            font-size: 1.8em;
+        }
+
+        .dashboard ul {
+            display: none;
+            width: 100%;
+            margin-top: 1em;
+            margin-bottom: -.5em;
+        }
+
+            .dashboard li {
+                width: 100%;
+                border-top: 1px solid;
+                border-color: #ddd;
+            }
+
+                .dashboard li:first-child {
+                    border-top: 0;
+                }
+
+                .dashboard li a {
+                    display: block;
+                    font-size: .8em;
+                    line-height: 2.4em;
+                    text-transform: uppercase;
+                }
 
 /** --------------------------------------------------------------
     PROFILE

@@ -66,8 +66,29 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
 <div class="mainContainer">
     <div class="contentContainer clearfix">
         <div class="section userMenu">
-            <a class="logo" href="./">Entrepreneurs Society</a><a href="#"><?php echo $this->Html->image('profile_pics/user.jpg', array('alt' => 'User', 'class' => 'profilePic')); ?></a>
-            <a href="#">ed torba</a> <a href="#">Sign out</a>
+            <a class="logo" href="./">Entrepreneurs Society</a>
+            <?php
+                echo $this->Html->link(
+                        $this->Html->image('profile_pics/' . $user['Profile']['picture'], array(
+                        'fullbase'  => true, 
+                        'alt'       => $user['Profile']['firstname'] . ' ' . $user['Profile']['lastname'] . '\'s profile picture',
+                        'class'     => 'profilePic'
+                    )),
+                    '/profile/'.$user['Profile']['id'],
+                    array(
+                        'escape'    => false,
+                        'class'     => 'avatar'
+                    ));
+            ?>
+            <?php
+                echo $this->Html->link($user['Profile']['firstname'].' '. $user['Profile']['lastname'],
+                    '/profile/'.$user['Profile']['id'],
+                    array(
+                        'escape'    => false,
+                        'plugin'    => false
+                    ));
+            ?>
+            <?php echo $this->Html->link('Sign out', array('plugin' => false, 'controller' => 'users', 'action' => 'logout')); ?>
         </div><!-- END .section -->
         <div class="section clearfix">
                 <?php echo $this->Session->flash(); ?>

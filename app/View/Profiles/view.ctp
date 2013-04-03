@@ -44,7 +44,7 @@
 
         $temp = ($currentTime - $userTime);
 
-        if ($temp <= 5) {
+        if ($temp <= 300) {
             echo "online";
         } else {
             echo 'ofline';
