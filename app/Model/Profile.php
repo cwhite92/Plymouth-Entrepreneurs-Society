@@ -67,6 +67,13 @@ class Profile extends AppModel {
                 return false;
             }
 
+            // Query for the old filename so we can delete it
+            $oldFilename = $this->find('first', array(
+                'condition' => array('Profile.id' => $this->data['Profile']['id']),
+                'fields' => array('Profile.picture')
+            ));
+            unlink(WWW_ROOT . 'img' . DS . 'profile_pics' . DS . $oldFilename['Profile']['picture']);
+
             // Rename it so it gets saved with the correct name in the database
             $this->data['Profile']['picture'] = $filename;
         } else {
