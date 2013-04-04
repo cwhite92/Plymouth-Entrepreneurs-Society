@@ -41,8 +41,12 @@ class Profile extends AppModel {
     );
 
     public function validateImage($check) {
-        // Quickly check if the file is an image by trying to get its width/height
-        if(@getimagesize($check['picture']['tmp_name'])) {
+        if(!empty($this->data['Profile']['picture']['name'])) {
+            // Quickly check if the file is an image by trying to get its width/height
+            if(@getimagesize($check['picture']['tmp_name'])) {
+                return true;
+            }
+        } else {
             return true;
         }
 
@@ -54,7 +58,7 @@ class Profile extends AppModel {
      * so unfortunately we have to have the skill logic in this Profile model...
      */
     public function beforeSave($options = Array()) {
-        if(isset($this->data['Profile']['picture'])) {
+        if(!empty($this->data['Profile']['picture']['name'])) {
             // Make a filename
             $filename = md5(microtime() * rand()) . '.png';
 
@@ -65,6 +69,9 @@ class Profile extends AppModel {
 
             // Rename it so it gets saved with the correct name in the database
             $this->data['Profile']['picture'] = $filename;
+        } else {
+            // Take the picture out of $this->data
+            unset($this->data['Profile']['picture']);
         }
 
         // If we have skills to save, do it here
