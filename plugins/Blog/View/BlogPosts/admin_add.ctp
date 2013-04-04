@@ -22,13 +22,7 @@
     </div><!-- END .span9 -->
     <div class="span3">
         <div class="entry">
-            <div class="widget">
-                <?php
-                echo $this->Form->input('published', array('label' => __('Publish?')));
-                echo $this->Form->input('sticky', array('label' => __('Stick to top of page?')));
-                echo $this->Form->input('in_rss', array('disabled' => 'disabled', 'checked' => 'checked', 'class' => 'hidden', 'label' => false));
-                ?>
-            </div><!-- END .widget -->
+
             <div class="widget">
                 <?php
                 $newTagLink = $this->Html->link(__('New Tag'), array('controller' => 'blog_post_tags', 'action' => 'add'));
@@ -39,6 +33,13 @@
                 <?php
                 $newCategoryLink = $this->Html->link(__('New Category'), array('controller' => 'blog_post_categories', 'action' => 'add'));
                 echo $this->Form->input('BlogPostCategory', array('label' => __('Categories - ') . $newCategoryLink));
+                ?>
+            </div><!-- END .widget -->
+            <div class="widget">
+                <?php
+                echo $this->Form->input('published', array('label' => __('Publish?')));
+                //                echo $this->Form->input('sticky', array('label' => __('Stick to top of page?')));
+                echo $this->Form->input('in_rss', array('disabled' => 'disabled', 'checked' => 'checked', 'class' => 'hidden', 'label' => false));
                 echo $this->Form->end(__('Submit'));
                 ?>
             </div><!-- END .widget -->
