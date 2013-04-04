@@ -42,8 +42,8 @@
     Router::connect('/skill/*', array('controller' => 'skills', 'action' => 'view'));
 
     // Profile specific routes
-    Router::connect('/profile/*', array('controller' => 'profiles', 'action' => 'view'));
     Router::connect('/profile/edit', array('controller' => 'profiles', 'action' => 'edit'));
+    Router::connect('/profile/*', array('controller' => 'profiles', 'action' => 'view'));
 
 /**
  * Load all plugin routes.  See the CakePlugin documentation on
