@@ -68,7 +68,7 @@ class ProfilesController extends AppController {
     public function rank($rank) {
         switch ($rank) {
             case 1:
-                return '<span class="rank">Admin</span>';
+                return 'Admin';
                 break;
         }
     }

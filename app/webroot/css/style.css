@@ -185,8 +185,7 @@ input,
 .button,
 .nav,
 .content,
-.dashboard img,
-.profile .rank {
+.dashboard img {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -641,45 +640,29 @@ input[type="submit"],
 
 }
 
-    .profile .meta {
+    .profile .vcard {
         display: block;
     }
 
-    .profile img {
-        float: left;
-        width: 132px;
-        height: 132px;
-        margin: 0 1.6em 0 0;
+    .profile .name {
+        color: #222;
+        font-size: 1.4em;
+        font-weight: 700;
     }
 
-    .profile .content > h1,
-    .profile .content h2 {
-        margin-top: 1.6em;
-        padding-bottom: .4em;
-        border-bottom: 1px solid;
-        border-color: #ddd;
-    }
-
-        .profile .content > h1:first-child {
-            margin-top: 0;
-        }
-
-    .profile ul {
-        float: left;
-    }
-
-    .profile textarea {
-        margin-top: 0;
+    .profile .rank {
+        font-size: .8em;
+        font-weight: 700;
+        text-transform: uppercase;
     }
 
     .profile .status {
-        font-size: .6em;
-        text-transform: uppercase;
-        margin-left: .6em;
+        font-size: .9em;
+        font-weight: 700;
     }
 
-        .profile .status > span {
-            font-size: .8em;
+        .profile .status span {
+            font-size: .9em;
         }
 
         .profile .status.online {
@@ -690,15 +673,34 @@ input[type="submit"],
             color: #b26565;
         }
 
-    .profile .rank {
-        float: right;
-        background-color: #b26565;
-        color: #fff;
-        font-size: .5em;
-        line-height: 1em;
-        padding: .4em .5em;
-        margin-top: .55em;
-        text-transform: uppercase;
+    .profile img {
+        float: left;
+        width: 132px;
+        height: 132px;
+        margin: 0 1.6em 0 0;
+    }
+
+    .profile .content h1 {
+        margin-bottom: 0;
+    }
+
+    .profile .content h2 {
+        margin-top: 1.6em;
+        padding-bottom: .4em;
+        border-bottom: 1px solid;
+        border-color: #ddd;
+    }
+
+        .profile .content > h2:first-child {
+            margin-top: 0;
+        }
+
+    .profile ul {
+        display: block;
+    }
+
+    .profile textarea {
+        margin-top: 0;
     }
 
 /** --------------------------------------------------------------

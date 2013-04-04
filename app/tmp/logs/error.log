@@ -7439,3 +7439,12 @@ Stack Trace:
 #1 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
 #2 E:\xampp\htdocs\projects\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2013-04-04 01:21:37 Error: [NotFoundException] Not Found
+Request URL: /projects/ISAD234/profile/edit
+Stack Trace:
+#0 [internal function]: ProfilesController->view('edit')
+#1 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#2 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#4 E:\xampp\htdocs\projects\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

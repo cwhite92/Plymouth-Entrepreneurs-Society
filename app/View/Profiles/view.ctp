@@ -1,19 +1,16 @@
 <div class="entry profile">
     <div class="content">
-        <div class="meta clearfix">
+        <div class="vcard clearfix">
             <?php
             echo $this->Html->image('profile_pics/' . $profile['Profile']['picture'], array(
                 'fullbase'  => true, 
                 'alt'       => $profile['Profile']['firstname'] . ' ' . $profile['Profile']['lastname'] . '\'s profile picture'
             )); 
             ?>
-            
-            <h1>
-                <?php echo $profile['Profile']['firstname']; ?> <?php echo $profile['Profile']['lastname']; ?>
-                <?php echo $this->requestAction('/Profiles/onlineStatus', array('pass' => array( $profile['Profile']['last_active'] ))); ?>
-                <?php echo $this->requestAction('/Profiles/rank', array('pass' => array( $profile['User']['admin'] ))); ?>
-            </h1>
+            <span class="name"><?php echo $profile['Profile']['firstname']; ?> <?php echo $profile['Profile']['lastname']; ?></span>
+            <span class="rank"><?php echo $this->requestAction('/Profiles/rank', array('pass' => array( $profile['User']['admin'] ))); ?></span>
             <ul>
+                <li><strong>Status:</strong> <?php echo $this->requestAction('/Profiles/onlineStatus', array('pass' => array( $profile['Profile']['last_active'] ))); ?></li>
                 <li><strong>Course:</strong> <?php echo htmlspecialchars($profile['Profile']['course']); ?></li>
                 <li>
                     <strong>Skills:</strong>
@@ -36,7 +33,7 @@
                 <li><strong>Skills requested:</strong> Chris - this bit needs to be added</li>
                 <li><strong>Last update:</strong> <?php echo $this->Time->format('d M Y', $profile['Profile']['modified']); ?></li>
             </ul>
-        </div><!-- END .meta -->
+        </div><!-- END .vcard -->
 
         <h2>About me</h2>
         <?php echo htmlspecialchars($profile['Profile']['bio']); ?>
@@ -46,7 +43,7 @@
 </div><!-- END .entry -->
 <div class="entry profile">
     <div class="content">
-        <h1>Contact <?php echo $profile['Profile']['firstname']; ?></h1>
+        <h2>Contact <?php echo $profile['Profile']['firstname']; ?></h2>
 
         <?php echo $this->Form->create('Profile', array('type' => 'post')); ?>
         <?php echo $this->Form->hidden('id'); ?>
