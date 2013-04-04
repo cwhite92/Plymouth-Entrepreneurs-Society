@@ -55,6 +55,17 @@ class AppController extends Controller {
             // Also make it easy to grab user/profile information in views
             $this->set('user', $this->Auth->user());
         }
+
+        // Latest members
+        $this->loadModel('User');
+        
+        // Get the latest members
+        $latestUsers = $this->User->find('all', array(
+            'order'     => array('User.created'),
+            'condition' => array('User.activated' => 1),
+            'limit'     => 5
+        ));
+        $this->set('latestUsers', $latestUsers);
     }
 
     public function isAuthorized($user) {

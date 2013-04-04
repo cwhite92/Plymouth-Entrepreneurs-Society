@@ -103,8 +103,12 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
             </div><!-- END .entry -->
             <div class="entry widget">
                 <div class="content">
-                    <h1>Welcome to my hood</h1>
-                    widget 2
+                    <h1>Recent members</h1>
+                    <?php 
+                    foreach($latestUsers as $user) {
+                        echo $user['Profile']['firstname'];
+                    }
+                    ?>
                 </div><!-- END .content -->
             </div><!-- END .entry -->
             <div class="entry widget">

@@ -7448,3 +7448,88 @@ Stack Trace:
 #3 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
 #4 E:\xampp\htdocs\projects\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2013-04-04 15:29:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /projects/ISAD234/img/profile_pics/a7471ae8492c1d73bc81053d856ed451.png
+Stack Trace:
+#0 E:\xampp\htdocs\projects\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-04 15:31:26 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /projects/ISAD234/img/profile_pics/a7471ae8492c1d73bc81053d856ed451.png
+Stack Trace:
+#0 E:\xampp\htdocs\projects\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-04 15:31:36 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /projects/ISAD234/img/profile_pics/a7471ae8492c1d73bc81053d856ed451.png
+Stack Trace:
+#0 E:\xampp\htdocs\projects\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-04 15:36:20 Error: [NotFoundException] Not Found
+Request URL: /projects/ISAD234/profile/edit
+Stack Trace:
+#0 [internal function]: ProfilesController->view('edit')
+#1 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#2 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#4 E:\xampp\htdocs\projects\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-04-04 15:36:47 Error: [NotFoundException] Not Found
+Request URL: /projects/ISAD234/profile/edit
+Stack Trace:
+#0 [internal function]: ProfilesController->view('edit')
+#1 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfilesController), Array)
+#2 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfilesController), Object(CakeRequest), Object(CakeResponse))
+#4 E:\xampp\htdocs\projects\ISAD234\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-04-04 15:43:26 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\xampp\htdocs\projects\ISAD234\app\Controller\AppController.php, line 60]
+2013-04-04 15:43:26 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /projects/ISAD234/
+Stack Trace:
+#0 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\xampp\htdocs...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\xampp\htdocs...', 60, Array)
+#2 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\xampp\htdocs...', 60, Array)
+#3 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-04 15:44:04 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\xampp\htdocs\projects\ISAD234\app\Controller\AppController.php, line 62]
+2013-04-04 15:44:04 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /projects/ISAD234/
+Stack Trace:
+#0 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\xampp\htdocs...', 62)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\xampp\htdocs...', 62, Array)
+#2 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\xampp\htdocs...', 62, Array)
+#3 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-04 15:45:56 Error: Fatal Error (4): syntax error, unexpected '?' in [E:\xampp\htdocs\projects\ISAD234\app\View\Layouts\default.ctp, line 107]
+2013-04-04 15:45:56 Error: [FatalErrorException] syntax error, unexpected '?'
+Request URL: /projects/ISAD234/
+Stack Trace:
+#0 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\xampp\htdocs...', 107)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\xampp\htdocs...', 107, Array)
+#2 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\xampp\htdocs...', 107, Array)
+#3 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-04 15:46:07 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\xampp\htdocs\projects\ISAD234\app\Controller\AppController.php, line 75]
+2013-04-04 15:46:07 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /projects/ISAD234/
+Stack Trace:
+#0 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\xampp\htdocs...', 75)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\xampp\htdocs...', 75, Array)
+#2 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\xampp\htdocs...', 75, Array)
+#3 E:\xampp\htdocs\projects\ISAD234\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
