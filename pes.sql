@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2013 at 12:04 AM
+-- Generation Time: Apr 04, 2013 at 04:56 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `blog_posts`
 --
 
-CREATE TABLE `blog_posts` (
+CREATE TABLE IF NOT EXISTS `blog_posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `slug` varchar(255) NOT NULL,
@@ -49,7 +49,7 @@ CREATE TABLE `blog_posts` (
 -- Table structure for table `blog_post_categories`
 --
 
-CREATE TABLE `blog_post_categories` (
+CREATE TABLE IF NOT EXISTS `blog_post_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) DEFAULT NULL,
   `lft` int(11) DEFAULT NULL,
@@ -75,7 +75,7 @@ CREATE TABLE `blog_post_categories` (
 -- Table structure for table `blog_post_categories_blog_posts`
 --
 
-CREATE TABLE `blog_post_categories_blog_posts` (
+CREATE TABLE IF NOT EXISTS `blog_post_categories_blog_posts` (
   `blog_post_category_id` int(11) NOT NULL,
   `blog_post_id` int(11) NOT NULL,
   PRIMARY KEY (`blog_post_category_id`,`blog_post_id`)
@@ -87,7 +87,7 @@ CREATE TABLE `blog_post_categories_blog_posts` (
 -- Table structure for table `blog_post_tags`
 --
 
-CREATE TABLE `blog_post_tags` (
+CREATE TABLE IF NOT EXISTS `blog_post_tags` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `slug` varchar(255) NOT NULL,
@@ -110,7 +110,7 @@ CREATE TABLE `blog_post_tags` (
 -- Table structure for table `blog_post_tags_blog_posts`
 --
 
-CREATE TABLE `blog_post_tags_blog_posts` (
+CREATE TABLE IF NOT EXISTS `blog_post_tags_blog_posts` (
   `blog_post_tag_id` int(11) NOT NULL,
   `blog_post_id` int(11) NOT NULL,
   PRIMARY KEY (`blog_post_tag_id`,`blog_post_id`)
@@ -122,7 +122,7 @@ CREATE TABLE `blog_post_tags_blog_posts` (
 -- Table structure for table `blog_settings`
 --
 
-CREATE TABLE `blog_settings` (
+CREATE TABLE IF NOT EXISTS `blog_settings` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `setting` varchar(255) NOT NULL,
   `setting_text` varchar(255) NOT NULL,
@@ -164,12 +164,12 @@ INSERT INTO `blog_settings` (`id`, `setting`, `setting_text`, `tip`, `value`, `m
 -- Table structure for table `profiles`
 --
 
-CREATE TABLE `profiles` (
+CREATE TABLE IF NOT EXISTS `profiles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `firstname` varchar(50) CHARACTER SET utf8 NOT NULL,
   `lastname` varchar(50) CHARACTER SET utf8 NOT NULL,
-  `picture` varchar(36) CHARACTER SET utf8 NOT NULL DEFAULT 'user.jpg',
+  `picture` varchar(36) CHARACTER SET utf8 NOT NULL DEFAULT 'user.png',
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `course` varchar(50) CHARACTER SET utf8 NOT NULL,
   `bio` text CHARACTER SET utf8 NOT NULL,
@@ -192,7 +192,7 @@ INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `em
 -- Table structure for table `profiles_skills`
 --
 
-CREATE TABLE `profiles_skills` (
+CREATE TABLE IF NOT EXISTS `profiles_skills` (
   `profile_id` int(11) NOT NULL,
   `skill_id` int(11) NOT NULL,
   KEY `profile_id` (`profile_id`),
@@ -218,7 +218,7 @@ INSERT INTO `profiles_skills` (`profile_id`, `skill_id`) VALUES
 -- Table structure for table `skills`
 --
 
-CREATE TABLE `skills` (
+CREATE TABLE IF NOT EXISTS `skills` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
@@ -244,7 +244,7 @@ INSERT INTO `skills` (`id`, `name`) VALUES
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 NOT NULL,
