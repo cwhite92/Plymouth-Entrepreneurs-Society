@@ -15,7 +15,7 @@
         Hello <?php echo $user['Profile']['firstname']; ?>
         <a class="settings" href="#" data-icon="&#xF04E;"></a>
         <ul>
-            <?php if ( $user['admin'] == 1 ) : ?>
+            <?php if($user['User']['admin'] == 1): ?>
             <li><?php echo $this->Html->link('Admin Panel', '/admin', array('plugin' => false, 'escape' => false)); ?></li>
             <?php endif; ?>
             <li><?php echo $this->Html->link('Edit Profile', array('plugin' => false, 'controller' => 'profiles', 'action' => 'edit')); ?></li>

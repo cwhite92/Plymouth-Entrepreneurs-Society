@@ -48,18 +48,19 @@ class AppController extends Controller {
     );
 
     public function beforeFilter() {
+        $this->loadModel('User');
+
         // Used in views to easily check if a user is logged in
         $this->set('authed', $this->Auth->user());
         
         if($this->Auth->user()) {
             // Also make it easy to grab user/profile information in views
-            $this->set('user', $this->Auth->user());
+            $this->set('user', $this->User->find('first', array(
+                'condition' => array('User.id' => $this->Auth->user('id'))
+            )));
         }
 
         // Latest members
-        $this->loadModel('User');
-        
-        // Get the latest members
         $latestUsers = $this->User->find('all', array(
             'order'     => array('User.created'),
             'condition' => array('User.activated' => 1),
