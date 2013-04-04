@@ -21,7 +21,9 @@ class BlogPostCategoriesController extends AppController {
 	public function admin_index() {
 		$this->BlogPostCategory->recursive = 0;
 		$this->set('blogPostCategories', $this->paginate());
-	}
+        $this->layout = 'admin';
+
+    }
 
 /**
  * view method
@@ -35,7 +37,9 @@ class BlogPostCategoriesController extends AppController {
 			throw new NotFoundException(__('Invalid blog post category'));
 		}
 		$this->set('blogPostCategory', $this->BlogPostCategory->read(null, $id));
-	}
+        $this->layout = 'admin';
+
+    }
 
 /**
  * add method
@@ -54,7 +58,9 @@ class BlogPostCategoriesController extends AppController {
 		}
 		$parents = $this->BlogPostCategory->generateTreeList();
 		$this->set(compact('parents'));
-	}
+        $this->layout = 'admin';
+
+    }
 
 /**
  * edit method
@@ -79,7 +85,9 @@ class BlogPostCategoriesController extends AppController {
 		}
 		$parents = $this->BlogPostCategory->generateTreeList();
 		$this->set(compact('parents'));
-	}
+        $this->layout = 'admin';
+
+    }
 
 /**
  * delete method
@@ -101,5 +109,7 @@ class BlogPostCategoriesController extends AppController {
 		}
 		$this->Session->setFlash(__('Blog post category was not deleted'));
 		$this->redirect(array('action' => 'index'));
-	}
+        $this->layout = 'admin';
+
+    }
 }

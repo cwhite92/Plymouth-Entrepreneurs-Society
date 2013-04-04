@@ -20,7 +20,9 @@ class BlogPostTagsController extends AppController {
 	public function admin_index() {
 		$this->BlogPostTag->recursive = 0;
 		$this->set('blogPostTags', $this->paginate());
-	}
+        $this->layout = 'admin';
+
+    }
 
 /**
  * view method
@@ -34,7 +36,9 @@ class BlogPostTagsController extends AppController {
 			throw new NotFoundException(__('Invalid blog post tag'));
 		}
 		$this->set('blogPostTag', $this->BlogPostTag->read(null, $id));
-	}
+        $this->layout = 'admin';
+
+    }
 
 /**
  * add method
@@ -51,7 +55,9 @@ class BlogPostTagsController extends AppController {
 				$this->Session->setFlash(__('The blog post tag could not be saved. Please, try again.'));
 			}
 		}
-	}
+        $this->layout = 'admin';
+
+    }
 
 /**
  * edit method
@@ -74,7 +80,9 @@ class BlogPostTagsController extends AppController {
 		} else {
 			$this->request->data = $this->BlogPostTag->read(null, $id);
 		}
-	}
+        $this->layout = 'admin';
+
+    }
 
 /**
  * delete method
@@ -96,5 +104,7 @@ class BlogPostTagsController extends AppController {
 		}
 		$this->Session->setFlash(__('Blog post tag was not deleted'));
 		$this->redirect(array('action' => 'index'));
-	}
+        $this->layout = 'admin';
+
+    }
 }

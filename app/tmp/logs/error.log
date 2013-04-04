@@ -7592,3 +7592,95 @@ Request URL: /ISAD234/admin/settings
 Stack Trace:
 #0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-04-04 19:29:50 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /ISAD234/admin/blog/blog_posts/add
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Datasource/DboSource.php(261): Mysql->connect()
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(3195): ConnectionManager::getDataSource('default')
+#3 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(1107): Model->setDataSource('default')
+#4 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(3217): Model->setSource('users')
+#5 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(2674): Model->getDataSource()
+#6 /Users/jakechampion/Sites/ISAD234/app/Controller/AppController.php(60): Model->find('first', Array)
+#7 /Users/jakechampion/Sites/ISAD234/plugins/Blog/Controller/BlogPostsController.php(40): AppController->beforeFilter()
+#8 [internal function]: BlogPostsController->beforeFilter(Object(CakeEvent))
+#9 /Users/jakechampion/Sites/ISAD234/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /Users/jakechampion/Sites/ISAD234/lib/Cake/Controller/Controller.php(669): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(183): Controller->startupProcess()
+#12 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#13 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-04-04 19:29:50 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/css/cake.generic.css
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-04 19:29:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/img/cake.power.gif
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-04 19:30:00 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /ISAD234/admin/blog/blog_posts/add
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Datasource/DboSource.php(261): Mysql->connect()
+#1 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(3195): ConnectionManager::getDataSource('default')
+#3 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(1107): Model->setDataSource('default')
+#4 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(3217): Model->setSource('users')
+#5 /Users/jakechampion/Sites/ISAD234/lib/Cake/Model/Model.php(2674): Model->getDataSource()
+#6 /Users/jakechampion/Sites/ISAD234/app/Controller/AppController.php(60): Model->find('first', Array)
+#7 /Users/jakechampion/Sites/ISAD234/plugins/Blog/Controller/BlogPostsController.php(40): AppController->beforeFilter()
+#8 [internal function]: BlogPostsController->beforeFilter(Object(CakeEvent))
+#9 /Users/jakechampion/Sites/ISAD234/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /Users/jakechampion/Sites/ISAD234/lib/Cake/Controller/Controller.php(669): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(183): Controller->startupProcess()
+#12 /Users/jakechampion/Sites/ISAD234/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(BlogPostsController), Object(CakeRequest), Object(CakeResponse))
+#13 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-04-04 19:30:00 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/css/cake.generic.css
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-04 19:30:00 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /ISAD234/img/cake.power.gif
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-04 19:42:23 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) in [/Users/jakechampion/Sites/ISAD234/plugins/Blog/Controller/BlogPostTagsController.php, line 108]
+2013-04-04 19:42:23 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION)
+Request URL: /ISAD234/admin/blog/blog_post_tags
+Stack Trace:
+#0 /Users/jakechampion/Sites/ISAD234/lib/Cake/Error/ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/jakecham...', 108)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/jakecham...', 108, Array)
+#2 /Users/jakechampion/Sites/ISAD234/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/jakecham...', 108, Array)
+#3 /Users/jakechampion/Sites/ISAD234/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
