@@ -45,7 +45,7 @@ class ProfilesController extends AppController {
         // Get the skills corresponding to this profile
         $skills = '';
         foreach($profile['Skill'] as $skill) {
-            $skills .= $skill['name'] . ',';
+            $skills .= $skill['name'] . ', ';
         }
         $skills = rtrim($skills, ',');
         $this->set('skills', $skills);

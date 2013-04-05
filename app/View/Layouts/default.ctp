@@ -105,12 +105,24 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
             <div class="entry widget">
                 <div class="content">
                     <h1>Recent members</h1>
-                    <?php
-                    // print_r($latestUsers);
-                    foreach($latestUsers as $user) {
-                        echo $user['Profile']['firstname'].' '.$user['Profile']['lastname'];
-                    }
-                    ?>
+                    <ul class="recent clearfix">
+                        <?php
+                        // print_r($latestUsers);
+                        foreach($latestUsers as $user) {
+                            ?><li><?php
+                            echo $this->Html->link(
+                                $this->Html->image('profile_pics/' . $user['Profile']['picture'], array(
+                                    'fullbase'  => true, 
+                                    'alt'       => $user['Profile']['firstname'] . ' ' . $user['Profile']['lastname']
+                                )),'/profile/'.$user['Profile']['id'],
+                                array('escape' => false, 'class' => 'pic')
+                            );
+                            echo $this->Html->link($user['Profile']['firstname'].' '.$user['Profile']['lastname'],
+                            '/profile/'.$user['Profile']['id'], array('escape' => false));
+                            ?></li><?php
+                        }
+                        ?>
+                    </ul>
                 </div><!-- END .content -->
             </div><!-- END .entry -->
             <div class="entry widget">

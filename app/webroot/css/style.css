@@ -186,7 +186,8 @@ input,
 .nav,
 .content,
 .dashboard img,
-.profilePicture img {
+.profilePicture img,
+.recent li img {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -521,6 +522,7 @@ input[type="submit"],
         - login
         - twitter
         - dashboard
+        - recent members
     ----------------------------------------------------------- */
     /*
         Logo
@@ -634,6 +636,34 @@ input[type="submit"],
                     line-height: 2.4em;
                     text-transform: uppercase;
                 }
+
+    /*
+        Recent Members
+    */
+    .recent {
+        display: block;
+    }
+
+        .recent li {
+            float: left;
+            display: block;
+            width: 100%;
+            margin-top: 1em;
+        }
+
+            .recent li:first-child {
+                margin-top: 0;
+            }
+
+            .recent li a.pic {
+                float: left;
+                margin-right: 1em;
+            }
+
+            .recent li img {
+                width: 36px;
+                height: 36px;
+            }
 
 /** --------------------------------------------------------------
     PROFILE
