@@ -105,6 +105,15 @@ a:focus {
     color: #037ea5;
 }
 
+    .aside a {
+        color: #037ea5;
+    }
+
+        .aside a:hover,
+        .aside a:focus {
+            color: #222;
+        }
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
