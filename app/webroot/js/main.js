@@ -63,7 +63,8 @@ $(document).ready(function(){
 	});
 
 	// Delete profile picture functionality
-	$('#deletePictureButton').on('click', function() {
+	$('.removeProfilePic').on('click', function(e) {
+		e.preventDefault();
 		// Ask the user to confirm
 		if(confirm('Are you sure you want to delete your profile picture?')) {
 			// Send an AJAX request to delete the profile picture

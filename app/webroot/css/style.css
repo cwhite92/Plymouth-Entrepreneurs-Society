@@ -185,7 +185,8 @@ input,
 .button,
 .nav,
 .content,
-.dashboard img {
+.dashboard img,
+.profilePicture img {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -294,6 +295,7 @@ input[type="submit"],
     input[type="submit"]:focus,
     .button:hover,
     .button:focus {
+        color: #fff;
         background-color: #009bcd;
     }
 
@@ -635,7 +637,12 @@ input[type="submit"],
 
 /** --------------------------------------------------------------
     PROFILE
+    - Profile
+    - Profile edit
     ----------------------------------------------------------- */
+/*
+    Profile
+*/
 .profile {
 
 }
@@ -701,6 +708,39 @@ input[type="submit"],
 
     .profile textarea {
         margin-top: 0;
+    }
+
+/*
+    Profile edit
+*/
+.profilePicture {
+    display: block;
+}
+
+    .profilePicture img {
+        float: left;
+        width: 132px;
+        height: 132px;
+        margin: 0 1.6em 0 0;
+    }
+
+    .profilePicture .options {
+        float: left;
+    }
+
+    .profilePicture label {
+        margin: 0;
+    }
+
+    .profilePicture input[type="file"] {
+        width: auto;
+        border: 0;
+        padding: 0;
+        margin-bottom: 1.6em;
+    }
+
+    .profilePicture a {
+        font-size: .8em;
     }
 
 /** --------------------------------------------------------------
@@ -1082,6 +1122,12 @@ input[type="submit"],
     }
 
     .profile img {
+        float: none;
+        display: block;
+        margin: 0 auto 1.6em;
+    }
+
+    .profilePicture img {
         float: none;
         display: block;
         margin: 0 auto 1.6em;
