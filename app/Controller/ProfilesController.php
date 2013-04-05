@@ -83,15 +83,12 @@ class ProfilesController extends AppController {
         }
     }
 
-    // User online status
-    public function onlineStatus($time) {
-        $currentTime = time();
-            
-        if ($currentTime - $time <= 180) {
-            return '<span class="status online"><span data-icon="&#xF0C7;"></span> Online</span>';
-        } else {
-            return '<span class="status offline"><span data-icon="&#xF0C7;"></span> Offline</span>';
-        }
+    // Online indicator
+    public function online($id = null) {
+        $this->User->Profile->updateAll(
+            array('last_active' => time() ),
+            array('AND' => array('user_id' => $id) )
+        );
     }
 
     // User rank
