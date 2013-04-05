@@ -60,7 +60,7 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
         <ul class="nav">
             <li class="mobileTrigger hiddenDesktop"><a href="#" data-icon="&#xF0AA;"></a></li>
             <li class="currentMenuItem"><?php echo $this->Html->link('News', '/', array('escape' => false)); ?></li>
-            <li><a href="#">Events</a></li>
+            <li><?php echo $this->Html->link('Events', '/events', array('escape' => false)); ?></li>
             <li><a href="#">Members</a></li>
             <li>
                 <a href="#">Services+</a>

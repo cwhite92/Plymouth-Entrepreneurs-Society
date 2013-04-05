@@ -38,4 +38,32 @@ class Event extends AppModel {
 
         return false;
     }
+
+    public function beforeSave($options = Array()) {
+        if(!empty($this->data['Event']['poster']['name'])) {
+            // Query for the users current profile picture
+            $currentPicture = $this->find('first', array(
+                'condition' => array(
+                    'Event.id' => $this->data['Event']['id']
+                ),
+                'fields' => array('Event.poster')
+            ));
+
+            // Make a filename
+            $filename = md5(microtime() * rand()) . '.png';
+
+            // Attempt to move the uploaded file
+            if(!move_uploaded_file($this->data['Event']['poster']['tmp_name'], WWW_ROOT . 'img' . DS . 'posters' . DS . $filename)) {
+                return false;
+            }
+
+            // Rename it so it gets saved with the correct name in the database
+            $this->data['Profile']['picture'] = $filename;
+        } else {
+            // Take the picture out of $this->data
+            unset($this->data['Profile']['picture']);
+        }
+
+        return true;
+    }
 }

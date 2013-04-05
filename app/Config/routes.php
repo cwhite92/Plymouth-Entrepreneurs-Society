@@ -23,6 +23,7 @@
 
     // General routes
     Router::connect('/', array('controller' => 'posts', 'action' => 'index'));
+    Router::connect('/events', array('controller' => 'events', 'action' => 'index'));
 
     // Admin routes
     Router::connect('/admin', array('controller' => 'users', 'action' => 'index', 'admin' => true));
