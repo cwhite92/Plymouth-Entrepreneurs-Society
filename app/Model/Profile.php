@@ -58,15 +58,15 @@ class Profile extends AppModel {
      * so unfortunately we have to have the skill logic in this Profile model...
      */
     public function beforeSave($options = Array()) {
-        // Query for the users current profile picture
-        $currentPicture = $this->find('first', array(
-            'condition' => array(
-                'Profile.id' => $this->data['Profile']['id']
-            ),
-            'fields' => array('Profile.picture')
-        ));
-
         if(!empty($this->data['Profile']['picture']['name'])) {
+            // Query for the users current profile picture
+            $currentPicture = $this->find('first', array(
+                'condition' => array(
+                    'Profile.id' => $this->data['Profile']['id']
+                ),
+                'fields' => array('Profile.picture')
+            ));
+
             // Make a filename
             $filename = md5(microtime() * rand()) . '.png';
 
@@ -82,12 +82,6 @@ class Profile extends AppModel {
 
             // Rename it so it gets saved with the correct name in the database
             $this->data['Profile']['picture'] = $filename;
-        } else if($this->data['Profile']['deletePicture'] && $currentPicture['Profile']['picture'] != 'user.png') {
-            // The user wants to delete their profile picture
-            unlink(WWW_ROOT . 'img' . DS . 'profile_pics' . DS . $currentPicture['Profile']['picture']);
-
-            // Give them the default picture
-            $this->data['Profile']['picture'] = 'user.png';
         } else {
             // Take the picture out of $this->data
             unset($this->data['Profile']['picture']);

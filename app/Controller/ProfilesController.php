@@ -40,6 +40,8 @@ class ProfilesController extends AppController {
             'conditions' => array('User.id' => $this->Auth->user('id'))
         ));
 
+        $this->set('profile', $profile);
+
         // Get the skills corresponding to this profile
         $skills = array();
         foreach($profile['Skill'] as $skill) {
@@ -51,6 +53,29 @@ class ProfilesController extends AppController {
         if(!$this->request->data) {
             $this->request->data = $profile;
         }
+    }
+
+    public function deleteProfilePicture() {
+        $this->layout = 'ajax';
+
+        // First find the profile ID from the user ID
+        // Also get the users old profile picture to delete it from disk
+        $profileId = $this->Profile->find('first', array(
+            'condition' => array('User.id' => $this->Auth->user('id')),
+            'fields'    => array('Profile.id', 'Profile.picture'),
+            'recursive' => -1
+        ));
+
+        $this->Profile->id = $profileId['Profile']['id'];
+        $this->Profile->saveField('picture', 'user.png', array(
+            'validate'  => false,
+            'callbacks' => false
+        ));
+
+        // Delete old profile picture
+        unlink(WWW_ROOT . 'img' . DS . 'profile_pics' . DS . $profileId['Profile']['picture']);
+
+        $this->set('response', array('status' => 'ok', 'url' => '/ISAD234/img' . DS . 'profile_pics' . DS . 'user.png'));
     }
 
     // User online status

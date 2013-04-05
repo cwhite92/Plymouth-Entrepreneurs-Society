@@ -1,20 +1,23 @@
 <div class="entry">
     <div class="content">
         <h1>Edit your profile</h1>
-        <?php
-        echo $this->Form->create('Profile', array(
+        <?php echo $this->Form->create('Profile', array(
             'type'          => 'file',
             'inputDefaults' => array(
                 'div'       => false
             )
-        ));
-        ?>
+        )); ?>
         <?php echo $this->Form->hidden('id'); ?>
+        <?php echo $this->Html->image('profile_pics/' . $profile['Profile']['picture'], array(
+            'fullbase'  => true, 
+            'alt'       => $profile['Profile']['firstname'] . ' ' . $profile['Profile']['lastname'] . '\'s profile picture',
+            'id' => 'profile-picture'
+        )); ?>
         <?php echo $this->Form->input('picture', array('type' => 'file')); ?>
-        <?php echo $this->Form->input('deletePicture', array(
-            'type' => 'checkbox',
-            'label' => 'Delete profile picture',
-            'after' => '<span class="description">Check this to remove your profile picture and use the default.</span>'
+        <?php echo $this->Form->button('Delete profile picture', array(
+            'type' => 'button',
+            'id' => 'deletePictureButton',
+            'class' => 'button'
         )); ?>
         <?php echo $this->Form->input('firstname'); ?>
         <?php echo $this->Form->input('lastname'); ?>

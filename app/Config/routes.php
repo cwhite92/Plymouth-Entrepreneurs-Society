@@ -43,6 +43,7 @@
 
     // Profile specific routes
     Router::connect('/profile/edit', array('controller' => 'profiles', 'action' => 'edit'));
+    Router::connect('/profile/edit/deleteProfilePicture/*', array('controller' => 'profiles', 'action' => 'deleteProfilePicture'));
     Router::connect('/profile/*', array('controller' => 'profiles', 'action' => 'view'));
 
 /**
