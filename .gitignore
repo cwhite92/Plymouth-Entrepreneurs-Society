@@ -37,3 +37,5 @@ app/tmp/cache/persistent/myapp_cake_core_default_en-us
 app/tmp/cache/persistent/myapp_cake_core_file_map
 
 app/tmp/cache/persistent/myapp_cake_core_method_cache
+
+app/tmp/logs/error.log
