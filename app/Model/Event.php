@@ -58,10 +58,10 @@ class Event extends AppModel {
             }
 
             // Rename it so it gets saved with the correct name in the database
-            $this->data['Profile']['picture'] = $filename;
+            $this->data['Events']['poster'] = $filename;
         } else {
             // Take the picture out of $this->data
-            unset($this->data['Profile']['picture']);
+            unset($this->data['Event']['poster']);
         }
 
         return true;
