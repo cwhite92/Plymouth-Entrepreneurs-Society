@@ -34,8 +34,8 @@ class Profile extends AppModel {
                 'message' => 'Only images are allowed to be uploaded'
             ),
             'size' => array(
-                'rule' => array('fileSize', '<=', '2MB'),
-                'message' => 'Picture must be less than 2 MB'
+                'rule' => array('fileSize', '<=', '800KB'),
+                'message' => 'Picture must be less than 800KB'
             )
         )
     );
