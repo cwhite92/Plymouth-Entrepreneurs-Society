@@ -29,11 +29,11 @@ class ProfilesController extends AppController {
     public function edit() {
         if($this->request->is('post') || $this->request->is('put')) {
             if($this->Profile->save($this->request->data)) {
-                $this->Session->setFlash('Your profile has been updated.');
+                $this->Session->setFlash('Your profile has been updated.', 'default', array('class' => 'success'));
                 $this->redirect(array('action' => 'edit'));
             }
             
-            $this->Session->setFlash('There was a problem saving your profile. Please try again.');
+            $this->Session->setFlash('There was a problem saving your profile. Please try again.', 'default', array('class' => 'error'));
         }
 
         $profile = $this->Profile->find('first', array(

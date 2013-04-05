@@ -14,7 +14,7 @@
         <?php echo $this->Form->input('deletePicture', array(
             'type' => 'checkbox',
             'label' => 'Delete profile picture',
-            'after' => '<span class="description">Check this to remove your profile picture and use the default</span>'
+            'after' => '<span class="description">Check this to remove your profile picture and use the default.</span>'
         )); ?>
         <?php echo $this->Form->input('firstname'); ?>
         <?php echo $this->Form->input('lastname'); ?>
