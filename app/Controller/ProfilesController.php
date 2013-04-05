@@ -62,9 +62,8 @@ class ProfilesController extends AppController {
         // First find the profile ID from the user ID
         // Also get the users old profile picture to delete it from disk
         $profile = $this->Profile->find('first', array(
-            'condition' => array('User.id' => $this->Auth->user('id')),
-            'fields'    => array('Profile.id', 'Profile.picture'),
-            'recursive' => -1
+            'conditions' => array('User.id' => $this->Auth->user('id')),
+            'fields'    => array('Profile.id', 'Profile.picture')
         ));
 
         // Don't do anything if a user has the default profile picture
