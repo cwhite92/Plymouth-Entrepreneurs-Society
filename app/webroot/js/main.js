@@ -61,4 +61,19 @@ $(document).ready(function(){
 		username: 'twitter',
 		posts: 2
 	});
+
+	// Delete profile picture functionality
+	$('#deletePictureButton').on('click', function() {
+		// Ask the user to confirm
+		if(confirm('Are you sure you want to delete your profile picture?')) {
+			// Send an AJAX request to delete the profile picture
+			$.get('edit/deleteProfilePicture', function(response) {
+				if(response.status == 'ok') {
+					// Make style changes to give user feedback
+					$('#profile-picture').attr('src', response.url);
+					$('.avatar img').attr('src', response.url);
+				}
+			}, 'json');
+		}
+	});
 });
