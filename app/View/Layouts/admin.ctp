@@ -18,6 +18,7 @@
 
 $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
 ?>
+<?php if($authed) $this->requestAction('/Users/online', array('pass' => array($user['User']['id']))); ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -47,7 +48,7 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
             <?php echo $this->Html->link('<span data-icon="&#xF162;"></span><span class="text">Home</span>', '/admin', array('escape' => false)); ?>
         </li>
         <li>
-            <?php echo $this->Html->link('<span data-icon="&#xF139;"></span><span class="text">News</span>', '/admin/blog_posts', array('escape' => false)); ?>
+            <?php echo $this->Html->link('<span data-icon="&#xF139;"></span><span class="text">News</span>', '/admin/news', array('escape' => false)); ?>
         </li>
         <li>
             <?php echo $this->Html->link('<span data-icon="&#xF05B;"></span><span class="text">Events</span>', '/admin/events', array('escape' => false)); ?>
@@ -58,9 +59,9 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
         <li>
             <?php echo $this->Html->link('<span data-icon="&#xF0CE;"></span><span class="text">Mass Mail</span>', 'https://login.mailchimp.com/', array('escape' => false, 'target' => '_blank')); ?>
         </li>
-        <li>
-            <?php echo $this->Html->link('<span data-icon="&#xF04E;"></span><span class="text">Settings</span>', '/admin/settings', array('escape' => false)); ?>
-        </li>
+<!--        <li>-->
+<!--            --><?php //echo $this->Html->link('<span data-icon="&#xF04E;"></span><span class="text">Settings</span>', '/admin/settings', array('escape' => false)); ?>
+<!--        </li>-->
     </ul>
 </div><!-- END .bar -->
 <div class="mainContainer">

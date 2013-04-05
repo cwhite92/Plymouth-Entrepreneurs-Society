@@ -22,13 +22,13 @@
  */
 
     // General routes
-    Router::connect('/', array('plugin' => 'blog', 'controller' => 'blog_posts', 'action' => 'index'));
+    Router::connect('/', array('controller' => 'posts', 'action' => 'index'));
 
     // Admin routes
     Router::connect('/admin', array('controller' => 'users', 'action' => 'index', 'admin' => true));
     Router::connect('/admin/users', array('controller' => 'users', 'action' => 'users', 'admin' => true));
-    Router::connect('/admin/news', array('plugin' => 'blog', 'controller' => 'blog_posts', 'action' => 'index', 'admin' => true));
-    Router::connect('/admin/events', array('plugin' => 'blog', 'controller' => 'blog_posts', 'action' => 'index', 'admin' => true));
+    Router::connect('/admin/news', array('controller' => 'posts', 'action' => 'index', 'admin' => true));
+    Router::connect('/admin/events', array('controller' => 'events', 'action' => 'index', 'admin' => true));
 
 
     // User specific routes

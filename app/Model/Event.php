@@ -1,0 +1,41 @@
+<?php
+/**
+ * Created by JetBrains PhpStorm.
+ * User: jakechampion
+ * Date: 05/04/2013
+ * Time: 15:03
+ * To change this template use File | Settings | File Templates.
+ */
+class Event extends AppModel {
+    public $validate = array(
+        'title' => array(
+            'rule' => 'notEmpty'
+        ),
+        'body' => array(
+            'rule' => 'notEmpty'
+        ),
+        'poster' => array(
+            'kosher' => array(
+                'rule' => 'validateImage',
+                'message' => 'Only images are allowed to be uploaded'
+            ),
+            'size' => array(
+                'rule' => array('fileSize', '<=', '2MB'),
+                'message' => 'Picture must be less than 2 MB'
+            )
+        )
+    );
+
+    public function validateImage($check) {
+        if(!empty($this->data['Event']['profile']['name'])) {
+            // Quickly check if the file is an image by trying to get its width/height
+            if(@getimagesize($check['picture']['tmp_name'])) {
+                return true;
+            }
+        } else {
+            return true;
+        }
+
+        return false;
+    }
+}
