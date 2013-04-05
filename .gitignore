@@ -1,22 +1,20 @@
-.idea/inspectionProfiles/Project_Default.xml
+# User specific & automatically generated files #
+#################################################
+/.idea
+/app/Config/database.php
+/app/tmp
+/lib/Cake/Console/Templates/skel/tmp/
+/build
+/dist
+/tags
 
-.idea/inspectionProfiles/profiles_settings.xml
-
-.idea/sqldialects.xml
-
-app/tmp/cache/.DS_Store
-.idea/workspace.xml
-
+# OS generated files #
+######################
 .DS_Store
-
-.idea/workspace.xml
-
-app/.DS_Store
-
-app/.DS_Store
-
-.DS_Store
-
-.idea/workspace.xml
-
-app/.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
