@@ -1,18 +1,10 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: jakechampion
- * Date: 05/04/2013
- * Time: 15:04
- * To change this template use File | Settings | File Templates.
- */
 class EventsController extends AppController {
     public $helpers = array('Html', 'Form');
 
     public function  admin_index() {
         $this->set('events', $this->Event->find('all'));
         $this->layout = 'admin';
-
     }
 
     public function  index() {
@@ -42,7 +34,6 @@ class EventsController extends AppController {
             }
         }
         $this->layout = 'admin';
-
     }
 
     public function admin_edit($id = null) {
@@ -69,7 +60,6 @@ class EventsController extends AppController {
             $this->request->data = $event;
         }
         $this->layout = 'admin';
-
     }
 
     public function admin_delete($id) {
@@ -82,6 +72,5 @@ class EventsController extends AppController {
             $this->redirect(array('action' => 'index'));
         }
         $this->layout = 'admin';
-
     }
 }

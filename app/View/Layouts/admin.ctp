@@ -45,7 +45,7 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
 <div class="bar">
     <ul>
         <li class="currentMenuItem">
-            <?php echo $this->Html->link('<span data-icon="&#xF162;"></span><span class="text">Home</span>', '/admin', array('escape' => false)); ?>
+            <?php echo $this->Html->link('<span data-icon="&#xF162;"></span><span class="text">Home</span>', '/', array('escape' => false)); ?>
         </li>
         <li>
             <?php echo $this->Html->link('<span data-icon="&#xF139;"></span><span class="text">News</span>', '/admin/news', array('escape' => false)); ?>
@@ -67,7 +67,7 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
 <div class="mainContainer">
     <div class="contentContainer clearfix">
         <div class="section userMenu">
-            <a class="logo" href="./">Entrepreneurs Society</a>
+            <?php echo $this->Html->link('Entrepreneurs Society', '/', array('class' => 'logo')); ?>
             <?php
                 echo $this->Html->link(
                         $this->Html->image('profile_pics/' . $user['Profile']['picture'], array(
@@ -89,7 +89,7 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
                         'plugin'    => false
                     ));
             ?>
-            <?php echo $this->Html->link('Sign out', array('plugin' => false, 'controller' => 'users', 'action' => 'logout')); ?>
+            <?php echo $this->Html->link('Sign out', array('admin' => false, 'controller' => 'users', 'action' => 'logout')); ?>
         </div><!-- END .section -->
         <div class="section clearfix">
                 <?php echo $this->Session->flash(); ?>

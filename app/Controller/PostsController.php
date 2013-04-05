@@ -30,6 +30,19 @@ class PostsController extends AppController {
         $this->set('post', $post);
     }
 
+    public function admin_view($id = null) {
+        if (!$id) {
+            throw new NotFoundException(__('Invalid post'));
+        }
+
+        $post = $this->Post->findById($id);
+        if (!$post) {
+            throw new NotFoundException(__('Invalid post'));
+        }
+        $this->set('post', $post);
+        $this->layout = 'admin';
+    }
+
     public function admin_add() {
         if ($this->request->is('post')) {
             $this->Post->create();
