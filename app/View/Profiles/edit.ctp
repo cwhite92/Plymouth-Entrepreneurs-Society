@@ -17,7 +17,9 @@
             <div class="options">
                 <?php echo $this->Form->input('picture', array('type' => 'file')); ?>
                 <div class="cf"></div>
-                <a href="#" class="removeProfilePic button" title="Remove profile picture">Remove picture</a>
+                <?php if($profile['Profile']['picture'] != 'user.png'): ?>
+                    <a href="#" class="removeProfilePic button" title="Remove profile picture">Remove picture</a>
+                <?php endif; ?>
             </div><!-- END .options -->
         </div><!-- END .profilePicture -->
         <?php echo $this->Form->input('firstname'); ?>

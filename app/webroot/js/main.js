@@ -73,6 +73,7 @@ $(document).ready(function(){
 					// Make style changes to give user feedback
 					$('#profile-picture').attr('src', response.url);
 					$('.avatar img').attr('src', response.url);
+					$('.removeProfilePic').remove();
 				}
 			}, 'json');
 		}

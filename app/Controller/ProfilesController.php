@@ -60,22 +60,27 @@ class ProfilesController extends AppController {
 
         // First find the profile ID from the user ID
         // Also get the users old profile picture to delete it from disk
-        $profileId = $this->Profile->find('first', array(
+        $profile = $this->Profile->find('first', array(
             'condition' => array('User.id' => $this->Auth->user('id')),
             'fields'    => array('Profile.id', 'Profile.picture'),
             'recursive' => -1
         ));
 
-        $this->Profile->id = $profileId['Profile']['id'];
-        $this->Profile->saveField('picture', 'user.png', array(
-            'validate'  => false,
-            'callbacks' => false
-        ));
+        // Don't do anything if a user has the default profile picture
+        if($profile['Profile']['picture'] != 'user.png') {
+            $this->Profile->id = $profile['Profile']['id'];
+            $this->Profile->saveField('picture', 'user.png', array(
+                'validate'  => false,
+                'callbacks' => false
+            ));
 
-        // Delete old profile picture
-        unlink(WWW_ROOT . 'img' . DS . 'profile_pics' . DS . $profileId['Profile']['picture']);
+            // Delete old profile picture
+            unlink(WWW_ROOT . 'img' . DS . 'profile_pics' . DS . $profile['Profile']['picture']);
 
-        $this->set('response', array('status' => 'ok', 'url' => '/ISAD234/img' . DS . 'profile_pics' . DS . 'user.png'));
+            $this->set('response', array('status' => 'ok', 'url' => '/ISAD234/img' . DS . 'profile_pics' . DS . 'user.png'));
+        } else {
+            $this->set('response', array('status' => 'error', 'msg' => 'You cannot delete the default profile picture.'));
+        }
     }
 
     // User online status
