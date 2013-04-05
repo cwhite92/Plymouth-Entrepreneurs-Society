@@ -4,7 +4,7 @@ A website which will enable users to register and network between each other in 
 
 | Tasks                         | Assigned-to | Status          |
 | ------------------------------|:-----------:|----------------:|
-| Blogging engine               | Jake        | Nearly perfect  |
+| Blogging engine               | Jake        | Failed :D       |
 | Rich text editor              | Ed          | Completed       |
 | Profile editor                | Chris       | Completed       |
 | Anonymous email               | Everyone    |                 |
@@ -12,7 +12,7 @@ A website which will enable users to register and network between each other in 
 | Admin indicator               | Louis       | Completed       |
 | Report abuse system           | Levi        | Not started     |
 | Create new admin system       | Levi        | Not started     |
-| Event posting                 | Jake        | Nearly perfect  |
+| Event posting                 | Jake        | Failed :D       |
 | Account verification          | Sheldon C.  | Completed       |
 | Link profile with skills page | Chris       | Completed       |
 | Skill search                  | Chris       | Started         |
