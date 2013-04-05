@@ -9,6 +9,6 @@
 <li><strong>Last update:</strong> <?php echo $this->Time->format('d M Y', $event['Event']['modified']); ?></li>
 
 
-<?php echo $this->Html->image('posters/' . $event['Event']['picture'], array(
+<?php echo $this->Html->image('posters/' . $event['Event']['poster'], array(
     'alt'       => $event['Event']['title'] . '\'s poster'
 )); ?>
