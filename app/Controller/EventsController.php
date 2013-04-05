@@ -18,6 +18,7 @@ class EventsController extends AppController {
 
         $event = $this->Event->findById($id);
         if (!$event) {
+            // TODO: route to 404
             throw new NotFoundException(__('Invalid event'));
         }
         $this->set('event', $event);
@@ -42,6 +43,7 @@ class EventsController extends AppController {
         }
 
         $event = $this->Event->findById($id);
+        $this->set('event', $event);
         if (!$event) {
             throw new NotFoundException(__('Invalid event'));
         }
