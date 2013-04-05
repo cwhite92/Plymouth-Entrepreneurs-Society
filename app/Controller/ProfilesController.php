@@ -43,10 +43,11 @@ class ProfilesController extends AppController {
         $this->set('profile', $profile);
 
         // Get the skills corresponding to this profile
-        $skills = array();
+        $skills = '';
         foreach($profile['Skill'] as $skill) {
-            $skills[] = $skill['name'];
+            $skills .= $skill['name'] . ',';
         }
+        $skills = rtrim($skills, ',');
         $this->set('skills', $skills);
 
         // Auto populate form fields

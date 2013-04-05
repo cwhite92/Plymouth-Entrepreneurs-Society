@@ -36,7 +36,7 @@
         <h2>About me</h2>
         <?php echo htmlspecialchars($profile['Profile']['bio']); ?>
         <h2>Experience</h2>
-        Same with this bit, it also needs to be added. Boom.
+        <?php echo htmlspecialchars($profile['Profile']['experience']); ?>
     </div><!-- END .content -->
 </div><!-- END .entry -->
 <div class="entry profile">

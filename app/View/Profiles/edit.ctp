@@ -27,9 +27,10 @@
         <?php echo $this->Form->input('email', array(
             'after' => '<span class="description">This is the email other users will use to contact you.</span>'
         )); ?>
-        <?php echo $this->Form->input('Skill', array('type' => 'text', 'value' => $skills, 'label' => 'Your skills (seperate each skill by space)')); ?>
+        <?php echo $this->Form->input('Skill', array('type' => 'text', 'value' => $skills, 'label' => 'Your skills (seperate each skill by a comma)')); ?>
         <?php echo $this->Form->input('course'); ?>
         <?php echo $this->Form->input('bio'); ?>
+        <?php echo $this->Form->input('experience'); ?>
         <?php echo $this->Form->end('Save changes'); ?>
     </div><!-- END .content -->
 </div><!-- END .entry -->
