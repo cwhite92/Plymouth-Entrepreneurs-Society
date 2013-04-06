@@ -13,7 +13,6 @@ class PostsController extends AppController {
         parent::beforeFilter();
         $this->Auth->allow('index');
         $this->Auth->allow('view');
-
     }
 
     public function  admin_index() {
@@ -22,7 +21,9 @@ class PostsController extends AppController {
     }
 
     public function  index() {
-        $this->set('posts', $this->Post->find('all'));
+        $this->set('posts', $this->Post->find('all', array(
+            'recursive' => 2
+        )));
     }
 
     public function view($id = null) {

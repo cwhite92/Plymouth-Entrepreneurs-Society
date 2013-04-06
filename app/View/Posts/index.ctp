@@ -20,16 +20,15 @@
             <?php endif; ?>
             <div class="meta">
                 <header>
-                    <?php // echo $post['User']; we need firstname and surname + profile picture :)) ?>
-                    <?php echo $post['Post']['user_id'] . ' on ' . $post['Post']['created']; ?> data avatar goes in here.
+                    <?php echo $post['User']['Profile']['firstname'] . ' ' . $post['User']['Profile']['lastname'] . ' on ' . $post['Post']['created']; ?>
                     <?php
                         // I know that $user shoudn't be used here, but i've used it for styling.
                         echo $this->Html->link(
-                            $this->Html->image('profile_pics/' . $user['Profile']['picture'], array(
+                            $this->Html->image('profile_pics/' . $post['User']['Profile']['picture'], array(
                                'fullbase'  => true,
-                               'alt'       => $user['Profile']['firstname'] . ' ' . $user['Profile']['lastname'] . '\'s profile picture',
+                               'alt'       => $post['User']['Profile']['firstname'] . ' ' . $post['User']['Profile']['lastname'] . '\'s profile picture',
                            )),
-                       '/profile/'.$user['Profile']['id'],
+                       '/profile/'.$post['User']['Profile']['id'],
                        array(
                            'escape'    => false,
                            'class'     => 'author'
