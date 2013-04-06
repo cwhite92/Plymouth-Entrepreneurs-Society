@@ -40,7 +40,7 @@
             <article>
                 <?php //TODO: make logic to output first paragraph of body from post, for now using whole body
                     echo $post['Post']['body'];
-                    echo $this->Html->Link(__('Read More'), array('action' => 'view', $post['Post']['id']));
+                    echo $this->Html->Link(__('Read More'), array('action' => 'view', $post['Post']['id']), array('class' => 'more-link'));
                 ?>
             </article>
         </div><!-- END .content -->

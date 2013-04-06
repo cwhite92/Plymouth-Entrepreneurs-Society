@@ -2,24 +2,16 @@
     <div class="content events clearfix">
         <?php 
         if(!empty($event['Event']['picture'])): ?>
-        <?php echo $this->Html->link(
-            $this->Html->image('posters/' . $event['Event']['picture'], array(
+        <?php echo $this->Html->image('posters/' . $event['Event']['picture'], array(
                 'fullbase'  => true,
                 'alt'       => 'Poster for ' . $event['Event']['title'],
                 'class'     => 'poster'
-            )),
-            array(
-                'action' => 'view',
-                $event['Event']['id'],
-            ),
-            array(
-                'escape'    => false,
             ));
         endif;
         ?>
         <header>
             <strong><?php echo $event['Event']['location']; ?></strong>
-            <h1><?php echo $this->Html->Link($event['Event']['title'], array('action' => 'view', $event['Event']['id'])); ?></h1>
+            <h1><?php echo $event['Event']['title']; ?></h1>
         </header>
         <article>
             <?php //TODO: make logic to output first paragraph of body from post, for now using whole body

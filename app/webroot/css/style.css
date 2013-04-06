@@ -182,6 +182,24 @@ h6 a:hover, h6 a:focus {
         color: #fff;
     }
 
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid;
+    border-color: #ddd;
+    margin: 1em 0;
+    padding: 0;
+}
+
+blockquote {
+    border-left: 5px solid !important;
+    border-color: #037ea5 !important;
+    padding: 1em 1.6em !important;
+    margin: 1em 0 !important;
+    font-style: italic !important;
+}
+
 /** --------------------------------------------------------------
     CSS3 EFFECTS
     ----------------------------------------------------------- */
@@ -840,6 +858,62 @@ input[type="submit"],
                 margin: 5%;
             }
 
+    .article .more-link {
+        display: block;
+        margin-top: 1.6em;
+    }
+
+    .article img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .article ul {
+        list-style: disc outside;
+        padding-left: 1.4em;
+        margin: 1.6em 0;
+    }
+
+    .article ol {
+        list-style: decimal outside;
+        padding-left: 1.4em;
+        margin: 1.6em 0;
+    }
+
+    .article table {
+        width: 100%;
+    }
+
+        .article table tr {
+            border: 1px solid;
+            border-color: #ddd;
+        }
+
+            .article table tr:first-child {
+
+            }
+
+            .article table tr:nth-child(even) {
+                background-color: #eee;
+            }
+
+        .article table tr td {
+            border-left: 1px solid;
+            border-color: #ddd;
+            padding: .4em;
+        }
+
+            .article table tr td:first-child {
+                border-left: 0;
+            }
+
+        .article table img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+        }
+
 /** --------------------------------------------------------------
     EVENTS
     ----------------------------------------------------------- */
@@ -1250,6 +1324,11 @@ input[type="submit"],
         width: 100%;
         max-width: 300px;
         margin: 0 auto 1.6em;
+    }
+
+    .article .meta .author {
+        width: 50px;
+        height: 50px;
     }
 
     /* VISIBILITY AND GRID ------------------------------ */

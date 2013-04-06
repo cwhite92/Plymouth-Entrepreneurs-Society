@@ -54,7 +54,7 @@ $(document).ready(function(){
 	// Functions that must wait for better performance.
 
 	// jQuery plugin for stretching videos in article.
-	$('.entry .media').fitVids();
+	$('.article').fitVids();
 
 	// Twitter plugin
 	$('.tweetbox').pixTwitter({

@@ -2,17 +2,9 @@
     <div class="content">
         <?php if(!empty($post['Post']['cover_photo'])): ?>
             <div class="media">
-                <?php echo $this->Html->link(
-                    $this->Html->image('cover_photo/' . $post['Post']['cover_photo'], array(
+                <?php echo $this->Html->image('cover_photo/' . $post['Post']['cover_photo'], array(
                         'fullbase'  => true,
                         'alt'       => $post['Post']['alt_text'],
-                    )),
-                    array(
-                        'action' => 'view',
-                        $post['Post']['id'],
-                    ),
-                    array(
-                        'escape'    => false,
                     ));
                 ?>
             </div><!-- END .media -->
@@ -32,13 +24,12 @@
                        'class'     => 'author'
                    ));
                 ?>
-                <h1><?php echo $this->Html->Link($post['Post']['title'], array('action' => 'view', $post['Post']['id'])); ?></h1>
+                <h1><?php echo $post['Post']['title']; ?></h1>
             </header>
         </div><!-- END .meta -->
         <article>
             <?php //TODO: make logic to output first paragraph of body from post, for now using whole body
                 echo $post['Post']['body'];
-                echo $this->Html->Link(__('Read More'), array('action' => 'view', $post['Post']['id']));
             ?>
         </article>
     </div><!-- END .content -->
