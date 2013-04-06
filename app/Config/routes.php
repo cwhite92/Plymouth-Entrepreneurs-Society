@@ -30,6 +30,8 @@
     Router::connect('/admin/users', array('controller' => 'users', 'action' => 'index', 'admin' => true));
     Router::connect('/admin/news', array('controller' => 'posts', 'action' => 'index', 'admin' => true));
     Router::connect('/admin/events', array('controller' => 'events', 'action' => 'index', 'admin' => true));
+    Router::connect('/admin/services', array('controller' => 'services', 'action' => 'index', 'admin' => true));
+//    Router::connect('/admin/contacts', array('controller' => 'contacts', 'action' => 'edit', 'admin' => true));
 
     // User specific routes
     Router::connect('/register', array('controller' => 'users', 'action' => 'register'));
@@ -45,6 +47,9 @@
 
     // Service specific routes
     Router::connect('/services', array('controller' => 'services', 'action' => 'index'));
+
+    // Contact specific routes
+    Router::connect('/contact', array('controller' => 'contacts', 'action' => 'index'));
 
     // Profile specific routes
     Router::connect('/profile/edit', array('controller' => 'profiles', 'action' => 'edit'));

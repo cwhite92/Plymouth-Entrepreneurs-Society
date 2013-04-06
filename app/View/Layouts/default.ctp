@@ -73,7 +73,7 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
                 </ul>
             </li>
             <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><?php echo $this->Html->link('Contact', array('controller' => 'contacts', 'action' => 'index'), array('escape' => false)); ?></li>
         </ul>
     </div><!-- END .section -->
     <div class="section clearfix">
