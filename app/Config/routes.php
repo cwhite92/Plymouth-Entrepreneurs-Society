@@ -38,6 +38,7 @@
     Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
     Router::connect('/activate/*', array('controller' => 'users', 'action' => 'activate'));
     Router::connect('/account/edit', array('controller' => 'users', 'action' => 'edit'));
+    Router::connect('/members', array('controller' => 'users', 'action' => 'memberList'));
 
     // Skill specific routes
     Router::connect('/skill/*', array('controller' => 'skills', 'action' => 'view'));

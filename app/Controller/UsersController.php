@@ -6,6 +6,13 @@ class UsersController extends AppController {
 
     public $helpers = array('Html', 'Form');
 
+    public $paginate = array(
+        'limit' => 10,
+        'order' => array(
+            'User.created' => 'desc'
+        )
+    );
+
     function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('register', 'activate', 'login');
@@ -27,7 +34,7 @@ class UsersController extends AppController {
                 $this->redirect(array('action' => 'edit'));
             }
 
-            $this->Session->setFlash('There was a problem saving your account settings. Please try again.');
+            $this->Session->setFlash('There was a problem saving the account settings. Please try again.');
         }
 
         // Auto populate form fields
@@ -38,6 +45,30 @@ class UsersController extends AppController {
         }
         $this->layout = 'admin';
 
+    }
+
+    // Has to be called memberList because of some type of reserved word
+    public function memberList() {
+        if(isset($this->request->data['User']['query'])) {
+            // The user is searching, change the conditions of the retrieval
+            $q = $this->request->data['User']['query'];
+
+            $this->paginate = array(
+                'conditions' => array(
+                    'OR' => array(
+                        'Profile.firstname LIKE' => "%$q%",
+                        'Profile.lastname LIKE' => "%$q%"
+                    )
+                ),
+                'limit' => 10,
+                'order' => array(
+                    'User.created' => 'desc'
+                )
+            );
+        }
+
+        // Retrieve member list, have to retrieve the Profile so that the skills get returned
+        $this->set('users', $this->paginate('Profile'));
     }
 
     public function edit() {
