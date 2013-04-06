@@ -674,6 +674,11 @@ input[type="submit"],
                 height: 36px;
             }
 
+            .recent li .skills {
+                display: block;
+                font-size: .8em;
+            }
+
 /** --------------------------------------------------------------
     PROFILE
     - Profile
