@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 06, 2013 at 10:06 PM
+-- Generation Time: Apr 06, 2013 at 10:54 PM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.10
 
@@ -75,7 +75,7 @@ INSERT INTO `events` (`id`, `title`, `body`, `created`, `modified`, `picture`, `
 CREATE TABLE `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `body` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `body` longtext CHARACTER SET utf8 NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -141,7 +141,7 @@ CREATE TABLE `profiles` (
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `email`, `course`, `bio`, `modified`, `last_active`, `experience`) VALUES
-(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 17:04:30', 1365278485, 'I like boobies'),
+(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 22:34:31', 1365281583, 'I like boobies'),
 (37, 53, 'Bob', 'Doe', '5923c5e979cf9c30d555fb0cec442b0d.png', 'bob@gmail.com', '', '', '2013-04-06 00:04:02', 1365199738, ''),
 (38, 54, 'Liza', 'Doe', 'user.png', 'liza@gmail.com', '', '', '2013-04-05 21:36:35', 1365202400, ''),
 (39, 55, 'gemma', 'pike', '8b3286ba312b5d6077ea9fd2d4c82da5.png', 'gemma.pike@students.plymouth.ac.uk', 'International Tourism Management', 'I''m a badass', '2013-04-06 19:24:53', 1365269095, '21 years of being a badass');
@@ -164,15 +164,15 @@ CREATE TABLE `profiles_skills` (
 --
 
 INSERT INTO `profiles_skills` (`profile_id`, `skill_id`) VALUES
-(36, 33),
-(36, 34),
-(36, 35),
-(36, 36),
 (39, 32),
 (39, 49),
 (39, 50),
 (39, 51),
-(39, 52);
+(39, 52),
+(36, 33),
+(36, 53),
+(36, 54),
+(36, 55);
 
 -- --------------------------------------------------------
 
@@ -185,7 +185,14 @@ CREATE TABLE `services` (
   `title` varchar(255) NOT NULL,
   `body` longtext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`id`, `title`, `body`) VALUES
+(1, 'Mentoring', 'Welcome to the Mentoring page!');
 
 -- --------------------------------------------------------
 
@@ -198,7 +205,7 @@ CREATE TABLE `skills` (
   `name` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `skill` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=56 ;
 
 --
 -- Dumping data for table `skills`
@@ -212,7 +219,10 @@ INSERT INTO `skills` (`id`, `name`) VALUES
 (45, '  css'),
 (47, '  english'),
 (48, '  french'),
+(55, '  HTML5'),
+(53, '  Java'),
 (46, '  marketing'),
+(54, '  PHP'),
 (41, ' css'),
 (43, ' english'),
 (44, ' french'),
