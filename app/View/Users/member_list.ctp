@@ -1,6 +1,7 @@
 <h1>Members list</h1>
 <?php echo $this->Form->create('User', array('action' => 'memberList')); ?>
-<?php echo $this->Form->input('query', array('label' => 'Search for')); ?>
+<?php echo $this->Form->textbox('query', array('placeholder' => 'Enter search term...')); ?>
+<?php echo $this->Form->radio('type', array('name' => 'Name search', 'skill' => 'Skill search'), array('value' => 'name')); ?>
 <?php echo $this->Form->end('Search'); ?>
 <ul>
     <?php if(count($users) == 0): ?>

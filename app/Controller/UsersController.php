@@ -6,7 +6,7 @@ class UsersController extends AppController {
 
     public $helpers = array('Html', 'Form');
 
-    public $paginate = array(
+    public $paginateOptions = array(
         'limit' => 10,
         'order' => array(
             'User.created' => 'desc'
@@ -52,22 +52,42 @@ class UsersController extends AppController {
         if(isset($this->request->data['User']['query'])) {
             // The user is searching, change the conditions of the retrieval
             $q = $this->request->data['User']['query'];
+            $type = $this->request->data['User']['type'];
 
-            $this->paginate = array(
-                'conditions' => array(
-                    'OR' => array(
-                        'Profile.firstname LIKE' => "%$q%",
-                        'Profile.lastname LIKE' => "%$q%"
-                    )
-                ),
-                'limit' => 10,
-                'order' => array(
-                    'User.created' => 'desc'
-                )
-            );
+            switch($type) {
+                case 'name':
+                    $this->paginateOptions['conditions'] = array(
+                        'OR' => array(
+                            'Profile.firstname LIKE' => "%$q%",
+                            'Profile.lastname LIKE' => "%$q%"
+                        )
+                    );
+                    break;
+                case 'skill':
+                    $this->paginateOptions['conditions'] = array(
+                        'OR' => array(
+                            'Skill.name LIKE' => "%$q%"
+                        ));
+                    $this->paginateOptions['joins'] = array(
+                        array(
+                            'table' => 'profiles_skills',
+                            'alias' => 'ProfilesSkill',
+                            'type' => 'INNER',
+                            'conditions' => array('Profile.id = ProfilesSkill.profile_id')
+                        ),
+                        array(
+                            'table' => 'skills',
+                            'alias' => 'Skill',
+                            'type' => 'INNER',
+                            'conditions' => array('ProfilesSkill.skill_id = Skill.id')
+                        )
+                    );
+                break;
+            }
         }
 
         // Retrieve member list, have to retrieve the Profile so that the skills get returned
+        $this->paginate = $this->paginateOptions;
         $this->set('users', $this->paginate('Profile'));
     }
 
