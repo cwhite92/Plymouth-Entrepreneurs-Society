@@ -20,7 +20,7 @@
             <?php endif; ?>
             <div class="meta">
                 <header>
-                    <?php echo $post['User']['Profile']['firstname'] . ' ' . $post['User']['Profile']['lastname'] . ' on ' . $post['Post']['created']; ?>
+                    <?php echo $post['User']['Profile']['firstname'] . ' ' . $post['User']['Profile']['lastname']; ?> on <?php echo $this->Time->format('d M Y', $post['Post']['created']); ?>
                     <?php
                         // I know that $user shoudn't be used here, but i've used it for styling.
                         echo $this->Html->link(
