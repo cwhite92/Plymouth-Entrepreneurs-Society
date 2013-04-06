@@ -47,7 +47,7 @@ class ProfilesController extends AppController {
         ))->to($to['Profile']['email'])->subject('Message from ' . $to['Profile']['firstname'] . ' ' . $to['Profile']['lastname'])->template('message')->send();
 
         $this->Session->setFlash('Your message has been sent.', 'default', array('class' => 'success'));
-        $this->redirect(array('action' => 'view', $from['Profile']['id']));
+        $this->redirect(array('action' => 'view', $to['Profile']['id']));
     }
 
     public function edit() {
