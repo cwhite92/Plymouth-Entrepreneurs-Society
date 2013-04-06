@@ -16,10 +16,4 @@ class Post extends AppModel {
             'rule' => 'notEmpty'
         )
     );
-
-    public function beforeSave($options = Array()) {
-        $id = $this->User('id');
-        $this->data['Post']['user_id'] = $id;
-        return true;
-    }
 }

@@ -48,9 +48,12 @@ class PostsController extends AppController {
     }
 
     public function admin_add() {
-        if ($this->request->is('post')) {
+        if($this->request->is('post')) {
+            // Add the user ID to the request data
+            $this->request->data['Post']['user_id'] = $this->Auth->user('id');
+
             $this->Post->create();
-            if ($this->Post->save($this->request->data)) {
+            if($this->Post->save($this->request->data)) {
                 $this->Session->setFlash('Your post has been saved.');
                 $this->redirect(array('action' => 'index'));
             } else {
@@ -97,7 +100,7 @@ class PostsController extends AppController {
             $this->Session->setFlash('The post with id: ' . $id . ' has been deleted.');
             $this->redirect(array('action' => 'index'));
         }
-        
+
         $this->layout = 'admin';
     }
 }
