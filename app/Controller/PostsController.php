@@ -25,7 +25,10 @@ class PostsController extends AppController {
             throw new NotFoundException('Invalid post');
         }
 
-        $post = $this->Post->findById($id);
+        $post = $this->Post->find('first', array(
+            'conditions' => array('Post.id' => $id),
+            'recursive' => 2
+        ));
         if (!$post) {
             throw new NotFoundException('Invalid post');
         }

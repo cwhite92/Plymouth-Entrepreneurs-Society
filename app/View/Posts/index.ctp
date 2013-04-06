@@ -1,6 +1,6 @@
 <?php foreach ($posts as $post): ?>
-    <div class="entry">
-        <div class="content article">
+    <div class="entry article">
+        <div class="content">
             <?php if(!empty($post['Post']['cover_photo'])): ?>
                 <div class="media">
                     <?php echo $this->Html->link(
