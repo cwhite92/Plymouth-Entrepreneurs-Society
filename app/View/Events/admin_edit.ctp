@@ -1,6 +1,7 @@
 <h1>Edit Event</h1>
 <?php
 echo $this->Form->create('Event');
+echo $this->Form->hidden('id');
 echo $this->Form->input('title');
 echo $this->Form->input('picture', array('type' => 'file'));
 echo $this->Form->input('location');
