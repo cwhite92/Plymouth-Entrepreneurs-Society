@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 06, 2013 at 06:47 PM
+-- Generation Time: Apr 06, 2013 at 10:06 PM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.10
 
@@ -83,7 +83,7 @@ CREATE TABLE `posts` (
   `alt_text` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
 
 --
 -- Dumping data for table `posts`
@@ -98,7 +98,8 @@ INSERT INTO `posts` (`id`, `title`, `body`, `created`, `modified`, `user_id`, `c
 (29, 'strikethrough, bold and italic', '<p><strike>STRIKE</strike>,&nbsp;<span style="font-size: 15px; background-color: rgb(255, 255, 255); line-height: 1.45em; letter-spacing: 0px;"><b>BOLD</b>, <i>ITALIC</i></span></p>', '2013-04-06 18:44:51', '2013-04-06 18:44:51', 52, NULL, NULL),
 (30, 'indented paragraghs', '<blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p>fgdsgfsg</p></blockquote><span style="font-size: 15px; line-height: 1.45em; font-style: italic; letter-spacing: 0px;">fgsfdsgdsfgdsgdg</span><br>', '2013-04-06 18:45:13', '2013-04-06 18:45:13', 52, NULL, NULL),
 (31, 'links', '<p><a href="http://www.google.com">google.com</a><br></p><p><a href="mailto:me@jakechampion.name">email</a><br></p><p><br></p>', '2013-04-06 18:46:08', '2013-04-06 18:46:08', 52, NULL, NULL),
-(32, 'colours!!!', '<p><p><span style="color: #8db3e2;"><strong>Lorem Ipsum</strong>&nbsp;is simply dummy te</span><span style="color: #17365d;">xt of the printing a</span><span style="color: #9bbb59;">nd typesetting industry. Lorem Ipsum has been the industry''s standard dum', '2013-04-06 18:47:09', '2013-04-06 18:47:09', 52, NULL, NULL);
+(32, 'colours!!!', '<p><p><span style="color: #8db3e2;"><strong>Lorem Ipsum</strong>&nbsp;is simply dummy te</span><span style="color: #17365d;">xt of the printing a</span><span style="color: #9bbb59;">nd typesetting industry. Lorem Ipsum has been the industry''s standard dum', '2013-04-06 18:47:09', '2013-04-06 18:47:09', 52, NULL, NULL),
+(33, 'another post', '<h1>heading</h1><div>gandhi said I''m a cunt</div><div><hr></div>', '2013-04-06 19:27:30', '2013-04-06 19:27:30', 52, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -133,16 +134,17 @@ CREATE TABLE `profiles` (
   `experience` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=40 ;
 
 --
 -- Dumping data for table `profiles`
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `email`, `course`, `bio`, `modified`, `last_active`, `experience`) VALUES
-(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 17:04:30', 1365266850, 'I like boobies'),
+(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 17:04:30', 1365278485, 'I like boobies'),
 (37, 53, 'Bob', 'Doe', '5923c5e979cf9c30d555fb0cec442b0d.png', 'bob@gmail.com', '', '', '2013-04-06 00:04:02', 1365199738, ''),
-(38, 54, 'Liza', 'Doe', 'user.png', 'liza@gmail.com', '', '', '2013-04-05 21:36:35', 1365202400, '');
+(38, 54, 'Liza', 'Doe', 'user.png', 'liza@gmail.com', '', '', '2013-04-05 21:36:35', 1365202400, ''),
+(39, 55, 'gemma', 'pike', '8b3286ba312b5d6077ea9fd2d4c82da5.png', 'gemma.pike@students.plymouth.ac.uk', 'International Tourism Management', 'I''m a badass', '2013-04-06 19:24:53', 1365269095, '21 years of being a badass');
 
 -- --------------------------------------------------------
 
@@ -165,7 +167,25 @@ INSERT INTO `profiles_skills` (`profile_id`, `skill_id`) VALUES
 (36, 33),
 (36, 34),
 (36, 35),
-(36, 36);
+(36, 36),
+(39, 32),
+(39, 49),
+(39, 50),
+(39, 51),
+(39, 52);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `services`
+--
+
+CREATE TABLE `services` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `body` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -178,21 +198,37 @@ CREATE TABLE `skills` (
   `name` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `skill` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
 
 --
 -- Dumping data for table `skills`
 --
 
 INSERT INTO `skills` (`id`, `name`) VALUES
+(49, '   css'),
+(51, '   english'),
+(52, '   french'),
+(50, '   marketing'),
+(45, '  css'),
+(47, '  english'),
+(48, '  french'),
+(46, '  marketing'),
+(41, ' css'),
+(43, ' english'),
+(44, ' french'),
 (36, ' HTML5'),
 (34, ' Java'),
+(42, ' marketing'),
 (35, ' PHP'),
 (24, 'C#'),
+(37, 'css'),
+(39, 'english'),
+(40, 'french'),
 (32, 'HTML'),
 (26, 'Java'),
 (25, 'JavaScript'),
 (27, 'jQuery'),
+(38, 'marketing'),
 (23, 'MySQL'),
 (22, 'PHP'),
 (33, 'SQL');
@@ -212,7 +248,7 @@ CREATE TABLE `users` (
   `activation` varchar(32) CHARACTER SET utf8 NOT NULL,
   `activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=55 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=56 ;
 
 --
 -- Dumping data for table `users`
@@ -221,7 +257,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`, `activated`) VALUES
 (52, 'john.smith@gmail.com', '$2a$10$9nLSM4BucqPPBTRaOTzxBu2xao4l.V6YtAp.Dz1VT3sBtoM9FIZuW', 1, '2013-02-12 03:07:40', '4f8a070a4a24a9676ab6ae6a8dfad2a2', 1),
 (53, 'bob@gmail.com', '$2a$10$E9TAzT/g3ZOTY1vQ7Xv58uifn9FoXvFiAExGbDEzgGMsUj5T.RbX2', 0, '2013-04-05 21:36:03', '23629a764cd13939155f00d593e4dc2a', 1),
-(54, 'liza@gmail.com', '$2a$10$oIaRoZBHAakDMuG6MgTnluFXa.La2CFGXl/uACS3gid.AX2qjGIUu', 0, '2013-04-05 21:36:35', '3a723c799ce8e9078fcb1eb000abb6ed', 1);
+(54, 'liza@gmail.com', '$2a$10$oIaRoZBHAakDMuG6MgTnluFXa.La2CFGXl/uACS3gid.AX2qjGIUu', 0, '2013-04-05 21:36:35', '3a723c799ce8e9078fcb1eb000abb6ed', 1),
+(55, 'gemma.pike@students.plymouth.ac.uk', '$2a$10$TmBD3te5vYtk/Y8T8US8FuzRl8AwXGAgyC2dsLX3Hx8GP5BSguuJG', 0, '2013-04-06 19:20:58', '0cc33626216a68e4b8345e963f910bbb', 1);
 
 --
 -- Constraints for dumped tables
