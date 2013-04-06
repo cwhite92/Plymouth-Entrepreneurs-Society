@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 06, 2013 at 03:51 PM
+-- Generation Time: Apr 06, 2013 at 05:06 PM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.10
 
@@ -53,19 +53,18 @@ CREATE TABLE `events` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   `picture` varchar(255) DEFAULT NULL,
+  `date` datetime NOT NULL,
+  `location` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`id`, `title`, `body`, `created`, `modified`, `picture`) VALUES
-(4, 'event', '<p>eveveveveve</p>', '2013-04-05 20:09:58', '2013-04-05 20:25:02', 'boob.png'),
-(8, 'boob?', 'boobs?', '2013-04-06 01:45:15', '2013-04-06 01:45:15', NULL),
-(9, 'event', '<p>eveveveveve</p>', '2013-04-06 02:27:49', '2013-04-06 02:27:49', NULL),
-(10, 'woop', '<p>p tags ftw</p>', '2013-04-06 02:34:43', '2013-04-06 02:34:43', NULL);
+INSERT INTO `events` (`id`, `title`, `body`, `created`, `modified`, `picture`, `date`, `location`) VALUES
+(1, 'First event', '<p>Description of said event</p>', '2013-04-06 16:34:43', '2013-04-06 16:34:43', 'boob.png', '2013-04-06 16:34:00', 'Ed''s house');
 
 -- --------------------------------------------------------
 
@@ -134,7 +133,7 @@ CREATE TABLE `profiles` (
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `email`, `course`, `bio`, `modified`, `last_active`, `experience`) VALUES
-(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 00:04:10', 1365256198, 'I like boobies'),
+(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 17:04:30', 1365260674, 'I like boobies'),
 (37, 53, 'Bob', 'Doe', '5923c5e979cf9c30d555fb0cec442b0d.png', 'bob@gmail.com', '', '', '2013-04-06 00:04:02', 1365199738, ''),
 (38, 54, 'Liza', 'Doe', 'user.png', 'liza@gmail.com', '', '', '2013-04-05 21:36:35', 1365202400, '');
 
@@ -156,13 +155,10 @@ CREATE TABLE `profiles_skills` (
 --
 
 INSERT INTO `profiles_skills` (`profile_id`, `skill_id`) VALUES
-(36, 22),
-(36, 23),
-(36, 32),
-(36, 25),
-(36, 27),
-(36, 24),
-(36, 26);
+(36, 33),
+(36, 34),
+(36, 35),
+(36, 36);
 
 -- --------------------------------------------------------
 
@@ -175,20 +171,24 @@ CREATE TABLE `skills` (
   `name` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `skill` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
 
 --
 -- Dumping data for table `skills`
 --
 
 INSERT INTO `skills` (`id`, `name`) VALUES
+(36, ' HTML5'),
+(34, ' Java'),
+(35, ' PHP'),
 (24, 'C#'),
 (32, 'HTML'),
 (26, 'Java'),
 (25, 'JavaScript'),
 (27, 'jQuery'),
 (23, 'MySQL'),
-(22, 'PHP');
+(22, 'PHP'),
+(33, 'SQL');
 
 -- --------------------------------------------------------
 
