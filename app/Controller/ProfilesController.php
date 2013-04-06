@@ -1,5 +1,7 @@
 <?php
 
+App::uses('CakeEmail', 'Network/Email');
+
 class ProfilesController extends AppController {
 
     public $helpers = array('Html', 'Form');
@@ -17,13 +19,35 @@ class ProfilesController extends AppController {
         ));
 
         if(!$profile) {
-            // Profile doesn't exist, return 404
-            // TODO: route to 404 page
-            // redirectUrl(array('controller' => 'pages', 'action' => '404'));
             throw new NotFoundException();
         }
 
         $this->set('profile', $profile);
+    }
+
+    public function emailUser() {
+        // Find the profile
+        $to = $this->Profile->find('first', array(
+            'conditions' => array('Profile.id' => $this->request->data['Profile']['id'])
+        ));
+        if(!$to) {
+            throw new NotFoundException();
+        }
+
+        $from = $this->Auth->user();
+
+        // Send an email to the user
+        $email = new CakeEmail('default');
+        $email->viewVars(array(
+            'emailTitle' => 'Message from ' . $to['Profile']['firstname'] . ' ' . $to['Profile']['lastname'],
+            'to' => $to['Profile']['firstname'],
+            'toId' => $to['Profile']['id'],
+            'from' => $from['Profile']['firstname'] . ' ' . $from['Profile']['lastname'],
+            'message' => $this->request->data['Profile']['message']
+        ))->to($to['Profile']['email'])->subject('Message from ' . $to['Profile']['firstname'] . ' ' . $to['Profile']['lastname'])->template('message')->send();
+
+        $this->Session->setFlash('Your message has been sent.', 'default', array('class' => 'success'));
+        $this->redirect(array('action' => 'view', $from['Profile']['id']));
     }
 
     public function edit() {

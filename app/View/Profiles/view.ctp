@@ -43,8 +43,8 @@
     <div class="content">
         <h2>Contact <?php echo $profile['Profile']['firstname']; ?></h2>
 
-        <?php echo $this->Form->create('Profile', array('type' => 'post')); ?>
-        <?php echo $this->Form->hidden('id'); ?>
+        <?php echo $this->Form->create('Profile', array('type' => 'post', 'action' => 'emailUser')); ?>
+        <?php echo $this->Form->hidden('id', array('value' => $profile['Profile']['id'])); ?>
         <?php echo $this->Form->textarea('message'); ?>
         <?php echo $this->Form->end('Send message'); ?>
     </div><!-- END .content -->
