@@ -106,7 +106,7 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
                                         'fullbase'  => true,
                                         'alt'       => 'Poster for ' . $event['Event']['title']
                                     )),
-                                    '/event/'.$event['Event']['id'],
+                                    array('controller' => 'events', 'action' => 'view', $event['Event']['id']),
                                     array('escape' => false, 'class' => 'pic')
                                 );
 

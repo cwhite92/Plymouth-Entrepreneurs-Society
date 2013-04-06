@@ -49,6 +49,9 @@
     Router::connect('/profile/edit/deleteProfilePicture/*', array('controller' => 'profiles', 'action' => 'deleteProfilePicture'));
     Router::connect('/profile/*', array('controller' => 'profiles', 'action' => 'view'));
 
+    // Event specific routes
+    Router::connect('/event/*', array('controller' => 'events', 'action' => 'view'));
+
 /**
  * Load all plugin routes.  See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
