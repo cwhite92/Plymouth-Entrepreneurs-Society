@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 06, 2013 at 01:12 AM
+-- Generation Time: Apr 06, 2013 at 03:51 PM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.10
 
@@ -13,8 +13,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `pes`
 --
-CREATE DATABASE `pes` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `pes`;
 
 -- --------------------------------------------------------
 
@@ -22,10 +20,8 @@ USE `pes`;
 -- Table structure for table `attachments`
 --
 
-DROP TABLE IF EXISTS `attachments`;
-CREATE TABLE IF NOT EXISTS `attachments` (
+CREATE TABLE `attachments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `posts_id` int(11) NOT NULL,
   `file_name` varchar(255) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `file_name` (`file_name`)
@@ -37,13 +33,11 @@ CREATE TABLE IF NOT EXISTS `attachments` (
 -- Table structure for table `attending`
 --
 
-DROP TABLE IF EXISTS `attending`;
-CREATE TABLE IF NOT EXISTS `attending` (
+CREATE TABLE `attending` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `events_id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `events_id` (`events_id`,`email`)
+  UNIQUE KEY `events_id` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -52,8 +46,7 @@ CREATE TABLE IF NOT EXISTS `attending` (
 -- Table structure for table `events`
 --
 
-DROP TABLE IF EXISTS `events`;
-CREATE TABLE IF NOT EXISTS `events` (
+CREATE TABLE `events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `body` varchar(255) NOT NULL,
@@ -62,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `events` (
   `picture` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `events`
@@ -70,9 +63,9 @@ CREATE TABLE IF NOT EXISTS `events` (
 
 INSERT INTO `events` (`id`, `title`, `body`, `created`, `modified`, `picture`) VALUES
 (4, 'event', '<p>eveveveveve</p>', '2013-04-05 20:09:58', '2013-04-05 20:25:02', 'boob.png'),
-(5, 'ababab', '<p>ababa</p>', '2013-04-05 20:15:06', '2013-04-06 01:07:35', NULL),
-(6, 'rthyrdhhytdh', '<p>fghdfgdfg</p>', '2013-04-05 20:15:11', '2013-04-05 20:15:11', NULL),
-(7, 'vdxbfvdfbv', 'Text', '2013-04-05 20:21:46', '2013-04-05 20:22:14', NULL);
+(8, 'boob?', 'boobs?', '2013-04-06 01:45:15', '2013-04-06 01:45:15', NULL),
+(9, 'event', '<p>eveveveveve</p>', '2013-04-06 02:27:49', '2013-04-06 02:27:49', NULL),
+(10, 'woop', '<p>p tags ftw</p>', '2013-04-06 02:34:43', '2013-04-06 02:34:43', NULL);
 
 -- --------------------------------------------------------
 
@@ -80,23 +73,39 @@ INSERT INTO `events` (`id`, `title`, `body`, `created`, `modified`, `picture`) V
 -- Table structure for table `posts`
 --
 
-DROP TABLE IF EXISTS `posts`;
-CREATE TABLE IF NOT EXISTS `posts` (
+CREATE TABLE `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) CHARACTER SET utf8 NOT NULL,
   `body` varchar(255) CHARACTER SET utf8 NOT NULL,
   `created` datetime NOT NULL,
-  `modifed` datetime NOT NULL,
+  `modified` datetime NOT NULL,
   `user_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+  `cover_photo` varchar(255) DEFAULT NULL,
+  `alt_text` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`id`, `title`, `body`, `created`, `modifed`, `user_id`) VALUES
-(1, 'rererere', 'rererererer', '2013-04-05 18:05:06', '0000-00-00 00:00:00', 0);
+INSERT INTO `posts` (`id`, `title`, `body`, `created`, `modified`, `user_id`, `cover_photo`, `alt_text`) VALUES
+(23, 'Welcome to the site', '<p>This is a paragraph. With lots and lots of text lol.</p>', '2013-04-06 12:31:31', '2013-04-06 12:31:31', 52, NULL, NULL),
+(24, 'Don''t play stupid with me... I''m better at it.', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper elementum scelerisque. Fusce nibh turpis, pharetra sit amet consequat ac, malesuada vitae enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos ', '2013-04-06 14:22:21', '2013-04-06 14:22:21', 53, 'thumbnail.png', 'This is the alt_text n****');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `posts_attachments`
+--
+
+CREATE TABLE `posts_attachments` (
+  `post_id` int(11) NOT NULL,
+  `attachment_id` int(11) NOT NULL,
+  KEY `post_id` (`post_id`),
+  KEY `attachment_id` (`attachment_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -104,8 +113,7 @@ INSERT INTO `posts` (`id`, `title`, `body`, `created`, `modifed`, `user_id`) VAL
 -- Table structure for table `profiles`
 --
 
-DROP TABLE IF EXISTS `profiles`;
-CREATE TABLE IF NOT EXISTS `profiles` (
+CREATE TABLE `profiles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `firstname` varchar(50) CHARACTER SET utf8 NOT NULL,
@@ -126,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `profiles` (
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `email`, `course`, `bio`, `modified`, `last_active`, `experience`) VALUES
-(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 00:04:10', 1365203398, 'I like boobies'),
+(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 00:04:10', 1365256198, 'I like boobies'),
 (37, 53, 'Bob', 'Doe', '5923c5e979cf9c30d555fb0cec442b0d.png', 'bob@gmail.com', '', '', '2013-04-06 00:04:02', 1365199738, ''),
 (38, 54, 'Liza', 'Doe', 'user.png', 'liza@gmail.com', '', '', '2013-04-05 21:36:35', 1365202400, '');
 
@@ -136,8 +144,7 @@ INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `em
 -- Table structure for table `profiles_skills`
 --
 
-DROP TABLE IF EXISTS `profiles_skills`;
-CREATE TABLE IF NOT EXISTS `profiles_skills` (
+CREATE TABLE `profiles_skills` (
   `profile_id` int(11) NOT NULL,
   `skill_id` int(11) NOT NULL,
   KEY `profile_id` (`profile_id`),
@@ -163,8 +170,7 @@ INSERT INTO `profiles_skills` (`profile_id`, `skill_id`) VALUES
 -- Table structure for table `skills`
 --
 
-DROP TABLE IF EXISTS `skills`;
-CREATE TABLE IF NOT EXISTS `skills` (
+CREATE TABLE `skills` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
@@ -190,12 +196,11 @@ INSERT INTO `skills` (`id`, `name`) VALUES
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `admin` int(1) NOT NULL DEFAULT '0',
+  `admin` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `activation` varchar(32) CHARACTER SET utf8 NOT NULL,
   `activated` tinyint(1) NOT NULL DEFAULT '0',
@@ -216,14 +221,27 @@ INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`
 --
 
 --
+-- Constraints for table `posts`
+--
+ALTER TABLE `posts`
+ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `posts_attachments`
+--
+ALTER TABLE `posts_attachments`
+ADD CONSTRAINT `posts_attachments_ibfk_2` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`),
+ADD CONSTRAINT `posts_attachments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`);
+
+--
 -- Constraints for table `profiles`
 --
 ALTER TABLE `profiles`
-  ADD CONSTRAINT `profiles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+ADD CONSTRAINT `profiles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `profiles_skills`
 --
 ALTER TABLE `profiles_skills`
-  ADD CONSTRAINT `profiles_skills_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`),
-  ADD CONSTRAINT `profiles_skills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`);
+ADD CONSTRAINT `profiles_skills_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`),
+ADD CONSTRAINT `profiles_skills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`);
