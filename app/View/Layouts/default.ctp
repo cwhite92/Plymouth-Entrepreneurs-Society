@@ -133,9 +133,9 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
                         <?php
                         function preview($_text, $_count) {
                             $_count2 = $_count;
-                            $_text = strip_tags($_text);    
+                            $_text = strip_tags($_text);
                             
-                            if (strlen ($_text) > $_count) {  
+                            if (strlen ($_text) > $_count) {
                                 while ($_text[$_count] != " " && $_count < strlen ($_text) - 1) {
                                     $_count++;
                                     if ($_count - $_count2 == 12) {
@@ -143,7 +143,7 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
                                     }
                                 }
                                 return substr ($_text, 0, $_count)."...";
-                            } else {          
+                            } else {
                                 return $_text;
                             }
                         }
