@@ -113,7 +113,9 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
                                 );
 
                                 echo $this->Html->link($event['Event']['title'],
-                                    '/event/'.$event['Event']['id'], array('escape' => false)); ?>
+                                    '/event/'.$event['Event']['id'], array('escape' => false));
+                                echo  '<span class="date">'.$this->Time->format('d M Y', $event['Event']['date']).'</span>';
+                                ?>
                             </li>
                         <?php endforeach; ?>
                     </ul>

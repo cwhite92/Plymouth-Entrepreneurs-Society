@@ -712,6 +712,11 @@ input[type="submit"],
                 font-size: .8em;
             }
 
+            .recent li .date {
+                display: block;
+                font-size: .8em;
+            }
+
 /** --------------------------------------------------------------
     PROFILE
     - Profile
