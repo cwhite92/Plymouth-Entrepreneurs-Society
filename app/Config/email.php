@@ -45,8 +45,8 @@ class EmailConfig {
     public $default = array(
         'host' => 'ssl://smtp.gmail.com',
         'port' => 465,
-        'username' => 'isad234test@gmail.com',
-        'password' => 'thegmailpassword123',
+        'username' => 'pesclients@gmail.com',
+        'password' => 'thegmailpassword',
         'transport' => 'Smtp',
         'from' => array('noreply@pes.co.uk' => 'Plymouth Entrepreneurs Society'),
         'emailFormat' => 'html'

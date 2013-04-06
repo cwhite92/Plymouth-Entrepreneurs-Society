@@ -162,7 +162,7 @@ class UsersController extends AppController {
         $this->User->save($user);
 
         $this->Session->setFlash('Your account has been activated. You may now proceed to log in.');
-        $this->redirect(array('controller' => 'pages', 'action' => 'home'));
+        $this->redirect(array('controller' => 'posts', 'action' => 'index'));
     }
 
     public function login() {

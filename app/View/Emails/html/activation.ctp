@@ -1,4 +1,4 @@
-<h1>Hello <?php echo $name; ?>,</h1>
+<p>Hello <?php echo $name; ?>,</p>
 
 <p>Thank you for registering with the Plymouth Entrepreneurs Society, to proceed you must activate your account so we know this email is real.</p>
 
