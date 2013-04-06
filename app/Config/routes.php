@@ -41,6 +41,7 @@
     Router::connect('/members', array('controller' => 'users', 'action' => 'memberList'));
 
     // Skill specific routes
+    Router::connect('/skill', array('controller' => 'skills', 'action' => 'index'));
     Router::connect('/skill/*', array('controller' => 'skills', 'action' => 'view'));
 
     // Profile specific routes

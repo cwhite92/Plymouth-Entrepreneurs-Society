@@ -7,6 +7,11 @@ class SkillsController extends AppController {
     function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('view');
+        $this->Auth->allow('index');
+    }
+
+    public function  index() {
+        $this->set('skills', $this->Skill->find('all'));
     }
 
     public function view($name) {
