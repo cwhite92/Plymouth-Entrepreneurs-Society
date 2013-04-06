@@ -1,5 +1,5 @@
 <h1 class="alignLeft">News</h1>
-<?php echo $this->Html->link('Add News', array('action' => 'add')); ?>
+<?php echo $this->Html->link('Add News', array('action' => 'add')); //TODO: put space between title and link?>
 <table>
     <tr>
         <th>Title</th>
