@@ -14,6 +14,7 @@
     - WIDGETS - logo, mini dashboard, twitter etc..
     - PROFILE
     - ARTICLE
+    - SEARCH
     - EVENTS
     # GRID
     # MEDIA QUERIES
@@ -268,13 +269,15 @@ a:focus img {
 /** --------------------------------------------------------------
     INPUTS AND TEXTAREA
     ----------------------------------------------------------- */
-label {
+label,
+legend {
     display: block;
     font-weight: 700;
     margin-top: 1.6em;
 }
 
-    label:first-child {
+    label:first-child,
+    legend:first-child {
         margin-top: 0;
     }
 
@@ -928,6 +931,37 @@ input[type="submit"],
             max-width: 100%;
             height: auto;
         }
+
+/** --------------------------------------------------------------
+    SEARCH
+    ----------------------------------------------------------- */
+.search {
+
+}
+    .search input[type="text"],
+    .search input[type="textbox"] {
+        margin-bottom: 1em;
+    }
+
+    .search input[type="radio"] {
+        width: auto;
+    }
+
+    .search label,
+    .search legend {
+        display: inline;
+        width: auto;
+        margin-right: 1.6em;
+    }
+
+    .search label,
+    .search input[type="radio"] {
+        line-height: 1.75em;
+    }
+
+    .search legend {
+        float: left;
+    }
 
 /** --------------------------------------------------------------
     EVENTS
