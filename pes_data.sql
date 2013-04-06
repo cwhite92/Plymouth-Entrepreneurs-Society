@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 06, 2013 at 05:06 PM
+-- Generation Time: Apr 06, 2013 at 06:47 PM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.10
 
@@ -52,19 +52,19 @@ CREATE TABLE `events` (
   `body` varchar(255) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
-  `picture` varchar(255) DEFAULT NULL,
+  `picture` varchar(255) NOT NULL,
   `date` datetime NOT NULL,
   `location` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `events`
 --
 
 INSERT INTO `events` (`id`, `title`, `body`, `created`, `modified`, `picture`, `date`, `location`) VALUES
-(1, 'First event', '<p>Description of said event</p>', '2013-04-06 16:34:43', '2013-04-06 16:34:43', 'boob.png', '2013-04-06 16:34:00', 'Ed''s house');
+(1, 'First event', '<p>Description of said event</p>', '2013-04-06 16:34:43', '2013-04-06 18:18:11', 'boob.png', '2013-04-06 16:34:00', 'Ed''s front room');
 
 -- --------------------------------------------------------
 
@@ -83,15 +83,22 @@ CREATE TABLE `posts` (
   `alt_text` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
 
 --
 -- Dumping data for table `posts`
 --
 
 INSERT INTO `posts` (`id`, `title`, `body`, `created`, `modified`, `user_id`, `cover_photo`, `alt_text`) VALUES
-(23, 'Welcome to the site', '<p>This is a paragraph. With lots and lots of text lol.</p>', '2013-04-06 12:31:31', '2013-04-06 12:31:31', 52, NULL, NULL),
-(24, 'Don''t play stupid with me... I''m better at it.', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper elementum scelerisque. Fusce nibh turpis, pharetra sit amet consequat ac, malesuada vitae enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos ', '2013-04-06 14:22:21', '2013-04-06 14:22:21', 53, 'thumbnail.png', 'This is the alt_text n****');
+(23, 'Welcome to the site', '<p>This is a paragraph. With lots and lots of text lol.</p><p></p><ul><li>this is&nbsp;</li><li>an unordered</li><li>list</li></ul><ol><li>this is&nbsp;</li><li>an ordered</li><li>list</li></ol><p></p>\r\n', '2013-04-06 12:31:31', '2013-04-06 18:42:20', 52, NULL, NULL),
+(24, 'Don''t play stupid with me... I''m better at it.', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper elementum scelerisque. Fusce nibh turpis, pharetra sit amet consequat ac, malesuada vitae enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos ', '2013-04-06 14:22:21', '2013-04-06 14:22:21', 53, 'thumbnail.png', 'This is the alt_text n****'),
+(26, 'Test Post for image inside body', '<p><img src="http://24.media.tumblr.com/959ae84c70f876ba4e305ecde5356f4a/tumblr_mkue1eF2ON1s7rwz8o1_500.jpg"><br></p>\r\n', '2013-04-06 18:38:33', '2013-04-06 18:38:53', 52, NULL, NULL),
+(27, 'post with video embedded', '<p><iframe width="640" height="360" src="http://www.youtube.com/embed/q_Gh8TWpQE8?feature=player_detailpage" frameborder="0" allowfullscreen=""></iframe><br></p>', '2013-04-06 18:43:16', '2013-04-06 18:43:16', 52, NULL, NULL),
+(28, 'post with tables', '<p><table id="table82812"><tbody><tr><td>cloumn</td><td>asd</td><td>dfdszg</td></tr><tr><td>fdgdfg</td><td>fdgdfg</td><td>gdfgdf</td></tr></tbody></table><p></p><br></p>', '2013-04-06 18:44:02', '2013-04-06 18:44:02', 52, NULL, NULL),
+(29, 'strikethrough, bold and italic', '<p><strike>STRIKE</strike>,&nbsp;<span style="font-size: 15px; background-color: rgb(255, 255, 255); line-height: 1.45em; letter-spacing: 0px;"><b>BOLD</b>, <i>ITALIC</i></span></p>', '2013-04-06 18:44:51', '2013-04-06 18:44:51', 52, NULL, NULL),
+(30, 'indented paragraghs', '<blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p>fgdsgfsg</p></blockquote><span style="font-size: 15px; line-height: 1.45em; font-style: italic; letter-spacing: 0px;">fgsfdsgdsfgdsgdg</span><br>', '2013-04-06 18:45:13', '2013-04-06 18:45:13', 52, NULL, NULL),
+(31, 'links', '<p><a href="http://www.google.com">google.com</a><br></p><p><a href="mailto:me@jakechampion.name">email</a><br></p><p><br></p>', '2013-04-06 18:46:08', '2013-04-06 18:46:08', 52, NULL, NULL),
+(32, 'colours!!!', '<p><p><span style="color: #8db3e2;"><strong>Lorem Ipsum</strong>&nbsp;is simply dummy te</span><span style="color: #17365d;">xt of the printing a</span><span style="color: #9bbb59;">nd typesetting industry. Lorem Ipsum has been the industry''s standard dum', '2013-04-06 18:47:09', '2013-04-06 18:47:09', 52, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -133,7 +140,7 @@ CREATE TABLE `profiles` (
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `email`, `course`, `bio`, `modified`, `last_active`, `experience`) VALUES
-(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 17:04:30', 1365260674, 'I like boobies'),
+(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 17:04:30', 1365266850, 'I like boobies'),
 (37, 53, 'Bob', 'Doe', '5923c5e979cf9c30d555fb0cec442b0d.png', 'bob@gmail.com', '', '', '2013-04-06 00:04:02', 1365199738, ''),
 (38, 54, 'Liza', 'Doe', 'user.png', 'liza@gmail.com', '', '', '2013-04-05 21:36:35', 1365202400, '');
 
