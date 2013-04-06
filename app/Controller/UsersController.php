@@ -31,7 +31,7 @@ class UsersController extends AppController {
         if($this->request->is('post')) {
             if($this->User->save($this->request->data)) {
                 $this->Session->setFlash('Account has been updated.');
-                $this->redirect(array('action' => 'edit'));
+                $this->redirect(array('action' => 'index'));
             }
 
             $this->Session->setFlash('There was a problem saving the account settings. Please try again.');

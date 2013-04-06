@@ -65,6 +65,7 @@ class EventsController extends AppController {
 //    }
 
     public function admin_edit($id = null) {
+        //TODO: on save it creates a new event
         if($this->request->is('post') || $this->request->is('put')) {
             if($this->Event->save($this->request->data)) {
                 $this->Session->setFlash('Your event has been updated.', 'default', array('class' => 'success'));
