@@ -60,7 +60,7 @@ CREATE TABLE `events` (
   `body` varchar(255) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
-  `poster` varchar(255) DEFAULT NULL,
+  `picture` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
