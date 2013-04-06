@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: jakechampion
- * Date: 05/04/2013
- * Time: 15:04
- * To change this template use File | Settings | File Templates.
- */
+
 class PostsController extends AppController {
     public $helpers = array('Html', 'Form');
 
@@ -15,12 +9,12 @@ class PostsController extends AppController {
         $this->Auth->allow('view');
     }
 
-    public function  admin_index() {
+    public function admin_index() {
         $this->set('posts', $this->Post->find('all'));
         $this->layout = 'admin';
     }
 
-    public function  index() {
+    public function index() {
         $this->set('posts', $this->Post->find('all', array(
             'recursive' => 2
         )));
@@ -28,25 +22,27 @@ class PostsController extends AppController {
 
     public function view($id = null) {
         if (!$id) {
-            throw new NotFoundException(__('Invalid post'));
+            throw new NotFoundException('Invalid post');
         }
 
         $post = $this->Post->findById($id);
         if (!$post) {
-            throw new NotFoundException(__('Invalid post'));
+            throw new NotFoundException('Invalid post');
         }
+
         $this->set('post', $post);
     }
 
     public function admin_view($id = null) {
         if (!$id) {
-            throw new NotFoundException(__('Invalid post'));
+            throw new NotFoundException('Invalid post');
         }
 
         $post = $this->Post->findById($id);
         if (!$post) {
-            throw new NotFoundException(__('Invalid post'));
+            throw new NotFoundException('Invalid post');
         }
+
         $this->set('post', $post);
         $this->layout = 'admin';
     }
@@ -61,17 +57,18 @@ class PostsController extends AppController {
                 $this->Session->setFlash('Unable to add your post.');
             }
         }
+
         $this->layout = 'admin';
     }
 
     public function admin_edit($id = null) {
         if (!$id) {
-            throw new NotFoundException(__('Invalid post'));
+            throw new NotFoundException('Invalid post');
         }
 
         $post = $this->Post->findById($id);
         if (!$post) {
-            throw new NotFoundException(__('Invalid post'));
+            throw new NotFoundException('Invalid post');
         }
 
         if ($this->request->is('post') || $this->request->is('put')) {
@@ -87,6 +84,7 @@ class PostsController extends AppController {
         if (!$this->request->data) {
             $this->request->data = $post;
         }
+
         $this->layout = 'admin';
     }
 
@@ -99,6 +97,7 @@ class PostsController extends AppController {
             $this->Session->setFlash('The post with id: ' . $id . ' has been deleted.');
             $this->redirect(array('action' => 'index'));
         }
+        
         $this->layout = 'admin';
     }
 }
