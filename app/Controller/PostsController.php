@@ -9,6 +9,11 @@
 class PostsController extends AppController {
     public $helpers = array('Html', 'Form');
 
+    function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('view');
+    }
+
     public function  admin_index() {
         $this->set('posts', $this->Post->find('all'));
         $this->layout = 'admin';
@@ -54,7 +59,6 @@ class PostsController extends AppController {
             }
         }
         $this->layout = 'admin';
-
     }
 
     public function admin_edit($id = null) {
@@ -81,7 +85,6 @@ class PostsController extends AppController {
             $this->request->data = $post;
         }
         $this->layout = 'admin';
-
     }
 
     public function admin_delete($id) {
@@ -94,6 +97,5 @@ class PostsController extends AppController {
             $this->redirect(array('action' => 'index'));
         }
         $this->layout = 'admin';
-
     }
 }

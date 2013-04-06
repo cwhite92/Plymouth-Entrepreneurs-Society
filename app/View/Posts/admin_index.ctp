@@ -1,32 +1,49 @@
-<h1>Blog posts</h1>
-<p><?php echo $this->Html->link('Add Post', array('action' => 'add')); ?></p>
+<h1 class="alignLeft">News</h1>
+<?php echo $this->Html->link('Add News', array('action' => 'add')); ?>
 <table>
     <tr>
-        <th>Id</th>
         <th>Title</th>
-        <th>Actions</th>
         <th>Created</th>
+        <th>Modified</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
 
     <!-- Here's where we loop through our $posts array, printing out post info -->
 
     <?php foreach ($posts as $post): ?>
         <tr>
-            <td><?php echo $post['Post']['id']; ?></td>
-            <td>
-                <?php echo $this->Html->link($post['Post']['title'], array('admin' => false, 'action' => 'view', $post['Post']['id'])); ?>
-            </td>
-            <td>
-                <?php echo $this->Form->postLink(
-                    'Delete',
-                    array('action' => 'delete', $post['Post']['id']),
-                    array('confirm' => 'Are you sure?'));
-                ?>
-                <?php echo $this->Html->link('Edit', array('action' => 'edit', $post['Post']['id'])); ?>
-            </td>
+            <td><?php echo $post['Post']['title']; ?></td>
             <td>
                 <?php echo $post['Post']['created']; ?>
             </td>
+            <td>
+                <?php echo $post['Post']['modified']; ?>
+            </td>
+            <td>
+                <?php echo $this->Html->link('',
+                    array(
+                        'action' => 'edit',
+                        $post['Post']['id']),
+                    array(
+                        'escape' => false,
+                        'class' => 'actions',
+                        'data-icon' => '&#xF139;')); ?>
+            </td>
+            <td>
+                <?php echo $this->Form->postLink('',
+                    array(
+                        'action' => 'delete',
+                        $post['Post']['id']),
+                    array(
+                        'class' => 'actions',
+                        'escape' => false,
+                        'data-icon' => '&#xF155;'),
+                    __('Are you sure you want to delete %s?',
+                        $post['Post']['title'])); ?>
+
+            </td>
+
         </tr>
     <?php endforeach; ?>
 

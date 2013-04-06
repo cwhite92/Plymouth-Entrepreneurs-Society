@@ -37,28 +37,49 @@ class EventsController extends AppController {
         $this->layout = 'admin';
     }
 
+//    public function admin_edit($id = null) {
+//        if (!$id) {
+//            throw new NotFoundException(__('Invalid event'));
+//        }
+//
+//        $event = $this->Event->findById($id);
+//        $this->set('event', $event);
+//        if (!$event) {
+//            throw new NotFoundException(__('Invalid event'));
+//        }
+//
+//        if ($this->request->is('post') || $this->request->is('put')) {
+//            $this->Event->id = $id;
+//            if ($this->Event->save($this->request->data)) {
+//                $this->Session->setFlash('Your event has been updated.');
+//                $this->redirect(array('action' => 'index'));
+//            } else {
+//                $this->Session->setFlash('Unable to update your event.');
+//            }
+//        }
+//
+//        if (!$this->request->data) {
+//            $this->request->data = $event;
+//        }
+//        $this->layout = 'admin';
+//    }
+
     public function admin_edit($id = null) {
-        if (!$id) {
-            throw new NotFoundException(__('Invalid event'));
+        if($this->request->is('post') || $this->request->is('put')) {
+            if($this->Event->save($this->request->data)) {
+                $this->Session->setFlash('Your event has been updated.', 'default', array('class' => 'success'));
+                $this->redirect(array('action' => 'index'));
+            }
+
+            $this->Session->setFlash('There was a problem saving your event. Please try again.', 'default', array('class' => 'error'));
         }
 
         $event = $this->Event->findById($id);
+
         $this->set('event', $event);
-        if (!$event) {
-            throw new NotFoundException(__('Invalid event'));
-        }
 
-        if ($this->request->is('post') || $this->request->is('put')) {
-            $this->Event->id = $id;
-            if ($this->Event->save($this->request->data)) {
-                $this->Session->setFlash('Your event has been updated.');
-                $this->redirect(array('action' => 'index'));
-            } else {
-                $this->Session->setFlash('Unable to update your event.');
-            }
-        }
-
-        if (!$this->request->data) {
+        // Auto populate form fields
+        if(!$this->request->data) {
             $this->request->data = $event;
         }
         $this->layout = 'admin';

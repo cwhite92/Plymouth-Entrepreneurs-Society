@@ -7,15 +7,19 @@
  * To change this template use File | Settings | File Templates.
  */
 class Post extends AppModel {
+    public $belongsTo = 'User';
     public $validate = array(
         'title' => array(
             'rule' => 'notEmpty'
         ),
         'body' => array(
             'rule' => 'notEmpty'
-        ),
-        'type' => array(
-            'rule' => 'notEmpty'
         )
     );
+
+    public function beforeSave($options = Array()) {
+        $id = $this->User('id');
+        $this->data['Post']['user_id'] = $id;
+        return true;
+    }
 }

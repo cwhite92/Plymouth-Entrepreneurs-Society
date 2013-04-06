@@ -13,8 +13,8 @@ class Event extends AppModel {
                 'message' => 'Only images are allowed to be uploaded'
             ),
             'size' => array(
-                'rule' => array('fileSize', '<=', '700KB'),
-                'message' => 'Picture must be less than 700KB'
+//                'rule' => array('fileSize', '<=', '800KB'),
+                'message' => 'Picture must be less than 800KB'
             )
         )
     );
@@ -32,12 +32,8 @@ class Event extends AppModel {
         return false;
     }
 
-    /**
-     * For some reason, Cake won't call beforeSave() in our Skill model when saving a profile even with a HABTM relationship,
-     * so unfortunately we have to have the skill logic in this Profile model...
-     */
     public function beforeSave($options = Array()) {
-        if(!empty($this->data['Event']['picture'])) {
+        if(!empty($this->data['Event']['picture']['name'])) {
             // Query for the users current profile picture
             $currentPicture = $this->find('first', array(
                 'condition' => array(
@@ -47,7 +43,7 @@ class Event extends AppModel {
             ));
 
             // Make a filename
-            $filename = $this->data['Event']['id'] . '.png';
+            $filename = md5(microtime() * rand()) . '.png';
 
             // Attempt to move the uploaded file
             if(!move_uploaded_file($this->data['Event']['picture']['tmp_name'], WWW_ROOT . 'img' . DS . 'posters' . DS . $filename)) {
@@ -55,7 +51,9 @@ class Event extends AppModel {
             }
 
             // Also delete their old picture to save space (if it's not user.png)
-//            unlink(WWW_ROOT . 'img' . DS . 'posters' . DS . $currentPicture['Event']['picture']);
+            if($currentPicture['Event']['picture'] != 'user.png') {
+                unlink(WWW_ROOT . 'img' . DS . 'posters' . DS . $currentPicture['Event']['picture']);
+            }
 
             // Rename it so it gets saved with the correct name in the database
             $this->data['Event']['picture'] = $filename;

@@ -11,7 +11,6 @@ class UsersController extends AppController {
         $this->Auth->allow('register', 'activate', 'login');
     }
 
-    // Example admin action for editing users
     public function admin_index($id = null) {
         $this->layout = 'admin';
     }
