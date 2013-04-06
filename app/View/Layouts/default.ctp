@@ -63,11 +63,13 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
             <li><?php echo $this->Html->link('Events', '/events', array('escape' => false)); ?></li>
             <li><?php echo $this->Html->link('Members', array('controller' => 'users', 'action' => 'memberList'), array('escape' => false)); ?></li>
             <li>
-                <a href="#">Services+</a>
+                <?php echo $this->Html->link('Services+', array('controller' => 'services', 'action' => 'index'), array('escape' => false)); ?>
                 <ul>
-                    <li><a href="#">Mentoring</a></li>
-                    <li><a href="#">University Start-Up Support</a></li>
-                    <li><a href="#">Funding</a></li>
+                    <?php foreach ($services as $service): ?>
+                        <li>
+                            <?php echo $this->Html->Link($service['Service']['title'], array('action' => 'view', $service['Service']['id'])); ?>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
             </li>
             <li><a href="#">About Us</a></li>

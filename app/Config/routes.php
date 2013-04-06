@@ -43,6 +43,9 @@
     Router::connect('/skills', array('controller' => 'skills', 'action' => 'index'));
     Router::connect('/skill/*', array('controller' => 'skills', 'action' => 'view'));
 
+    // Service specific routes
+    Router::connect('/services', array('controller' => 'services', 'action' => 'index'));
+
     // Profile specific routes
     Router::connect('/profile/edit', array('controller' => 'profiles', 'action' => 'edit'));
     Router::connect('/profile/edit/deleteProfilePicture', array('controller' => 'profiles', 'action' => 'deleteProfilePicture'));
