@@ -2,6 +2,12 @@
 class EventsController extends AppController {
     public $helpers = array('Html', 'Form');
 
+    function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('index');
+        $this->Auth->allow('view');
+    }
+
     public function  admin_index() {
         $this->set('events', $this->Event->find('all'));
         $this->layout = 'admin';

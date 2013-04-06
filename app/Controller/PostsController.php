@@ -11,7 +11,9 @@ class PostsController extends AppController {
 
     function beforeFilter() {
         parent::beforeFilter();
+        $this->Auth->allow('index');
         $this->Auth->allow('view');
+
     }
 
     public function  admin_index() {
