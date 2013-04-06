@@ -31,7 +31,6 @@
     Router::connect('/admin/news', array('controller' => 'posts', 'action' => 'index', 'admin' => true));
     Router::connect('/admin/events', array('controller' => 'events', 'action' => 'index', 'admin' => true));
 
-
     // User specific routes
     Router::connect('/register', array('controller' => 'users', 'action' => 'register'));
     Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
@@ -46,7 +45,7 @@
 
     // Profile specific routes
     Router::connect('/profile/edit', array('controller' => 'profiles', 'action' => 'edit'));
-    Router::connect('/profile/edit/deleteProfilePicture/*', array('controller' => 'profiles', 'action' => 'deleteProfilePicture'));
+    Router::connect('/profile/edit/deleteProfilePicture', array('controller' => 'profiles', 'action' => 'deleteProfilePicture'));
     Router::connect('/profile/*', array('controller' => 'profiles', 'action' => 'view'));
 
     // Event specific routes
