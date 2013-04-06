@@ -148,7 +148,7 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
                                             urlencode($skill['name'])
                                         ));
                                         $i++;
-                                        if ( $i > 0 && $i != 5 ) echo ', ';
+                                        if ( $i > 0 && $i != 5 && $i != count( $user['Skill'] ) ) echo ', ';
                                     endif;
                                 endforeach;
                                 ?>
