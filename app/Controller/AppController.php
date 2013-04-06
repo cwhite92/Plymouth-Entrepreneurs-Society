@@ -50,6 +50,7 @@ class AppController extends Controller {
     public function beforeFilter() {
         $this->loadModel('User');
         $this->loadModel('Profile');
+        $this->loadModel('Event');
 
         // Used in views to easily check if a user is logged in
         $this->set('authed', $this->Auth->user());
@@ -68,6 +69,13 @@ class AppController extends Controller {
             'limit'     => 5
         ));
         $this->set('latestUsers', $latestUsers);
+
+        // Latest events
+        $latestEvents = $this->Event->find('all', array(
+            'order'     => array('Event.created'),
+            'limit'     => 5
+        ));
+        $this->set('latestEvents', $latestEvents);
     }
 
     public function isAuthorized($user) {

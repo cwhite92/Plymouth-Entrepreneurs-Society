@@ -99,7 +99,22 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
             <div class="entry widget">
                 <div class="content">
                     <h1>Upcoming events</h1>
-                    widget 1
+                    <ul class="recent clearfix">
+                        <?php foreach($latestEvents as $event): ?>
+                            <li><?php echo $this->Html->link(
+                                    $this->Html->image('posters/' . $event['Event']['picture'], array(
+                                        'fullbase'  => true,
+                                        'alt'       => 'Poster for ' . $event['Event']['title']
+                                    )),
+                                    '/event/'.$event['Event']['id'],
+                                    array('escape' => false, 'class' => 'pic')
+                                );
+
+                                echo $this->Html->link($event['Event']['title'],
+                                    '/event/'.$event['Event']['id'], array('escape' => false)); ?>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
                 </div><!-- END .content -->
             </div><!-- END .entry -->
             <div class="entry widget">
