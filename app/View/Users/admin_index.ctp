@@ -1,4 +1,47 @@
-<div class="entry">
-    <h1>Getting Started</h1>
-    As an admin you need to control what content you want on each section of the website, for example news and events, this admin panel will allow you to add, edit and delete events, as well as manage users. On the left hand side you will see the sections you can access.
+<div class='entry'>
+    <table>
+        <thead></thead>
+        <tr>
+<!--            <th>Username</th>-->
+            <th>Email</th>
+            <th>Activated</th>
+            <th>Role</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($users as $user): ?>
+            <tr>
+                <td><?php echo $user['User']['email']; ?></td>
+                <td><?php echo $user['User']['activated']; ?></td>
+                <td><?php echo $user['User']['admin']; ?></td>
+                <td>
+                    <?php echo $this->Html->link('',
+                        array(
+                            'action' => 'edit',
+                            $user['User']['id']),
+                        array(
+                            'escape' => false,
+                            'class' => 'actions',
+                            'data-icon' => '&#xF139;')); ?>
+                </td>
+                <td>
+                    <?php echo $this->Form->postLink('',
+                        array(
+                            'action' => 'delete',
+                            $user['User']['id']),
+                        array(
+                            'class' => 'actions',
+                            'escape' => false,
+                            'data-icon' => '&#xF155;'),
+                        __('Are you sure you want to delete %s?',
+                            $user['User']['email'])); ?>
+
+                </td>
+            </tr>
+        <?php endforeach; ?>
+        <?php unset($user); ?>
+        </tbody>
+    </table>
 </div><!-- END .entry-->

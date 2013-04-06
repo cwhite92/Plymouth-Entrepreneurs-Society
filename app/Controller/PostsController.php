@@ -5,8 +5,7 @@ class PostsController extends AppController {
 
     function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('index');
-        $this->Auth->allow('view');
+        $this->Auth->allow('index', 'view');
     }
 
     public function admin_index() {
@@ -21,15 +20,11 @@ class PostsController extends AppController {
     }
 
     public function view($id = null) {
-        if (!$id) {
-            throw new NotFoundException('Invalid post');
-        }
-
         $post = $this->Post->find('first', array(
             'conditions' => array('Post.id' => $id),
             'recursive' => 2
         ));
-        if (!$post) {
+        if(!$post) {
             throw new NotFoundException('Invalid post');
         }
 
@@ -37,12 +32,8 @@ class PostsController extends AppController {
     }
 
     public function admin_view($id = null) {
-        if (!$id) {
-            throw new NotFoundException('Invalid post');
-        }
-
         $post = $this->Post->findById($id);
-        if (!$post) {
+        if(!$post) {
             throw new NotFoundException('Invalid post');
         }
 
@@ -68,18 +59,14 @@ class PostsController extends AppController {
     }
 
     public function admin_edit($id = null) {
-        if (!$id) {
-            throw new NotFoundException('Invalid post');
-        }
-
         $post = $this->Post->findById($id);
-        if (!$post) {
+        if(!$post) {
             throw new NotFoundException('Invalid post');
         }
 
-        if ($this->request->is('post') || $this->request->is('put')) {
+        if($this->request->is('post') || $this->request->is('put')) {
             $this->Post->id = $id;
-            if ($this->Post->save($this->request->data)) {
+            if($this->Post->save($this->request->data)) {
                 $this->Session->setFlash('Your post has been updated.');
                 $this->redirect(array('action' => 'index'));
             } else {
@@ -87,7 +74,8 @@ class PostsController extends AppController {
             }
         }
 
-        if (!$this->request->data) {
+        // Auto populate form fields
+        if(!$this->request->data) {
             $this->request->data = $post;
         }
 
@@ -95,11 +83,11 @@ class PostsController extends AppController {
     }
 
     public function admin_delete($id) {
-        if ($this->request->is('get')) {
+        if($this->request->is('get')) {
             throw new MethodNotAllowedException();
         }
 
-        if ($this->Post->delete($id)) {
+        if($this->Post->delete($id)) {
             $this->Session->setFlash('The post with id: ' . $id . ' has been deleted.');
             $this->redirect(array('action' => 'index'));
         }

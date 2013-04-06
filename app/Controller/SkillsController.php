@@ -6,11 +6,10 @@ class SkillsController extends AppController {
 
     function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('view');
-        $this->Auth->allow('index');
+        $this->Auth->allow('view', 'index');
     }
 
-    public function  index() {
+    public function index() {
         $this->set('skills', $this->Skill->find('all'));
     }
 
@@ -24,8 +23,6 @@ class SkillsController extends AppController {
         ));
 
         if(!$skill) {
-            // Skill doesn't exist, return 404
-            // TODO: route to 404 page
             throw new NotFoundException();
         }
 

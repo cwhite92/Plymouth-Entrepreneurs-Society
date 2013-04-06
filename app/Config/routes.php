@@ -26,8 +26,8 @@
     Router::connect('/events', array('controller' => 'events', 'action' => 'index'));
 
     // Admin routes
-    Router::connect('/admin', array('controller' => 'users', 'action' => 'index', 'admin' => true));
-    Router::connect('/admin/users', array('controller' => 'users', 'action' => 'users', 'admin' => true));
+    Router::connect('/admin', array('controller' => 'users', 'action' => 'home', 'admin' => true));
+    Router::connect('/admin/users', array('controller' => 'users', 'action' => 'index', 'admin' => true));
     Router::connect('/admin/news', array('controller' => 'posts', 'action' => 'index', 'admin' => true));
     Router::connect('/admin/events', array('controller' => 'events', 'action' => 'index', 'admin' => true));
 
@@ -40,7 +40,7 @@
     Router::connect('/members', array('controller' => 'users', 'action' => 'memberList'));
 
     // Skill specific routes
-    Router::connect('/skill', array('controller' => 'skills', 'action' => 'index'));
+    Router::connect('/skills', array('controller' => 'skills', 'action' => 'index'));
     Router::connect('/skill/*', array('controller' => 'skills', 'action' => 'view'));
 
     // Profile specific routes

@@ -18,16 +18,22 @@ class UsersController extends AppController {
         $this->Auth->allow('register', 'activate', 'login');
     }
 
-    public function admin_index($id = null) {
+    // Admin panel homepage
+    public function admin_home() {
         $this->layout = 'admin';
     }
 
-    public function admin_users() {
-        $this->layout = 'admin';
+    public function admin_index() {
         $this->set('users', $this->User->find('all'));
+        $this->layout = 'admin';
     }
 
-    public function admin_edit() {
+    public function admin_edit($id = null) {
+        $user = $this->User->findById($id);
+        if(!$user) {
+            throw new NotFoundException('Invalid user');
+        }
+
         if($this->request->is('post')) {
             if($this->User->save($this->request->data)) {
                 $this->Session->setFlash('Account has been updated.');
@@ -39,12 +45,10 @@ class UsersController extends AppController {
 
         // Auto populate form fields
         if(!$this->request->data) {
-            $this->request->data = $this->User->find('first', array(
-                'conditions' => array('User.id' => $this->Auth->user('id'))
-            ));
+            $this->request->data = $user;
         }
-        $this->layout = 'admin';
 
+        $this->layout = 'admin';
     }
 
     // Has to be called memberList because of some type of reserved word
@@ -151,7 +155,7 @@ class UsersController extends AppController {
         ));
 
         if(!$user) {
-            throw new NotFoundException();
+            throw new NotFoundException('Invalid user, please follow the activation link in your email.');
         }
 
         $user['User']['activated'] = true;
@@ -171,7 +175,7 @@ class UsersController extends AppController {
                     $this->Auth->logout();
                     $this->Session->setFlash('You must activate your account before you can log in. Please check your email for details.');
                 } else {
-                    $this->redirect($this->Auth->redirectUrl('/'));
+                    $this->redirect($this->Auth->redirect());
                 }
             } else {
                 $this->Session->setFlash('Invalid username or password, try again.');
