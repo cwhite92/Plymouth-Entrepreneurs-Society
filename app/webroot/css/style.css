@@ -712,6 +712,16 @@ input[type="submit"],
                 font-size: .8em;
             }
 
+                .recent li .skills a {
+                    color: #222;
+                    font-weight: 400;
+                }
+
+                    .recent li .skills a:hover,
+                    .recent li .skills a:focus {
+                        color: #037ea5;
+                    }
+
             .recent li .date {
                 display: block;
                 font-size: .8em;

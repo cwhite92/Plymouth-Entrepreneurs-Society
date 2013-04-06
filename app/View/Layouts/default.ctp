@@ -137,36 +137,24 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
 
                                 echo $this->Html->link($user['Profile']['firstname'] . ' ' . $user['Profile']['lastname'],
                                 '/profile/'.$user['Profile']['id'], array('escape' => false)); ?>
+                                <span class="skills">
                                 <?php
-                                $skills = '';
-
+                                $i = 0;
                                 foreach($user['Skill'] as $skill):
-                                    $skills .= $skill['name'].', ';
+                                    if ( $i != 6 ):
+                                        echo $this->Html->link($skill['name'], array(
+                                            'controller'    => 'skills',
+                                            'action'        => 'view',
+                                            urlencode($skill['name'])
+                                        ));
+                                        $i++;
+                                        if ( $i > 0 && $i != 5 ) echo ', ';
+                                    endif;
                                 endforeach;
-                                $skills = substr_replace($skills , '', -2);
-
-                                echo '<span class="skills">'.preview($skills, 30).'</span>';
                                 ?>
+                                </span>
                             </li>
                         <?php endforeach; ?>
-                        <?php
-                        function preview($_text, $_count) {
-                            $_count2 = $_count;
-                            $_text = strip_tags($_text);
-                            
-                            if (strlen ($_text) > $_count) {
-                                while ($_text[$_count] != " " && $_count < strlen ($_text) - 1) {
-                                    $_count++;
-                                    if ($_count - $_count2 == 12) {
-                                        return substr ($_text, 0, $_count)."...";
-                                    }
-                                }
-                                return substr ($_text, 0, $_count)."...";
-                            } else {
-                                return $_text;
-                            }
-                        }
-                        ?>
                     </ul>
                 </div><!-- END .content -->
             </div><!-- END .entry -->
