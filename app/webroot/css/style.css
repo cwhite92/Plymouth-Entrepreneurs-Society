@@ -18,6 +18,7 @@
     - EVENTS
     - MEMBERS LIST
     - PAGE NUMBERS
+    - SKILLS
     # GRID
     # MEDIA QUERIES
     # PRINT STYLES
@@ -1063,6 +1064,59 @@ input[type="submit"],
         .pageNumbers .pageNumber a:hover,
         .pageNumbers .pageNumber a:focus {
             background-color: #037ea5;
+        }
+
+/** --------------------------------------------------------------
+    SKILLS
+    ----------------------------------------------------------- */
+.skills {
+
+}
+
+    .skills ol {
+        position: relative;
+        list-style: none;
+        margin: 1.6em 0 0 0;
+        border-top: 1px solid;
+        border-color: #ddd;
+    }
+
+        .skills ol:first-child {
+            margin-top: 0;
+        }
+
+        .skills ol li {
+            display: block;
+            padding: .3em .2em;
+            margin-left: 50px;
+            border-top: 1px solid;
+            border-color: #ddd;
+        }
+
+        .skills ol li:nth-child(odd) {
+            background-color: #eee;
+        }
+
+        .skills ol li:first-child {
+            position: absolute;
+            width: 40px;
+            margin-left: 0;
+            background-color: transparent;
+            border-top: 0;
+        }
+
+        .skills ol li:first-child + li {
+            border-top: 0;
+        }
+
+            .skills ol li:first-child h1 {
+                margin: 0;
+            }
+
+        .skills ol li a {
+            display: block;
+            font-size: .9em;
+            font-weight: 400;
         }
 
 /** --------------------------------------------------------------

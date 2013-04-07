@@ -1,13 +1,33 @@
     <div class="entry">
-        <div class="content article">
+        <div class="content skills">
             <div class="meta">
-                <ul>
-                    <?php foreach ($skills as $skill): ?>
-                    <li>
-                        <?php echo $this->Html->Link($skill['Skill']['name'], array('action' => 'view', $skill['Skill']['name'])); ?>
-                    </li>
-                    <?php endforeach; ?>
-                </ul>
+                <h1>SKILLS BY NAME</h1>
+                <?php
+                    $temp   = '';
+                    $i      = 0;
+                    $a      = false;
+                    foreach($skills as $skill):
+                        if ( $i == 0 ) {
+                            $temp = strtoupper($skill['Skill']['name'][0]);
+                            echo '<ol class="clearfix"><li><h1>'.$temp.'</h1></li>';
+                        }
+
+                        if ( $temp != strtoupper($skill['Skill']['name'][0]) ) {
+                            echo '</ol>';
+                        }
+
+                        if ( $temp != strtoupper($skill['Skill']['name'][0]) ) {
+                            $temp = strtoupper($skill['Skill']['name'][0]);
+                            echo '<ol class="clearfix"><li><h1>'.$temp.'</h1></li>';
+                        }
+
+                        echo '<li>'.$this->Html->Link($skill['Skill']['name'], array('action' => 'view', $skill['Skill']['name'])).'</li>';
+                        $i++;
+                        if ( $i == count($skills) ) {
+                            echo '</ol>';
+                        }
+                    endforeach;
+                ?>
             </div><!-- END .meta -->
         </div><!-- END .content -->
     </div><!-- END .entry -->
