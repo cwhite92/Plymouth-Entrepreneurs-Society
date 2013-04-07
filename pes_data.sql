@@ -1,20 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.5.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2013 at 08:34 PM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Generation Time: Apr 07, 2013 at 10:16 PM
+-- Server version: 5.5.29
+-- PHP Version: 5.4.10
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `pes`
@@ -26,9 +20,10 @@ SET time_zone = "+00:00";
 -- Table structure for table `abouts`
 --
 
-CREATE TABLE IF NOT EXISTS `abouts` (
+CREATE TABLE `abouts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `body` longtext CHARACTER SET utf8 NOT NULL,
+  `title` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
@@ -36,8 +31,8 @@ CREATE TABLE IF NOT EXISTS `abouts` (
 -- Dumping data for table `abouts`
 --
 
-INSERT INTO `abouts` (`id`, `body`) VALUES
-(1, 'asa');
+INSERT INTO `abouts` (`id`, `body`, `title`) VALUES
+(1, 'asa', 'About Us');
 
 -- --------------------------------------------------------
 
@@ -45,21 +40,32 @@ INSERT INTO `abouts` (`id`, `body`) VALUES
 -- Table structure for table `attachments`
 --
 
-CREATE TABLE IF NOT EXISTS `attachments` (
+CREATE TABLE `attachments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `post_id` int(11) NOT NULL,
   `file_name` varchar(255) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `file_name` (`file_name`),
   KEY `post_id` (`post_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
 
 --
 -- Dumping data for table `attachments`
 --
 
 INSERT INTO `attachments` (`id`, `post_id`, `file_name`) VALUES
-(16, 93, 'MMSposter-large.jpg');
+(16, 93, 'MMSposter-large.jpg'),
+(17, 94, 'JAKECHAMPION.pdf'),
+(18, 94, 'My_CV.pdf'),
+(19, 94, 'Screen Shot 2013-04-04 at 23.41.23.png'),
+(20, 94, 'Screen Shot 2013-04-04 at 23.45.33.png'),
+(21, 94, 'Screen Shot 2013-04-05 at 01.31.31.png'),
+(22, 94, 'Screen Shot 2013-04-05 at 01.57.36.png'),
+(23, 94, 'Screen Shot 2013-04-07 at 17.36.36 (2).png'),
+(24, 94, 'Screen Shot 2013-04-07 at 17.36.36.png'),
+(25, 94, 'Screen Shot 2013-04-07 at 17.36.37.png'),
+(26, 94, 'Screen Shot 2013-04-07 at 17.40.05.png'),
+(27, 94, 'Term 2 Important Dates.docx');
 
 -- --------------------------------------------------------
 
@@ -67,7 +73,7 @@ INSERT INTO `attachments` (`id`, `post_id`, `file_name`) VALUES
 -- Table structure for table `attending`
 --
 
-CREATE TABLE IF NOT EXISTS `attending` (
+CREATE TABLE `attending` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
@@ -80,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `attending` (
 -- Table structure for table `contacts`
 --
 
-CREATE TABLE IF NOT EXISTS `contacts` (
+CREATE TABLE `contacts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `body` longtext NOT NULL,
   PRIMARY KEY (`id`)
@@ -99,7 +105,7 @@ INSERT INTO `contacts` (`id`, `body`) VALUES
 -- Table structure for table `events`
 --
 
-CREATE TABLE IF NOT EXISTS `events` (
+CREATE TABLE `events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `body` longtext NOT NULL,
@@ -125,7 +131,7 @@ INSERT INTO `events` (`id`, `title`, `body`, `created`, `modified`, `poster`, `d
 -- Table structure for table `posts`
 --
 
-CREATE TABLE IF NOT EXISTS `posts` (
+CREATE TABLE `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) CHARACTER SET utf8 NOT NULL,
   `body` longtext CHARACTER SET utf8 NOT NULL,
@@ -136,7 +142,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `alt_text` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=94 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=95 ;
 
 --
 -- Dumping data for table `posts`
@@ -153,7 +159,8 @@ INSERT INTO `posts` (`id`, `title`, `body`, `created`, `modified`, `user_id`, `c
 (31, 'links', '<p><a href="http://www.google.com">google.com</a><br></p><p><a href="mailto:me@jakechampion.name">email</a><br></p><p><br></p>', '2013-04-06 18:46:08', '2013-04-06 18:46:08', 52, NULL, NULL),
 (32, 'colours!!!', '<p><p><span style="color: #8db3e2;"><strong>Lorem Ipsum</strong>&nbsp;is simply dummy te</span><span style="color: #17365d;">xt of the printing a</span><span style="color: #9bbb59;">nd typesetting industry. Lorem Ipsum has been the industry''s standard dum', '2013-04-06 18:47:09', '2013-04-06 18:47:09', 52, NULL, NULL),
 (33, 'another post', '<h1>heading</h1><div>gandhi said I''m a cunt</div><div><hr></div>', '2013-04-06 19:27:30', '2013-04-06 19:27:30', 52, NULL, NULL),
-(93, 'Attachment test', '<p>i hate this project</p>', '2013-04-07 18:44:37', '2013-04-07 18:44:37', 52, NULL, NULL);
+(93, 'Attachment test', '<p>i hate this project</p>', '2013-04-07 18:44:37', '2013-04-07 18:44:37', 52, NULL, NULL),
+(94, 'loads''a files', '<p>woop</p>', '2013-04-07 21:15:50', '2013-04-07 21:15:50', 52, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -161,7 +168,7 @@ INSERT INTO `posts` (`id`, `title`, `body`, `created`, `modified`, `user_id`, `c
 -- Table structure for table `profiles`
 --
 
-CREATE TABLE IF NOT EXISTS `profiles` (
+CREATE TABLE `profiles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `firstname` varchar(50) CHARACTER SET utf8 NOT NULL,
@@ -175,17 +182,18 @@ CREATE TABLE IF NOT EXISTS `profiles` (
   `experience` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=40 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
 
 --
 -- Dumping data for table `profiles`
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `email`, `course`, `bio`, `modified`, `last_active`, `experience`) VALUES
-(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 22:34:31', 1365359636, 'I like boobies'),
+(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-07 21:14:44', 1365365747, 'I like boobies'),
 (37, 53, 'Bob', 'Doe', '5923c5e979cf9c30d555fb0cec442b0d.png', 'bob@gmail.com', '', '', '2013-04-06 00:04:02', 1365199738, ''),
 (38, 54, 'Liza', 'Doe', 'user.png', 'liza@gmail.com', '', '', '2013-04-05 21:36:35', 1365202400, ''),
-(39, 55, 'gemma', 'pike', '8b3286ba312b5d6077ea9fd2d4c82da5.png', 'gemma.pike@students.plymouth.ac.uk', 'International Tourism Management', 'I''m a badass', '2013-04-06 19:24:53', 1365269095, '21 years of being a badass');
+(39, 55, 'gemma', 'pike', '8b3286ba312b5d6077ea9fd2d4c82da5.png', 'gemma.pike@students.plymouth.ac.uk', 'International Tourism Management', 'I''m a badass', '2013-04-06 19:24:53', 1365269095, '21 years of being a badass'),
+(40, 56, 'Jake', 'McAlman', 'user.png', 'me@jakechampion.name', '', '', '2013-04-07 21:17:22', 1365362995, '');
 
 -- --------------------------------------------------------
 
@@ -193,7 +201,7 @@ INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `em
 -- Table structure for table `profiles_skills`
 --
 
-CREATE TABLE IF NOT EXISTS `profiles_skills` (
+CREATE TABLE `profiles_skills` (
   `profile_id` int(11) NOT NULL,
   `skill_id` int(11) NOT NULL,
   KEY `profile_id` (`profile_id`),
@@ -205,15 +213,11 @@ CREATE TABLE IF NOT EXISTS `profiles_skills` (
 --
 
 INSERT INTO `profiles_skills` (`profile_id`, `skill_id`) VALUES
-(39, 32),
-(39, 49),
-(39, 50),
-(39, 51),
-(39, 52),
-(36, 33),
-(36, 53),
-(36, 54),
-(36, 55);
+(36, 62),
+(36, 63),
+(36, 64),
+(36, 37),
+(36, 65);
 
 -- --------------------------------------------------------
 
@@ -221,7 +225,7 @@ INSERT INTO `profiles_skills` (`profile_id`, `skill_id`) VALUES
 -- Table structure for table `services`
 --
 
-CREATE TABLE IF NOT EXISTS `services` (
+CREATE TABLE `services` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `body` longtext NOT NULL,
@@ -246,39 +250,23 @@ INSERT INTO `services` (`id`, `title`, `body`, `permalink`) VALUES
 -- Table structure for table `skills`
 --
 
-CREATE TABLE IF NOT EXISTS `skills` (
+CREATE TABLE `skills` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `skill` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=62 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=66 ;
 
 --
 -- Dumping data for table `skills`
 --
 
 INSERT INTO `skills` (`id`, `name`) VALUES
-(49, '   css'),
-(51, '   english'),
-(52, '   french'),
-(50, '   marketing'),
-(45, '  css'),
-(47, '  english'),
-(48, '  french'),
-(55, '  HTML5'),
-(53, '  Java'),
-(46, '  marketing'),
-(54, '  PHP'),
-(41, ' css'),
-(43, ' english'),
-(44, ' french'),
-(36, ' HTML5'),
-(34, ' Java'),
-(42, ' marketing'),
-(35, ' PHP'),
+(65, '5 spaces'),
 (24, 'C#'),
 (37, 'css'),
 (58, 'dfg'),
+(63, 'drugs'),
 (39, 'english'),
 (40, 'french'),
 (60, 'ghj'),
@@ -293,6 +281,8 @@ INSERT INTO `skills` (`id`, `name`) VALUES
 (38, 'marketing'),
 (23, 'MySQL'),
 (22, 'PHP'),
+(64, 'rock ''n roll'),
+(62, 'sex'),
 (33, 'SQL');
 
 -- --------------------------------------------------------
@@ -301,7 +291,7 @@ INSERT INTO `skills` (`id`, `name`) VALUES
 -- Table structure for table `sponsors`
 --
 
-CREATE TABLE IF NOT EXISTS `sponsors` (
+CREATE TABLE `sponsors` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `picture` varchar(255) NOT NULL,
@@ -324,7 +314,7 @@ INSERT INTO `sponsors` (`id`, `name`, `picture`) VALUES
 -- Table structure for table `users`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 NOT NULL,
@@ -333,7 +323,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `activation` varchar(32) CHARACTER SET utf8 NOT NULL,
   `activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=56 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=57 ;
 
 --
 -- Dumping data for table `users`
@@ -343,7 +333,8 @@ INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`
 (52, 'john.smith@gmail.com', '$2a$10$9nLSM4BucqPPBTRaOTzxBu2xao4l.V6YtAp.Dz1VT3sBtoM9FIZuW', 1, '2013-02-12 03:07:40', '4f8a070a4a24a9676ab6ae6a8dfad2a2', 1),
 (53, 'bob@gmail.com', '$2a$10$E9TAzT/g3ZOTY1vQ7Xv58uifn9FoXvFiAExGbDEzgGMsUj5T.RbX2', 0, '2013-04-05 21:36:03', '23629a764cd13939155f00d593e4dc2a', 1),
 (54, 'liza@gmail.com', '$2a$10$oIaRoZBHAakDMuG6MgTnluFXa.La2CFGXl/uACS3gid.AX2qjGIUu', 0, '2013-04-05 21:36:35', '3a723c799ce8e9078fcb1eb000abb6ed', 1),
-(55, 'gemma.pike@students.plymouth.ac.uk', '$2a$10$TmBD3te5vYtk/Y8T8US8FuzRl8AwXGAgyC2dsLX3Hx8GP5BSguuJG', 0, '2013-04-06 19:20:58', '0cc33626216a68e4b8345e963f910bbb', 1);
+(55, 'gemma.pike@students.plymouth.ac.uk', '$2a$10$TmBD3te5vYtk/Y8T8US8FuzRl8AwXGAgyC2dsLX3Hx8GP5BSguuJG', 0, '2013-04-06 19:20:58', '0cc33626216a68e4b8345e963f910bbb', 1),
+(56, 'me@jakechampion.name', '$2a$10$K20tkKkhMcYLfMlydCf0QeSFyoon4T0d3s7r5zLEu8UlnMSx0K8J2', 0, '2013-04-07 21:17:21', 'a6b2861c2ccbf733b9e5719d02a67bea', 1);
 
 --
 -- Constraints for dumped tables
@@ -353,27 +344,23 @@ INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`
 -- Constraints for table `attachments`
 --
 ALTER TABLE `attachments`
-  ADD CONSTRAINT `attachments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`);
+ADD CONSTRAINT `attachments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`);
 
 --
 -- Constraints for table `posts`
 --
 ALTER TABLE `posts`
-  ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `profiles`
 --
 ALTER TABLE `profiles`
-  ADD CONSTRAINT `profiles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+ADD CONSTRAINT `profiles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `profiles_skills`
 --
 ALTER TABLE `profiles_skills`
-  ADD CONSTRAINT `profiles_skills_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`),
-  ADD CONSTRAINT `profiles_skills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+ADD CONSTRAINT `profiles_skills_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`),
+ADD CONSTRAINT `profiles_skills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`);
