@@ -89,7 +89,7 @@ class Profile extends AppModel {
 
         // If we have skills to save, do it here
         if(isset($this->data['Skill']['Skill'])) {
-            $skills = array_filter(explode(',', $this->data['Skill']['Skill']));
+            $skills = array_map('trim', array_filter(explode(',', $this->data['Skill']['Skill'])));
 
             $this->data['Skill']['Skill'] = array();
 
