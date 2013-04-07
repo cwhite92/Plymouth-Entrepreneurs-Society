@@ -183,36 +183,47 @@ body .redactor_box_fullscreen {
 .redactor_editor h3,
 .redactor_editor h4,
 .redactor_editor h5 {
-	color: #000;
+	color: #222;
 	background: none;
 	margin: 0 !important;
 	padding: 0 !important;
 	font-weight: bold;
 }
 
+.redactor_redactor h1 { font-size: 1.6em; }
+.redactor_redactor h2 { font-size: 1.5em; }
+.redactor_redactor h3 { font-size: 1.4em; }
+.redactor_redactor h4 { font-size: 1.3em; }
+.redactor_redactor h5 { font-size: 1.2em; }
+.redactor_redactor h6 { font-size: 1.1em; }
+
 .redactor_editor h1 {
-	font-size: 36px !important;
+	font-size: 1.6em !important;
 	line-height: 40px !important;
-	margin-bottom: 10px !important;
+	margin-bottom: .67em !important;
 }
 .redactor_editor h2 {
-	font-size: 30px !important;
+	font-size: 1.5em !important;
 	line-height: 38px !important;
-	margin-bottom: 15px !important;
+	margin-bottom: .67em !important;
 }
 .redactor_editor h3 {
-	font-size: 24px !important;
+	font-size: 1.4em !important;
 	line-height: 30px !important;
-	margin-bottom: 10px !important;
+	margin-bottom: .67em !important;
 }
 .redactor_editor h4 {
-	font-size: 18px !important;
+	font-size: 1.3em !important;
 	line-height: 24px !important;
-	margin-bottom: 10px !important;
+	margin-bottom: .67em !important;
 }
 .redactor_editor h5 {
-	font-size: 1em !important;
-	margin-bottom: 10px !important;
+	font-size: 1.2em !important;
+	margin-bottom: .67em !important;
+}
+.redactor_editor h6 {
+	font-size: 1.1em !important;
+	margin-bottom: .67em !important;
 }
 
 .redactor_editor.redactor_editor_wym {

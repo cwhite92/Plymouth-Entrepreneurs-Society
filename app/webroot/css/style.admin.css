@@ -216,6 +216,14 @@ input[type="submit"].redactor_modal_btn,
     -webkit-font-smoothing: antialiased;
 }
 
+.redactor_redactor ul {
+    list-style: disc outside;
+}
+
+.redactor_redactor ol {
+    list-style: decimal outside;
+}
+
 /** --------------------------------------------------------------
     CSS3 EFFECTS
     ----------------------------------------------------------- */
