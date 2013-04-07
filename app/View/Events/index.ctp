@@ -20,6 +20,7 @@
             ?>
             <header>
                 <strong><?php echo $event['Event']['location']; ?></strong>
+                <?php echo $this->Time->format('d M Y H:i', $event['Event']['date']); ?>
                 <h1><?php echo $this->Html->Link($event['Event']['title'], array('action' => 'view', $event['Event']['id'])); ?></h1>
             </header>
             <article>
