@@ -37,7 +37,7 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
     <?php echo $this->Html->css(array('style.admin', 'redactor')); ?>
 
     <!-- SCRIPTS -->
-    <?php echo $this->Html->script(array('jquery', /*'main',*/ 'redactor.min', 'moderniz.min')); ?>
+    <?php echo $this->Html->script(array('jquery', 'admin.main', 'redactor.min', 'moderniz.min')); ?>
     <!--[if lt IE 9]> <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 
 </head>

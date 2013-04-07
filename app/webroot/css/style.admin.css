@@ -274,7 +274,8 @@ input[type="checkbox"] {
     ----------------------------------------------------------- */
 #flashMessage {
     display: block;
-    background-color: #fff;
+    background-color: #222;
+    color: #fff;
     text-align: center;
     font-weight: 700;
     padding: .6em 0;
