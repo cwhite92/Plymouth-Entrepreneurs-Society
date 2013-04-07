@@ -137,7 +137,7 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
                                 );
 
                                 echo $this->Html->link($user['Profile']['firstname'] . ' ' . $user['Profile']['lastname'],
-                                '/profile/'.$user['Profile']['id'], array('escape' => false, 'class' => 'name')); ?>
+                                '/profile/'.$user['Profile']['id'], array('escape' => false)); ?>
                                 <span class="skills">
                                 <?php
                                 $i = 0;

@@ -712,10 +712,6 @@ input[type="submit"],
                 height: 36px;
             }
 
-            .recent li .name {
-                text-transform: capitalize;
-            }
-
             .recent li .skills {
                 display: block;
                 font-size: .8em;
@@ -756,7 +752,6 @@ input[type="submit"],
         color: #222;
         font-size: 1.4em;
         font-weight: 700;
-        text-transform: capitalize;
     }
 
     .profile .rank {
@@ -1019,10 +1014,6 @@ input[type="submit"],
                 width: 60px;
                 height: 60px;
             }
-
-        .membersList li .name {
-            text-transform: capitalize;
-        }
 
         .membersList li .skills {
             display: block;

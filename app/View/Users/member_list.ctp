@@ -30,8 +30,7 @@
                             'action'        => 'view',
                             $user['Profile']['id']
                         ),array(
-                            'escape'        => false,
-                            'class'         => 'name'
+                            'escape'        => false
                         ));
                         ?>
                         <span class="skills">
