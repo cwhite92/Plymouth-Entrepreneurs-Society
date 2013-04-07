@@ -3,6 +3,14 @@
 class PostsController extends AppController {
     public $helpers = array('Html', 'Form');
 
+    public $paginate = array(
+        'limit' => 6,
+        'order' => array(
+            'Post.created' => 'desc'
+        ),
+        'recursive' => 2
+    );
+
     function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('index', 'view');
@@ -14,10 +22,7 @@ class PostsController extends AppController {
     }
 
     public function index() {
-        $this->set('posts', $this->Post->find('all', array(
-            'recursive' => 2,
-            'order' => 'Post.created DESC'
-        )));
+        $this->set('posts', $this->paginate('Post'));
     }
 
     public function view($id = null) {
