@@ -1,12 +1,12 @@
-<h1>Events</h1>
-<p><?php echo $this->Html->link('Add Event', array('action' => 'add')); ?></p>
+<h1 class="alignLeft">Events</h1>
+<?php echo $this->Html->link('Add Event', array('action' => 'add'), array('class' => 'alignRight')); ?>
 <table>
     <tr>
         <th>Title</th>
         <th>Created</th>
         <th>Modified</th>
-        <th>Edit</th>
-        <th>Delete</th>
+        <th class="edit">Edit</th>
+        <th class="delete">Delete</th>
     </tr>
 
     <!-- Here's where we loop through our $posts array, printing out post info -->
@@ -27,7 +27,7 @@
                         $event['Event']['id']),
                     array(
                         'escape' => false,
-                        'class' => 'actions',
+                        'class' => 'actions edit',
                         'data-icon' => '&#xF139;')); ?>
             </td>
             <td>
@@ -36,7 +36,7 @@
                         'action' => 'delete',
                         $event['Event']['id']),
                     array(
-                        'class' => 'actions',
+                        'class' => 'actions delete',
                         'escape' => false,
                         'data-icon' => '&#xF155;'),
                     __('Are you sure you want to delete %s?',
