@@ -7,6 +7,7 @@
     - DOCUMENT SETUP
     - CSS3 EFFECTS
     - INPUTS AND TEXTAREA - and forms!
+    - FLASH MESSAGE
     - TABLE
     - WIDGET
     - BAR
@@ -267,6 +268,28 @@ input[type="checkbox"] {
     min-width: 100%;
     max-width: 100%;
 }
+
+/** --------------------------------------------------------------
+    FLASH MESSAGE
+    ----------------------------------------------------------- */
+#flashMessage {
+    display: block;
+    background-color: #fff;
+    text-align: center;
+    font-weight: 700;
+    padding: .6em 0;
+    cursor: pointer;
+}
+
+    #flashMessage.success {
+        background-color: #8eb265;
+        color: #fff;
+    }
+
+    #flashMessage.error {
+        background-color: #b26565;
+        color: #fff;
+    }
 
 /** --------------------------------------------------------------
     TABLE
