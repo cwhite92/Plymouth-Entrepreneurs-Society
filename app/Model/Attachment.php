@@ -2,6 +2,6 @@
 
 class Attachment extends AppModel {
 
-    public $belongsTo = 'Post';
+    public $belongsTo = 'Event';
 
 }

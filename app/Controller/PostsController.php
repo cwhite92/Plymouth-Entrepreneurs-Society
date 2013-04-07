@@ -52,25 +52,6 @@ class PostsController extends AppController {
             // Add the user ID to the request data
             $this->request->data['Post']['user_id'] = $this->Auth->user('id');
 
-            // Fuck this, I can't be bothered trying to work out how to do it properly since we're running out of time.
-            $this->request->data['Attachment'] = array();
-
-            // Loop through all uploaded attachments
-            foreach($this->request->data['Post']['attachments'] as $attachment) {
-                // Only proceed if there wasn't an error uploading
-                if($attachment['error'] == 0) {
-                    // Attempt to move the uploaded file
-                    if(move_uploaded_file($attachment['tmp_name'], WWW_ROOT . 'files' . DS . 'attachments' . DS . $attachment['name'])) {
-                        // Format the array so it gets saved to the database correctly
-                        $this->request->data['Attachment'][] = array(
-                            'file_name' => $attachment['name']
-                        );
-                    }
-                }
-            }
-
-            //die(debug($this->request->data));
-
             $this->Post->create();
             if($this->Post->saveAssociated($this->request->data)) {
                 $this->Session->setFlash('Your post has been saved.');

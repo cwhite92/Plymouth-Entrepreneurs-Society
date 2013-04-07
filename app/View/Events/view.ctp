@@ -19,6 +19,14 @@
             echo $event['Event']['body'];
             ?>
         </article>
+        <?php if(count($event['Attachment']) > 0): ?>
+            <h2>Attachments</h2>
+            <ul id="attachments">
+                <?php foreach($event['Attachment'] as $attachment): ?>
+                    <li><?php echo $this->Html->link($attachment['filename'], '/files/attachments/' . $attachment['filename'], array('target' => '_blank')); ?></li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
     </div><!-- END .content -->
 </div><!-- END .entry -->
 <div class="entry">

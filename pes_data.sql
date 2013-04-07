@@ -1,14 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.5
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Apr 07, 2013 at 10:27 PM
--- Server version: 5.5.29
--- PHP Version: 5.4.10
+-- Host: 127.0.0.1
+-- Generation Time: Apr 08, 2013 at 12:40 AM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `pes`
@@ -20,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `abouts`
 --
 
-CREATE TABLE `abouts` (
+CREATE TABLE IF NOT EXISTS `abouts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `body` longtext CHARACTER SET utf8 NOT NULL,
   `title` varchar(255) NOT NULL,
@@ -40,32 +46,12 @@ INSERT INTO `abouts` (`id`, `body`, `title`) VALUES
 -- Table structure for table `attachments`
 --
 
-CREATE TABLE `attachments` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `post_id` int(11) NOT NULL,
-  `file_name` varchar(255) CHARACTER SET utf8 NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `file_name` (`file_name`),
-  KEY `post_id` (`post_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
-
---
--- Dumping data for table `attachments`
---
-
-INSERT INTO `attachments` (`id`, `post_id`, `file_name`) VALUES
-(16, 93, 'MMSposter-large.jpg'),
-(17, 94, 'JAKECHAMPION.pdf'),
-(18, 94, 'My_CV.pdf'),
-(19, 94, 'Screen Shot 2013-04-04 at 23.41.23.png'),
-(20, 94, 'Screen Shot 2013-04-04 at 23.45.33.png'),
-(21, 94, 'Screen Shot 2013-04-05 at 01.31.31.png'),
-(22, 94, 'Screen Shot 2013-04-05 at 01.57.36.png'),
-(23, 94, 'Screen Shot 2013-04-07 at 17.36.36 (2).png'),
-(24, 94, 'Screen Shot 2013-04-07 at 17.36.36.png'),
-(25, 94, 'Screen Shot 2013-04-07 at 17.36.37.png'),
-(26, 94, 'Screen Shot 2013-04-07 at 17.40.05.png'),
-(27, 94, 'Term 2 Important Dates.docx');
+CREATE TABLE IF NOT EXISTS `attachments` (
+  `id` int(11) NOT NULL,
+  `event_id` int(11) NOT NULL,
+  `filename` varchar(255) NOT NULL,
+  KEY `event_id` (`event_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -73,7 +59,7 @@ INSERT INTO `attachments` (`id`, `post_id`, `file_name`) VALUES
 -- Table structure for table `attending`
 --
 
-CREATE TABLE `attending` (
+CREATE TABLE IF NOT EXISTS `attending` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
@@ -86,7 +72,7 @@ CREATE TABLE `attending` (
 -- Table structure for table `contacts`
 --
 
-CREATE TABLE `contacts` (
+CREATE TABLE IF NOT EXISTS `contacts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `body` longtext NOT NULL,
   `title` varchar(255) NOT NULL,
@@ -106,7 +92,7 @@ INSERT INTO `contacts` (`id`, `body`, `title`) VALUES
 -- Table structure for table `events`
 --
 
-CREATE TABLE `events` (
+CREATE TABLE IF NOT EXISTS `events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `body` longtext NOT NULL,
@@ -117,7 +103,7 @@ CREATE TABLE `events` (
   `location` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
 
 --
 -- Dumping data for table `events`
@@ -132,7 +118,7 @@ INSERT INTO `events` (`id`, `title`, `body`, `created`, `modified`, `poster`, `d
 -- Table structure for table `posts`
 --
 
-CREATE TABLE `posts` (
+CREATE TABLE IF NOT EXISTS `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) CHARACTER SET utf8 NOT NULL,
   `body` longtext CHARACTER SET utf8 NOT NULL,
@@ -169,7 +155,7 @@ INSERT INTO `posts` (`id`, `title`, `body`, `created`, `modified`, `user_id`, `c
 -- Table structure for table `profiles`
 --
 
-CREATE TABLE `profiles` (
+CREATE TABLE IF NOT EXISTS `profiles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `firstname` varchar(50) CHARACTER SET utf8 NOT NULL,
@@ -190,7 +176,7 @@ CREATE TABLE `profiles` (
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `email`, `course`, `bio`, `modified`, `last_active`, `experience`) VALUES
-(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-07 21:14:44', 1365366414, 'I like boobies'),
+(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-07 21:14:44', 1365374387, 'I like boobies'),
 (37, 53, 'Bob', 'Doe', '5923c5e979cf9c30d555fb0cec442b0d.png', 'bob@gmail.com', '', '', '2013-04-06 00:04:02', 1365199738, ''),
 (38, 54, 'Liza', 'Doe', 'user.png', 'liza@gmail.com', '', '', '2013-04-05 21:36:35', 1365202400, ''),
 (39, 55, 'gemma', 'pike', '8b3286ba312b5d6077ea9fd2d4c82da5.png', 'gemma.pike@students.plymouth.ac.uk', 'International Tourism Management', 'I''m a badass', '2013-04-06 19:24:53', 1365269095, '21 years of being a badass'),
@@ -202,7 +188,7 @@ INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `em
 -- Table structure for table `profiles_skills`
 --
 
-CREATE TABLE `profiles_skills` (
+CREATE TABLE IF NOT EXISTS `profiles_skills` (
   `profile_id` int(11) NOT NULL,
   `skill_id` int(11) NOT NULL,
   KEY `profile_id` (`profile_id`),
@@ -226,7 +212,7 @@ INSERT INTO `profiles_skills` (`profile_id`, `skill_id`) VALUES
 -- Table structure for table `services`
 --
 
-CREATE TABLE `services` (
+CREATE TABLE IF NOT EXISTS `services` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `body` longtext NOT NULL,
@@ -251,7 +237,7 @@ INSERT INTO `services` (`id`, `title`, `body`, `permalink`) VALUES
 -- Table structure for table `skills`
 --
 
-CREATE TABLE `skills` (
+CREATE TABLE IF NOT EXISTS `skills` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
@@ -292,7 +278,7 @@ INSERT INTO `skills` (`id`, `name`) VALUES
 -- Table structure for table `sponsors`
 --
 
-CREATE TABLE `sponsors` (
+CREATE TABLE IF NOT EXISTS `sponsors` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `picture` varchar(255) NOT NULL,
@@ -315,7 +301,7 @@ INSERT INTO `sponsors` (`id`, `name`, `picture`) VALUES
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 NOT NULL,
@@ -345,23 +331,27 @@ INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`
 -- Constraints for table `attachments`
 --
 ALTER TABLE `attachments`
-ADD CONSTRAINT `attachments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`);
+  ADD CONSTRAINT `attachments_ibfk_1` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`);
 
 --
 -- Constraints for table `posts`
 --
 ALTER TABLE `posts`
-ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `profiles`
 --
 ALTER TABLE `profiles`
-ADD CONSTRAINT `profiles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `profiles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `profiles_skills`
 --
 ALTER TABLE `profiles_skills`
-ADD CONSTRAINT `profiles_skills_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`),
-ADD CONSTRAINT `profiles_skills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`);
+  ADD CONSTRAINT `profiles_skills_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`),
+  ADD CONSTRAINT `profiles_skills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

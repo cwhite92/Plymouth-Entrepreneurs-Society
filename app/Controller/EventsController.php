@@ -35,7 +35,25 @@ class EventsController extends AppController {
     public function admin_add() {
         if($this->request->is('post')) {
             $this->Event->create();
-            if($this->Event->save($this->request->data)) {
+
+            // Fuck this, I can't be bothered trying to work out how to do it properly since we're running out of time.
+            $this->request->data['Attachment'] = array();
+
+            // Loop through all uploaded attachments
+            foreach($this->request->data['Event']['attachments'] as $attachment) {
+                // Only proceed if there wasn't an error uploading
+                if($attachment['error'] == 0) {
+                    // Attempt to move the uploaded file
+                    if(move_uploaded_file($attachment['tmp_name'], WWW_ROOT . 'files' . DS . 'attachments' . DS . $attachment['name'])) {
+                        // Format the array so it gets saved to the database correctly
+                        $this->request->data['Attachment'][] = array(
+                            'filename' => $attachment['name']
+                        );
+                    }
+                }
+            }
+
+            if($this->Event->saveAssociated($this->request->data)) {
                 $this->Session->setFlash('Your event has been saved.', 'default', array('class' => 'success'));
                 $this->redirect(array('action' => 'index'));
             } else {

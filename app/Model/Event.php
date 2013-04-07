@@ -1,5 +1,8 @@
 <?php
 class Event extends AppModel {
+
+    public $hasMany = 'Attachment';
+
     public $validate = array(
         'title' => array(
             'rule' => 'notEmpty'
