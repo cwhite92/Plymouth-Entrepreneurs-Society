@@ -105,7 +105,7 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
                     <ul class="recent clearfix">
                         <?php foreach($latestEvents as $event): ?>
                             <li><?php echo $this->Html->link(
-                                    $this->Html->image('posters/' . $event['Event']['picture'], array(
+                                    $this->Html->image('posters/' . $event['Event']['poster'], array(
                                         'fullbase'  => true,
                                         'alt'       => 'Poster for ' . $event['Event']['title']
                                     )),

@@ -33,33 +33,21 @@ class Event extends AppModel {
     }
 
     public function beforeSave($options = Array()) {
-        if(!empty($this->data['Event']['picture']['name'])) {
-            // Query for the users current profile picture
-            $currentPicture = $this->find('first', array(
-                'condition' => array(
-                    'Event.id' => $this->data['Event']['id']
-                ),
-                'fields' => array('Event.picture')
-            ));
-
+        if(!empty($this->data['Event']['poster']['name'])) {
             // Make a filename
             $filename = md5(microtime() * rand()) . '.png';
 
             // Attempt to move the uploaded file
-            if(!move_uploaded_file($this->data['Event']['picture']['tmp_name'], WWW_ROOT . 'img' . DS . 'posters' . DS . $filename)) {
+            if(!move_uploaded_file($this->data['Event']['poster']['tmp_name'], WWW_ROOT . 'img' . DS . 'posters' . DS . $filename)) {
                 return false;
             }
 
-            // Also delete their old picture to save space (if it's not user.png)
-            if($currentPicture['Event']['picture'] != 'user.png') {
-                unlink(WWW_ROOT . 'img' . DS . 'posters' . DS . $currentPicture['Event']['picture']);
-            }
-
             // Rename it so it gets saved with the correct name in the database
-            $this->data['Event']['picture'] = $filename;
+            $this->data['Event']['poster'] = $filename;
+        } elseif(isset($this->data['Event']['id'])) {
+            unset($this->data['Event']['poster']);
         } else {
-            // Take the picture out of $this->data
-            unset($this->data['Event']['picture']);
+            return false;
         }
 
         return true;

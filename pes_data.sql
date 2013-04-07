@@ -1,14 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.5
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2013 at 02:42 AM
--- Server version: 5.5.29
--- PHP Version: 5.4.10
+-- Generation Time: Apr 07, 2013 at 03:20 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `pes`
@@ -17,29 +23,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `abouts`
---
-
-CREATE TABLE `abouts` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `body` longtext CHARACTER SET utf8 NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `abouts`
---
-
-INSERT INTO `abouts` (`id`, `body`) VALUES
-(1, '<h1>Welcome to Plymouth University’s Entrepreneurs Society!</h1><br><p>OUR MISSION IS TO FOSTER AND ENCOURAGE ENTREPRENURSHIP THROUGH&nbsp;A BROAD RANGE OF EXCITING AVENUES.&nbsp;</p><br><h4>BUSINESS SUPPORT &amp; MENTORING</h4><p>Want to start a business? We offer a wide range of support such as financing, mentoring by industry experts, meeting rooms, access to lawyers and accountants, registration guidance, investment sourcing and more! Got an idea? Email <a href="mailto:entrepreneurs@upsu.com">entrepreneurs@upsu.com</a> asking for a “Start-Up Meeting”</p><br><h4>KEYNOTE GUEST SPEAKERS</h4><p>Become inspired by experienced global and local entrepreneurs and business leaders. We always have an exciting calendar of free lectures which enrich your university experience. Past speakers have included Doug Richard from Dragon’s Den!</p><br><h4>COMMERCIAL PROJECTS</h4><p>Get involved with real life business start-ups and develop your skills as an entrepreneur. Perfect for CV building, meeting people and making some money for yourself!</p><br><h4>PRACTICAL WORKSHOPS</h4><p>Sharpen your business skills! Learn from our free sales, marketing and negotiation workshops presented by leading experts and consultants, often valued at hundreds of pounds.&nbsp;</p><br><h4>NETWORKING</h4><p>Meet like-minded individuals and become part of a dynamic community of student entrepreneurs. We also partner with similar societies such as Enactus, Marketing, and Management so you are constantly meeting new and interesting people.&nbsp;</p><br><h4>TRIPS</h4><p>Get funded to join us at local, national, and global events! We’ve recently sent 20 society members to visit the UK’s leading student enterprise conference (travel, tickets and Hilton Hotel rooms included).</p><span style="color: rgb(0, 0, 0); font-size: 18px; font-weight: bold; line-height: 24px; letter-spacing: 0px;"><br></span><p></p><h4><span style="letter-spacing: 0px;">PROFESSIONAL DEVELOPMENT OPPORTUNITIES</span></h4><p>Apply for professional development funding. We currently offer our members CIMA (Certificate in Management Accounting) for only £20 (Normal Price: £1,200). Our partner societies also offer similar highly-regarded qualifications for low prices, which we can put you in touch with!</p><p></p>\r\n');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `attachments`
 --
 
-CREATE TABLE `attachments` (
+CREATE TABLE IF NOT EXISTS `attachments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `file_name` varchar(255) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
@@ -52,7 +39,7 @@ CREATE TABLE `attachments` (
 -- Table structure for table `attending`
 --
 
-CREATE TABLE `attending` (
+CREATE TABLE IF NOT EXISTS `attending` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
@@ -62,47 +49,28 @@ CREATE TABLE `attending` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contacts`
---
-
-CREATE TABLE `contacts` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `body` longtext NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `contacts`
---
-
-INSERT INTO `contacts` (`id`, `body`) VALUES
-(1, '<p></p><table id="table74382"><tbody><tr><td>email</td><td>phone</td><td>address</td></tr><tr><td><p><a href="mailto:tom.scott@plymouth.ac.uk">tom.scott@plymouth.ac.uk</a></p><a href="mailto:tom.scott@plymouth.ac.uk"></a><p><a href="mailto:entrepreneurs@upsu.com" style="font-size: 15px; line-height: 1.45em; letter-spacing: 0px; display: inline !important;">entrepreneurs@upsu.com</a></p><a href="mailto:tom.scott@plymouth.ac.uk"><br></a></td><td><p>0712-3456-789</p></td><td>5 Tavistock Place<br>Plymouth<br>PL4 8AU</td></tr></tbody></table><p></p><br><p></p>\r\n');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `events`
 --
 
-CREATE TABLE `events` (
+CREATE TABLE IF NOT EXISTS `events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
-  `body` longtext NOT NULL,
+  `body` varchar(255) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
-  `picture` varchar(255) NOT NULL,
+  `poster` varchar(255) NOT NULL,
   `date` datetime NOT NULL,
   `location` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`id`, `title`, `body`, `created`, `modified`, `picture`, `date`, `location`) VALUES
-(1, 'First event', '<p>Description of said event</p>', '2013-04-06 16:34:43', '2013-04-06 18:18:11', 'boob.png', '2013-04-06 16:34:00', 'Ed''s front room');
+INSERT INTO `events` (`id`, `title`, `body`, `created`, `modified`, `poster`, `date`, `location`) VALUES
+(17, 'Test', '<p>Testing</p>', '2013-04-07 03:20:08', '2013-04-07 03:20:08', 'a25bdf9a33c22b8769b2bce326dd9108.png', '2013-04-07 03:19:00', 'Here');
 
 -- --------------------------------------------------------
 
@@ -110,7 +78,7 @@ INSERT INTO `events` (`id`, `title`, `body`, `created`, `modified`, `picture`, `
 -- Table structure for table `posts`
 --
 
-CREATE TABLE `posts` (
+CREATE TABLE IF NOT EXISTS `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) CHARACTER SET utf8 NOT NULL,
   `body` longtext CHARACTER SET utf8 NOT NULL,
@@ -145,7 +113,7 @@ INSERT INTO `posts` (`id`, `title`, `body`, `created`, `modified`, `user_id`, `c
 -- Table structure for table `posts_attachments`
 --
 
-CREATE TABLE `posts_attachments` (
+CREATE TABLE IF NOT EXISTS `posts_attachments` (
   `post_id` int(11) NOT NULL,
   `attachment_id` int(11) NOT NULL,
   KEY `post_id` (`post_id`),
@@ -158,7 +126,7 @@ CREATE TABLE `posts_attachments` (
 -- Table structure for table `profiles`
 --
 
-CREATE TABLE `profiles` (
+CREATE TABLE IF NOT EXISTS `profiles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `firstname` varchar(50) CHARACTER SET utf8 NOT NULL,
@@ -172,17 +140,18 @@ CREATE TABLE `profiles` (
   `experience` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=40 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
 
 --
 -- Dumping data for table `profiles`
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `email`, `course`, `bio`, `modified`, `last_active`, `experience`) VALUES
-(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 22:34:31', 1365295334, 'I like boobies'),
+(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 22:34:31', 1365297613, 'I like boobies'),
 (37, 53, 'Bob', 'Doe', '5923c5e979cf9c30d555fb0cec442b0d.png', 'bob@gmail.com', '', '', '2013-04-06 00:04:02', 1365199738, ''),
 (38, 54, 'Liza', 'Doe', 'user.png', 'liza@gmail.com', '', '', '2013-04-05 21:36:35', 1365202400, ''),
-(39, 55, 'gemma', 'pike', '8b3286ba312b5d6077ea9fd2d4c82da5.png', 'gemma.pike@students.plymouth.ac.uk', 'International Tourism Management', 'I''m a badass', '2013-04-06 19:24:53', 1365269095, '21 years of being a badass');
+(39, 55, 'gemma', 'pike', '8b3286ba312b5d6077ea9fd2d4c82da5.png', 'gemma.pike@students.plymouth.ac.uk', 'International Tourism Management', 'I''m a badass', '2013-04-06 19:24:53', 1365269095, '21 years of being a badass'),
+(40, 56, 'ibh', 'jdnfg', 'user.png', 'dfg@dfg.com', '', '', '2013-04-06 23:07:19', 1365282567, '');
 
 -- --------------------------------------------------------
 
@@ -190,7 +159,7 @@ INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `em
 -- Table structure for table `profiles_skills`
 --
 
-CREATE TABLE `profiles_skills` (
+CREATE TABLE IF NOT EXISTS `profiles_skills` (
   `profile_id` int(11) NOT NULL,
   `skill_id` int(11) NOT NULL,
   KEY `profile_id` (`profile_id`),
@@ -218,25 +187,19 @@ INSERT INTO `profiles_skills` (`profile_id`, `skill_id`) VALUES
 -- Table structure for table `services`
 --
 
-CREATE TABLE `services` (
+CREATE TABLE IF NOT EXISTS `services` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `body` longtext NOT NULL,
-  `permalink` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `name` (`permalink`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `services`
 --
 
-INSERT INTO `services` (`id`, `title`, `body`, `permalink`) VALUES
-(1, 'Mentoring', 'Welcome to the Mentoring page!', 'mentoring'),
-(2, 'How to find investors', '<p>AHHAHAHAHAHAHAHAHHAHA</p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>You don''t need investors, you need a noose!</p>', 'how_to_find_investors'),
-(3, 'gdsfgdsg', '<p>dfsgdfsgdfsg</p>', 'gdsgdsfg'),
-(4, 'startup lectures', '<p>sdsdsd</p>', 'sdsd'),
-(5, 'sdfsdf', '<p>ghdfg</p>', 'gfdfh');
+INSERT INTO `services` (`id`, `title`, `body`) VALUES
+(1, 'Mentoring', 'Welcome to the Mentoring page!');
 
 -- --------------------------------------------------------
 
@@ -244,7 +207,7 @@ INSERT INTO `services` (`id`, `title`, `body`, `permalink`) VALUES
 -- Table structure for table `skills`
 --
 
-CREATE TABLE `skills` (
+CREATE TABLE IF NOT EXISTS `skills` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
@@ -293,7 +256,7 @@ INSERT INTO `skills` (`id`, `name`) VALUES
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 NOT NULL,
@@ -302,7 +265,7 @@ CREATE TABLE `users` (
   `activation` varchar(32) CHARACTER SET utf8 NOT NULL,
   `activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=56 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=57 ;
 
 --
 -- Dumping data for table `users`
@@ -312,7 +275,8 @@ INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`
 (52, 'john.smith@gmail.com', '$2a$10$9nLSM4BucqPPBTRaOTzxBu2xao4l.V6YtAp.Dz1VT3sBtoM9FIZuW', 1, '2013-02-12 03:07:40', '4f8a070a4a24a9676ab6ae6a8dfad2a2', 1),
 (53, 'bob@gmail.com', '$2a$10$E9TAzT/g3ZOTY1vQ7Xv58uifn9FoXvFiAExGbDEzgGMsUj5T.RbX2', 0, '2013-04-05 21:36:03', '23629a764cd13939155f00d593e4dc2a', 1),
 (54, 'liza@gmail.com', '$2a$10$oIaRoZBHAakDMuG6MgTnluFXa.La2CFGXl/uACS3gid.AX2qjGIUu', 0, '2013-04-05 21:36:35', '3a723c799ce8e9078fcb1eb000abb6ed', 1),
-(55, 'gemma.pike@students.plymouth.ac.uk', '$2a$10$TmBD3te5vYtk/Y8T8US8FuzRl8AwXGAgyC2dsLX3Hx8GP5BSguuJG', 0, '2013-04-06 19:20:58', '0cc33626216a68e4b8345e963f910bbb', 1);
+(55, 'gemma.pike@students.plymouth.ac.uk', '$2a$10$TmBD3te5vYtk/Y8T8US8FuzRl8AwXGAgyC2dsLX3Hx8GP5BSguuJG', 0, '2013-04-06 19:20:58', '0cc33626216a68e4b8345e963f910bbb', 1),
+(56, 'dfg@dfg.com', '$2a$10$KbsA0rAM9FVT4FGPhA9/uukfyuG1gaGViob33jLDS73EyD8T06Dc2', 0, '2013-04-06 23:07:18', 'd1fa80276c845ae7853fd43e25d6501b', 1);
 
 --
 -- Constraints for dumped tables
@@ -322,24 +286,28 @@ INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`
 -- Constraints for table `posts`
 --
 ALTER TABLE `posts`
-ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `posts_attachments`
 --
 ALTER TABLE `posts_attachments`
-ADD CONSTRAINT `posts_attachments_ibfk_2` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`),
-ADD CONSTRAINT `posts_attachments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`);
+  ADD CONSTRAINT `posts_attachments_ibfk_2` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`),
+  ADD CONSTRAINT `posts_attachments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`);
 
 --
 -- Constraints for table `profiles`
 --
 ALTER TABLE `profiles`
-ADD CONSTRAINT `profiles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `profiles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `profiles_skills`
 --
 ALTER TABLE `profiles_skills`
-ADD CONSTRAINT `profiles_skills_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`),
-ADD CONSTRAINT `profiles_skills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`);
+  ADD CONSTRAINT `profiles_skills_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`),
+  ADD CONSTRAINT `profiles_skills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
