@@ -16,6 +16,7 @@
     - ARTICLE
     - SEARCH
     - EVENTS
+    - MEMBERS LIST
     # GRID
     # MEDIA QUERIES
     # PRINT STYLES
@@ -217,7 +218,8 @@ input,
 .content,
 .dashboard img,
 .profilePicture img,
-.recent li img {
+.recent li img,
+.membersList li .pic img {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -976,6 +978,51 @@ input[type="submit"],
         height: auto;
         margin-right: 1.6em;
     }
+
+/** --------------------------------------------------------------
+    MEMBERS LIST
+    ----------------------------------------------------------- */
+.membersList {
+    float: left;
+    width: 100%;
+}
+
+    .membersList li {
+        float: left;
+        width: 100%;
+        padding: .6em 0;
+        border-top: 1px solid;
+        border-color: #ddd;
+    }
+
+        .membersList li:nth-child(even) {
+            background-color: #eee;
+        }
+
+        .membersList li:first-child {
+            border-top: 0;
+        }
+
+        .membersList li .pic {
+            float: left;
+            margin-left: .6em;
+            margin-right: 1.6em;
+            line-height: 1em;
+        }
+
+            .membersList li .pic img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .membersList li .skills {
+                display: block;
+            }
+
+                .membersList li .skills a {
+                    font-size: .8em;
+                    font-weight: 400;
+                }
 
 /** --------------------------------------------------------------
     GRID
