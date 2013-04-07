@@ -1015,14 +1015,18 @@ input[type="submit"],
                 height: 60px;
             }
 
-            .membersList li .skills {
-                display: block;
-            }
+        .membersList li .name {
+            text-transform: capitalize;
+        }
 
-                .membersList li .skills a {
-                    font-size: .8em;
-                    font-weight: 400;
-                }
+        .membersList li .skills {
+            display: block;
+        }
+
+            .membersList li .skills a {
+                font-size: .8em;
+                font-weight: 400;
+            }
 
 /** --------------------------------------------------------------
     GRID
