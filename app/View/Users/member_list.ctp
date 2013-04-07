@@ -13,7 +13,6 @@
             <?php if(count($users) == 0): ?>
                 <p>No users found :(</p>
             <?php else: ?>
-                <?php //print_r($users); ?>
                 <?php foreach($users as $user): ?>
                     <li>
                         <?php
