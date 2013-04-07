@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2013 at 03:20 AM
+-- Generation Time: Apr 07, 2013 at 03:52 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -19,6 +19,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `pes`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `abouts`
+--
+
+CREATE TABLE IF NOT EXISTS `abouts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `body` longtext CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `abouts`
+--
+
+INSERT INTO `abouts` (`id`, `body`) VALUES
+(1, 'asa');
 
 -- --------------------------------------------------------
 
@@ -49,13 +68,32 @@ CREATE TABLE IF NOT EXISTS `attending` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contacts`
+--
+
+CREATE TABLE IF NOT EXISTS `contacts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `body` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `body`) VALUES
+(1, '<p><table id="table74382"><tbody><tr><td>email</td><td>phone</td><td>address</td></tr><tr><td><a href="mailto:tom.scott@plymouth.ac.uk">tom.scott@plymouth.ac.uk</a></td><td>0712-3456-789</td><td>5 Tavistock Place<br>Plymouth<br>PL4 8AU</td></tr></tbody></table><p></p><br></p>');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `events`
 --
 
 CREATE TABLE IF NOT EXISTS `events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
-  `body` varchar(255) NOT NULL,
+  `body` longtext NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   `poster` varchar(255) NOT NULL,
@@ -63,14 +101,14 @@ CREATE TABLE IF NOT EXISTS `events` (
   `location` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `events`
 --
 
 INSERT INTO `events` (`id`, `title`, `body`, `created`, `modified`, `poster`, `date`, `location`) VALUES
-(17, 'Test', '<p>Testing</p>', '2013-04-07 03:20:08', '2013-04-07 03:20:08', 'a25bdf9a33c22b8769b2bce326dd9108.png', '2013-04-07 03:19:00', 'Here');
+(1, 'First event', '<p>Description of said event</p>', '2013-04-06 16:34:43', '2013-04-06 18:18:11', 'boob.png', '2013-04-06 16:34:00', 'Ed''s front room');
 
 -- --------------------------------------------------------
 
@@ -140,18 +178,17 @@ CREATE TABLE IF NOT EXISTS `profiles` (
   `experience` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=40 ;
 
 --
 -- Dumping data for table `profiles`
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `email`, `course`, `bio`, `modified`, `last_active`, `experience`) VALUES
-(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 22:34:31', 1365297613, 'I like boobies'),
+(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 22:34:31', 1365299546, 'I like boobies'),
 (37, 53, 'Bob', 'Doe', '5923c5e979cf9c30d555fb0cec442b0d.png', 'bob@gmail.com', '', '', '2013-04-06 00:04:02', 1365199738, ''),
 (38, 54, 'Liza', 'Doe', 'user.png', 'liza@gmail.com', '', '', '2013-04-05 21:36:35', 1365202400, ''),
-(39, 55, 'gemma', 'pike', '8b3286ba312b5d6077ea9fd2d4c82da5.png', 'gemma.pike@students.plymouth.ac.uk', 'International Tourism Management', 'I''m a badass', '2013-04-06 19:24:53', 1365269095, '21 years of being a badass'),
-(40, 56, 'ibh', 'jdnfg', 'user.png', 'dfg@dfg.com', '', '', '2013-04-06 23:07:19', 1365282567, '');
+(39, 55, 'gemma', 'pike', '8b3286ba312b5d6077ea9fd2d4c82da5.png', 'gemma.pike@students.plymouth.ac.uk', 'International Tourism Management', 'I''m a badass', '2013-04-06 19:24:53', 1365269095, '21 years of being a badass');
 
 -- --------------------------------------------------------
 
@@ -191,15 +228,20 @@ CREATE TABLE IF NOT EXISTS `services` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `body` longtext NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+  `permalink` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`permalink`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `services`
 --
 
-INSERT INTO `services` (`id`, `title`, `body`) VALUES
-(1, 'Mentoring', 'Welcome to the Mentoring page!');
+INSERT INTO `services` (`id`, `title`, `body`, `permalink`) VALUES
+(1, 'Mentoring', 'Welcome to the Mentoring page!', 'mentoring'),
+(2, 'How to find investors', '<p>AHHAHAHAHAHAHAHAHHAHA</p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>You don''t need investors, you need a noose!</p>', 'how_to_find_investors'),
+(3, 'gdsfgdsg', '<p>dfsgdfsgdfsg</p>', 'gdsgdsfg'),
+(4, 'startup lectures', '<p>sdsdsd</p>', 'sdsd');
 
 -- --------------------------------------------------------
 
@@ -265,7 +307,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `activation` varchar(32) CHARACTER SET utf8 NOT NULL,
   `activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=57 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=56 ;
 
 --
 -- Dumping data for table `users`
@@ -275,8 +317,7 @@ INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`
 (52, 'john.smith@gmail.com', '$2a$10$9nLSM4BucqPPBTRaOTzxBu2xao4l.V6YtAp.Dz1VT3sBtoM9FIZuW', 1, '2013-02-12 03:07:40', '4f8a070a4a24a9676ab6ae6a8dfad2a2', 1),
 (53, 'bob@gmail.com', '$2a$10$E9TAzT/g3ZOTY1vQ7Xv58uifn9FoXvFiAExGbDEzgGMsUj5T.RbX2', 0, '2013-04-05 21:36:03', '23629a764cd13939155f00d593e4dc2a', 1),
 (54, 'liza@gmail.com', '$2a$10$oIaRoZBHAakDMuG6MgTnluFXa.La2CFGXl/uACS3gid.AX2qjGIUu', 0, '2013-04-05 21:36:35', '3a723c799ce8e9078fcb1eb000abb6ed', 1),
-(55, 'gemma.pike@students.plymouth.ac.uk', '$2a$10$TmBD3te5vYtk/Y8T8US8FuzRl8AwXGAgyC2dsLX3Hx8GP5BSguuJG', 0, '2013-04-06 19:20:58', '0cc33626216a68e4b8345e963f910bbb', 1),
-(56, 'dfg@dfg.com', '$2a$10$KbsA0rAM9FVT4FGPhA9/uukfyuG1gaGViob33jLDS73EyD8T06Dc2', 0, '2013-04-06 23:07:18', 'd1fa80276c845ae7853fd43e25d6501b', 1);
+(55, 'gemma.pike@students.plymouth.ac.uk', '$2a$10$TmBD3te5vYtk/Y8T8US8FuzRl8AwXGAgyC2dsLX3Hx8GP5BSguuJG', 0, '2013-04-06 19:20:58', '0cc33626216a68e4b8345e963f910bbb', 1);
 
 --
 -- Constraints for dumped tables
