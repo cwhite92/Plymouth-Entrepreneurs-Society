@@ -10,13 +10,13 @@ A website which will enable users to register and network between each other in 
 | Online indicator              | Louis       | Completed       |
 | Admin indicator               | Louis       | Completed       |
 | Report abuse system           | Levi        | Not started     |
-| Create new admin system       | Levi        | Completed       |
+| Create new admin system       | Jake        | Completed       |
 | Event posting                 | Jake        | Nearly finished |
 | Account verification          | Sheldon C.  | Completed       |
 | Link profile with skills page | Chris       | Completed       |
 | Skill search                  | Chris       | Completed       |
-| RSS for blog                  | Jake        | Completed       |
-| RSS for events                | Jake        | Completed       |
+| RSS for blog                  | Jake        | Not started     |
+| RSS for events                | Jake        | Not started     |
 | Integrate template w/ backend | Ed          | Nearly finished |
 | Design admin panel            | Levi        | Completed       |
 | Sponsors list                 | Chris       | Not started     |
