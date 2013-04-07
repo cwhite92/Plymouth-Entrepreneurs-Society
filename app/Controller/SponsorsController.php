@@ -35,10 +35,10 @@ class SponsorsController extends AppController {
         if($this->request->is('post') || $this->request->is('put')) {
             $this->Sponsor->id = $id;
             if($this->Sponsor->save($this->request->data)) {
-                $this->Session->setFlash('The sponsor has been updated.', 'default', array('class' => 'success'));
+                $this->Session->setFlash('The sponsor has been updated.', 'default');
                 $this->redirect(array('action' => 'index'));
             } else {
-                $this->Session->setFlash('Unable to update sponsor.', 'default', array('class' => 'error'));
+                $this->Session->setFlash('Unable to update sponsor.', 'default');
             }
         }
 
