@@ -1,6 +1,6 @@
 <div class="entry">
     <div class="content">
-        <h1>Login</h1>
+        <h1>LOGIN</h1>
         <?php
         echo $this->Form->create('User', array(
             'inputDefaults' => array(
