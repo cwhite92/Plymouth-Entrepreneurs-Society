@@ -51,7 +51,12 @@
                 <?php endforeach; ?>
             <?php endif; ?>
         </ul>
-
-        <?php echo $this->Paginator->numbers(); ?>
     </div><!-- END .content -->
 </div><!-- END .entry -->
+
+ <?php echo $this->Paginator->numbers(array(
+    'separator'     => '',
+    'class'         => 'pageNumber',
+    'before'        => '<div class="pageNumbers">',
+    'after'         => '</div>'
+)); ?>

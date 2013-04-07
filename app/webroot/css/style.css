@@ -17,6 +17,7 @@
     - SEARCH
     - EVENTS
     - MEMBERS LIST
+    - PAGE NUMBERS
     # GRID
     # MEDIA QUERIES
     # PRINT STYLES
@@ -219,7 +220,9 @@ input,
 .dashboard img,
 .profilePicture img,
 .recent li img,
-.membersList li .pic img {
+.membersList li .pic img,
+.pageNumbers .pageNumber a,
+.pageNumbers .pageNumber.current {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -1027,6 +1030,40 @@ input[type="submit"],
                 font-size: .8em;
                 font-weight: 400;
             }
+
+/** --------------------------------------------------------------
+    PAGE NUMBERS
+    ----------------------------------------------------------- */
+.pageNumbers {
+    display: block;
+    margin-top: 2em;
+    text-align: center;
+}
+
+    .pageNumbers .pageNumber {
+        margin: 0 0.4em;
+    }
+
+        .pageNumbers .pageNumber.current {
+            background-color: #037ea5;
+            padding: 0.7em 1em;
+            font-size: 1em;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .pageNumbers .pageNumber a {
+            background-color: #222;
+            padding: 0.7em 1em;
+            font-size: 1em;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .pageNumbers .pageNumber a:hover,
+        .pageNumbers .pageNumber a:focus {
+            background-color: #037ea5;
+        }
 
 /** --------------------------------------------------------------
     GRID
