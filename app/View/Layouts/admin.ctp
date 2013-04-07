@@ -60,10 +60,10 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
             <?php echo $this->Html->link('<span data-icon="&#xF04E;"></span><span class="text">Services</span>', '/admin/services', array('escape' => false)); ?>
         </li>
         <li>
-            <?php echo $this->Html->link('<span data-icon="&#xF0CE;"></span><span class="text">About</span>', '/admin/abouts', array('escape' => false)); ?>
+            <?php echo $this->Html->link('<span data-icon="&#xF0CE;"></span><span class="text">About</span>', '/admin/abouts/edit/1', array('escape' => false)); ?>
         </li>
         <li>
-            <?php echo $this->Html->link('<span data-icon="&#xF0CE;"></span><span class="text">Contact</span>', '/admin/contacts', array('escape' => false)); ?>
+            <?php echo $this->Html->link('<span data-icon="&#xF0CE;"></span><span class="text">Contact</span>', '/admin/contacts/edit/1', array('escape' => false)); ?>
         </li>
         <li>
             <?php echo $this->Html->link('<span data-icon="&#xF0CE;"></span><span class="text">Mass Mail</span>', 'https://login.mailchimp.com/', array('escape' => false, 'target' => '_blank')); ?>
