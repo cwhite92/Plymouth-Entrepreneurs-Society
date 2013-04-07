@@ -6,4 +6,4 @@
 
 <p>To reply to this message, visit this member through their profile at:</p>
 
-<p>http://localhost/ISAD234/profile/<?php echo $toId; ?></p>
+<p><a href="//localhost/ISAD234/profile/<?php echo $toId; ?>">localhost/ISAD234/profile/<?php echo $toId; ?></a></p>
