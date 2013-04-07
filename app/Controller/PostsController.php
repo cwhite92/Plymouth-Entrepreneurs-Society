@@ -15,7 +15,8 @@ class PostsController extends AppController {
 
     public function index() {
         $this->set('posts', $this->Post->find('all', array(
-            'recursive' => 2
+            'recursive' => 2,
+            'order' => 'Post.created DESC'
         )));
     }
 
