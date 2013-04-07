@@ -9,12 +9,6 @@ class AboutsController extends AppController {
     }
 
 // Admin specific functions
-
-    public function admin_index() {
-        $this->set('abouts', $this->About->find('all'));
-        $this->layout = 'admin';
-    }
-
     public function admin_edit($id = null) {
         $about = $this->About->findById($id);
         if(!$about) {
@@ -25,7 +19,7 @@ class AboutsController extends AppController {
             $this->About->id = $id;
             if($this->About->save($this->request->data)) {
 //                $this->About->setFlash('Your about has been updated.'); TODO:this lines break it
-                $this->redirect(array('action' => 'index'));
+                $this->redirect(array('action' => 'edit', 1));
             } else {
                 $this->About->setFlash('Unable to update your about.');
             }

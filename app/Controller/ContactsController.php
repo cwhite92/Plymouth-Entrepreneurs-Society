@@ -9,12 +9,6 @@ class ContactsController extends AppController {
     }
 
 // Admin specific functions
-
-    public function admin_index() {
-        $this->set('contacts', $this->Contact->find('all'));
-        $this->layout = 'admin';
-    }
-
     public function admin_edit($id = null) {
         $contact = $this->Contact->findById($id);
         if(!$contact) {
@@ -25,7 +19,7 @@ class ContactsController extends AppController {
             $this->Contact->id = $id;
             if($this->Contact->save($this->request->data)) {
 //                $this->Contact->setFlash('Your contact has been updated.'); TODO:this lines break it
-                $this->redirect(array('action' => 'index'));
+                $this->redirect(array('action' => 'edit',1));
             } else {
                 $this->Contact->setFlash('Unable to update your contact.');
             }
