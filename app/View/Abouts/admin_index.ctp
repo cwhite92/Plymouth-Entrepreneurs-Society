@@ -2,7 +2,7 @@
 <table>
     <tr>
         <th>Body</th>
-        <th>Edit</th>
+        <th class="edit">Edit</th>
     </tr>
     <?php foreach ($abouts as $about): ?>
         <tr>
@@ -14,7 +14,7 @@
                         $about['About']['id']),
                     array(
                         'escape' => false,
-                        'class' => 'actions',
+                        'class' => 'actions edit',
                         'data-icon' => '&#xF139;')); ?>
             </td>
         </tr>

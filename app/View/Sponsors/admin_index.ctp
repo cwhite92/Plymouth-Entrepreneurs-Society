@@ -1,12 +1,13 @@
 <div class='entry'>
-    <p><?php echo $this->Html->link('Add Sponsor', array('action' => 'add')); ?></p>
+    <h1 class="alignLeft">About</h1>
+    <?php echo $this->Html->link('Add Sponsor', array('action' => 'add'), array('class' => 'alignRight')); ?>
     <table>
         <thead></thead>
         <tr>
             <th>Name</th>
             <th>Picture</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th class="edit">Edit</th>
+            <th class="delete">Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -27,7 +28,7 @@
                             $sponsor['Sponsor']['id']),
                         array(
                             'escape' => false,
-                            'class' => 'actions',
+                            'class' => 'actions edit',
                             'data-icon' => '&#xF139;')); ?>
                 </td>
                 <td>
@@ -36,7 +37,7 @@
                             'action' => 'delete',
                             $sponsor['Sponsor']['id']),
                         array(
-                            'class' => 'actions',
+                            'class' => 'actions delete',
                             'escape' => false,
                             'data-icon' => '&#xF155;'),
                         __('Are you sure you want to delete %s?',

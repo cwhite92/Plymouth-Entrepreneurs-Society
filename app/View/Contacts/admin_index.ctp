@@ -2,7 +2,7 @@
 <table>
     <tr>
         <th>Body</th>
-        <th>Edit</th>
+        <th class="edit">Edit</th>
     </tr>
     <?php foreach ($contacts as $contact): ?>
         <tr>
@@ -14,7 +14,7 @@
                         $contact['Contact']['id']),
                     array(
                         'escape' => false,
-                        'class' => 'actions',
+                        'class' => 'actions edit',
                         'data-icon' => '&#xF139;')); ?>
             </td>
         </tr>

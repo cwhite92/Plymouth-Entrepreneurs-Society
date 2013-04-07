@@ -1,13 +1,12 @@
 <div class='entry'>
     <table>
-        <thead></thead>
+        <thead>
         <tr>
-<!--            <th>Username</th>-->
             <th>Email</th>
             <th>Activated</th>
             <th>Role</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th class="edit">Edit</th>
+            <th class="delete">Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -23,7 +22,7 @@
                             $user['User']['id']),
                         array(
                             'escape' => false,
-                            'class' => 'actions',
+                            'class' => 'actions edit',
                             'data-icon' => '&#xF139;')); ?>
                 </td>
                 <td>
@@ -32,7 +31,7 @@
                             'action' => 'delete',
                             $user['User']['id']),
                         array(
-                            'class' => 'actions',
+                            'class' => 'actions delete',
                             'escape' => false,
                             'data-icon' => '&#xF155;'),
                         __('Are you sure you want to delete %s?',

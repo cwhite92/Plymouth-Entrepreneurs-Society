@@ -41,10 +41,7 @@
                         'data-icon' => '&#xF155;'),
                     __('Are you sure you want to delete %s?',
                         $event['Event']['title'])); ?>
-
             </td>
-
         </tr>
     <?php endforeach; ?>
-
 </table>

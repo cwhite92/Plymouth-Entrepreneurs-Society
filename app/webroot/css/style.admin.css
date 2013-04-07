@@ -288,6 +288,14 @@ input[type="file"] {
     border: 0;
 }
 
+div.datetime {
+    margin-top: 1.6em;
+}
+
+    div.datetime select {
+        width: auto;
+    }
+
 input[type="checkbox"] {
     width: auto;
 }
@@ -362,6 +370,7 @@ table {
         }
 
         table a.actions {
+            padding: 0 .6em;
             text-align: center;
         }
 
@@ -372,6 +381,16 @@ table {
     table th,
     table td {
         
+    }
+
+    table .edit {
+        width: 40px;
+        text-align: center;
+    }
+
+    table .delete {
+        width: 60px;
+        text-align: center;
     }
 
     table tbody tr:nth-child(even) {
