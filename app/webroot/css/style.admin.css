@@ -143,9 +143,10 @@ h6 a:hover, h6 a:focus {
 
 input[type="button"],
 input[type="submit"],
-.button {
+.button  {
     display: block;
     padding: .6em .9em;
+    margin: 0;
     margin-top: 1.6em;
     background-color: #037ea5;
     color: #fff;
@@ -162,10 +163,12 @@ input[type="submit"],
     .button:focus {
         background-color: #0d737a;
         color: #fff;
+        text-decoration: none;
     }
 
     input.delete,
-    .button.delete {
+    .button.delete,
+    .redactor_modal_btn {
         background-color: #d63339;
     }
 
@@ -174,6 +177,34 @@ input[type="submit"],
     .button.delete:hover,
     .button.delete:focus {
         background-color: #d63353;
+        text-decoration: none;
+    }
+
+input[type="button"].redactor_modal_btn,
+input[type="submit"].redactor_modal_btn,
+.redactor_modal_btn {
+    float: right;
+    display: inline;
+    width: auto;
+    padding: .6em .9em;
+    margin: 0 0 2em 1em;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1em;
+    text-decoration: none;
+    font-weight: 700;
+    text-shadow: none;
+}
+
+    input[type="button"].redactor_modal_btn:first-child,
+    input[type="submit"].redactor_modal_btn:first-child,
+    .redactor_modal_btn:first-child {
+        margin-right: 2.5em;
+    }
+
+    .redactor_modal_btn:hover,
+    .redactor_modal_btn:focus {
+        text-decoration: none;
     }
 
 [data-icon]:before {
@@ -199,7 +230,8 @@ input[type="button"],
 input[type="submit"],
 .button,
 .userMenu img,
-.nav ul li a {
+.nav ul li a,
+.redactor_modal_btn {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
