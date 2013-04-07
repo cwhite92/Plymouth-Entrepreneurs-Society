@@ -2,6 +2,13 @@
 class EventsController extends AppController {
     public $helpers = array('Html', 'Form');
 
+    public $paginate = array(
+        'limit' => 6,
+        'order' => array(
+            'Event.created' => 'desc'
+        )
+    );
+
     function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('index', 'view');
@@ -13,7 +20,7 @@ class EventsController extends AppController {
     }
 
     public function  index() {
-        $this->set('events', $this->Event->find('all'));
+        $this->set('events', $this->paginate('Event'));
     }
 
     public function view($id = null) {

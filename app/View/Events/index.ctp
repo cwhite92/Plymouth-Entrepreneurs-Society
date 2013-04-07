@@ -30,3 +30,9 @@
         </div><!-- END .content -->
     </div><!-- END .entry -->
 <?php endforeach; ?>
+<?php echo $this->Paginator->numbers(array(
+    'separator'     => '',
+    'class'         => 'pageNumber',
+    'before'        => '<div class="pageNumbers">',
+    'after'         => '</div>'
+)); ?>
