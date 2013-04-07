@@ -5,7 +5,6 @@
                 <?php
                     $temp   = '';
                     $i      = 0;
-                    $a      = false;
                     foreach($skills as $skill):
                         if ( $i == 0 ) {
                             $temp = strtoupper($skill['Skill']['name'][0]);
