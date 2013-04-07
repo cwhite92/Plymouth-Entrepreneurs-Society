@@ -32,6 +32,7 @@
     Router::connect('/admin/events', array('controller' => 'events', 'action' => 'index', 'admin' => true));
     Router::connect('/admin/services', array('controller' => 'services', 'action' => 'index', 'admin' => true));
 //    Router::connect('/admin/contacts', array('controller' => 'contacts', 'action' => 'edit', 'admin' => true));
+    Router::connect('/admin/sponsors', array('controller' => 'sponsors', 'action' => 'index', 'admin' => true));
 
     // User specific routes
     Router::connect('/register', array('controller' => 'users', 'action' => 'register'));

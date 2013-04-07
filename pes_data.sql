@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2013 at 06:44 PM
+-- Generation Time: Apr 07, 2013 at 08:34 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `events` (
   `location` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `events`
@@ -182,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `profiles` (
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `email`, `course`, `bio`, `modified`, `last_active`, `experience`) VALUES
-(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 22:34:31', 1365353082, 'I like boobies'),
+(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 22:34:31', 1365359636, 'I like boobies'),
 (37, 53, 'Bob', 'Doe', '5923c5e979cf9c30d555fb0cec442b0d.png', 'bob@gmail.com', '', '', '2013-04-06 00:04:02', 1365199738, ''),
 (38, 54, 'Liza', 'Doe', 'user.png', 'liza@gmail.com', '', '', '2013-04-05 21:36:35', 1365202400, ''),
 (39, 55, 'gemma', 'pike', '8b3286ba312b5d6077ea9fd2d4c82da5.png', 'gemma.pike@students.plymouth.ac.uk', 'International Tourism Management', 'I''m a badass', '2013-04-06 19:24:53', 1365269095, '21 years of being a badass');
@@ -294,6 +294,29 @@ INSERT INTO `skills` (`id`, `name`) VALUES
 (23, 'MySQL'),
 (22, 'PHP'),
 (33, 'SQL');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sponsors`
+--
+
+CREATE TABLE IF NOT EXISTS `sponsors` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `picture` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+
+--
+-- Dumping data for table `sponsors`
+--
+
+INSERT INTO `sponsors` (`id`, `name`, `picture`) VALUES
+(4, 'Android', '79d6cfc34d4b1b54cf1c3f50e656d1f2.png'),
+(5, 'dribbble', '233fff9e433f9ad92224c97c98cc6b0f.png'),
+(6, 'Google', '1f3337f44bef5f471f77e47044defd31.png'),
+(7, 'Smashing Magazine', '0cf67a32161ed286503a5481282f51ab.png');
 
 -- --------------------------------------------------------
 

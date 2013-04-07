@@ -52,6 +52,7 @@ class AppController extends Controller {
         $this->loadModel('Profile');
         $this->loadModel('Event');
         $this->loadModel('Service');
+        $this->loadModel('Sponsor');
 
         // Used in views to easily check if a user is logged in
         $this->set('authed', $this->Auth->user());
@@ -80,6 +81,9 @@ class AppController extends Controller {
 
         // Services
         $this->set('services', $this->Service->find('all'));
+
+        // Sponsors
+        $this->set('sponsors', $this->Sponsor->find('all'));
     }
 
     public function isAuthorized($user) {

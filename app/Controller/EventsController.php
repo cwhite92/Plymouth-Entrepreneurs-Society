@@ -14,12 +14,12 @@ class EventsController extends AppController {
         $this->Auth->allow('index', 'view');
     }
 
-    public function  admin_index() {
+    public function admin_index() {
         $this->set('events', $this->Event->find('all'));
         $this->layout = 'admin';
     }
 
-    public function  index() {
+    public function index() {
         $this->set('events', $this->paginate('Event'));
     }
 

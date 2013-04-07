@@ -170,7 +170,12 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
     <div class="section clearfix">
         <div class="entry">
             <footer>
-                footer
+                <?php foreach($sponsors as $sponsor): ?>
+                    <?php echo $this->Html->image('sponsors/' . $sponsor['Sponsor']['picture'], array(
+                        'fullbase'  => true,
+                        'alt'       => $sponsor['Sponsor']['name']
+                    )); ?>
+                <?php endforeach; ?>
             </footer>
         </div><!-- END .entry -->
         <div class="entry">

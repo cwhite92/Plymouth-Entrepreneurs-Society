@@ -57,6 +57,9 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
             <?php echo $this->Html->link('<span data-icon="&#xF0CD;"></span><span class="text">Users</span>', '/admin/users', array('escape' => false)); ?>
         </li>
         <li>
+            <?php echo $this->Html->link('<span data-icon="&#xF0CE;"></span><span class="text">Sponsors</span>', array('controller' => 'sponsors', 'action' => 'index'), array('escape' => false)); ?>
+        </li>
+        <li>
             <?php echo $this->Html->link('<span data-icon="&#xF04E;"></span><span class="text">Services</span>', '/admin/services', array('escape' => false)); ?>
         </li>
         <li>
