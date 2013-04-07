@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2013 at 03:52 AM
+-- Generation Time: Apr 07, 2013 at 06:44 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -47,10 +47,19 @@ INSERT INTO `abouts` (`id`, `body`) VALUES
 
 CREATE TABLE IF NOT EXISTS `attachments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `post_id` int(11) NOT NULL,
   `file_name` varchar(255) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `file_name` (`file_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  UNIQUE KEY `file_name` (`file_name`),
+  KEY `post_id` (`post_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+
+--
+-- Dumping data for table `attachments`
+--
+
+INSERT INTO `attachments` (`id`, `post_id`, `file_name`) VALUES
+(16, 93, 'MMSposter-large.jpg');
 
 -- --------------------------------------------------------
 
@@ -101,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `events` (
   `location` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `events`
@@ -127,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `alt_text` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=94 ;
 
 --
 -- Dumping data for table `posts`
@@ -143,20 +152,8 @@ INSERT INTO `posts` (`id`, `title`, `body`, `created`, `modified`, `user_id`, `c
 (30, 'indented paragraghs', '<blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p>fgdsgfsg</p></blockquote><span style="font-size: 15px; line-height: 1.45em; font-style: italic; letter-spacing: 0px;">fgsfdsgdsfgdsgdg</span><br>', '2013-04-06 18:45:13', '2013-04-06 18:45:13', 52, NULL, NULL),
 (31, 'links', '<p><a href="http://www.google.com">google.com</a><br></p><p><a href="mailto:me@jakechampion.name">email</a><br></p><p><br></p>', '2013-04-06 18:46:08', '2013-04-06 18:46:08', 52, NULL, NULL),
 (32, 'colours!!!', '<p><p><span style="color: #8db3e2;"><strong>Lorem Ipsum</strong>&nbsp;is simply dummy te</span><span style="color: #17365d;">xt of the printing a</span><span style="color: #9bbb59;">nd typesetting industry. Lorem Ipsum has been the industry''s standard dum', '2013-04-06 18:47:09', '2013-04-06 18:47:09', 52, NULL, NULL),
-(33, 'another post', '<h1>heading</h1><div>gandhi said I''m a cunt</div><div><hr></div>', '2013-04-06 19:27:30', '2013-04-06 19:27:30', 52, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `posts_attachments`
---
-
-CREATE TABLE IF NOT EXISTS `posts_attachments` (
-  `post_id` int(11) NOT NULL,
-  `attachment_id` int(11) NOT NULL,
-  KEY `post_id` (`post_id`),
-  KEY `attachment_id` (`attachment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+(33, 'another post', '<h1>heading</h1><div>gandhi said I''m a cunt</div><div><hr></div>', '2013-04-06 19:27:30', '2013-04-06 19:27:30', 52, NULL, NULL),
+(93, 'Attachment test', '<p>i hate this project</p>', '2013-04-07 18:44:37', '2013-04-07 18:44:37', 52, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -185,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `profiles` (
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `email`, `course`, `bio`, `modified`, `last_active`, `experience`) VALUES
-(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 22:34:31', 1365299546, 'I like boobies'),
+(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 22:34:31', 1365353082, 'I like boobies'),
 (37, 53, 'Bob', 'Doe', '5923c5e979cf9c30d555fb0cec442b0d.png', 'bob@gmail.com', '', '', '2013-04-06 00:04:02', 1365199738, ''),
 (38, 54, 'Liza', 'Doe', 'user.png', 'liza@gmail.com', '', '', '2013-04-05 21:36:35', 1365202400, ''),
 (39, 55, 'gemma', 'pike', '8b3286ba312b5d6077ea9fd2d4c82da5.png', 'gemma.pike@students.plymouth.ac.uk', 'International Tourism Management', 'I''m a badass', '2013-04-06 19:24:53', 1365269095, '21 years of being a badass');
@@ -254,7 +251,7 @@ CREATE TABLE IF NOT EXISTS `skills` (
   `name` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `skill` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=56 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=62 ;
 
 --
 -- Dumping data for table `skills`
@@ -281,12 +278,18 @@ INSERT INTO `skills` (`id`, `name`) VALUES
 (35, ' PHP'),
 (24, 'C#'),
 (37, 'css'),
+(58, 'dfg'),
 (39, 'english'),
 (40, 'french'),
+(60, 'ghj'),
+(61, 'gj'),
+(59, 'hgj'),
 (32, 'HTML'),
+(56, 'HTML5'),
 (26, 'Java'),
 (25, 'JavaScript'),
 (27, 'jQuery'),
+(57, 'loldfg'),
 (38, 'marketing'),
 (23, 'MySQL'),
 (22, 'PHP'),
@@ -324,17 +327,16 @@ INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`
 --
 
 --
+-- Constraints for table `attachments`
+--
+ALTER TABLE `attachments`
+  ADD CONSTRAINT `attachments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`);
+
+--
 -- Constraints for table `posts`
 --
 ALTER TABLE `posts`
   ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
-
---
--- Constraints for table `posts_attachments`
---
-ALTER TABLE `posts_attachments`
-  ADD CONSTRAINT `posts_attachments_ibfk_2` FOREIGN KEY (`attachment_id`) REFERENCES `attachments` (`id`),
-  ADD CONSTRAINT `posts_attachments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`);
 
 --
 -- Constraints for table `profiles`

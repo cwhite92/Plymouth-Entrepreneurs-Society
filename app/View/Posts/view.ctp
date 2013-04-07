@@ -32,5 +32,13 @@
                 echo $post['Post']['body'];
             ?>
         </article>
+        <?php if(count($post['Attachment']) > 0): ?>
+            <h2>Attachments</h2>
+            <ul id="attachments">
+                <?php foreach($post['Attachment'] as $attachment): ?>
+                    <li><?php echo $this->Html->link($attachment['file_name'], '/files/attachments/' . $attachment['file_name'], array('target' => '_blank')); ?></li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
     </div><!-- END .content -->
 </div><!-- END .entry -->
