@@ -11,7 +11,7 @@ class AboutsController extends AppController {
 // Admin specific functions
 
     public function admin_index() {
-        $this->set('about', $this->About->find('all'));
+        $this->set('abouts', $this->About->find('all'));
         $this->layout = 'admin';
     }
 
