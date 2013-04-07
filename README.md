@@ -4,21 +4,20 @@ A website which will enable users to register and network between each other in 
 
 | Tasks                         | Assigned-to | Status          |
 | ------------------------------|:-----------:|----------------:|
-| Blogging engine               | Jake        | Started         |
+| Blogging engine               | Jake        | Nearly finished |
 | Rich text editor              | Ed          | Completed       |
 | Profile editor                | Chris       | Completed       |
-| Anonymous email               | Everyone    |                 |
 | Online indicator              | Louis       | Completed       |
 | Admin indicator               | Louis       | Completed       |
 | Report abuse system           | Levi        | Not started     |
-| Create new admin system       | Levi        | Not started     |
-| Event posting                 | Jake        | Started         |
+| Create new admin system       | Levi        | Completed       |
+| Event posting                 | Jake        | Nearly finished |
 | Account verification          | Sheldon C.  | Completed       |
 | Link profile with skills page | Chris       | Completed       |
-| Skill search                  | Chris       | Started         |
+| Skill search                  | Chris       | Completed       |
 | RSS for blog                  | Jake        | Completed       |
 | RSS for events                | Jake        | Completed       |
-| Integrate template w/ backend | Ed          | Started         |
+| Integrate template w/ backend | Ed          | Nearly finished |
 | Design admin panel            | Levi        | Completed       |
 | Sponsors list                 | Chris       | Not started     |
 
