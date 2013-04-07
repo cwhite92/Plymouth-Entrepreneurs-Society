@@ -24,7 +24,7 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<!-- Designed and Coded by Eduards Torba, Chris White, Levi Lucas, Jake Champion, Louis Harrison. -->
+<!-- Designed and Coded by Eduards Torba, Chris White, Levi Lucas, Jake Champion. -->
 <head>
     <?php echo $this->Html->charset(); ?>
     <title>
