@@ -49,7 +49,10 @@
     // Service specific routes
     Router::connect('/services', array('controller' => 'services', 'action' => 'index'));
 
-    // Contact specific routes
+    // About specific routes
+    Router::connect('/about', array('controller' => 'abouts', 'action' => 'index'));
+
+// Contact specific routes
     Router::connect('/contact', array('controller' => 'contacts', 'action' => 'index'));
 
     // Profile specific routes
