@@ -12,7 +12,21 @@ class About extends AppModel {
             'rule' => 'notEmpty'
         ),
         'body' => array(
-            'rule' => 'notEmpty'
+            'rule' => 'blankPost'
         )
     );
+
+    public function blankPost() {
+        /* store body data in temp variable
+        /  strip tags from temp
+        /  check if the temp has any remaining txt
+        */
+        $temp = $this->data['Post']['body'];
+        $temp = trim(strip_tags($temp));
+        if (strlen($temp) !== 0) {
+            return true;
+        }
+
+        return false;
+    }
 }
