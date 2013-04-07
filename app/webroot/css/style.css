@@ -19,6 +19,7 @@
     - MEMBERS LIST
     - PAGE NUMBERS
     - SKILLS
+    - SPONSORS
     # GRID
     # MEDIA QUERIES
     # PRINT STYLES
@@ -1118,6 +1119,21 @@ input[type="submit"],
             font-size: .9em;
             font-weight: 400;
         }
+
+/** --------------------------------------------------------------
+    SPONSORS
+    ----------------------------------------------------------- */
+.sponsors {
+    text-align: center;
+}
+
+    .sponsors img {
+        display: inline;
+        width: auto;
+        max-width: 300px;
+        height: auto;
+        margin: 0 1em;
+    }
 
 /** --------------------------------------------------------------
     GRID
