@@ -10,7 +10,9 @@ class SkillsController extends AppController {
     }
 
     public function index() {
-        $this->set('skills', $this->Skill->find('all'));
+        $this->set('skills', $this->Skill->find('all', array(
+            'order' => array('name ASC')
+        )));
     }
 
     public function view($name) {
