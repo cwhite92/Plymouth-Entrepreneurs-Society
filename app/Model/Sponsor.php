@@ -38,7 +38,7 @@ class Sponsor extends AppModel {
         return false;
     }
 
-    public function beforeSave() {
+    public function beforeSave($options = Array()) {
         if(!empty($this->data['Sponsor']['picture']['name'])) {
             // Make a filename
             $filename = md5(microtime() * rand()) . '.png';
