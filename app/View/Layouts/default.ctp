@@ -72,7 +72,8 @@ $cakeDescription = __d('cake_dev', 'Entrepreneurs Society');
                     <?php endforeach; ?>
                 </ul>
             </li>
-            <li><a href="#">About Us</a></li>
+            <li><?php echo $this->Html->link('Skills', array('controller' => 'skills', 'action' => 'index'), array('escape' => false)); ?></li>
+            <li><?php echo $this->Html->link('About Us', array('controller' => 'abouts', 'action' => 'index'), array('escape' => false)); ?></li>
             <li><?php echo $this->Html->link('Contact', array('controller' => 'contacts', 'action' => 'index'), array('escape' => false)); ?></li>
         </ul>
     </div><!-- END .section -->
