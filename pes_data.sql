@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2013 at 02:11 AM
+-- Generation Time: Apr 07, 2013 at 02:42 AM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.10
 
@@ -31,7 +31,7 @@ CREATE TABLE `abouts` (
 --
 
 INSERT INTO `abouts` (`id`, `body`) VALUES
-(1, 'asa');
+(1, '<h1>Welcome to Plymouth University’s Entrepreneurs Society!</h1><br><p>OUR MISSION IS TO FOSTER AND ENCOURAGE ENTREPRENURSHIP THROUGH&nbsp;A BROAD RANGE OF EXCITING AVENUES.&nbsp;</p><br><h4>BUSINESS SUPPORT &amp; MENTORING</h4><p>Want to start a business? We offer a wide range of support such as financing, mentoring by industry experts, meeting rooms, access to lawyers and accountants, registration guidance, investment sourcing and more! Got an idea? Email <a href="mailto:entrepreneurs@upsu.com">entrepreneurs@upsu.com</a> asking for a “Start-Up Meeting”</p><br><h4>KEYNOTE GUEST SPEAKERS</h4><p>Become inspired by experienced global and local entrepreneurs and business leaders. We always have an exciting calendar of free lectures which enrich your university experience. Past speakers have included Doug Richard from Dragon’s Den!</p><br><h4>COMMERCIAL PROJECTS</h4><p>Get involved with real life business start-ups and develop your skills as an entrepreneur. Perfect for CV building, meeting people and making some money for yourself!</p><br><h4>PRACTICAL WORKSHOPS</h4><p>Sharpen your business skills! Learn from our free sales, marketing and negotiation workshops presented by leading experts and consultants, often valued at hundreds of pounds.&nbsp;</p><br><h4>NETWORKING</h4><p>Meet like-minded individuals and become part of a dynamic community of student entrepreneurs. We also partner with similar societies such as Enactus, Marketing, and Management so you are constantly meeting new and interesting people.&nbsp;</p><br><h4>TRIPS</h4><p>Get funded to join us at local, national, and global events! We’ve recently sent 20 society members to visit the UK’s leading student enterprise conference (travel, tickets and Hilton Hotel rooms included).</p><span style="color: rgb(0, 0, 0); font-size: 18px; font-weight: bold; line-height: 24px; letter-spacing: 0px;"><br></span><p></p><h4><span style="letter-spacing: 0px;">PROFESSIONAL DEVELOPMENT OPPORTUNITIES</span></h4><p>Apply for professional development funding. We currently offer our members CIMA (Certificate in Management Accounting) for only £20 (Normal Price: £1,200). Our partner societies also offer similar highly-regarded qualifications for low prices, which we can put you in touch with!</p><p></p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -76,7 +76,7 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `body`) VALUES
-(1, '<p><table id="table74382"><tbody><tr><td>email</td><td>phone</td><td>address</td></tr><tr><td><a href="mailto:tom.scott@plymouth.ac.uk">tom.scott@plymouth.ac.uk</a></td><td>0712-3456-789</td><td>5 Tavistock Place<br>Plymouth<br>PL4 8AU</td></tr></tbody></table><p></p><br></p>');
+(1, '<p></p><table id="table74382"><tbody><tr><td>email</td><td>phone</td><td>address</td></tr><tr><td><p><a href="mailto:tom.scott@plymouth.ac.uk">tom.scott@plymouth.ac.uk</a></p><a href="mailto:tom.scott@plymouth.ac.uk"></a><p><a href="mailto:entrepreneurs@upsu.com" style="font-size: 15px; line-height: 1.45em; letter-spacing: 0px; display: inline !important;">entrepreneurs@upsu.com</a></p><a href="mailto:tom.scott@plymouth.ac.uk"><br></a></td><td><p>0712-3456-789</p></td><td>5 Tavistock Place<br>Plymouth<br>PL4 8AU</td></tr></tbody></table><p></p><br><p></p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -179,7 +179,7 @@ CREATE TABLE `profiles` (
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `email`, `course`, `bio`, `modified`, `last_active`, `experience`) VALUES
-(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 22:34:31', 1365293508, 'I like boobies'),
+(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-06 22:34:31', 1365295334, 'I like boobies'),
 (37, 53, 'Bob', 'Doe', '5923c5e979cf9c30d555fb0cec442b0d.png', 'bob@gmail.com', '', '', '2013-04-06 00:04:02', 1365199738, ''),
 (38, 54, 'Liza', 'Doe', 'user.png', 'liza@gmail.com', '', '', '2013-04-05 21:36:35', 1365202400, ''),
 (39, 55, 'gemma', 'pike', '8b3286ba312b5d6077ea9fd2d4c82da5.png', 'gemma.pike@students.plymouth.ac.uk', 'International Tourism Management', 'I''m a badass', '2013-04-06 19:24:53', 1365269095, '21 years of being a badass');
@@ -225,7 +225,7 @@ CREATE TABLE `services` (
   `permalink` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`permalink`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `services`
@@ -235,7 +235,8 @@ INSERT INTO `services` (`id`, `title`, `body`, `permalink`) VALUES
 (1, 'Mentoring', 'Welcome to the Mentoring page!', 'mentoring'),
 (2, 'How to find investors', '<p>AHHAHAHAHAHAHAHAHHAHA</p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>You don''t need investors, you need a noose!</p>', 'how_to_find_investors'),
 (3, 'gdsfgdsg', '<p>dfsgdfsgdfsg</p>', 'gdsgdsfg'),
-(4, 'startup lectures', '<p>sdsdsd</p>', 'sdsd');
+(4, 'startup lectures', '<p>sdsdsd</p>', 'sdsd'),
+(5, 'sdfsdf', '<p>ghdfg</p>', 'gfdfh');
 
 -- --------------------------------------------------------
 
