@@ -1,7 +1,8 @@
 <h1>Add Post</h1>
 <?php
-    echo $this->Form->create('Post', array('type' => 'file'));
-    echo $this->Form->input('Post.title', array('required' => 'required'));
-    echo $this->Form->input('Post.body', array('type' => 'textarea','class' => 'redactor', 'required' => 'required', 'label' => 'Body'));
-    echo $this->Form->end('Save Post');
+echo $this->Form->create('Post', array('type' => 'file'));
+echo $this->Form->input('Post.title', array('required' => 'required'));
+echo $this->Form->input('cover_photo', array('type' => 'file', 'label' => 'Cover Photo'));
+echo $this->Form->input('Post.body', array('type' => 'textarea','class' => 'redactor', 'required' => 'required', 'label' => 'Body'));
+echo $this->Form->end('Save Post');
 ?>

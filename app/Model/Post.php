@@ -9,6 +9,16 @@ class Post extends AppModel {
         ),
         'body' => array(
             'rule' => 'blankPost'
+        ),
+        'picture' => array(
+            'kosher' => array(
+                'rule' => 'validateImage',
+                'message' => 'Only images are allowed to be uploaded'
+            ),
+            'size' => array(
+//                'rule' => array('fileSize', '<=', '800KB'),
+                'message' => 'Picture must be less than 800KB'
+            )
         )
     );
 
@@ -24,5 +34,39 @@ class Post extends AppModel {
         }
 
         return false;
+    }
+
+    public function validateImage($check) {
+        if(!empty($this->data['Post']['cover_photo']['name'])) {
+            // Quickly check if the file is an image by trying to get its width/height
+            if(@getimagesize($check['cover_photo']['tmp_name'])) {
+                return true;
+            }
+        } else {
+            return true;
+        }
+
+        return false;
+    }
+
+    public function beforeSave($options = Array()) {
+        if(!empty($this->data['Post']['cover_photo']['name'])) {
+            // Make a filename
+            $filename = md5(microtime() * rand()) . '.png';
+
+            // Attempt to move the uploaded file
+            if(!move_uploaded_file($this->data['Post']['cover_photo']['tmp_name'], WWW_ROOT . 'img' . DS . 'cover_photo' . DS . $filename)) {
+                return false;
+            }
+
+            // Rename it so it gets saved with the correct name in the database
+            $this->data['Post']['cover_photo'] = $filename;
+        } elseif(isset($this->data['Post']['id'])) {
+            unset($this->data['Post']['cover_photo']);
+        } else {
+            return false;
+        }
+
+        return true;
     }
 }
