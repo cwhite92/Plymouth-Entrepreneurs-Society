@@ -17,7 +17,7 @@ A website which will enable users to register and network between each other in 
 | Skill search                  | Chris       | Completed       |
 | RSS for blog                  | Jake        | Not started     |
 | RSS for events                | Jake        | Not started     |
-| Integrate template w/ backend | Ed          | Nearly finished |
+| Integrate template w/ backend | Ed          | Completed       |
 | Design admin panel            | Levi        | Completed       |
 | Sponsors list                 | Chris       | Completed       |
 
