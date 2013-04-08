@@ -11,7 +11,6 @@ class ProfilesController extends AppController {
         $this->Auth->allow('view');
     }
 
-
     public function view($id = null) {
         // Find profile using $id
         $profile = $this->Profile->find('first', array(
@@ -21,6 +20,8 @@ class ProfilesController extends AppController {
         if(!$profile) {
             throw new NotFoundException();
         }
+
+        $this->set('pageTitle', $profile['Profile']['firstname'] . ' ' . $profile['Profile']['lastname'] . '\'s Profile - Plymouth Entrepreneurs Society');
 
         $this->set('profile', $profile);
     }
@@ -51,6 +52,8 @@ class ProfilesController extends AppController {
     }
 
     public function edit() {
+        $this->set('pageTitle', 'Edit Profile - Plymouth Entrepreneurs Society');
+
         if($this->request->is('post') || $this->request->is('put')) {
             if($this->Profile->save($this->request->data)) {
                 $this->Session->setFlash('Your profile has been updated.', 'default', array('class' => 'success'));

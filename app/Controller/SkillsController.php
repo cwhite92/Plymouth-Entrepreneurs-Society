@@ -10,6 +10,8 @@ class SkillsController extends AppController {
     }
 
     public function index() {
+        $this->set('pageTitle', 'Skills - Plymouth Entrepreneurs Society');
+
         $this->set('skills', $this->Skill->find('all', array(
             'order' => array('name ASC')
         )));
@@ -27,6 +29,8 @@ class SkillsController extends AppController {
         if(!$skill) {
             throw new NotFoundException();
         }
+
+        $this->set('pageTitle', 'People with the ' . $skill['Skill']['name'] . ' skill - Plymouth Entrepreneurs Society');
 
         $this->set('skill', $skill);
     }

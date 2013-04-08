@@ -15,11 +15,15 @@ class EventsController extends AppController {
     }
 
     public function admin_index() {
+        $this->set('pageTitle', 'Events - Admin Panel');
+
         $this->set('events', $this->Event->find('all'));
         $this->layout = 'admin';
     }
 
     public function index() {
+        $this->set('pageTitle', 'Events - Plymouth Entrepreneurs Society');
+
         $this->set('events', $this->paginate('Event'));
     }
 
@@ -29,10 +33,14 @@ class EventsController extends AppController {
             throw new NotFoundException();
         }
 
+        $this->set('pageTitle', $event['Event']['title'] . ' - Plymouth Entrepreneurs Society');
+
         $this->set('event', $event);
     }
 
     public function admin_add() {
+        $this->set('pageTitle', 'Add Event - Admin Panel');
+
         if($this->request->is('post')) {
             $this->Event->create();
 
@@ -65,6 +73,8 @@ class EventsController extends AppController {
     }
 
     public function admin_edit($id = null) {
+        $this->set('pageTitle', 'Edit Event - Plymouth Entrepreneurs Society');
+
         if($this->request->is('post') || $this->request->is('put')) {
             if($this->Event->save($this->request->data)) {
                 $this->Session->setFlash('Your event has been updated.', 'default', array('class' => 'success'));

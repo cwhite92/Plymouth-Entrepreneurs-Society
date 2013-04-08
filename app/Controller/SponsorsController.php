@@ -9,6 +9,8 @@ class SponsorsController extends AppController {
     }
 
     public function admin_index() {
+        $this->set('pageTitle', 'Sponsors - Admin Panel');
+
         $this->set('sponsors', $this->Sponsor->find('all'));
         $this->layout = 'admin';
     }
@@ -27,6 +29,8 @@ class SponsorsController extends AppController {
     }
 
     public function admin_edit($id = null) {
+        $this->set('pageTitle', 'Edit Sponsor - Plymouth Entrepreneurs Society');
+
         $sponsor = $this->Sponsor->findById($id);
         if(!$sponsor) {
             throw new NotFoundException();
@@ -51,6 +55,8 @@ class SponsorsController extends AppController {
     }
 
     public function admin_add() {
+        $this->set('pageTitle', 'Add Sponsor - Plymouth Entrepreneurs Society');
+
         if($this->request->is('post')) {
             //die(debug($this->request->data));
             $this->Sponsor->create();

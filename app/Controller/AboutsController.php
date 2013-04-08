@@ -10,6 +10,8 @@ class AboutsController extends AppController {
 
 // Admin specific functions
     public function admin_edit($id = null) {
+        $this->set('pageTitle', 'About - Admin Panel');
+
         $about = $this->About->findById($id);
         if(!$about) {
             throw new NotFoundException('Invalid contact');
@@ -35,6 +37,8 @@ class AboutsController extends AppController {
 
 // Non-Admin functions
     public function index() {
+        $this->set('pageTitle', 'About - Plymouth Entrepreneurs Society');
+
         $this->set('abouts', $this->About->find('all'));
     }
 }

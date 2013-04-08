@@ -30,6 +30,8 @@ class ServicesController extends AppController {
 
 
     public function admin_add() {
+        $this->set('pageTitle', 'Add Service - Admin Panel');
+
         if($this->request->is('post')) {
             $this->Service->create();
             if($this->Service->save($this->request->data)) {
@@ -43,6 +45,8 @@ class ServicesController extends AppController {
     }
 
     public function admin_edit($id = null) {
+        $this->set('pageTitle', 'Edit Service - Plymouth Entrepreneurs Society');
+
         $service = $this->Service->findById($id);
         if(!$service) {
             throw new NotFoundException('Invalid service');
@@ -68,6 +72,8 @@ class ServicesController extends AppController {
 
 // Non-Admin functions
     public function index() {
+        $this->set('pageTitle', 'Services - Plymouth Entrepreneurs Society');
+
         $this->set('services', $this->Service->find('all'));
     }
 
@@ -78,6 +84,8 @@ class ServicesController extends AppController {
         if(!$service) {
             throw new NotFoundException('Invalid service');
         }
+
+        $this->set('pageTitle', $service['Service']['title'] . ' - Plymouth Entrepreneurs Society');
 
         $this->set('service', $service);
     }

@@ -20,15 +20,21 @@ class UsersController extends AppController {
 
     // Admin panel homepage
     public function admin_home() {
+        $this->set('pageTitle', 'Admin Panel');
+
         $this->layout = 'admin';
     }
 
     public function admin_index() {
+        $this->set('pageTitle', 'Users - Admin Panel');
+
         $this->set('users', $this->User->find('all'));
         $this->layout = 'admin';
     }
 
     public function admin_edit($id = null) {
+        $this->set('pageTitle', 'Edit User - Admin Panel');
+
         $user = $this->User->findById($id);
         if(!$user) {
             throw new NotFoundException('Invalid user');
@@ -52,6 +58,8 @@ class UsersController extends AppController {
     }
 
     public function recover($hash = null) {
+        $this->set('pageTitle', 'Recover - Plymouth Entrepreneurs Society');
+
         if($this->request->is('post')) {
             if(isset($this->request->data['User']['email'])) {
                 // Try and find the user this email belongs to
@@ -87,6 +95,8 @@ class UsersController extends AppController {
     }
 
     public function recoverStepTwo($hash = null) {
+        $this->set('pageTitle', 'Recover - Plymouth Entrepreneurs Society');
+
         // Try to find the user ID
         $user = $this->User->find('first', array(
             'conditions' => array(
@@ -116,6 +126,8 @@ class UsersController extends AppController {
 
     // Has to be called memberList because of some type of reserved word
     public function memberList() {
+        $this->set('pageTitle', 'Members List - Plymouth Entrepreneurs Society');
+
         if(isset($this->request->data['User']['query'])) {
             // The user is searching, change the conditions of the retrieval
             $q = $this->request->data['User']['query'];
@@ -159,6 +171,8 @@ class UsersController extends AppController {
     }
 
     public function edit() {
+        $this->set('pageTitle', 'Edit Account - Plymouth Entrepreneurs Society');
+
         if($this->request->is('post')) {
             if($this->User->save($this->request->data)) {
                 $this->Session->setFlash('Your account has been updated.');
@@ -177,6 +191,8 @@ class UsersController extends AppController {
     }
 
     public function register() {
+        $this->set('pageTitle', 'Register - Plymouth Entrepreneurs Society');
+
         if($this->request->is('post')) {
             $this->User->create();
 
@@ -207,6 +223,8 @@ class UsersController extends AppController {
     }
 
     public function activate($hash = null) {
+        $this->set('pageTitle', 'Activate - Plymouth Entrepreneurs Society');
+
         $user = $this->User->find('first', array(
             'conditions' => array(
                 'User.activation' => $hash,
@@ -229,6 +247,8 @@ class UsersController extends AppController {
     }
 
     public function login() {
+        $this->set('pageTitle', 'Login - Plymouth Entrepreneurs Society');
+
         if($this->request->is('post')) {
             if($this->Auth->login()) {
                 // We must check if the user has activated their account

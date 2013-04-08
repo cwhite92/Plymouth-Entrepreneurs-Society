@@ -10,6 +10,8 @@ class ContactsController extends AppController {
 
 // Admin specific functions
     public function admin_edit($id = null) {
+        $this->set('pageTitle', 'Edit Contact - Admin Panel');
+
         $contact = $this->Contact->findById($id);
         if(!$contact) {
             throw new NotFoundException('Invalid contact');
@@ -18,7 +20,7 @@ class ContactsController extends AppController {
         if($this->request->is('post') || $this->request->is('put')) {
             $this->Contact->id = $id;
             if($this->Contact->save($this->request->data)) {
-//                $this->Contact->setFlash('Your contact has been updated.'); TODO:this lines break it
+                $this->Session->setFlash('Your contact has been updated.');
                 $this->redirect(array('action' => 'edit',1));
             } else {
                 $this->Contact->setFlash('Unable to update your contact.');
@@ -35,6 +37,8 @@ class ContactsController extends AppController {
 
 // Non-Admin functions
     public function index() {
+        $this->set('pageTitle', 'Contact - Plymouth Entrepreneurs Society');
+
         $this->set('contacts', $this->Contact->find('all'));
     }
 }

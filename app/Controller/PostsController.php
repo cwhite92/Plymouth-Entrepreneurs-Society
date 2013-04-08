@@ -17,11 +17,15 @@ class PostsController extends AppController {
     }
 
     public function admin_index() {
+        $this->set('pageTitle', 'News - Admin Panel');
+
         $this->set('posts', $this->Post->find('all'));
         $this->layout = 'admin';
     }
 
     public function index() {
+        $this->set('pageTitle', 'News - Plymouth Entrepreneurs Society');
+
         $this->set('posts', $this->paginate('Post'));
     }
 
@@ -34,10 +38,13 @@ class PostsController extends AppController {
             throw new NotFoundException('Invalid post');
         }
 
+        $this->set('pageTitle', $post['Post']['title'] . ' - Plymouth Entrepreneurs Society');
         $this->set('post', $post);
     }
 
     public function admin_view($id = null) {
+        $this->set('pageTitle', 'Post - Admin Panel');
+
         $post = $this->Post->findById($id);
         if(!$post) {
             throw new NotFoundException('Invalid post');
@@ -48,6 +55,8 @@ class PostsController extends AppController {
     }
 
     public function admin_add() {
+        $this->set('pageTitle', 'Add Post - Admin Panel');
+
         if($this->request->is('post')) {
             // Add the user ID to the request data
             $this->request->data['Post']['user_id'] = $this->Auth->user('id');
@@ -65,6 +74,8 @@ class PostsController extends AppController {
     }
 
     public function admin_edit($id = null) {
+        $this->set('pageTitle', 'Edit Post - Admin Panel');
+
         $post = $this->Post->findById($id);
         if(!$post) {
             throw new NotFoundException('Invalid post');
