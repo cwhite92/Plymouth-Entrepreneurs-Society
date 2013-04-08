@@ -459,6 +459,10 @@ input[type="submit"],
                 background-color: #454242;
             }
 
+            .nav li.currentMenuItem ul li a {
+                background-color: #fff;
+            }
+
         /*
             Rouding corners for first link in nav
         */

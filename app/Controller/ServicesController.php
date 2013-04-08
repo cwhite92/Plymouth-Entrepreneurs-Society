@@ -73,7 +73,7 @@ class ServicesController extends AppController {
 // Non-Admin functions
     public function index() {
         $this->set('pageTitle', 'Services - Plymouth Entrepreneurs Society');
-
+        $this->set('currentPage', 'services');
         $this->set('services', $this->Service->find('all'));
     }
 
@@ -86,7 +86,7 @@ class ServicesController extends AppController {
         }
 
         $this->set('pageTitle', $service['Service']['title'] . ' - Plymouth Entrepreneurs Society');
-
+        $this->set('currentPage', $service['Service']['title']);
         $this->set('service', $service);
     }
 }

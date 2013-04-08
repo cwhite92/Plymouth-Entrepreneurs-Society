@@ -25,6 +25,7 @@ class PostsController extends AppController {
 
     public function index() {
         $this->set('pageTitle', 'News - Plymouth Entrepreneurs Society');
+        $this->set('currentPage', 'news');
 
         $this->set('posts', $this->paginate('Post'));
     }
@@ -39,6 +40,7 @@ class PostsController extends AppController {
         }
 
         $this->set('pageTitle', $post['Post']['title'] . ' - Plymouth Entrepreneurs Society');
+        $this->set('currentPage', 'news');
         $this->set('post', $post);
     }
 

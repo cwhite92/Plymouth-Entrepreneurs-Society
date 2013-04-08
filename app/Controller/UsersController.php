@@ -127,6 +127,7 @@ class UsersController extends AppController {
     // Has to be called memberList because of some type of reserved word
     public function memberList() {
         $this->set('pageTitle', 'Members List - Plymouth Entrepreneurs Society');
+        $this->set('currentPage', 'members');
 
         if(isset($this->request->data['User']['query'])) {
             // The user is searching, change the conditions of the retrieval

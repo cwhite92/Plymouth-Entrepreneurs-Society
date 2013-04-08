@@ -38,6 +38,7 @@ class ContactsController extends AppController {
 // Non-Admin functions
     public function index() {
         $this->set('pageTitle', 'Contact - Plymouth Entrepreneurs Society');
+        $this->set('currentPage', 'contact');
 
         $this->set('contacts', $this->Contact->find('all'));
     }

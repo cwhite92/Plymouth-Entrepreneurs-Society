@@ -38,6 +38,7 @@ class AboutsController extends AppController {
 // Non-Admin functions
     public function index() {
         $this->set('pageTitle', 'About - Plymouth Entrepreneurs Society');
+        $this->set('currentPage', 'about');
 
         $this->set('abouts', $this->About->find('all'));
     }

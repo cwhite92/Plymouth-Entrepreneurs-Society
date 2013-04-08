@@ -23,6 +23,7 @@ class EventsController extends AppController {
 
     public function index() {
         $this->set('pageTitle', 'Events - Plymouth Entrepreneurs Society');
+        $this->set('currentPage', 'events');
 
         $this->set('events', $this->paginate('Event'));
     }
@@ -34,6 +35,7 @@ class EventsController extends AppController {
         }
 
         $this->set('pageTitle', $event['Event']['title'] . ' - Plymouth Entrepreneurs Society');
+        $this->set('currentPage', 'events');
 
         $this->set('event', $event);
     }
