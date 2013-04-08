@@ -18,7 +18,7 @@ class AboutsController extends AppController {
         if($this->request->is('post') || $this->request->is('put')) {
             $this->About->id = $id;
             if($this->About->save($this->request->data)) {
-//                $this->About->setFlash('Your about has been updated.'); TODO:this lines break it
+                $this->Session->setFlash('Your about has been updated.');
                 $this->redirect(array('action' => 'edit', 1));
             } else {
                 $this->About->setFlash('Unable to update your about.');
