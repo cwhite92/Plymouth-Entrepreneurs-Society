@@ -19,7 +19,7 @@ class EventsController extends AppController {
         $this->set('currentPage', 'events');
 
         $this->set('events', $this->Event->find('all', array(
-            'order' => 'Event.date desc'
+            'order' => 'Event.id desc'
         )));
         $this->layout = 'admin';
     }
