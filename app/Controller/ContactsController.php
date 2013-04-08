@@ -20,7 +20,7 @@ class ContactsController extends AppController {
         if($this->request->is('post') || $this->request->is('put')) {
             $this->Contact->id = $id;
             if($this->Contact->save($this->request->data)) {
-                $this->Session->setFlash('Your contact has been updated.');
+                $this->Session->setFlash('Your contact details has been updated.');
                 $this->redirect(array('action' => 'edit',1));
             } else {
                 $this->Contact->setFlash('Unable to update your contact.');
