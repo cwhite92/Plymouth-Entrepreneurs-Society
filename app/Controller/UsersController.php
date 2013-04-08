@@ -217,7 +217,7 @@ class UsersController extends AppController {
                         'activation' => $this->request->data['User']['activation']
                     ))->to($this->request->data['User']['email'])->subject('Activate your account')->template('activation')->send();
 
-                    $this->Session->setFlash('You have been registered. Please check your email for an activation code.', 'default', array('class' => 'success'));
+                    $this->Session->setFlash('You have been registered. Please check your email for an activation code. If it does not appear in five minutes, check your junk folder.', 'default', array('class' => 'success'));
                     $this->redirect(array('action' => 'register'));
                 }
             }
