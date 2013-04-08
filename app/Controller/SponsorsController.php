@@ -22,7 +22,7 @@ class SponsorsController extends AppController {
         }
 
         if($this->Sponsor->delete($id)) {
-            $this->Session->setFlash('The sponsor has been deleted.', 'default', array('class' => 'success'));
+            $this->Session->setFlash('The sponsor has been deleted.', 'default');
             $this->redirect(array('action' => 'index'));
         }
 
@@ -64,10 +64,10 @@ class SponsorsController extends AppController {
             //die(debug($this->request->data));
             $this->Sponsor->create();
             if($this->Sponsor->save($this->request->data)) {
-                $this->Session->setFlash('The sponsor.', 'default', array('class' => 'success'));
+                $this->Session->setFlash('The sponsor.', 'default');
                 $this->redirect(array('action' => 'index'));
             } else {
-                $this->Session->setFlash('Unable to add sponsor.', 'default', array('class' => 'error'));
+                $this->Session->setFlash('Unable to add sponsor.', 'default');
             }
         }
 

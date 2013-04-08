@@ -68,10 +68,10 @@ class EventsController extends AppController {
             }
 
             if($this->Event->saveAssociated($this->request->data)) {
-                $this->Session->setFlash('Your event has been saved.', 'default', array('class' => 'success'));
+                $this->Session->setFlash('Your event has been saved.', 'default');
                 $this->redirect(array('action' => 'index'));
             } else {
-                $this->Session->setFlash('Unable to add your event.', 'default', array('class' => 'error'));
+                $this->Session->setFlash('Unable to add your event.', 'default');
             }
         }
 
@@ -84,11 +84,11 @@ class EventsController extends AppController {
 
         if($this->request->is('post') || $this->request->is('put')) {
             if($this->Event->save($this->request->data)) {
-                $this->Session->setFlash('Your event has been updated.', 'default', array('class' => 'success'));
+                $this->Session->setFlash('Your event has been updated.', 'default');
                 $this->redirect(array('action' => 'index'));
             }
 
-            $this->Session->setFlash('There was a problem saving your event. Please try again.', 'default', array('class' => 'error'));
+            $this->Session->setFlash('There was a problem saving your event. Please try again.', 'default');
         }
 
         $event = $this->Event->findById($id);
