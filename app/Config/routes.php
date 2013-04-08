@@ -27,6 +27,7 @@
 
     // Posts routes
     Router::connect('/news', array('controller' => 'posts', 'action' => 'index'));
+    Router::connect('/news/*', array('controller' => 'posts', 'action' => 'view'));
 
 // Admin routes
     Router::connect('/admin', array('controller' => 'users', 'action' => 'home', 'admin' => true));

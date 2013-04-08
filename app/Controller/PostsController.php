@@ -8,7 +8,8 @@ class PostsController extends AppController {
         'order' => array(
             'Post.created' => 'desc'
         ),
-        'recursive' => 2
+        'recursive' => 2,
+        'paramType' => 'querystring'
     );
 
     function beforeFilter() {

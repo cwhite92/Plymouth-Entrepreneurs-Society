@@ -34,7 +34,7 @@
                            'class'     => 'author'
                        ));
                     ?>
-                    <h1><?php echo $this->Html->Link($post['Post']['title'], array('action' => 'view', $post['Post']['id'])); ?></h1>
+                    <h1><?php echo $this->Html->Link($post['Post']['title'], array('controller' => 'posts', 'action' => 'view', $post['Post']['id'])); ?></h1>
                 </header>
             </div><!-- END .meta -->
             <article>
