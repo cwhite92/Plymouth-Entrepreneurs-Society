@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2013 at 10:27 PM
+-- Generation Time: Apr 08, 2013 at 06:12 AM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.10
 
@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `abouts`
 --
 
-CREATE TABLE IF NOT EXISTS `abouts` (
+CREATE TABLE `abouts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `body` longtext CHARACTER SET utf8 NOT NULL,
   `title` varchar(255) NOT NULL,
@@ -33,27 +33,12 @@ CREATE TABLE IF NOT EXISTS `abouts` (
 -- Table structure for table `attachments`
 --
 
-CREATE TABLE IF NOT EXISTS `attachments` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `post_id` int(11) NOT NULL,
-  `file_name` varchar(255) CHARACTER SET utf8 NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `file_name` (`file_name`),
-  KEY `post_id` (`post_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `attending`
---
-
-CREATE TABLE IF NOT EXISTS `attending` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `email` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `events_id` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+CREATE TABLE `attachments` (
+  `id` int(11) NOT NULL,
+  `event_id` int(11) NOT NULL,
+  `filename` varchar(255) NOT NULL,
+  KEY `event_id` (`event_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -61,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `attending` (
 -- Table structure for table `contacts`
 --
 
-CREATE TABLE IF NOT EXISTS `contacts` (
+CREATE TABLE `contacts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `body` longtext NOT NULL,
   `title` varchar(255) NOT NULL,
@@ -74,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `contacts` (
 -- Table structure for table `events`
 --
 
-CREATE TABLE IF NOT EXISTS `events` (
+CREATE TABLE `events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `body` longtext NOT NULL,
@@ -85,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `events` (
   `location` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 -- --------------------------------------------------------
 
@@ -93,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `events` (
 -- Table structure for table `posts`
 --
 
-CREATE TABLE IF NOT EXISTS `posts` (
+CREATE TABLE `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) CHARACTER SET utf8 NOT NULL,
   `body` longtext CHARACTER SET utf8 NOT NULL,
@@ -104,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `alt_text` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=95 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=103 ;
 
 -- --------------------------------------------------------
 
@@ -112,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
 -- Table structure for table `profiles`
 --
 
-CREATE TABLE IF NOT EXISTS `profiles` (
+CREATE TABLE `profiles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `firstname` varchar(50) CHARACTER SET utf8 NOT NULL,
@@ -126,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `profiles` (
   `experience` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
 
 -- --------------------------------------------------------
 
@@ -134,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `profiles` (
 -- Table structure for table `profiles_skills`
 --
 
-CREATE TABLE IF NOT EXISTS `profiles_skills` (
+CREATE TABLE `profiles_skills` (
   `profile_id` int(11) NOT NULL,
   `skill_id` int(11) NOT NULL,
   KEY `profile_id` (`profile_id`),
@@ -147,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `profiles_skills` (
 -- Table structure for table `services`
 --
 
-CREATE TABLE IF NOT EXISTS `services` (
+CREATE TABLE `services` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `body` longtext NOT NULL,
@@ -162,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `services` (
 -- Table structure for table `skills`
 --
 
-CREATE TABLE IF NOT EXISTS `skills` (
+CREATE TABLE `skills` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
@@ -175,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `skills` (
 -- Table structure for table `sponsors`
 --
 
-CREATE TABLE IF NOT EXISTS `sponsors` (
+CREATE TABLE `sponsors` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `picture` varchar(255) NOT NULL,
@@ -188,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `sponsors` (
 -- Table structure for table `users`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 NOT NULL,
@@ -197,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `activation` varchar(32) CHARACTER SET utf8 NOT NULL,
   `activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=57 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=58 ;
 
 --
 -- Constraints for dumped tables
@@ -207,7 +192,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Constraints for table `attachments`
 --
 ALTER TABLE `attachments`
-  ADD CONSTRAINT `attachments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`);
+  ADD CONSTRAINT `attachments_ibfk_1` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`);
 
 --
 -- Constraints for table `posts`

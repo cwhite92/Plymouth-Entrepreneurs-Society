@@ -2,10 +2,17 @@
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
+<<<<<<< HEAD
 -- Host: 127.0.0.1
 -- Generation Time: Apr 08, 2013 at 06:06 AM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
+=======
+-- Host: localhost
+-- Generation Time: Apr 08, 2013 at 06:12 AM
+-- Server version: 5.5.29
+-- PHP Version: 5.4.10
+>>>>>>> lots
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -110,7 +117,12 @@ CREATE TABLE IF NOT EXISTS `events` (
 --
 
 INSERT INTO `events` (`id`, `title`, `body`, `created`, `modified`, `poster`, `date`, `location`) VALUES
+<<<<<<< HEAD
 (1, 'First event', '<p>Description of said event</p>', '2013-04-06 16:34:43', '2013-04-06 18:18:11', 'boob.png', '2013-04-06 16:34:00', 'Ed''s front room');
+=======
+(24, 'Career Launchpad Student Conference', '<p>Ever wondered what it''s like to work for a startup? Want the lowdown on what''s happening in the European startup community? The Startup Career Launchpad is a huge event with the likes of Raspberry Pi, MindCandy and LastMinute founders, amongst some 50 other keynote speakers. It''s happening over April 18 and 19 in London, organised by NACUE.</p><p>Plymouth Entrepreneurs Society may be able to pay all travel, accommodation and conference costs. Sign up if you are interested in attending!</p><p><a href="http://www.startupcareerlaunchpad.com/">www.startupcareerlaunchpad.com</a><br><br>REGISTER YOUR INTEREST AT:&nbsp;<a href="http://www.doodle.com/bkqmxzfk4w3vy4g6">http://www.doodle.com/bkqmxzfk4w3vy4g6</a><br></p>\r\n', '2013-04-08 04:52:49', '2013-04-08 05:15:13', '27e1390bda132dd12daf6650527cf02b.png', '2013-04-18 08:30:00', 'The Light, London'),
+(25, ' Lecture Delivered by Wilfred Emmanuel-Jones', '<p>On behalf of our Vice-Chancellor, Professor Wendy Purcell, we are writing to invite you to a Prestige Lecture by Wilfred Emmanuel-Jones.<br><br>Please see your invitation below for full details and we hope that you will be able to join us for this very special occasion.<br><br>More information can be found on the University events page and to reserve a place please book here;<a href="https://www.surveymonkey.com/s/PrestigeLectureWilfredEmmanuel-Jones">https://www.surveymonkey.com/s/PrestigeLectureWilfredEmmanuel-Jones</a>&nbsp;<br><br>The event is taking place at the Robbins Conference Centre from 6.00 pm and the nearest car park is on Regent Street. However, free parking is available after 4.00 pm on campus and is just a short walk across campus to the Robbins Conference Centre. Please see the link below for more information regarding car parking and for campus maps.<br><br><a href="http://www.plymouth.ac.uk/pages/view.asp?page=17148">http://www.plymouth.ac.uk/pages/view.asp?page=17148</a><br><br>If you require this email invitation in an alternative format please contact us on 01752 586005 or email <a href="mailto:prestigelectures@plymouth.ac.uk">prestigelectures@plymouth.ac.uk</a><br></p>', '2013-04-08 05:12:04', '2013-04-08 05:12:04', 'fbb47e65dafbfe22197b7e3a1115da8f.png', '2013-04-11 18:00:00', 'Robbins Conference Centre');
+>>>>>>> lots
 
 -- --------------------------------------------------------
 
@@ -129,13 +141,18 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `alt_text` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=95 ;
+=======
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=103 ;
+>>>>>>> lots
 
 --
 -- Dumping data for table `posts`
 --
 
 INSERT INTO `posts` (`id`, `title`, `body`, `created`, `modified`, `user_id`, `cover_photo`, `alt_text`) VALUES
+<<<<<<< HEAD
 (23, 'Welcome to the site', '<p>This is a paragraph. With lots and lots of text lol.</p><p></p><ul><li>this is&nbsp;</li><li>an unordered</li><li>list</li></ul><ol><li>this is&nbsp;</li><li>an ordered</li><li>list</li></ol><p></p>\r\n', '2013-04-06 12:31:31', '2013-04-06 18:42:20', 52, NULL, NULL),
 (24, 'Don''t play stupid with me... I''m better at it.', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper elementum scelerisque. Fusce nibh turpis, pharetra sit amet consequat ac, malesuada vitae enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos ', '2013-04-06 14:22:21', '2013-04-06 14:22:21', 53, 'thumbnail.png', 'This is the alt_text n****'),
 (26, 'Test Post for image inside body', '<p><img src="http://24.media.tumblr.com/959ae84c70f876ba4e305ecde5356f4a/tumblr_mkue1eF2ON1s7rwz8o1_500.jpg"><br></p>\r\n', '2013-04-06 18:38:33', '2013-04-06 18:38:53', 52, NULL, NULL),
@@ -148,6 +165,15 @@ INSERT INTO `posts` (`id`, `title`, `body`, `created`, `modified`, `user_id`, `c
 (33, 'another post', '<h1>heading</h1><div>gandhi said I''m a cunt</div><div><hr></div>', '2013-04-06 19:27:30', '2013-04-06 19:27:30', 52, NULL, NULL),
 (93, 'Attachment test', '<p>i hate this project</p>', '2013-04-07 18:44:37', '2013-04-07 18:44:37', 52, NULL, NULL),
 (94, 'loads''a files', '<p>woop</p>\r\n', '2013-04-07 21:15:50', '2013-04-08 05:10:37', 52, NULL, NULL);
+=======
+(96, 'WARNING - New Scam Targeting Ambitious Entrepreneurs!', '<p>A number of websites are popping up claiming young people are entitled to start-up and marketing grants from government agencies.&nbsp;<br><br>You apply, get approved for around £5,000 - £9,000 and then are asked to pay ''admin fees'' (because it''s a third party company) before the funds are transferred.&nbsp;<br>Yep, you guessed it...the funds never arrive.&nbsp;<br><br>The websites I''ve been made aware of include: businessgrantsdirect.org.uk, usagrantfunding.org, and australiangrantfunding.org but I''m sure there''s more.&nbsp;<br><br>Good news though!!! The Entrepreneurs Society currently has access to numerous legitimate grants which you can take advantage of for FREE. Claim upto £200 for any business expense or upto £5,500 for a social enterprise start-up. T&amp;Cs apply.<br></p>', '2013-04-08 04:56:32', '2013-04-08 05:18:08', 52, NULL, NULL),
+(97, 'Enterprise Bursary', '<p>Setting up a business and require a financial boost for things such as stock, marketing material, web hosting, training courses, patents, registering your business and other legal costs?...<br><br>Then apply for an Enterprise Bursary today and we can fund you up to £200! It might not sound like a lot, but in business that can go a long way - Lets not forget how Alan Sugar started with much less!<br><br>If you have any questions, contact me at <a href="mailto:tom.scott@plymouth.ac.uk">tom.scott@plymouth.ac.uk</a><br></p>', '2013-04-08 04:58:39', '2013-04-08 05:18:05', 52, NULL, NULL),
+(98, 'Santander Universities Entrepreneurship Awards', '<p>Submit a business plan and win £5,000 or £20,000!<br></p><p><a href="https://exchange.plymouth.ac.uk/intranet/communities/m/stuevent/public/announcements/Santander%20Universities%20Entrepreneurship%20Awards.htm">Santander Universities Entrepreneurship Awards</a><br></p>', '2013-04-08 05:00:03', '2013-04-08 05:18:02', 52, NULL, NULL),
+(99, 'Plymouth University Crowdfunding Workshop', '<p>Our friends at Peoplefund.it awarded £500 to these students yesterday at the fantastic crowd-funding workshop organised by Plymouth Entrepreneur''s Society!<br>Well done to everyone involved!!! :)</p><p><a href="https://www.facebook.com/media/set/?set=a.488259644572156.1073741825.186241674773956&amp;type=1">Plymouth University Crowdfunding Workshop</a><br></p>\r\n', '2013-04-08 05:01:10', '2013-04-08 05:17:59', 52, NULL, NULL),
+(100, 'Placement Opportunities at Johnson Media', '<p></p><p>I''ve just been contacted by the Marketing &amp; PR Director of Johnson Media (one of the largest marketing agencies in America) who would like to create some fantastic opportunities for the members of this society.</p><p>If you would like a free copy of ''The Entrepreneur Mind: 100 Beliefs, Characteristics, and Habits of Elite Entrepreneurs'', please send your name and a short description of yourself (why you''re interested in entrepreneurship, business ideas, how you''ve got involved with the society, what inspires you in terms of business, role-models etc).&nbsp;</p><p>This list of names and paragraphs will then be posted onto the book website and give purchasers an opportunity to select a name (or multiple names) off the list and purchase a copy (or copies) to be donated to them directly.&nbsp;</p><p>Additionally, participating members are encouraged to include their Email and/or Twitter so that the donor of the book can get in contact, which adds a dimension of personalisation to the project and an amazing networking opportunity.&nbsp;</p><p>This is not only an easy way to get a free book about entrepreneurship, but also possibly get yourself a successful mentor. Kevin (the owner), as described in a previous post, has some huge contacts in business and it will be those sort of people who donate the books. There is a real opportunity to make some fantastic contacts who could provide valuable business advice, access to their network, and even internships.&nbsp;</p><p>To see the kind of people/companies Johnson Media has worked with, visit the website:&nbsp;<a href="http://www.johnsonmedia.com/clients.php">http://www.johnsonmedia.com/clients.php</a></p><p>Please send your short paragraphs to my university email so I can collate and pass on. <a href="mailto:James.Holden1@students.plymouth.ac.uk">James.Holden1@students.plymouth.ac.uk</a></p><p></p>\r\n', '2013-04-08 05:03:43', '2013-04-08 05:17:49', 52, NULL, NULL),
+(101, 'Want a grant of up to £500?', '<p>If you have an idea that can make a difference in your community, we want to hear from you. Plymouth Entrepreneurs Society is working with both UnLtd and Lloyds Banking Group to offer innovative leading programmes for social entrepreneurs and grants to develop and grow your project. Only applicable while you''re a student! Why wait!?<br><br>Do you have an idea?<br><br>UnLtd offer grants (money you never have to repay) of up to £500 to test out a social enterprise idea you have. If the test is successful, you can apply for a further £5,000.<br>Lloyds Banking Group offer £4,000 for your project, providing you take part in the free Plymouth based business workshops.<br><br>Do you already have a Social Enterprise Company?<br><br>UnLtd offer growth grants between £5,000 and £15,000. With this, you will receive an award manager who acts as a mentor to guide you through fast, profitable growth.<br>Lloyds Banking Group also offers a scale-up course to help you grow your organisation. On completion, you will be given a grant of £15,000 along with the tools you need to maximise social impact.<br><br>To find out more information email:&nbsp;<a href="mailto:entrepreneurs@upsu.com">entrepreneurs@upsu.com</a><br></p>', '2013-04-08 05:23:41', '2013-04-08 05:23:41', 52, NULL, NULL),
+(102, 'Participation Needed', '<p>Plymouth Entrepreneurs Society is currently lobbying Plymouth University for a fund to offer grants, loans and equity funding for new and current student businesses.&nbsp;<br><br>We need as many people to participate in this survey as possible. Results may be presented to the Vice Chancellor within the next few weeks.<br><br>Very short and light-hearted.&nbsp;<br>Your participation could help make this society the most funded society on campus!!!<br></p><p><a href="http://www.surveymonkey.com/s/9R8KHJ9">Seed Funding 2013/2014 Survey</a><br></p>', '2013-04-08 05:28:32', '2013-04-08 05:28:32', 52, NULL, NULL);
+>>>>>>> lots
 
 -- --------------------------------------------------------
 
@@ -169,18 +195,27 @@ CREATE TABLE IF NOT EXISTS `profiles` (
   `experience` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=44 ;
+=======
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
+>>>>>>> lots
 
 --
 -- Dumping data for table `profiles`
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `email`, `course`, `bio`, `modified`, `last_active`, `experience`) VALUES
+<<<<<<< HEAD
 (36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-07 21:14:44', 1365393960, 'I like boobies'),
 (37, 53, 'Bob', 'Doe', '5923c5e979cf9c30d555fb0cec442b0d.png', 'bob@gmail.com', '', '', '2013-04-06 00:04:02', 1365199738, ''),
 (38, 54, 'Liza', 'Doe', 'user.png', 'liza@gmail.com', '', '', '2013-04-05 21:36:35', 1365202400, ''),
 (39, 55, 'gemma', 'pike', '8b3286ba312b5d6077ea9fd2d4c82da5.png', 'gemma.pike@students.plymouth.ac.uk', 'International Tourism Management', 'I''m a badass', '2013-04-06 19:24:53', 1365269095, '21 years of being a badass'),
 (40, 56, 'Jake', 'McAlman', 'user.png', 'me@jakechampion.name', '', '', '2013-04-07 21:17:22', 1365362995, '');
+=======
+(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-08 06:11:56', 1365394316, 'I like boobies'),
+(41, 57, 'Jake', 'Champion', 'a663058890769571c8da9d9684c6ebf6.png', 'jakechampion.jake2@gmail.com', 'Web Applications Development', '', '2013-04-08 06:11:00', 1365394261, '');
+>>>>>>> lots
 
 -- --------------------------------------------------------
 
@@ -200,11 +235,8 @@ CREATE TABLE IF NOT EXISTS `profiles_skills` (
 --
 
 INSERT INTO `profiles_skills` (`profile_id`, `skill_id`) VALUES
-(36, 62),
-(36, 63),
-(36, 64),
-(36, 37),
-(36, 65);
+(41, 25),
+(41, 26);
 
 -- --------------------------------------------------------
 
@@ -249,28 +281,8 @@ CREATE TABLE IF NOT EXISTS `skills` (
 --
 
 INSERT INTO `skills` (`id`, `name`) VALUES
-(65, '5 spaces'),
-(24, 'C#'),
-(37, 'css'),
-(58, 'dfg'),
-(63, 'drugs'),
-(39, 'english'),
-(40, 'french'),
-(60, 'ghj'),
-(61, 'gj'),
-(59, 'hgj'),
-(32, 'HTML'),
-(56, 'HTML5'),
 (26, 'Java'),
-(25, 'JavaScript'),
-(27, 'jQuery'),
-(57, 'loldfg'),
-(38, 'marketing'),
-(23, 'MySQL'),
-(22, 'PHP'),
-(64, 'rock ''n roll'),
-(62, 'sex'),
-(33, 'SQL');
+(25, 'JavaScript');
 
 -- --------------------------------------------------------
 
@@ -312,18 +324,28 @@ CREATE TABLE IF NOT EXISTS `users` (
   `recovery` varchar(32) NOT NULL,
   `recovered` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=61 ;
+=======
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=58 ;
+>>>>>>> lots
 
 --
 -- Dumping data for table `users`
 --
 
+<<<<<<< HEAD
 INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`, `activated`, `recovery`, `recovered`) VALUES
 (52, 'john.smith@gmail.com', '$2a$10$9nLSM4BucqPPBTRaOTzxBu2xao4l.V6YtAp.Dz1VT3sBtoM9FIZuW', 1, '2013-02-12 03:07:40', '4f8a070a4a24a9676ab6ae6a8dfad2a2', 1, '4a9c4152f04c88bc94c8611538e4622d', 0),
 (53, 'bob@gmail.com', '$2a$10$E9TAzT/g3ZOTY1vQ7Xv58uifn9FoXvFiAExGbDEzgGMsUj5T.RbX2', 0, '2013-04-05 21:36:03', '23629a764cd13939155f00d593e4dc2a', 1, '', 0),
 (54, 'liza@gmail.com', '$2a$10$oIaRoZBHAakDMuG6MgTnluFXa.La2CFGXl/uACS3gid.AX2qjGIUu', 0, '2013-04-05 21:36:35', '3a723c799ce8e9078fcb1eb000abb6ed', 1, '', 0),
 (55, 'gemma.pike@students.plymouth.ac.uk', '$2a$10$TmBD3te5vYtk/Y8T8US8FuzRl8AwXGAgyC2dsLX3Hx8GP5BSguuJG', 0, '2013-04-06 19:20:58', '0cc33626216a68e4b8345e963f910bbb', 1, '', 0),
 (56, 'me@jakechampion.name', '$2a$10$K20tkKkhMcYLfMlydCf0QeSFyoon4T0d3s7r5zLEu8UlnMSx0K8J2', 0, '2013-04-07 21:17:21', 'a6b2861c2ccbf733b9e5719d02a67bea', 1, '', 0);
+=======
+INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`, `activated`) VALUES
+(52, 'john.smith@gmail.com', '$2a$10$9nLSM4BucqPPBTRaOTzxBu2xao4l.V6YtAp.Dz1VT3sBtoM9FIZuW', 1, '2013-02-12 03:07:40', '4f8a070a4a24a9676ab6ae6a8dfad2a2', 1),
+(57, 'jakechampion.jake2@gmail.com', '$2a$10$PLIDaSUQx6IPhYSIhDtQ5ugjeCn2bsI1vGZ8CTsQ.ToIbdM0LoOZ.', 0, '2013-04-08 05:36:43', '904c42601948b790933deaa46f752c1a', 1);
+>>>>>>> lots
 
 --
 -- Constraints for dumped tables

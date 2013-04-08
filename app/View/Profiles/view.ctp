@@ -6,9 +6,21 @@
                 'alt'       => $profile['Profile']['firstname'] . ' ' . $profile['Profile']['lastname'] . '\'s profile picture'
             )); ?>
             <span class="name"><?php echo $profile['Profile']['firstname']; ?> <?php echo $profile['Profile']['lastname']; ?></span>
-            <span class="rank"><?php echo $this->requestAction('/Profiles/rank', array('pass' => array( $profile['User']['admin'] ))); ?></span>
+            <span class="rank"><?php
+                if($profile['User']['admin']) {
+                    echo 'Admin';
+                }; ?></span>
             <ul>
-                <li><strong>Status:</strong> <?php echo $this->requestAction('/Profiles/onlineStatus', array('pass' => array( $profile['Profile']['last_active'] ))); ?></li>
+                <li><strong>Status:</strong> <?php
+                    $currentTime = time();
+                    $time = $profile['Profile']['last_active'];
+
+                    if ($currentTime - $time <= 180) {
+                        echo '<span class="status online"><span data-icon="&#xF0C7;"></span> Online</span>';
+                    } else {
+                        echo '<span class="status offline"><span data-icon="&#xF0C7;"></span> Offline</span>';
+                    }
+                    ?></li>
                 <li><strong>Course:</strong> <?php echo htmlspecialchars($profile['Profile']['course']); ?></li>
                 <li>
                     <strong>Skills:</strong>
@@ -28,7 +40,6 @@
                     endforeach;
                     ?>
                 </li>
-                <li><strong>Skills requested:</strong> Chris - this bit needs to be added</li>
                 <li><strong>Last update:</strong> <?php echo $this->Time->format('d M Y', $profile['Profile']['modified']); ?></li>
             </ul>
         </div><!-- END .vcard -->
@@ -39,6 +50,7 @@
         <?php echo htmlspecialchars($profile['Profile']['experience']); ?>
     </div><!-- END .content -->
 </div><!-- END .entry -->
+<?php if($authed): ?>
 <div class="entry profile">
     <div class="content">
         <h2>Contact <?php echo $profile['Profile']['firstname']; ?></h2>
@@ -49,3 +61,4 @@
         <?php echo $this->Form->end('Send message'); ?>
     </div><!-- END .content -->
 </div><!-- END .entry -->
+<?php endif; ?>
