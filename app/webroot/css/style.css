@@ -1393,7 +1393,6 @@ input[type="submit"],
             }
 
             .nav li a {
-                max-width: 350px;
                 margin: 0 auto;
                 border-top: 1px solid;
                 border-color: #555;
