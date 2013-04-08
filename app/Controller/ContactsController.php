@@ -11,6 +11,7 @@ class ContactsController extends AppController {
 // Admin specific functions
     public function admin_edit($id = null) {
         $this->set('pageTitle', 'Edit Contact - Admin Panel');
+        $this->set('currentPage', 'contact');
 
         $contact = $this->Contact->findById($id);
         if(!$contact) {

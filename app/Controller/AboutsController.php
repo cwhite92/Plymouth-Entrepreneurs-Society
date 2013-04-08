@@ -11,6 +11,7 @@ class AboutsController extends AppController {
 // Admin specific functions
     public function admin_edit($id = null) {
         $this->set('pageTitle', 'About - Admin Panel');
+        $this->set('currentPage', 'about');
 
         $about = $this->About->findById($id);
         if(!$about) {

@@ -16,6 +16,7 @@ class EventsController extends AppController {
 
     public function admin_index() {
         $this->set('pageTitle', 'Events - Admin Panel');
+        $this->set('currentPage', 'events');
 
         $this->set('events', $this->Event->find('all', array(
             'order' => 'Event.date desc'
@@ -44,6 +45,7 @@ class EventsController extends AppController {
 
     public function admin_add() {
         $this->set('pageTitle', 'Add Event - Admin Panel');
+        $this->set('currentPage', 'events');
 
         if($this->request->is('post')) {
             $this->Event->create();
@@ -78,6 +80,7 @@ class EventsController extends AppController {
 
     public function admin_edit($id = null) {
         $this->set('pageTitle', 'Edit Event - Plymouth Entrepreneurs Society');
+        $this->set('currentPage', 'events');
 
         if($this->request->is('post') || $this->request->is('put')) {
             if($this->Event->save($this->request->data)) {

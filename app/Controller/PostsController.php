@@ -18,6 +18,7 @@ class PostsController extends AppController {
 
     public function admin_index() {
         $this->set('pageTitle', 'News - Admin Panel');
+        $this->set('currentPage', 'news');
 
         $this->set('posts', $this->Post->find('all', array(
             'order' => 'Post.created desc'
@@ -49,6 +50,7 @@ class PostsController extends AppController {
 
     public function admin_view($id = null) {
         $this->set('pageTitle', 'Post - Admin Panel');
+        $this->set('currentPage', 'news');
 
         $post = $this->Post->findById($id);
         if(!$post) {
@@ -61,6 +63,7 @@ class PostsController extends AppController {
 
     public function admin_add() {
         $this->set('pageTitle', 'Add Post - Admin Panel');
+        $this->set('currentPage', 'news');
 
         if($this->request->is('post')) {
             // Add the user ID to the request data
@@ -80,6 +83,7 @@ class PostsController extends AppController {
 
     public function admin_edit($id = null) {
         $this->set('pageTitle', 'Edit Post - Admin Panel');
+        $this->set('currentPage', 'news');
 
         $post = $this->Post->findById($id);
         if(!$post) {

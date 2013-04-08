@@ -24,6 +24,8 @@ class ServicesController extends AppController {
     }
 
     public function admin_index() {
+        $this->set('pageTitle', 'Services - Plymouth Entrepreneurs Society');
+        $this->set('currentPage', 'services');
         $this->set('services', $this->Service->find('all'));
         $this->layout = 'admin';
     }
@@ -31,6 +33,7 @@ class ServicesController extends AppController {
 
     public function admin_add() {
         $this->set('pageTitle', 'Add Service - Admin Panel');
+        $this->set('currentPage', 'services');
 
         if($this->request->is('post')) {
             $this->Service->create();
@@ -46,6 +49,7 @@ class ServicesController extends AppController {
 
     public function admin_edit($id = null) {
         $this->set('pageTitle', 'Edit Service - Plymouth Entrepreneurs Society');
+        $this->set('currentPage', 'services');
 
         $service = $this->Service->findById($id);
         if(!$service) {
@@ -86,6 +90,7 @@ class ServicesController extends AppController {
         }
 
         $this->set('pageTitle', $service['Service']['title'] . ' - Plymouth Entrepreneurs Society');
+        $this->set('currentPageParent', 'services');
         $this->set('currentPage', $service['Service']['title']);
         $this->set('service', $service);
     }

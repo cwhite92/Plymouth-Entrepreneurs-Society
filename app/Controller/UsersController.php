@@ -21,12 +21,14 @@ class UsersController extends AppController {
     // Admin panel homepage
     public function admin_home() {
         $this->set('pageTitle', 'Admin Panel');
+        $this->set('currentPage', 'home');
 
         $this->layout = 'admin';
     }
 
     public function admin_index() {
         $this->set('pageTitle', 'Users - Admin Panel');
+        $this->set('currentPage', 'users');
 
         $this->set('users', $this->User->find('all'));
         $this->layout = 'admin';
@@ -34,6 +36,7 @@ class UsersController extends AppController {
 
     public function admin_edit($id = null) {
         $this->set('pageTitle', 'Edit User - Admin Panel');
+        $this->set('currentPage', 'users');
 
         $user = $this->User->findById($id);
         if(!$user) {

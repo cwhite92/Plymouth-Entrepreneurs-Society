@@ -13,8 +13,8 @@
         <?php foreach ($users as $user): ?>
             <tr>
                 <td><?php echo $user['User']['email']; ?></td>
-                <td><?php echo $user['User']['activated']; ?></td>
-                <td><?php echo $user['User']['admin']; ?></td>
+                <td><?php if( $user['User']['activated'] == 1 ) { echo 'Yes'; } else { echo 'No'; } ?></td>
+                <td><?php if( $user['User']['admin'] == 1 ) { echo 'Admin'; } else { echo 'User'; } ?></td>
                 <td>
                     <?php echo $this->Html->link('',
                         array(

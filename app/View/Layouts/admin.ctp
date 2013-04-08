@@ -23,28 +23,28 @@
 <body>
 <div class="bar">
     <ul>
-        <li class="currentMenuItem">
+        <li <?php if (isset($currentPage) && $currentPage == 'home') echo 'class="currentMenuItem"' ?> >
             <?php echo $this->Html->link('<span data-icon="&#xF162;"></span><span class="text">Home</span>', '/', array('escape' => false)); ?>
         </li>
-        <li>
+        <li <?php if (isset($currentPage) && $currentPage == 'news') echo 'class="currentMenuItem"' ?> >
             <?php echo $this->Html->link('<span data-icon="&#xF139;"></span><span class="text">News</span>', '/admin/news', array('escape' => false)); ?>
         </li>
-        <li>
+        <li <?php if (isset($currentPage) && $currentPage == 'events') echo 'class="currentMenuItem"' ?> >
             <?php echo $this->Html->link('<span data-icon="&#xF05B;"></span><span class="text">Events</span>', '/admin/events', array('escape' => false)); ?>
         </li>
-        <li>
+        <li <?php if (isset($currentPage) && $currentPage == 'users') echo 'class="currentMenuItem"' ?> >
             <?php echo $this->Html->link('<span data-icon="&#xF0CD;"></span><span class="text">Users</span>', '/admin/users', array('escape' => false)); ?>
         </li>
-        <li>
+        <li <?php if (isset($currentPage) && $currentPage == 'sponsors') echo 'class="currentMenuItem"' ?> >
             <?php echo $this->Html->link('<span data-icon="&#xF105;"></span><span class="text">Sponsors</span>', array('controller' => 'sponsors', 'action' => 'index'), array('escape' => false)); ?>
         </li>
-        <li>
+        <li <?php if (isset($currentPage) && $currentPage == 'services') echo 'class="currentMenuItem"' ?> >
             <?php echo $this->Html->link('<span data-icon="&#xF04E;"></span><span class="text">Services</span>', '/admin/services', array('escape' => false)); ?>
         </li>
-        <li>
+        <li <?php if (isset($currentPage) && $currentPage == 'about') echo 'class="currentMenuItem"' ?> >
             <?php echo $this->Html->link('<span data-icon="&#xF043;"></span><span class="text">About</span>', '/admin/abouts/edit/1', array('escape' => false)); ?>
         </li>
-        <li>
+        <li <?php if (isset($currentPage) && $currentPage == 'contact') echo 'class="currentMenuItem"' ?> >
             <?php echo $this->Html->link('<span data-icon="&#xF0CE;"></span><span class="text">Contact</span>', '/admin/contacts/edit/1', array('escape' => false)); ?>
         </li>
         <li>

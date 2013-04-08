@@ -48,7 +48,7 @@
                 <li <?php if (isset($currentPage) && $currentPage == 'members') echo 'class="currentMenuItem"' ?> >
                     <?php echo $this->Html->link('Members', array('controller' => 'users', 'action' => 'memberList'), array('escape' => false)); ?>
                 </li>
-                <li <?php if (isset($currentPage) && $currentPage == 'services') echo 'class="currentMenuItem"' ?> >
+                <li <?php if (isset($currentPage) && $currentPage == 'services' || isset($currentPageParent) && $currentPageParent == 'services') echo 'class="currentMenuItem"' ?> >
                     <?php echo $this->Html->link('Services+', array('controller' => 'services', 'action' => 'index'), array('escape' => false)); ?>
                     <ul>
                         <?php foreach ($services as $service): ?>
