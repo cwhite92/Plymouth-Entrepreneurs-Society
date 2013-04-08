@@ -29,8 +29,3 @@
         <?php endif; ?>
     </div><!-- END .content -->
 </div><!-- END .entry -->
-<div class="entry">
-    <div class="content">
-        subscribe form
-    </div><!-- END .content -->
-</div><!-- END .entry -->
