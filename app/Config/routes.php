@@ -39,6 +39,8 @@
     Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
     Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
     Router::connect('/activate/*', array('controller' => 'users', 'action' => 'activate'));
+    Router::connect('/recover', array('controller' => 'users', 'action' => 'recover'));
+    Router::connect('/recover/*', array('controller' => 'users', 'action' => 'recoverStepTwo'));
     Router::connect('/account/edit', array('controller' => 'users', 'action' => 'edit'));
     Router::connect('/members', array('controller' => 'users', 'action' => 'memberList'));
 
