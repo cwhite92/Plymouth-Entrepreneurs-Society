@@ -36,37 +36,39 @@
 <?php if($authed) $this->requestAction('/Users/online', array('pass' => array($user['User']['id']))); ?>
 <div class="mainContainer">
     <div class="section clearfix">
-        <ul class="nav">
-            <li class="mobileTrigger hiddenDesktop"><a href="#" data-icon="&#xF0AA;"></a></li>
-            <li <?php if (isset($currentPage) && $currentPage == 'news') echo 'class="currentMenuItem"' ?> >
-                <?php echo $this->Html->link('News', '/', array('escape' => false)); ?>
-            </li>
-            <li <?php if (isset($currentPage) && $currentPage == 'events') echo 'class="currentMenuItem"' ?> >
-                <?php echo $this->Html->link('Events', '/events', array('escape' => false)); ?>
-            </li>
-            <li <?php if (isset($currentPage) && $currentPage == 'members') echo 'class="currentMenuItem"' ?> >
-                <?php echo $this->Html->link('Members', array('controller' => 'users', 'action' => 'memberList'), array('escape' => false)); ?>
-            </li>
-            <li <?php if (isset($currentPage) && $currentPage == 'services') echo 'class="currentMenuItem"' ?> >
-                <?php echo $this->Html->link('Services+', array('controller' => 'services', 'action' => 'index'), array('escape' => false)); ?>
-                <ul>
-                    <?php foreach ($services as $service): ?>
-                        <li <?php if (isset($currentPage) && $currentPage == $service['Service']['title']) echo 'class="currentMenuItem"' ?> >
-                            <?php echo $this->Html->Link($service['Service']['title'], array('controller' => 'services', 'action' => 'view', $service['Service']['id'])); ?>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            </li>
-            <li <?php if (isset($currentPage) && $currentPage == 'skills') echo 'class="currentMenuItem"' ?> >
-                <?php echo $this->Html->link('Skills', array('controller' => 'skills', 'action' => 'index'), array('escape' => false)); ?>
-            </li>
-            <li <?php if (isset($currentPage) && $currentPage == 'about') echo 'class="currentMenuItem"' ?> >
-                <?php echo $this->Html->link('About Us', array('controller' => 'abouts', 'action' => 'index'), array('escape' => false)); ?>
-            </li>
-            <li <?php if (isset($currentPage) && $currentPage == 'contact') echo 'class="currentMenuItem"' ?> >
-                <?php echo $this->Html->link('Contact', array('controller' => 'contacts', 'action' => 'index'), array('escape' => false)); ?>
-            </li>
-        </ul>
+        <nav>
+            <ul class="nav">
+                <li class="mobileTrigger hiddenDesktop"><a href="#" data-icon="&#xF0AA;"></a></li>
+                <li <?php if (isset($currentPage) && $currentPage == 'news') echo 'class="currentMenuItem"' ?> >
+                    <?php echo $this->Html->link('News', '/', array('escape' => false)); ?>
+                </li>
+                <li <?php if (isset($currentPage) && $currentPage == 'events') echo 'class="currentMenuItem"' ?> >
+                    <?php echo $this->Html->link('Events', '/events', array('escape' => false)); ?>
+                </li>
+                <li <?php if (isset($currentPage) && $currentPage == 'members') echo 'class="currentMenuItem"' ?> >
+                    <?php echo $this->Html->link('Members', array('controller' => 'users', 'action' => 'memberList'), array('escape' => false)); ?>
+                </li>
+                <li <?php if (isset($currentPage) && $currentPage == 'services') echo 'class="currentMenuItem"' ?> >
+                    <?php echo $this->Html->link('Services+', array('controller' => 'services', 'action' => 'index'), array('escape' => false)); ?>
+                    <ul>
+                        <?php foreach ($services as $service): ?>
+                            <li <?php if (isset($currentPage) && $currentPage == $service['Service']['title']) echo 'class="currentMenuItem"' ?> >
+                                <?php echo $this->Html->Link($service['Service']['title'], array('controller' => 'services', 'action' => 'view', $service['Service']['id'])); ?>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </li>
+                <li <?php if (isset($currentPage) && $currentPage == 'skills') echo 'class="currentMenuItem"' ?> >
+                    <?php echo $this->Html->link('Skills', array('controller' => 'skills', 'action' => 'index'), array('escape' => false)); ?>
+                </li>
+                <li <?php if (isset($currentPage) && $currentPage == 'about') echo 'class="currentMenuItem"' ?> >
+                    <?php echo $this->Html->link('About Us', array('controller' => 'abouts', 'action' => 'index'), array('escape' => false)); ?>
+                </li>
+                <li <?php if (isset($currentPage) && $currentPage == 'contact') echo 'class="currentMenuItem"' ?> >
+                    <?php echo $this->Html->link('Contact', array('controller' => 'contacts', 'action' => 'index'), array('escape' => false)); ?>
+                </li>
+            </ul>
+        </nav>
     </div><!-- END .section -->
     <div class="section clearfix">
         <div class="aside upper">
