@@ -19,7 +19,10 @@ class PostsController extends AppController {
     public function admin_index() {
         $this->set('pageTitle', 'News - Admin Panel');
 
-        $this->set('posts', $this->Post->find('all'));
+        $this->set('posts', $this->Post->find('all', array(
+            'order' => 'Post.created desc'
+        )));
+
         $this->layout = 'admin';
     }
 

@@ -17,7 +17,9 @@ class EventsController extends AppController {
     public function admin_index() {
         $this->set('pageTitle', 'Events - Admin Panel');
 
-        $this->set('events', $this->Event->find('all'));
+        $this->set('events', $this->Event->find('all', array(
+            'order' => 'Event.date desc'
+        )));
         $this->layout = 'admin';
     }
 
@@ -105,6 +107,13 @@ class EventsController extends AppController {
             throw new NotFoundException();
         }
 
+        // Delete all attachments with this event ID
+        $this->loadModel('Attachment');
+        $this->Attachment->deleteAll(array(
+            'Attachment.event_id' => $event['Event']['id']
+        ));
+
+        // Delete event
         if($this->Event->delete($id)) {
             $this->Session->setFlash('The event "' . $event['Event']['title'] . '" has been deleted.');
             $this->redirect(array('action' => 'index'));
