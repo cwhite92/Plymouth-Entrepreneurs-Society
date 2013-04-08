@@ -27,7 +27,7 @@ class Event extends AppModel {
         /  strip tags from temp
         /  check if the temp has any remaining txt
         */
-        $temp = $this->data['Post']['body'];
+        $temp = $this->data['Event']['body'];
         $temp = trim(strip_tags($temp));
         if (strlen($temp) !== 0) {
             return true;

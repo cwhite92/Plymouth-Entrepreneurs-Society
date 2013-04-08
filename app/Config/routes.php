@@ -25,7 +25,10 @@
     Router::connect('/', array('controller' => 'posts', 'action' => 'index'));
     Router::connect('/events', array('controller' => 'events', 'action' => 'index'));
 
-    // Admin routes
+    // Posts routes
+    Router::connect('/news', array('controller' => 'posts', 'action' => 'index'));
+
+// Admin routes
     Router::connect('/admin', array('controller' => 'users', 'action' => 'home', 'admin' => true));
     Router::connect('/admin/users', array('controller' => 'users', 'action' => 'index', 'admin' => true));
     Router::connect('/admin/news', array('controller' => 'posts', 'action' => 'index', 'admin' => true));
@@ -54,7 +57,7 @@
     // About specific routes
     Router::connect('/about', array('controller' => 'abouts', 'action' => 'index'));
 
-// Contact specific routes
+    // Contact specific routes
     Router::connect('/contact', array('controller' => 'contacts', 'action' => 'index'));
 
     // Profile specific routes
