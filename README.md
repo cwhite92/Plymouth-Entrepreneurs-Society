@@ -7,8 +7,8 @@ A website which will enable users to register and network between each other in 
 | Blogging engine               | Jake        | Completed       |
 | Rich text editor              | Ed          | Completed       |
 | Profile editor                | Chris       | Completed       |
-| Online indicator              | Louis       | Completed       |
-| Admin indicator               | Louis       | Completed       |
+| Online indicator              | Ed/Jake     | Completed       |
+| Admin indicator               | Ed/Jake     | Completed       |
 | Report abuse system           | Levi        | Not started     |
 | Create new admin system       | Jake        | Completed       |
 | Event posting                 | Jake        | Completed       |
