@@ -10,7 +10,7 @@ class Event extends AppModel {
         'body' => array(
             'rule' => 'blankPost'
         ),
-        'picture' => array(
+        'poster' => array(
             'kosher' => array(
                 'rule' => 'validateImage',
                 'message' => 'Only images are allowed to be uploaded'
@@ -37,9 +37,9 @@ class Event extends AppModel {
     }
 
     public function validateImage($check) {
-        if(!empty($this->data['Event']['picture']['name'])) {
+        if(!empty($this->data['Event']['poster']['name'])) {
             // Quickly check if the file is an image by trying to get its width/height
-            if(@getimagesize($check['picture']['tmp_name'])) {
+            if(@getimagesize($check['poster']['tmp_name'])) {
                 return true;
             }
         } else {

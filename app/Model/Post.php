@@ -10,7 +10,7 @@ class Post extends AppModel {
         'body' => array(
             'rule' => 'blankPost'
         ),
-        'picture' => array(
+        'cover_photo' => array(
             'kosher' => array(
                 'rule' => 'validateImage',
                 'message' => 'Only images are allowed to be uploaded'
