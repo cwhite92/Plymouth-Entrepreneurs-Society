@@ -718,6 +718,7 @@ input[type="submit"],
             .recent li a.pic {
                 float: left;
                 margin-right: 1em;
+                margin-bottom: .4em;
             }
 
             .recent li img {
