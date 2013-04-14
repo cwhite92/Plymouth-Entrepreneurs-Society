@@ -58,7 +58,7 @@ $(document).ready(function(){
 
 	// Twitter plugin
 	$('.tweetbox').pixTwitter({
-		username: 'twitter',
+		username: 'PlymouthES',
 		posts: 2
 	});
 

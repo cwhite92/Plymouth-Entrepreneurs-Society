@@ -8,7 +8,7 @@ jQuery.fn.extend(
 
 		// Default Options
 		this.defaultOptions = {
-			username: 'twitter',
+			username: 'PlymouthES',
 			posts: 3
 		};
 
