@@ -20,6 +20,7 @@ A website which will enable users to register and network between each other in 
 | Integrate template w/ backend | Ed          | Completed       |
 | Design admin panel            | Levi        | Completed       |
 | Sponsors list                 | Chris       | Completed       |
+| Services Page                 | Jake        | Completed       |
 
 
 Some good things to know
