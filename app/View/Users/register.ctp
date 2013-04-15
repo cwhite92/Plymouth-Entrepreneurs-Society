@@ -37,6 +37,14 @@
             'autocomplete'  => 'off'
         ));
 
+        echo $this->Form->input('agree', array(
+            'type'          => 'checkbox',
+            'value'         => '',
+            'required'      => 'required',
+            'autocomplete'  => 'off',
+            'label'         => 'I agree to the ToS and am over 13 years of age'
+        ));
+
         echo $this->Form->submit('Register', array(
             'div'           => false
         ));

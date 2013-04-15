@@ -40,6 +40,11 @@ class User extends AppModel {
                 'rule' => 'validateCurrentPassword',
                 'message' => 'Incorrect password. Make sure you\'re using your current password.'
             )
+        ),
+        'agree' => array(
+            'rule' => array('comparison', 'equal to', 1),
+            'required' => true,
+            'message' => 'You must agree to the Terms of Service in order to register.'
         )
     );
 
