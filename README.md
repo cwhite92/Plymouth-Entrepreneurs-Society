@@ -12,7 +12,7 @@ A website which will enable users to register and network between each other in 
 | Report abuse system           | Levi        | Not started     |
 | Create new admin system       | Jake        | Completed       |
 | Event posting                 | Jake        | Completed       |
-| Account verification          | Sheldon C.  | Completed       |
+| Account verification          | Chris       | Completed       |
 | Link profile with skills page | Chris       | Completed       |
 | Skill search                  | Chris       | Completed       |
 | RSS for blog                  | Jake        | Not started     |
