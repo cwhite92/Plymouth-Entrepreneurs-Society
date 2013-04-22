@@ -81,10 +81,11 @@ class ServicesController extends AppController {
         $this->set('services', $this->Service->find('all'));
     }
 
-    public function view($id = null) {
+    public function view($slug = null) {
         $service = $this->Service->find('first', array(
-            'conditions' => array('Service.id' => $id)
+            'conditions' => array('Service.permalink' => $slug)
         ));
+
         if(!$service) {
             throw new NotFoundException('Invalid service');
         }

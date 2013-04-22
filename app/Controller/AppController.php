@@ -66,7 +66,7 @@ class AppController extends Controller {
 
         // Latest members
         $latestUsers = $this->Profile->find('all', array(
-            'order'     => array('User.created'),
+            'order'     => array('User.created DESC'),
             'conditions' => array('User.activated' => 1),
             'limit'     => 5
         ));
@@ -74,7 +74,7 @@ class AppController extends Controller {
 
         // Latest events
         $latestEvents = $this->Event->find('all', array(
-            'order'     => array('Event.created'),
+            'order'     => array('Event.date ASC'),
             'limit'     => 5
         ));
         $this->set('latestEvents', $latestEvents);

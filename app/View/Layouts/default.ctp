@@ -53,7 +53,7 @@
                     <ul>
                         <?php foreach ($services as $service): ?>
                             <li <?php if (isset($currentPage) && $currentPage == $service['Service']['title']) echo 'class="currentMenuItem"' ?> >
-                                <?php echo $this->Html->Link($service['Service']['title'], array('controller' => 'services', 'action' => 'view', $service['Service']['id'])); ?>
+                                <?php echo $this->Html->Link($service['Service']['title'], array('controller' => 'services', 'action' => 'view', $service['Service']['permalink'])); ?>
                             </li>
                         <?php endforeach; ?>
                     </ul>

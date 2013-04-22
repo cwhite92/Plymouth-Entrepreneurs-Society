@@ -54,6 +54,7 @@
 
     // Service specific routes
     Router::connect('/services', array('controller' => 'services', 'action' => 'index'));
+    Router::connect('/services/*', array('controller' => 'services', 'action' => 'view'));
 
     // About specific routes
     Router::connect('/about', array('controller' => 'abouts', 'action' => 'index'));

@@ -20,7 +20,7 @@
                             echo '<ol class="clearfix"><li><h1>'.$temp.'</h1></li>';
                         }
 
-                        echo '<li>'.$this->Html->Link($skill['Skill']['name'], array('action' => 'view', $skill['Skill']['name'])).'</li>';
+                        echo '<li>'.$this->Html->Link(htmlspecialchars($skill['Skill']['name']), array('action' => 'view', $skill['Skill']['name'])).'</li>';
                         $i++;
                         if ( $i == count($skills) ) {
                             echo '</ol>';
