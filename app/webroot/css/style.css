@@ -431,6 +431,17 @@ input[type="submit"],
         margin-top: 2em;
     }
 
+    .entry .adminLinks {
+        margin-top: 1.6em;
+        font-size: .8em;
+        text-transform: uppercase;
+        text-align: right;
+    }
+
+        .entry .adminLinks a {
+            margin-left: 1em;
+        }
+
 .content {
     display: block;
     padding: 1.2em;

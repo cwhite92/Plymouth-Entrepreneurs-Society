@@ -2,7 +2,6 @@
     <div class="content">
         <div class="vcard clearfix">
             <?php echo $this->Html->image('profile_pics/' . $profile['Profile']['picture'], array(
-                'fullbase'  => true, 
                 'alt'       => $profile['Profile']['firstname'] . ' ' . $profile['Profile']['lastname'] . '\'s profile picture'
             )); ?>
             <span class="name"><?php echo $profile['Profile']['firstname']; ?> <?php echo $profile['Profile']['lastname']; ?></span>
