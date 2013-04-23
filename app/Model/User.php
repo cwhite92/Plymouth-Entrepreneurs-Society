@@ -43,10 +43,21 @@ class User extends AppModel {
         ),
         'agree' => array(
             'rule' => array('comparison', 'equal to', 1),
-            'required' => true,
+            'required' => false,
             'message' => 'You must agree to the Terms of Service in order to register.'
         )
     );
+
+    // Used when a user changes their password
+    public function beforeValidate($options = Array()) {
+        // Change "newPassword" and "confirmNewPassword" to "password" and "confirmPassword"
+        if(!empty($this->data[$this->alias]['newPassword'])) {
+            $this->data[$this->alias]['password'] = $this->data[$this->alias]['newPassword'];
+            unset($this->data[$this->alias]['newPassword']);
+        }
+
+        return true;
+    }
 
     public function validateCurrentPassword($data) {
         // Retrieve current password from the database
@@ -65,20 +76,6 @@ class User extends AppModel {
     public function validateConfirmPassword($data) {
         if($this->data['User']['password'] !== $data['confirmPassword']) {
             return false;
-        }
-
-        return true;
-    }
-
-    // Used when a user changes their password
-    public function beforeValidate($options = Array()) {
-        // Change "newPassword" and "confirmNewPassword" to "password" and "confirmPassword"
-        if(!empty($this->data[$this->alias]['newPassword'])) {
-            $this->data[$this->alias]['password'] = $this->data[$this->alias]['newPassword'];
-            unset($this->data[$this->alias]['newPassword']);
-
-            $this->data[$this->alias]['confirmPassword'] = $this->data[$this->alias]['confirmNewPassword'];
-            unset($this->data[$this->alias]['confirmNewPassword']);
         }
 
         return true;
