@@ -170,7 +170,7 @@
             </footer>
         </div><!-- END .entry -->
         <div class="entry">
-            &copy; <?php print date( 'Y' ); ?>. All rights reserved.
+            &copy; <?php print date( 'Y' ); ?>. All rights reserved. <?php echo $this->Html->link('Terms of Services', '#urlGoesHere', array('class' => 'alignRight', 'escape' => false)); ?>
         </div><!-- END .entry -->
     </div><!-- END .section -->
 </div><!-- END .mainContainer -->
