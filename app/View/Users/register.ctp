@@ -45,7 +45,7 @@
             'value'         => '',
             'required'      => 'required',
             'autocomplete'  => 'off',
-            'label'         => 'I agree to the Terms of Services and am over 13 years of age'
+            'label'         => 'I agree to the Terms of Service and I am over 13 years of age'
         ));
         ?>
         </div><!-- END .checkbox -->
