@@ -309,6 +309,10 @@ textarea {
     -moz-box-sizing: border-box;
 }
 
+input[type="checkbox"] {
+    width: auto;
+}
+
 .no-boxsizing input,
 .no-boxsizing textarea {
     width: 98.2%;
@@ -367,6 +371,18 @@ input[type="submit"],
     font-weight: 700;
     color: #7b7b7b;
 }
+
+.checkbox {
+    margin-top: 1.6em;
+}
+
+    .checkbox input {
+        margin-right: 1em;
+    }
+
+    .checkbox label {
+        display: inline;
+    }
 
 /** --------------------------------------------------------------
     FLASH MESSAGE
