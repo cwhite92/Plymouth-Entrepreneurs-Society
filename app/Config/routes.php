@@ -53,7 +53,7 @@
     Router::connect('/skill/*', array('controller' => 'skills', 'action' => 'view'));
 
     // Service specific routes
-    Router::connect('/services', array('controller' => 'services', 'action' => 'index'));
+//    Router::connect('/services', array('controller' => 'services', 'action' => 'index'));
     Router::connect('/services/*', array('controller' => 'services', 'action' => 'view'));
 
     // About specific routes
