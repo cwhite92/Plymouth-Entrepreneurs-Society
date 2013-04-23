@@ -10,7 +10,6 @@
                         <?php
                         echo $this->Html->link(
                             $this->Html->image('profile_pics/'.$user['picture'], array(
-                                'fullbase'  => true,
                                 'alt'       => htmlspecialchars($user['firstname']) . ' ' . htmlspecialchars($user['lastname'])
                             )),
                             '/profile/'.$user['id'],

@@ -3,7 +3,6 @@
         <?php 
         if(!empty($event['Event']['poster'])):
             echo $this->Html->image('posters/' . $event['Event']['poster'], array(
-                'fullbase'  => true,
                 'alt'       => 'Poster for ' . $event['Event']['title'],
                 'class'     => 'poster'
             ));

@@ -5,7 +5,6 @@
                 <div class="media">
                     <?php echo $this->Html->link(
                         $this->Html->image('cover_photo/' . $post['Post']['cover_photo'], array(
-                            'fullbase'  => true,
                             'alt'       => $post['Post']['alt_text'],
                         )),
                         array(
@@ -25,7 +24,6 @@
                         // I know that $user shoudn't be used here, but i've used it for styling.
                         echo $this->Html->link(
                             $this->Html->image('profile_pics/' . $post['User']['Profile']['picture'], array(
-                               'fullbase'  => true,
                                'alt'       => $post['User']['Profile']['firstname'] . ' ' . $post['User']['Profile']['lastname'] . '\'s profile picture',
                            )),
                        '/profile/'.$post['User']['Profile']['id'],

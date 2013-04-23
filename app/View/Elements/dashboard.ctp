@@ -3,7 +3,6 @@
         <?php
             echo $this->Html->link(
                     $this->Html->image('profile_pics/' . $user['Profile']['picture'], array(
-                    'fullbase'  => true, 
                     'alt'       => $user['Profile']['firstname'] . ' ' . $user['Profile']['lastname'] . '\'s profile picture',
                 )),
                 '/profile/'.$user['Profile']['id'],

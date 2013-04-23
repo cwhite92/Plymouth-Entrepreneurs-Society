@@ -5,7 +5,6 @@
             if(!empty($event['Event']['poster'])): ?>
             <?php echo $this->Html->link(
                 $this->Html->image('posters/' . $event['Event']['poster'], array(
-                    'fullbase'  => true,
                     'alt'       => 'Poster for ' . $event['Event']['title'],
                     'class'     => 'poster'
                 )),

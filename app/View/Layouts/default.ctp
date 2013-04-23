@@ -49,8 +49,8 @@
                     <?php echo $this->Html->link('Members', array('controller' => 'users', 'action' => 'memberList'), array('escape' => false)); ?>
                 </li>
                 <li <?php if (isset($currentPage) && $currentPage == 'services' || isset($currentPageParent) && $currentPageParent == 'services') echo 'class="currentMenuItem"' ?> >
-                    <?php echo $this->Html->link('Services+', array('controller' => 'services', 'action' => 'index'), array('escape' => false)); ?>
-                    <ul>
+                    <?php echo $this->Html->link('Services+', '#'); ?>
+                    <ul class="subMenu">
                         <?php foreach ($services as $service): ?>
                             <li <?php if (isset($currentPage) && $currentPage == $service['Service']['title']) echo 'class="currentMenuItem"' ?> >
                                 <?php echo $this->Html->Link($service['Service']['title'], array('controller' => 'services', 'action' => 'view', $service['Service']['permalink'])); ?>
@@ -75,7 +75,7 @@
             <div class="entry logo">
                 <?php
                 echo $this->Html->link(
-                    $this->Html->image('logo.png', array('alt' => 'Plymouth Entrepreneurs Society', 'border' => '0')),
+                    $this->Html->image('logo.png', array('alt' => 'Plymouth Entrepreneurs Society')),
                     '/',
                     array('escape' => false)
                 );
@@ -122,7 +122,6 @@
                         <?php foreach($latestUsers as $user): ?>
                             <li><?php echo $this->Html->link(
                                     $this->Html->image('profile_pics/' . $user['Profile']['picture'], array(
-                                        'fullbase'  => true,
                                         'alt'       => $user['Profile']['firstname'] . ' ' . $user['Profile']['lastname']
                                     )),
                                     '/profile/'.$user['Profile']['id'],
@@ -165,7 +164,6 @@
             <footer>
                 <?php foreach($sponsors as $sponsor): ?>
                     <?php echo $this->Html->image('sponsors/' . $sponsor['Sponsor']['picture'], array(
-                        'fullbase'  => true,
                         'alt'       => $sponsor['Sponsor']['name']
                     )); ?>
                 <?php endforeach; ?>
