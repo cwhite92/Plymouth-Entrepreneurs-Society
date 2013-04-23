@@ -29,3 +29,37 @@
         <?php endif; ?>
     </div><!-- END .content -->
 </div><!-- END .entry -->
+<?php
+if(isset($user)) {
+    if($user['User']['admin'] == 1) {
+?>
+<div class="entry">
+    <div class='content'>
+        <?php
+        echo $this->Html->link('EDIT',
+            array(
+                'action' => 'edit',
+                $event['Event']['id'],
+                'admin' => true),
+            array(
+                'escape' => false,
+                'class' => 'actions edit',
+                'data-icon' => '&#xF139;'));
+
+        echo $this->Form->postLink('DELETE',
+            array(
+                'action' => 'delete',
+                $event['Event']['id'],
+                'admin' => true),
+            array(
+                'class' => 'actions delete',
+                'escape' => false,
+                'data-icon' => '&#xF155;'),
+            __('Are you sure you want to delete this event?'));
+        ?>
+    </div><!-- END .content -->"
+    <?php
+    }
+}
+    ?>
+</div><!-- END .entry -->
