@@ -10,7 +10,6 @@
         <?php echo $this->Form->hidden('id'); ?>
         <div class="profilePicture clearfix">
             <?php echo $this->Html->image('profile_pics/' . $profile['Profile']['picture'], array(
-                'fullbase'  => true, 
                 'alt'       => $profile['Profile']['firstname'] . ' ' . $profile['Profile']['lastname'] . '\'s profile picture',
                 'id' => 'profile-picture'
             )); ?>
