@@ -1,6 +1,6 @@
 <div class="entry">
     <div class="content search">
-        <h1>MEMBERS LIST</h1>
+        <h1>Members list</h1>
         <?php echo $this->Form->create('User', array('action' => 'memberList')); ?>
         <?php echo $this->Form->textbox('query', array('placeholder' => 'Enter search term...')); ?>
         <?php echo $this->Form->radio('type', array('name' => 'Name search', 'skill' => 'Skill search'), array('value' => 'name')); ?>

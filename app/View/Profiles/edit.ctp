@@ -1,6 +1,6 @@
 <div class="entry">
     <div class="content">
-        <h1>EDIT PROFILE</h1>
+        <h1>Edit profile</h1>
         <?php echo $this->Form->create('Profile', array(
             'type'          => 'file',
             'inputDefaults' => array(

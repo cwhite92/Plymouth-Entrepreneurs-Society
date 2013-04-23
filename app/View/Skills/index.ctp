@@ -1,7 +1,7 @@
     <div class="entry">
         <div class="content skills">
             <div class="meta">
-                <h1>SKILLS BY NAME</h1>
+                <h1>Skills by name</h1>
                 <?php
                     $temp   = '';
                     $i      = 0;

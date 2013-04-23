@@ -1,6 +1,6 @@
 <div class="entry register">
     <div class="content">
-        <h1>RECOVER</h1>
+        <h1>Recover</h1>
         <p>Enter your account email address below and a recovery link will be emailed to you.</p>
         <?php
         echo $this->Form->create('User', array(
