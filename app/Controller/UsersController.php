@@ -179,7 +179,7 @@ class UsersController extends AppController {
 
         if($this->request->is('post')) {
             if($this->User->save($this->request->data)) {
-                $this->Session->setFlash('Your account has been updated.');
+                $this->Session->setFlash('Your account has been updated.', 'default', array('class' => 'success'));
                 $this->redirect(array('action' => 'edit'));
             }
 
