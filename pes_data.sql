@@ -1,14 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.5
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 08, 2013 at 06:14 AM
--- Server version: 5.5.29
--- PHP Version: 5.4.10
+-- Generation Time: Apr 24, 2013 at 05:06 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `pes`
@@ -17,30 +23,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `abouts`
---
-
-CREATE TABLE `abouts` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `body` longtext CHARACTER SET utf8 NOT NULL,
-  `title` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `abouts`
---
-
-INSERT INTO `abouts` (`id`, `body`, `title`) VALUES
-(1, '<h1>Our mission is to foster and encourage entrepreneurship through a broad range of exciting avenues.</h1>\r\n<h3>Business support &amp; mentoring</h3>\r\n<p>Want to start a business? We offer a wide range of support such as financing, mentoring by industry experts, meeting rooms, access to lawyers and accountants, registration guidance, investment sourcing and more! Got an idea? Email entrepreneurs@upsu.com asking for a “Start-Up Meeting”</p>\r\n<h3>Keynote Guest Speakers</h3>\r\n<p>Become inspired by experienced global and local entrepreneurs and business leaders. We always have an exciting calendar of free lectures which enrich your university experience. Past speakers have included Doug Richard from Dragon’s Den!</p>\r\n<h3>Commercial Projects</h3>\r\n<p>Get involved with real life business start-ups and develop your skills as an entrepreneur. Perfect for CV building, meeting people and making some money for yourself!</p>\r\n<h3>Practical workshops</h3>\r\n<p>Sharpen your business skills! Learn from our free sales, marketing and negotiation workshops presented by leading experts and consultants, often valued at hundreds of pounds.&nbsp;</p>\r\n<h3>Networking</h3>\r\n<p>Meet like-minded individuals and become part of a dynamic community of student entrepreneurs. We also partner with similar societies such as Enactus, Marketing, and Management so you are constantly meeting new and interesting people.</p>\r\n<h3>Trips</h3>\r\n<p>Get funded to join us at local, national, and global events! We’ve recently sent 20 society members to visit the UK’s leading student enterprise conference (travel, tickets and Hilton Hotel rooms included).</p>\r\n<h3> Professional Development Opportunities</h3>\r\n<p>Apply for professional development funding. We currently offer our members CIMA (Certificate in Management Accounting) for only £20 (Normal Price: £1,200). Our partner societies also offer similar highly-regarded qualifications for low prices, which we can put you in touch with!</p>\r\n', 'About Us');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `attachments`
 --
 
-CREATE TABLE `attachments` (
+CREATE TABLE IF NOT EXISTS `attachments` (
   `id` int(11) NOT NULL,
   `event_id` int(11) NOT NULL,
   `filename` varchar(255) NOT NULL,
@@ -50,22 +36,23 @@ CREATE TABLE `attachments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contacts`
+-- Table structure for table `categories`
 --
 
-CREATE TABLE `contacts` (
+CREATE TABLE IF NOT EXISTS `categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `body` longtext NOT NULL,
-  `title` varchar(255) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
 
 --
--- Dumping data for table `contacts`
+-- Dumping data for table `categories`
 --
 
-INSERT INTO `contacts` (`id`, `body`, `title`) VALUES
-(1, '<p><table id="table74382"><tbody><tr><td>email</td><td>phone</td><td>address</td></tr><tr><td><a href="mailto:tom.scott@plymouth.ac.uk">tom.scott@plymouth.ac.uk</a></td><td>0712-3456-789</td><td>5 Tavistock Place<br>Plymouth<br>PL4 8AU</td></tr></tbody></table><p></p><br></p>', 'Contact');
+INSERT INTO `categories` (`id`, `name`) VALUES
+(38, 'Services'),
+(39, ''),
+(40, 'Services yeah!');
 
 -- --------------------------------------------------------
 
@@ -73,7 +60,7 @@ INSERT INTO `contacts` (`id`, `body`, `title`) VALUES
 -- Table structure for table `events`
 --
 
-CREATE TABLE `events` (
+CREATE TABLE IF NOT EXISTS `events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `body` longtext NOT NULL,
@@ -84,15 +71,45 @@ CREATE TABLE `events` (
   `location` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
 
 --
 -- Dumping data for table `events`
 --
 
 INSERT INTO `events` (`id`, `title`, `body`, `created`, `modified`, `poster`, `date`, `location`) VALUES
-(24, 'Career Launchpad Student Conference', '<p>Ever wondered what it''s like to work for a startup? Want the lowdown on what''s happening in the European startup community? The Startup Career Launchpad is a huge event with the likes of Raspberry Pi, MindCandy and LastMinute founders, amongst some 50 other keynote speakers. It''s happening over April 18 and 19 in London, organised by NACUE.</p><p>Plymouth Entrepreneurs Society may be able to pay all travel, accommodation and conference costs. Sign up if you are interested in attending!</p><p><a href="http://www.startupcareerlaunchpad.com/">www.startupcareerlaunchpad.com</a><br><br>REGISTER YOUR INTEREST AT:&nbsp;<a href="http://www.doodle.com/bkqmxzfk4w3vy4g6">http://www.doodle.com/bkqmxzfk4w3vy4g6</a><br></p>\r\n', '2013-04-08 04:52:49', '2013-04-08 05:15:13', '27e1390bda132dd12daf6650527cf02b.png', '2013-04-18 08:30:00', 'The Light, London'),
-(25, ' Lecture Delivered by Wilfred Emmanuel-Jones', '<p>On behalf of our Vice-Chancellor, Professor Wendy Purcell, we are writing to invite you to a Prestige Lecture by Wilfred Emmanuel-Jones.<br><br>Please see your invitation below for full details and we hope that you will be able to join us for this very special occasion.<br><br>More information can be found on the University events page and to reserve a place please book here;<a href="https://www.surveymonkey.com/s/PrestigeLectureWilfredEmmanuel-Jones">https://www.surveymonkey.com/s/PrestigeLectureWilfredEmmanuel-Jones</a>&nbsp;<br><br>The event is taking place at the Robbins Conference Centre from 6.00 pm and the nearest car park is on Regent Street. However, free parking is available after 4.00 pm on campus and is just a short walk across campus to the Robbins Conference Centre. Please see the link below for more information regarding car parking and for campus maps.<br><br><a href="http://www.plymouth.ac.uk/pages/view.asp?page=17148">http://www.plymouth.ac.uk/pages/view.asp?page=17148</a><br><br>If you require this email invitation in an alternative format please contact us on 01752 586005 or email <a href="mailto:prestigelectures@plymouth.ac.uk">prestigelectures@plymouth.ac.uk</a><br></p>', '2013-04-08 05:12:04', '2013-04-08 05:12:04', 'fbb47e65dafbfe22197b7e3a1115da8f.png', '2013-04-11 18:00:00', 'Robbins Conference Centre');
+(26, 'Career Launchpad Student Conference', '<p><p>Ever wondered what it''s like to work for a startup? Want the lowdown on what''s happening in the European startup community? The Startup Career Launchpad is a huge event with the likes of Raspberry Pi, MindCandy and LastMinute founders, amongst some 50 other keynote speakers. It''s happening over April 18 and 19 in London, organised by&nbsp;NACUE.</p><p>Plymouth Entrepreneurs Society may be able to pay all travel, accommodation and conference costs. Sign up if you are interested in attending!</p><p><a href="http://www.startupcareerlaunchpad.com/">www.startupcareerlaunchpad.com</a><br><br>REGISTER YOUR INTEREST AT:&nbsp;<a href="http://www.doodle.com/bkqmxzfk4w3vy4g6">http://www.doodle.com/bkqmxzfk4w3vy4g6</a></p></p>', '2013-04-24 05:01:37', '2013-04-24 05:01:37', 'a034ba1e606b05e0a99477118d393dfa.png', '2013-04-18 08:30:00', 'The Light, London'),
+(27, ' Lecture Delivered by Wilfred Emmanuel-Jones', '<p>On behalf of our Vice-Chancellor, Professor Wendy Purcell, we are writing to invite you to a Prestige Lecture by Wilfred Emmanuel-Jones.<br><br>Please see your invitation below for full details and we hope that you will be able to join us for this very special occasion.<br><br>More information can be found on the University events page and to reserve a place please book here;<a href="https://www.surveymonkey.com/s/PrestigeLectureWilfredEmmanuel-Jones">https://www.surveymonkey.com/s/PrestigeLectureWilfredEmmanuel-Jones</a><br><br>The event is taking place at the Robbins Conference Centre from 6.00 pm and the nearest car park is on Regent Street. However, free parking is available after 4.00 pm on campus and is just a short walk across campus to the Robbins Conference Centre. Please see the link below for more information regarding car parking and for campus maps.<br><br><a href="http://www.plymouth.ac.uk/pages/view.asp?page=17148">http://www.plymouth.ac.uk/pages/view.asp?page=17148</a><br><br>If you require this email invitation in an alternative format please contact us on 01752 586005 or email&nbsp;<a href="mailto:prestigelectures@plymouth.ac.uk">prestigelectures@plymouth.ac.uk</a><br></p>', '2013-04-24 05:02:42', '2013-04-24 05:02:42', 'cebfb25ba17e587182cf3209f85eddca.png', '2013-04-11 18:00:00', 'Robbins Conference Centre'),
+(28, 'Lecture from Sir Alan Sugar', '<p>Alan sugar&nbsp;ennit<br></p>', '2013-04-24 05:03:24', '2013-04-24 05:03:24', 'ac79fac6ca4e4cb083019baabbfd7e69.png', '2013-04-26 09:00:00', 'Rolle - 301');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pages`
+--
+
+CREATE TABLE IF NOT EXISTS `pages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `body` longtext NOT NULL,
+  `permalink` varchar(255) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `in_header` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`),
+  KEY `category_id` (`category_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=47 ;
+
+--
+-- Dumping data for table `pages`
+--
+
+INSERT INTO `pages` (`id`, `title`, `body`, `permalink`, `created`, `modified`, `category_id`, `in_header`) VALUES
+(41, 'Mentoring', '<blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p>Mentoring page</p></blockquote>', 'mentoring', '2013-04-24 04:20:37', '2013-04-24 04:39:36', 38, 1),
+(42, 'Finding Investors', '<blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p>Finding Investors</p></blockquote>', 'finding-investors', '2013-04-24 04:27:12', '2013-04-24 04:27:12', 38, 1),
+(43, 'About Us', '<h1>Our mission is to foster and encourage entrepreneurship through a broad range of exciting avenues.</h1>\r\n<h3>Business support &amp; mentoring</h3>\r\n<p>Want to start a business? We offer a wide range of support such as financing, mentoring by industry experts, meeting rooms, access to lawyers and accountants, registration guidance, investment sourcing and more! Got an idea? Email entrepreneurs@upsu.com asking for a “Start-Up Meeting”</p>\r\n<h3>Keynote Guest Speakers</h3>\r\n<p>Become inspired by experienced global and local entrepreneurs and business leaders. We always have an exciting calendar of free lectures which enrich your university experience. Past speakers have included Doug Richard from Dragon’s Den!</p>\r\n<h3>Commercial Projects</h3>\r\n<p>Get involved with real life business start-ups and develop your skills as an entrepreneur. Perfect for CV building, meeting people and making some money for yourself!</p>\r\n<h3>Practical workshops</h3>\r\n<p>Sharpen your business skills! Learn from our free sales, marketing and negotiation workshops presented by leading experts and consultants, often valued at hundreds of pounds.&nbsp;</p>\r\n<h3>Networking</h3>\r\n<p>Meet like-minded individuals and become part of a dynamic community of student entrepreneurs. We also partner with similar societies such as Enactus, Marketing, and Management so you are constantly meeting new and interesting people.</p>\r\n<h3>Trips</h3>\r\n<p>Get funded to join us at local, national, and global events! We’ve recently sent 20 society members to visit the UK’s leading student enterprise conference (travel, tickets and Hilton Hotel rooms included).</p>\r\n<h3> Professional Development Opportunities</h3>\r\n<p>Apply for professional development funding. We currently offer our members CIMA (Certificate in Management Accounting) for only £20 (Normal Price: £1,200). Our partner societies also offer similar highly-regarded qualifications for low prices, which we can put you in touch with!</p>\r\n', 'about', '2013-04-24 04:28:13', '2013-04-24 04:28:13', 39, 1),
+(44, 'Contact', '<p></p><table><tbody><tr><td>email</td><td>phone</td><td>address</td></tr><tr><td><a href="mailto:tom.scott@plymouth.ac.uk">tom.scott@plymouth.ac.uk</a></td><td>0712-3456-789</td><td>5 Tavistock Place<br>Plymouth<br>PL4 8AU</td></tr></tbody></table><br><p></p>\r\n', 'contact', '2013-04-24 04:28:45', '2013-04-24 04:50:48', 39, 1);
 
 -- --------------------------------------------------------
 
@@ -100,7 +117,7 @@ INSERT INTO `events` (`id`, `title`, `body`, `created`, `modified`, `poster`, `d
 -- Table structure for table `posts`
 --
 
-CREATE TABLE `posts` (
+CREATE TABLE IF NOT EXISTS `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) CHARACTER SET utf8 NOT NULL,
   `body` longtext CHARACTER SET utf8 NOT NULL,
@@ -132,7 +149,7 @@ INSERT INTO `posts` (`id`, `title`, `body`, `created`, `modified`, `user_id`, `c
 -- Table structure for table `profiles`
 --
 
-CREATE TABLE `profiles` (
+CREATE TABLE IF NOT EXISTS `profiles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `firstname` varchar(50) CHARACTER SET utf8 NOT NULL,
@@ -146,15 +163,16 @@ CREATE TABLE `profiles` (
   `experience` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
 
 --
 -- Dumping data for table `profiles`
 --
 
 INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `email`, `course`, `bio`, `modified`, `last_active`, `experience`) VALUES
-(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-08 06:11:56', 1365394316, 'I like boobies'),
-(41, 57, 'Jake', 'Champion', 'a663058890769571c8da9d9684c6ebf6.png', 'jakechampion.jake2@gmail.com', 'Web Applications Development', '', '2013-04-08 06:11:00', 1365394261, '');
+(36, 52, 'John', 'Smith', 'user.png', 'john.smith@gmail.com', 'BSc Web Applications Development', 'I like the web. And stuff.', '2013-04-08 06:11:56', 1366772722, 'I like boobies'),
+(41, 57, 'Jake', 'Champion', 'a663058890769571c8da9d9684c6ebf6.png', 'jakechampion.jake2@gmail.com', 'Web Applications Development', '', '2013-04-08 06:11:00', 1365394261, ''),
+(42, 58, 'John', 'Doe', 'user.png', 'name@email.com', '', '', '2013-04-23 21:37:01', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -162,7 +180,7 @@ INSERT INTO `profiles` (`id`, `user_id`, `firstname`, `lastname`, `picture`, `em
 -- Table structure for table `profiles_skills`
 --
 
-CREATE TABLE `profiles_skills` (
+CREATE TABLE IF NOT EXISTS `profiles_skills` (
   `profile_id` int(11) NOT NULL,
   `skill_id` int(11) NOT NULL,
   KEY `profile_id` (`profile_id`),
@@ -180,35 +198,10 @@ INSERT INTO `profiles_skills` (`profile_id`, `skill_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `services`
---
-
-CREATE TABLE `services` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL,
-  `body` longtext NOT NULL,
-  `permalink` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `name` (`permalink`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
-
---
--- Dumping data for table `services`
---
-
-INSERT INTO `services` (`id`, `title`, `body`, `permalink`) VALUES
-(1, 'Mentoring', 'Welcome to the Mentoring page!', 'mentoring'),
-(2, 'How to find investors', '<p>AHHAHAHAHAHAHAHAHHAHA</p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>You don''t need investors, you need a noose!</p>', 'how_to_find_investors'),
-(3, 'gdsfgdsg', '<p>dfsgdfsgdfsg</p>', 'gdsgdsfg'),
-(4, 'startup lectures', '<p>sdsdsd</p>', 'sdsd');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `skills`
 --
 
-CREATE TABLE `skills` (
+CREATE TABLE IF NOT EXISTS `skills` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
@@ -229,7 +222,7 @@ INSERT INTO `skills` (`id`, `name`) VALUES
 -- Table structure for table `sponsors`
 --
 
-CREATE TABLE `sponsors` (
+CREATE TABLE IF NOT EXISTS `sponsors` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `picture` varchar(255) NOT NULL,
@@ -252,7 +245,7 @@ INSERT INTO `sponsors` (`id`, `name`, `picture`) VALUES
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 NOT NULL,
@@ -261,15 +254,16 @@ CREATE TABLE `users` (
   `activation` varchar(32) CHARACTER SET utf8 NOT NULL,
   `activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=58 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=59 ;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`, `activated`) VALUES
-(52, 'john.smith@gmail.com', '$2a$10$9nLSM4BucqPPBTRaOTzxBu2xao4l.V6YtAp.Dz1VT3sBtoM9FIZuW', 1, '2013-02-12 03:07:40', '4f8a070a4a24a9676ab6ae6a8dfad2a2', 1),
-(57, 'jakechampion.jake2@gmail.com', '$2a$10$PLIDaSUQx6IPhYSIhDtQ5ugjeCn2bsI1vGZ8CTsQ.ToIbdM0LoOZ.', 0, '2013-04-08 05:36:43', '904c42601948b790933deaa46f752c1a', 1);
+(52, 'john.smith@gmail.com', '$2a$10$rJbS0LnagNb3DjqSWEH0UeEgyK8ucLUrKLqlbIA.Ui8vO.9A.0/HO', 1, '2013-02-12 03:07:40', '4f8a070a4a24a9676ab6ae6a8dfad2a2', 1),
+(57, 'jakechampion.jake2@gmail.com', '$2a$10$PLIDaSUQx6IPhYSIhDtQ5ugjeCn2bsI1vGZ8CTsQ.ToIbdM0LoOZ.', 0, '2013-04-08 05:36:43', '904c42601948b790933deaa46f752c1a', 1),
+(58, 'name@email.com', '$2a$10$QNBEYMiBXU.2QumiJuDV0eW7/8W9Wz4kbCWVTCfNpyVh/EkCGeqH6', 0, '2013-04-23 21:37:00', 'b51e5fff047e34e8ff12aa403562d5f0', 0);
 
 --
 -- Constraints for dumped tables
@@ -280,6 +274,12 @@ INSERT INTO `users` (`id`, `email`, `password`, `admin`, `created`, `activation`
 --
 ALTER TABLE `attachments`
   ADD CONSTRAINT `attachments_ibfk_1` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`);
+
+--
+-- Constraints for table `pages`
+--
+ALTER TABLE `pages`
+  ADD CONSTRAINT `pages_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`);
 
 --
 -- Constraints for table `posts`
@@ -299,3 +299,7 @@ ALTER TABLE `profiles`
 ALTER TABLE `profiles_skills`
   ADD CONSTRAINT `profiles_skills_ibfk_1` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`),
   ADD CONSTRAINT `profiles_skills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

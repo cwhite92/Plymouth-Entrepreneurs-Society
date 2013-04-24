@@ -51,8 +51,8 @@ class AppController extends Controller {
         $this->loadModel('User');
         $this->loadModel('Profile');
         $this->loadModel('Event');
-        $this->loadModel('Service');
         $this->loadModel('Sponsor');
+        $this->loadModel('Category');
 
         // Used in views to easily check if a user is logged in
         $this->set('authed', $this->Auth->user());
@@ -79,8 +79,7 @@ class AppController extends Controller {
         ));
         $this->set('latestEvents', $latestEvents);
 
-        // Services
-        $this->set('services', $this->Service->find('all'));
+        $this->set('navElements', $this->Category->find('all'));
 
         // Sponsors
         $this->set('sponsors', $this->Sponsor->find('all'));

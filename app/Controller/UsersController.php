@@ -15,7 +15,7 @@ class UsersController extends AppController {
 
     function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('register', 'activate', 'recover', 'recoverStepTwo', 'login');
+        $this->Auth->allow('register', 'activate', 'recover', 'recoverStepTwo', 'login', 'memberList');
     }
 
     // Admin panel homepage

@@ -48,25 +48,34 @@
                 <li <?php if (isset($currentPage) && $currentPage == 'members') echo 'class="currentMenuItem"' ?> >
                     <?php echo $this->Html->link('Members', array('controller' => 'users', 'action' => 'memberList'), array('escape' => false)); ?>
                 </li>
-                <li <?php if (isset($currentPage) && $currentPage == 'services' || isset($currentPageParent) && $currentPageParent == 'services') echo 'class="currentMenuItem"' ?> >
-                    <?php echo $this->Html->link('Services+', '#'); ?>
-                    <ul class="subMenu">
-                        <?php foreach ($services as $service): ?>
-                            <li <?php if (isset($currentPage) && $currentPage == $service['Service']['title']) echo 'class="currentMenuItem"' ?> >
-                                <?php echo $this->Html->Link($service['Service']['title'], array('controller' => 'services', 'action' => 'view', $service['Service']['permalink'])); ?>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </li>
                 <li <?php if (isset($currentPage) && $currentPage == 'skills') echo 'class="currentMenuItem"' ?> >
                     <?php echo $this->Html->link('Skills', array('controller' => 'skills', 'action' => 'index'), array('escape' => false)); ?>
                 </li>
-                <li <?php if (isset($currentPage) && $currentPage == 'about') echo 'class="currentMenuItem"' ?> >
-                    <?php echo $this->Html->link('About Us', array('controller' => 'abouts', 'action' => 'index'), array('escape' => false)); ?>
-                </li>
-                <li <?php if (isset($currentPage) && $currentPage == 'contact') echo 'class="currentMenuItem"' ?> >
-                    <?php echo $this->Html->link('Contact', array('controller' => 'contacts', 'action' => 'index'), array('escape' => false)); ?>
-                </li>
+                <?php foreach($navElements as $navElement): ?>
+                        <?php if(!empty($navElement['Category']['name']) && !empty($navElement['Page'])): ?>
+                            <li>
+                                <?php echo $this->Html->link($navElement['Category']['name'] . '+', '#'); ?>
+                                <ul class="subMenu">
+                                    <?php foreach($navElement['Page'] as $item): ?>
+                                        <?php if($item['in_header']): ?>
+                                            <li>
+                                                <?php echo $this->Html->Link($item['title'], array('controller' => 'pages', 'action' => 'view', $item['permalink'])); ?>
+                                            </li>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </li>
+                        <?php else: ?>
+                            <?php foreach($navElement['Page'] as $item): ?>
+                                <li>
+                                    <?php if($item['in_header']): ?>
+                                        <?php echo $this->Html->Link($item['title'], array('controller' => 'pages', 'action' => 'view', $item['permalink'])); ?>
+                                    <?php endif; ?>
+                                </li>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+
+                <?php endforeach; ?>
             </ul>
         </nav>
     </div><!-- END .section -->

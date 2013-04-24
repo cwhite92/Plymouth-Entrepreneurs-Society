@@ -29,14 +29,13 @@
     Router::connect('/news', array('controller' => 'posts', 'action' => 'index'));
     Router::connect('/news/*', array('controller' => 'posts', 'action' => 'view'));
 
-// Admin routes
+    // Admin routes
     Router::connect('/admin', array('controller' => 'users', 'action' => 'home', 'admin' => true));
     Router::connect('/admin/users', array('controller' => 'users', 'action' => 'index', 'admin' => true));
     Router::connect('/admin/news', array('controller' => 'posts', 'action' => 'index', 'admin' => true));
     Router::connect('/admin/events', array('controller' => 'events', 'action' => 'index', 'admin' => true));
-    Router::connect('/admin/services', array('controller' => 'services', 'action' => 'index', 'admin' => true));
-//    Router::connect('/admin/contacts', array('controller' => 'contacts', 'action' => 'edit', 'admin' => true));
     Router::connect('/admin/sponsors', array('controller' => 'sponsors', 'action' => 'index', 'admin' => true));
+    Router::connect('/admin/pages', array('controller' => 'pages', 'action' => 'index', 'admin' => true));
 
     // User specific routes
     Router::connect('/register', array('controller' => 'users', 'action' => 'register'));
@@ -52,16 +51,6 @@
     Router::connect('/skills', array('controller' => 'skills', 'action' => 'index'));
     Router::connect('/skill/*', array('controller' => 'skills', 'action' => 'view'));
 
-    // Service specific routes
-//    Router::connect('/services', array('controller' => 'services', 'action' => 'index'));
-    Router::connect('/services/*', array('controller' => 'services', 'action' => 'view'));
-
-    // About specific routes
-    Router::connect('/about', array('controller' => 'abouts', 'action' => 'index'));
-
-    // Contact specific routes
-    Router::connect('/contact', array('controller' => 'contacts', 'action' => 'index'));
-
     // Profile specific routes
     Router::connect('/profile/edit', array('controller' => 'profiles', 'action' => 'edit'));
     Router::connect('/profile/edit/deleteProfilePicture', array('controller' => 'profiles', 'action' => 'deleteProfilePicture'));
@@ -69,6 +58,9 @@
 
     // Event specific routes
     Router::connect('/event/*', array('controller' => 'events', 'action' => 'view'));
+
+    // Everything else is a static page
+    Router::connect('/static/*', array('controller' => 'pages', 'action' => 'view'));
 
 /**
  * Load all plugin routes.  See the CakePlugin documentation on
