@@ -60,6 +60,24 @@ class UsersController extends AppController {
         $this->layout = 'admin';
     }
 
+    public function admin_delete($id) {
+        if($this->request->is('get')) {
+            throw new MethodNotAllowedException();
+        }
+
+        $profile = $this->Profile->find('first', array(
+            'conditions' => array('Profile.user_id' => $id)));
+
+        if($this->Profile->delete($profile['Profile']['id'])){
+            if($this->User->delete($id, true)) {
+                $this->Session->setFlash( $profile['User']['email'] . ' has been deleted.');
+                $this->redirect(array('action' => 'index'));
+            }
+        }
+
+        $this->layout = 'admin';
+    }
+
     public function recover($hash = null) {
         $this->set('pageTitle', 'Recover - Plymouth Entrepreneurs Society');
 
