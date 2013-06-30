@@ -43,12 +43,12 @@
 class EmailConfig {
 
     public $default = array(
-        'host' => 'ssl://smtp.gmail.com',
+        'host' => 'ssl://smtp.123-reg.co.uk',
         'port' => 465,
-        'username' => 'pesclients@gmail.com',
-        'password' => 'thegmailpassword',
+        'username' => 'noreply@withaspark.co.uk',
+        'password' => 'withaspark1',
         'transport' => 'Smtp',
-        'from' => array('noreply@pes.co.uk' => 'Plymouth Entrepreneurs Society'),
+        'from' => array('noreply@withaspark.co.uk' => 'With A Spark'),
         'emailFormat' => 'html'
     );
 
