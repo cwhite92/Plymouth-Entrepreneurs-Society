@@ -43,8 +43,8 @@
 class EmailConfig {
 
     public $default = array(
-        'host' => 'ssl://smtp.123-reg.co.uk',
-        'port' => 465,
+        'host' => 'smtp.123-reg.co.uk',
+        'port' => 25,
         'username' => 'noreply@withaspark.co.uk',
         'password' => 'withaspark1',
         'transport' => 'Smtp',
