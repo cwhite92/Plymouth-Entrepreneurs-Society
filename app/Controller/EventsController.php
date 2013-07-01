@@ -67,11 +67,15 @@ class EventsController extends AppController {
                 }
             }
 
-            if($this->Event->saveAssociated($this->request->data)) {
-                $this->Session->setFlash('Your event has been saved.', 'default');
-                $this->redirect(array('action' => 'index'));
+            if(!empty($this->request->data['Event']['poster']['name'])){
+                if($this->Event->saveAssociated($this->request->data)) {
+                    $this->Session->setFlash('Your event has been saved.', 'default');
+                    $this->redirect(array('action' => 'index'));
+                } else {
+                    $this->Session->setFlash('Unable to add your event.', 'default');
+                }
             } else {
-                $this->Session->setFlash('Unable to add your event.', 'default');
+                $this->Session->setFlash('An event poster is required to be uploaded for every event');
             }
         }
 
