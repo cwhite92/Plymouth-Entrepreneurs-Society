@@ -70,12 +70,27 @@ class PostsController extends AppController {
             // Add the user ID to the request data
             $this->request->data['Post']['user_id'] = $this->Auth->user('id');
 
+
             $this->Post->create();
-            if($this->Post->saveAssociated($this->request->data)) {
-                $this->Session->setFlash('Your post has been saved.');
-                $this->redirect(array('action' => 'index'));
-            } else {
-                $this->Session->setFlash('Unable to add your post.');
+            // if no image uploaded, unset image
+            if(empty($this->request->data['Post']['cover_photo']['name'])){
+                unset($this->request->data['Post']['cover_photo']);
+
+                if($this->Post->saveAssociated($this->request->data)) {
+                    $this->Session->setFlash('Your post has been saved.');
+                    $this->redirect(array('action' => 'index'));
+                } else {
+                    Debugger::dump($this->request->data);
+                    $this->Session->setFlash('cunt');
+                }
+            }
+            else {
+                if($this->Post->saveAssociated($this->request->data)) {
+                    $this->Session->setFlash('Your post has been saved.');
+                    $this->redirect(array('action' => 'index'));
+                } else {
+                    $this->Session->setFlash('Unable to add your post.');
+                }
             }
         }
 

@@ -61,10 +61,6 @@ class Post extends AppModel {
 
             // Rename it so it gets saved with the correct name in the database
             $this->data['Post']['cover_photo'] = $filename;
-        } elseif(isset($this->data['Post']['id'])) {
-            unset($this->data['Post']['cover_photo']);
-        } else {
-            return false;
         }
 
         return true;
