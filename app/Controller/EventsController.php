@@ -110,21 +110,41 @@ class EventsController extends AppController {
 
     public function admin_delete($id = null) {
         $event = $this->Event->findById($id);
-        if(!$event) {
-            throw new NotFoundException();
-        }
+        if($event) {
+            // delete poster
+            if(!empty($event['Event']['poster'])){
+                $file = new File( WWW_ROOT . 'img' . DS . 'posters' . DS . $event['Event']['poster'], false, 0777);
+                if (!$file->delete()){
+                    $this->Session->setFlash('Unable to delete event poster error');
+                }
+            }
 
-        // Delete all attachments with this event ID
-        $this->loadModel('Attachment');
+            // Delete all attachments with this event ID
+            $this->loadModel('Attachment');
+            
+            foreach ($event['Attachment'] as $attachment ) {
+                $file = new File(WWW_ROOT . 'files' . DS . 'attachments' . DS . $attachment['filename'], false, 0777);
+                if($file->delete()) {
+                    Debugger::dump('deleted file');
+                }
+
+            }
+
         $this->Attachment->deleteAll(array(
             'Attachment.event_id' => $event['Event']['id']
         ));
 
-        // Delete event
-        if($this->Event->delete($id)) {
-            $this->Session->setFlash('The event "' . $event['Event']['title'] . '" has been deleted.');
-            $this->redirect(array('action' => 'index'));
+            // Delete event
+            if($this->Event->delete($id)) {
+                $this->Session->setFlash('The event "' . $event['Event']['title'] . '" has been deleted.');
+                $this->redirect(array('action' => 'index'));
+            }
         }
+        else {
+            throw new NotFoundException();
+        }
+
+
 
         $this->layout = 'admin';
     }
