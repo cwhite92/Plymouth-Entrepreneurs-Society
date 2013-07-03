@@ -80,8 +80,7 @@ class PostsController extends AppController {
                     $this->Session->setFlash('Your post has been saved.');
                     $this->redirect(array('action' => 'index'));
                 } else {
-                    Debugger::dump($this->request->data);
-                    $this->Session->setFlash('cunt');
+                    $this->Session->setFlash('Unable to add your post');
                 }
             }
             else {
