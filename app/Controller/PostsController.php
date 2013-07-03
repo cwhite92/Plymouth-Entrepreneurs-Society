@@ -128,9 +128,25 @@ class PostsController extends AppController {
             throw new MethodNotAllowedException();
         }
 
-        if($this->Post->delete($id)) {
-            $this->Session->setFlash('The post with id: ' . $id . ' has been deleted.');
-            $this->redirect(array('action' => 'index'));
+        $post = $this->Post->findById($id);
+        if($post) {
+            // delete cover photo if the post has one
+            Debugger::dump($post);
+            if(!empty($post['Post']['cover_photo'])){
+                $file = new File(WWW_ROOT . 'img' . DS . 'cover_photo' . DS . $post['Post']['cover_photo'], false, 0777);
+                if (!$file->delete()){
+                    $this->Session->setFlash('Unable to delete post');
+                }
+            }
+
+            // delete post
+            if($this->Post->delete($id)) {
+                $this->Session->setFlash('The post with id: ' . $id . ' has been deleted.');
+                $this->redirect(array('action' => 'index'));
+            }
+        }
+        else {
+            throw new NotFoundException('Invalid post');
         }
 
         $this->layout = 'admin';
