@@ -131,7 +131,6 @@ class PostsController extends AppController {
         $post = $this->Post->findById($id);
         if($post) {
             // delete cover photo if the post has one
-            Debugger::dump($post);
             if(!empty($post['Post']['cover_photo'])){
                 $file = new File(WWW_ROOT . 'img' . DS . 'cover_photo' . DS . $post['Post']['cover_photo'], false, 0777);
                 if (!$file->delete()){
